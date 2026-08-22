@@ -86,6 +86,13 @@ export interface ReviewCandidateView {
 
 export interface BureauSummaryView {
   bureaus: BureauRowView[];
+  summary: {
+    bureauCount: number;
+    totalComparableCount: number;
+    totalNeedsExplanationCount: number;
+    totalFy2024CurrentBudgetYen: number;
+    consistencyCheck: string;
+  };
 }
 
 export interface BureauRowView {

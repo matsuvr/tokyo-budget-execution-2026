@@ -196,6 +196,30 @@ header h1 {
   font-size: 0.85rem;
 }
 
+/* 表示切替と局別サマリー（#51） */
+
+.view-toggle {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.view-toggle-button {
+  cursor: pointer;
+  font: inherit;
+  padding: 0.4rem 1rem;
+}
+
+.view-toggle-button[data-active] {
+  background: #333;
+  color: #fff;
+}
+
+.bureau-select {
+  cursor: pointer;
+  font: inherit;
+}
+
 @media (max-width: 480px) {
   .overview-grid,
   .candidate-grid {
