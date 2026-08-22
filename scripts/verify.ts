@@ -21,7 +21,10 @@ async function readJson<T>(relativePath: string): Promise<T> {
 
 async function countLines(relativePath: string): Promise<number> {
   let count = 0;
-  const reader = createInterface({ input: createReadStream(join(ROOT, relativePath)), crlfDelay: Infinity });
+  const reader = createInterface({
+    input: createReadStream(join(ROOT, relativePath)),
+    crlfDelay: Infinity,
+  });
   for await (const line of reader) if (line.trim()) count += 1;
   return count;
 }
@@ -32,7 +35,10 @@ const budgetIndex = await readJson<Array<{ fiscalYears: number[]; recordCount: n
 check("budget series count is 15", budgetIndex.length === 15, budgetIndex.length);
 check(
   "every budget series contains FY2025 and FY2026",
-  budgetIndex.every((entry) => entry.fiscalYears.includes(2025) && entry.fiscalYears.includes(2026) && entry.recordCount > 0),
+  budgetIndex.every(
+    (entry) =>
+      entry.fiscalYears.includes(2025) && entry.fiscalYears.includes(2026) && entry.recordCount > 0,
+  ),
 );
 
 const settlementIndex = await readJson<Array<{ latestFiscalYear: number; recordCount: number }>>(
@@ -57,29 +63,49 @@ for (const fiscalYear of [2025, 2026] as const) {
   const transactionLineCount = await countLines(
     `data/normalized/public-expenditure/fy${fiscalYear}/transactions.jsonl`,
   );
-  check(`FY${fiscalYear} transaction JSONL count matches summary`, transactionLineCount === expenditure.transactionCount, {
-    transactionLineCount,
-    summary: expenditure.transactionCount,
-  });
+  check(
+    `FY${fiscalYear} transaction JSONL count matches summary`,
+    transactionLineCount === expenditure.transactionCount,
+    {
+      transactionLineCount,
+      summary: expenditure.transactionCount,
+    },
+  );
   check(
     `FY${fiscalYear} public expenditure file coverage`,
     expenditure.transactionFileCount === (fiscalYear === 2025 ? 14 : 3),
     expenditure.transactionFileCount,
   );
-  check(`FY${fiscalYear} public expenditure amounts are positive`, expenditure.transactionAmountYen > 0 && expenditure.payrollAmountYen > 0);
-  check(`FY${fiscalYear} all transaction dates parsed`, expenditure.invalidDateCount === 0, expenditure.invalidDateCount);
-  check(`FY${fiscalYear} non-data footers were skipped`, expenditure.skippedNonDataRowCount > 0, expenditure.skippedNonDataRowCount);
+  check(
+    `FY${fiscalYear} public expenditure amounts are positive`,
+    expenditure.transactionAmountYen > 0 && expenditure.payrollAmountYen > 0,
+  );
+  check(
+    `FY${fiscalYear} all transaction dates parsed`,
+    expenditure.invalidDateCount === 0,
+    expenditure.invalidDateCount,
+  );
+  check(
+    `FY${fiscalYear} non-data footers were skipped`,
+    expenditure.skippedNonDataRowCount > 0,
+    expenditure.skippedNonDataRowCount,
+  );
 }
 
-const subsidyIndex = await readJson<Array<{ fiscalYear: number; recordCount: number; totalBudgetThousandYen: number }>>(
-  "data/normalized/subsidies/index.json",
-);
+const subsidyIndex = await readJson<
+  Array<{ fiscalYear: number; recordCount: number; totalBudgetThousandYen: number }>
+>("data/normalized/subsidies/index.json");
 check(
   "subsidies include FY2025 and FY2026",
-  subsidyIndex.length === 2 && subsidyIndex.some((entry) => entry.fiscalYear === 2025) && subsidyIndex.some((entry) => entry.fiscalYear === 2026),
+  subsidyIndex.length === 2 &&
+    subsidyIndex.some((entry) => entry.fiscalYear === 2025) &&
+    subsidyIndex.some((entry) => entry.fiscalYear === 2026),
   subsidyIndex,
 );
-check("subsidy rows are populated", subsidyIndex.every((entry) => entry.recordCount > 1_000 && entry.totalBudgetThousandYen > 0));
+check(
+  "subsidy rows are populated",
+  subsidyIndex.every((entry) => entry.recordCount > 1_000 && entry.totalBudgetThousandYen > 0),
+);
 
 const closingEstimate = await readJson<{
   fiscalYear: number;
@@ -87,7 +113,9 @@ const closingEstimate = await readJson<{
   records: Array<{ metric: string; fiscalYear2025HundredMillionYen: number }>;
 }>("data/normalized/closing-estimate/fy2025.json");
 const closingRevenue = closingEstimate.records.find((record) => record.metric === "revenue");
-const closingExpenditure = closingEstimate.records.find((record) => record.metric === "expenditure");
+const closingExpenditure = closingEstimate.records.find(
+  (record) => record.metric === "expenditure",
+);
 check(
   "FY2025 preliminary closing estimate identity",
   closingEstimate.fiscalYear === 2025 && closingEstimate.status === "preliminary",
@@ -109,8 +137,14 @@ for (const source of manifest.sources) {
   const bytes = await readFile(path);
   const digest = createHash("sha256").update(bytes).digest("hex");
   const size = (await stat(path)).size;
-  check(`manifest hash: ${source.id}`, digest === source.sha256, { expected: source.sha256, actual: digest });
-  check(`manifest size: ${source.id}`, size === source.bytes, { expected: source.bytes, actual: size });
+  check(`manifest hash: ${source.id}`, digest === source.sha256, {
+    expected: source.sha256,
+    actual: digest,
+  });
+  check(`manifest size: ${source.id}`, size === source.bytes, {
+    expected: source.bytes,
+    actual: size,
+  });
   verifiedHashes += 1;
 }
 check("downloaded source hashes verified", verifiedHashes >= 47, verifiedHashes);
@@ -156,6 +190,12 @@ const report = {
   failedCheckCount: checks.filter((entry) => !entry.pass).length,
   checks,
 };
-await writeFile(join(ROOT, "data", "verification-report.json"), `${JSON.stringify(report, null, 2)}\n`, "utf8");
-console.log(JSON.stringify({ pass, checkCount: checks.length, failed: report.failedCheckCount }, null, 2));
+await writeFile(
+  join(ROOT, "data", "verification-report.json"),
+  `${JSON.stringify(report, null, 2)}\n`,
+  "utf8",
+);
+console.log(
+  JSON.stringify({ pass, checkCount: checks.length, failed: report.failedCheckCount }, null, 2),
+);
 if (!pass) process.exit(1);

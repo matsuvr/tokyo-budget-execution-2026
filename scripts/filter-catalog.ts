@@ -25,7 +25,9 @@ const datasetIds = new Set([
 const titlePattern = /予算|決算|公金支出|補助金|財務諸表|財政/i;
 
 if (!existsSync(sourcePath)) {
-  console.log(`Catalog source not found; leaving existing filtered catalog unchanged: ${sourcePath}`);
+  console.log(
+    `Catalog source not found; leaving existing filtered catalog unchanged: ${sourcePath}`,
+  );
   process.exit(0);
 }
 
@@ -53,9 +55,11 @@ parseCsvEach(decoded.text, (row, rowIndex) => {
   }
 });
 
-const records = selectedRows.slice(1).map((row) =>
-  Object.fromEntries(headers.map((header, index) => [header, cleanCell(row[index])])),
-);
+const records = selectedRows
+  .slice(1)
+  .map((row) =>
+    Object.fromEntries(headers.map((header, index) => [header, cleanCell(row[index])])),
+  );
 await mkdir(resolve(outputRaw, ".."), { recursive: true });
 await mkdir(resolve(outputJson, ".."), { recursive: true });
 await writeFile(outputRaw, `\uFEFF${stringifyCsv(selectedRows)}`, "utf8");
@@ -68,7 +72,8 @@ await writeFile(
       sourceSnapshotDate,
       sourceEncoding: decoded.encoding,
       generatedAt: new Date().toISOString(),
-      caveat: "東京都オープンデータAPI一覧の2025-02-25スナップショットから財政関係行のみ抽出。最新性の判定には各原本・公式ページを優先する。",
+      caveat:
+        "東京都オープンデータAPI一覧の2025-02-25スナップショットから財政関係行のみ抽出。最新性の判定には各原本・公式ページを優先する。",
       recordCount: records.length,
       records,
     },
@@ -77,4 +82,6 @@ await writeFile(
   )}\n`,
   "utf8",
 );
-console.log(JSON.stringify({ sourcePath, outputRaw, outputJson, recordCount: records.length }, null, 2));
+console.log(
+  JSON.stringify({ sourcePath, outputRaw, outputJson, recordCount: records.length }, null, 2),
+);

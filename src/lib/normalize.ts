@@ -1,9 +1,12 @@
 export function cleanCell(value: string | undefined): string {
-  return (value ?? "")
-    .replace(/^\uFEFF/, "")
-    .replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F]/g, "")
-    .replace(/\u00A0/g, " ")
-    .trim();
+  return (
+    (value ?? "")
+      .replace(/^\uFEFF/, "")
+      // oxlint-disable-next-line no-control-regex -- Shift-JIS由来の制御文字除去が目的
+      .replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F]/g, "")
+      .replace(/\u00A0/g, " ")
+      .trim()
+  );
 }
 
 export function normalizeHeader(value: string): string {
@@ -73,7 +76,10 @@ export function parseJapaneseEraMonth(value: string): string | null {
 
 export function splitObjectAndSubObject(value: string): [string, string | null] {
   const cleaned = cleanCell(value);
-  const parts = cleaned.split(/(?:　+|\s{2,})/u).map(cleanCell).filter(Boolean);
+  const parts = cleaned
+    .split(/(?:　+|\s{2,})/u)
+    .map(cleanCell)
+    .filter(Boolean);
   if (parts.length <= 1) return [cleaned, null];
   return [parts[0], parts.slice(1).join(" / ")];
 }
