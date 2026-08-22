@@ -39,7 +39,9 @@ const subsidies = await readJson<
     summaryPath: string;
   }>
 >("data/normalized/subsidies/index.json");
-const catalog = await readJson<{ recordCount: number }>("data/normalized/catalog/relevant-api-catalog.json");
+const catalog = await readJson<{ recordCount: number }>(
+  "data/normalized/catalog/relevant-api-catalog.json",
+);
 const verification = await readJson<{
   pass: boolean;
   checkCount: number;
@@ -59,8 +61,11 @@ const summary = {
   requestedFiscalYears: manifest.requestedFiscalYears,
   contents: {
     manifestSources: manifest.sources.length,
-    officialRawSourcesDownloaded: manifest.sources.filter((source) => source.status === "downloaded").length,
-    referenceSources: manifest.sources.filter((source) => source.status === "reference-only").length,
+    officialRawSourcesDownloaded: manifest.sources.filter(
+      (source) => source.status === "downloaded",
+    ).length,
+    referenceSources: manifest.sources.filter((source) => source.status === "reference-only")
+      .length,
     sourceCategories,
     budget: {
       series: budget.length,
@@ -117,7 +122,11 @@ const summary = {
   ],
 };
 
-await writeFile(join(ROOT, "PACKAGE_SUMMARY.json"), `${JSON.stringify(summary, null, 2)}\n`, "utf8");
+await writeFile(
+  join(ROOT, "PACKAGE_SUMMARY.json"),
+  `${JSON.stringify(summary, null, 2)}\n`,
+  "utf8",
+);
 console.log(
   JSON.stringify(
     {

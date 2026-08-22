@@ -12,17 +12,24 @@
     "normalize": "node --max-old-space-size=3072 --experimental-strip-types scripts/normalize.ts",
     "manifest": "node --experimental-strip-types scripts/build-manifest.ts",
     "summary": "node --experimental-strip-types scripts/build-package-summary.ts",
+    "drilldown": "node --experimental-strip-types scripts/build-drilldown.ts",
     "verify": "node --experimental-strip-types scripts/verify.ts",
     "prepare:data": "pnpm run filter:catalog && pnpm run normalize && pnpm run manifest && pnpm run verify && pnpm run summary",
     "example": "node --experimental-strip-types scripts/example-analysis.ts",
     "fetch:pending": "node --experimental-strip-types scripts/fetch-pending.ts",
     "upload:r2": "node --experimental-strip-types scripts/upload-r2.ts",
     "typecheck": "tsc --noEmit",
+    "lint": "oxlint src public scripts",
+    "format": "oxfmt src public scripts",
+    "format:check": "oxfmt --check src public scripts",
+    "test": "node --experimental-strip-types --test tests/**/*.test.ts",
     "dev": "wrangler dev",
     "deploy": "wrangler deploy"
   },
   "devDependencies": {
     "@types/node": "latest",
+    "oxfmt": "^0.64.0",
+    "oxlint": "^1.79.0",
     "typescript": "latest",
     "wrangler": "latest"
   }

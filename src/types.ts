@@ -1,7 +1,4 @@
-export type SourceStatus =
-  | "downloaded"
-  | "pending-upstream-503"
-  | "reference-only";
+export type SourceStatus = "downloaded" | "pending-upstream-503" | "reference-only";
 
 export interface SourceEntry {
   id: string;

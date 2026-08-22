@@ -8,7 +8,10 @@ import type { DataManifest, SourceEntry } from "../src/types.ts";
 const ROOT = resolve(fileURLToPath(new URL("../", import.meta.url)));
 const generatedAt = new Date().toISOString();
 
-interface SourceDefinition extends Omit<SourceEntry, "status" | "bytes" | "sha256" | "retrievedAt"> {
+interface SourceDefinition extends Omit<
+  SourceEntry,
+  "status" | "bytes" | "sha256" | "retrievedAt"
+> {
   expectedStatus: SourceEntry["status"];
 }
 
@@ -68,7 +71,8 @@ const definitions: SourceDefinition[] = [
     title: "公金支出情報 令和7年度 2025年4月",
     category: "public-expenditure",
     fiscalYears: [2025],
-    sourceUrl: "https://www.opendata.metro.tokyo.lg.jp/kaikeikanri/op20250813_r7koukinsisyutujouhou_2025_04.csv",
+    sourceUrl:
+      "https://www.opendata.metro.tokyo.lg.jp/kaikeikanri/op20250813_r7koukinsisyutujouhou_2025_04.csv",
     localPath: "data/raw/public-expenditure/fy2025/2025-04.csv",
     expectedStatus: "downloaded",
   },
@@ -77,7 +81,8 @@ const definitions: SourceDefinition[] = [
     title: "公金支出情報 令和7年度 2025年5月",
     category: "public-expenditure",
     fiscalYears: [2025],
-    sourceUrl: "https://www.opendata.metro.tokyo.lg.jp/kaikeikanri/op20250813_r7koukinsisyutujouhou_2025_05.csv",
+    sourceUrl:
+      "https://www.opendata.metro.tokyo.lg.jp/kaikeikanri/op20250813_r7koukinsisyutujouhou_2025_05.csv",
     localPath: "data/raw/public-expenditure/fy2025/2025-05.csv",
     expectedStatus: "downloaded",
   },
@@ -86,7 +91,8 @@ const definitions: SourceDefinition[] = [
     title: "公金支出情報 令和7年度 2025年6月",
     category: "public-expenditure",
     fiscalYears: [2025],
-    sourceUrl: "https://www.opendata.metro.tokyo.lg.jp/kaikeikanri/op20250813_r7koukinsisyutujouhou_2025_06.csv",
+    sourceUrl:
+      "https://www.opendata.metro.tokyo.lg.jp/kaikeikanri/op20250813_r7koukinsisyutujouhou_2025_06.csv",
     localPath: "data/raw/public-expenditure/fy2025/2025-06.csv",
     expectedStatus: "downloaded",
   },
@@ -95,7 +101,8 @@ const definitions: SourceDefinition[] = [
     title: "公金支出情報 令和7年度 2025年7月",
     category: "public-expenditure",
     fiscalYears: [2025],
-    sourceUrl: "https://www.opendata.metro.tokyo.lg.jp/kaikeikanri/op20250903_r7koukinsisyutujouhou_2025_07.csv",
+    sourceUrl:
+      "https://www.opendata.metro.tokyo.lg.jp/kaikeikanri/op20250903_r7koukinsisyutujouhou_2025_07.csv",
     localPath: "data/raw/public-expenditure/fy2025/2025-07.csv",
     expectedStatus: "downloaded",
   },
@@ -104,7 +111,8 @@ const definitions: SourceDefinition[] = [
     title: "公金支出情報 令和7年度 2025年8月",
     category: "public-expenditure",
     fiscalYears: [2025],
-    sourceUrl: "https://www.opendata.metro.tokyo.lg.jp/kaikeikanri/op202501002_r7koukinsisyutujouhou_2025_08.csv",
+    sourceUrl:
+      "https://www.opendata.metro.tokyo.lg.jp/kaikeikanri/op202501002_r7koukinsisyutujouhou_2025_08.csv",
     localPath: "data/raw/public-expenditure/fy2025/2025-08.csv",
     expectedStatus: "downloaded",
     notes: "ファイル名の日付部分は東京都カタログ掲載値をそのまま使用。",
@@ -114,7 +122,8 @@ const definitions: SourceDefinition[] = [
     title: "公金支出情報 令和7年度 2025年9月",
     category: "public-expenditure",
     fiscalYears: [2025],
-    sourceUrl: "https://www.opendata.metro.tokyo.lg.jp/kaikeikanri/op20251114_r7koukinsisyutujouhou_2025_09.csv",
+    sourceUrl:
+      "https://www.opendata.metro.tokyo.lg.jp/kaikeikanri/op20251114_r7koukinsisyutujouhou_2025_09.csv",
     localPath: "data/raw/public-expenditure/fy2025/2025-09.csv",
     expectedStatus: "downloaded",
   },
@@ -123,7 +132,8 @@ const definitions: SourceDefinition[] = [
     title: "公金支出情報 令和7年度 2025年10月",
     category: "public-expenditure",
     fiscalYears: [2025],
-    sourceUrl: "https://www.opendata.metro.tokyo.lg.jp/kaikeikanri/op20251128_r7koukinsisyutujouhou_2025_10.csv",
+    sourceUrl:
+      "https://www.opendata.metro.tokyo.lg.jp/kaikeikanri/op20251128_r7koukinsisyutujouhou_2025_10.csv",
     localPath: "data/raw/public-expenditure/fy2025/2025-10.csv",
     expectedStatus: "downloaded",
   },
@@ -132,7 +142,8 @@ const definitions: SourceDefinition[] = [
     title: "公金支出情報 令和7年度 2025年11月",
     category: "public-expenditure",
     fiscalYears: [2025],
-    sourceUrl: "https://www.opendata.metro.tokyo.lg.jp/kaikeikanri/op20251226_r7koukinsisyutujouhou_2025_11.csv",
+    sourceUrl:
+      "https://www.opendata.metro.tokyo.lg.jp/kaikeikanri/op20251226_r7koukinsisyutujouhou_2025_11.csv",
     localPath: "data/raw/public-expenditure/fy2025/2025-11.csv",
     expectedStatus: "downloaded",
   },
@@ -141,7 +152,8 @@ const definitions: SourceDefinition[] = [
     title: "公金支出情報 令和7年度 2025年12月",
     category: "public-expenditure",
     fiscalYears: [2025],
-    sourceUrl: "https://www.opendata.metro.tokyo.lg.jp/kaikeikanri/op20260130_r7koukinsisyutujouhou_2025_12.csv",
+    sourceUrl:
+      "https://www.opendata.metro.tokyo.lg.jp/kaikeikanri/op20260130_r7koukinsisyutujouhou_2025_12.csv",
     localPath: "data/raw/public-expenditure/fy2025/2025-12.csv",
     expectedStatus: "downloaded",
   },
@@ -150,7 +162,8 @@ const definitions: SourceDefinition[] = [
     title: "公金支出情報 令和7年度 2026年1月",
     category: "public-expenditure",
     fiscalYears: [2025],
-    sourceUrl: "https://www.opendata.metro.tokyo.lg.jp/kaikeikanri/op20260227_r7koukinsisyutujouhou_2026_1.csv",
+    sourceUrl:
+      "https://www.opendata.metro.tokyo.lg.jp/kaikeikanri/op20260227_r7koukinsisyutujouhou_2026_1.csv",
     localPath: "data/raw/public-expenditure/fy2025/2026-01.csv",
     expectedStatus: "downloaded",
   },
@@ -159,7 +172,8 @@ const definitions: SourceDefinition[] = [
     title: "公金支出情報 令和7年度 給与関係費等",
     category: "public-expenditure",
     fiscalYears: [2025],
-    sourceUrl: "https://www.opendata.metro.tokyo.lg.jp/kaikeikanri/op20260227_r7koukinsisyutujouhou_kyuyokankei.csv",
+    sourceUrl:
+      "https://www.opendata.metro.tokyo.lg.jp/kaikeikanri/op20260227_r7koukinsisyutujouhou_kyuyokankei.csv",
     localPath: "data/raw/public-expenditure/fy2025/payroll.csv",
     expectedStatus: "downloaded",
   },
@@ -186,20 +200,61 @@ const definitions: SourceDefinition[] = [
     title: "東京都オープンデータAPI一覧（財政関係抽出）",
     category: "catalog",
     fiscalYears: [2025],
-    sourceUrl: "https://data.storage.data.metro.tokyo.lg.jp/digitalservice/130001_tokyo_opendata_api_list.csv",
+    sourceUrl:
+      "https://data.storage.data.metro.tokyo.lg.jp/digitalservice/130001_tokyo_opendata_api_list.csv",
     localPath: "data/raw/catalog/relevant-api-catalog.csv",
     expectedStatus: "downloaded",
     notes: "2025-02-25時点のAPI一覧から財政関連行を抽出した参照用スナップショット。",
   },
   ...[
-    ["fy2025-2026-02", "令和7年度 2026年2月", "0802koukinsisyutsu-xlsx", "data/raw/public-expenditure/fy2025/2026-02.xlsx"],
-    ["fy2025-2026-03", "令和7年度 2026年3月", "0803koukinsisyutsu-xlsx", "data/raw/public-expenditure/fy2025/2026-03.xlsx"],
-    ["fy2025-closing-04", "令和7年度 2026年4月 出納整理期間", "0804_suito_koukinsisyutsu-xlsx", "data/raw/public-expenditure/fy2025/2026-04-closing.xlsx"],
-    ["fy2025-closing-05", "令和7年度 2026年5月 出納整理期間", "0805_suito_koukinsisyutsu-xlsx", "data/raw/public-expenditure/fy2025/2026-05-closing.xlsx"],
-    ["fy2026-2026-04", "令和8年度 2026年4月", "0804koukinsisyutsu-xlsx", "data/raw/public-expenditure/fy2026/2026-04.xlsx"],
-    ["fy2026-2026-05", "令和8年度 2026年5月", "0805koukinsisyutsu-xlsx", "data/raw/public-expenditure/fy2026/2026-05.xlsx"],
-    ["fy2026-2026-06", "令和8年度 2026年6月", "0806koukinsisyutsu-xlsx", "data/raw/public-expenditure/fy2026/2026-06.xlsx"],
-    ["fy2026-payroll", "令和8年度 給与関係費等", "0806koukinsisyutsukyuuyo-xlsx", "data/raw/public-expenditure/fy2026/payroll.xlsx"],
+    [
+      "fy2025-2026-02",
+      "令和7年度 2026年2月",
+      "0802koukinsisyutsu-xlsx",
+      "data/raw/public-expenditure/fy2025/2026-02.xlsx",
+    ],
+    [
+      "fy2025-2026-03",
+      "令和7年度 2026年3月",
+      "0803koukinsisyutsu-xlsx",
+      "data/raw/public-expenditure/fy2025/2026-03.xlsx",
+    ],
+    [
+      "fy2025-closing-04",
+      "令和7年度 2026年4月 出納整理期間",
+      "0804_suito_koukinsisyutsu-xlsx",
+      "data/raw/public-expenditure/fy2025/2026-04-closing.xlsx",
+    ],
+    [
+      "fy2025-closing-05",
+      "令和7年度 2026年5月 出納整理期間",
+      "0805_suito_koukinsisyutsu-xlsx",
+      "data/raw/public-expenditure/fy2025/2026-05-closing.xlsx",
+    ],
+    [
+      "fy2026-2026-04",
+      "令和8年度 2026年4月",
+      "0804koukinsisyutsu-xlsx",
+      "data/raw/public-expenditure/fy2026/2026-04.xlsx",
+    ],
+    [
+      "fy2026-2026-05",
+      "令和8年度 2026年5月",
+      "0805koukinsisyutsu-xlsx",
+      "data/raw/public-expenditure/fy2026/2026-05.xlsx",
+    ],
+    [
+      "fy2026-2026-06",
+      "令和8年度 2026年6月",
+      "0806koukinsisyutsu-xlsx",
+      "data/raw/public-expenditure/fy2026/2026-06.xlsx",
+    ],
+    [
+      "fy2026-payroll",
+      "令和8年度 給与関係費等",
+      "0806koukinsisyutsukyuuyo-xlsx",
+      "data/raw/public-expenditure/fy2026/payroll.xlsx",
+    ],
   ].map(([id, title, remoteName, localPath]) => ({
     id: `expenditure-pending-${id}`,
     title: `公金支出情報 ${title}`,
@@ -208,63 +263,72 @@ const definitions: SourceDefinition[] = [
     sourceUrl: `https://www.kaikeikanri.metro.tokyo.lg.jp/documents/d/kaikeikanri/${remoteName}`,
     localPath,
     expectedStatus: "pending-upstream-503" as const,
-    notes: "公式配信サーバーは取得時に断続的な503を返す場合がある。ローカル原本がない場合はfetch:pendingで再取得可能。",
+    notes:
+      "公式配信サーバーは取得時に断続的な503を返す場合がある。ローカル原本がない場合はfetch:pendingで再取得可能。",
   })),
   ...[
     {
       id: "document-fy2026-budget-proposal-overview",
       title: "令和8年度 東京都予算案の概要",
       fiscalYears: [2026],
-      sourceUrl: "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/20260130_reiwa8nendo_tokyotoyosanangaiyou/8yosanangaiyou.pdf",
+      sourceUrl:
+        "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/20260130_reiwa8nendo_tokyotoyosanangaiyou/8yosanangaiyou.pdf",
       localPath: "data/raw/documents/fy2026/budget-proposal-overview.pdf",
     },
     {
       id: "document-fy2026-budget-proposal-visual-summary",
       title: "令和8年度 東京都予算案説明資料（図解）",
       fiscalYears: [2026],
-      sourceUrl: "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/20260130_reiwa8nendo_tokyotoyosanangaiyou/8yosan_gaiyoushiryou.pdf",
+      sourceUrl:
+        "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/20260130_reiwa8nendo_tokyotoyosanangaiyou/8yosan_gaiyoushiryou.pdf",
       localPath: "data/raw/documents/fy2026/budget-proposal-visual-summary.pdf",
     },
     {
       id: "document-fy2026-major-projects",
       title: "令和8年度 主要事業",
       fiscalYears: [2026],
-      sourceUrl: "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/20260130_reiwa8nendo_tokyotoyosanangaiyou/8shuyouzigyou.pdf",
+      sourceUrl:
+        "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/20260130_reiwa8nendo_tokyotoyosanangaiyou/8shuyouzigyou.pdf",
       localPath: "data/raw/documents/fy2026/major-projects.pdf",
     },
     {
       id: "document-fy2026-subsidy-execution-review",
       title: "令和8年度予算編成における補助金の執行状況の総点検",
       fiscalYears: [2025, 2026],
-      sourceUrl: "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/20260130_reiwa8nendo_tokyotoyosanangaiyou/8hojokinnosikkoujoukyou.pdf",
+      sourceUrl:
+        "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/20260130_reiwa8nendo_tokyotoyosanangaiyou/8hojokinnosikkoujoukyou.pdf",
       localPath: "data/raw/documents/fy2026/subsidy-execution-review.pdf",
     },
     {
       id: "document-fy2025-budget-proposal-overview",
       title: "令和7年度 東京都予算案の概要",
       fiscalYears: [2025],
-      sourceUrl: "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/20250131_reiwa7nendo_tokyotoyosanangaiyou/7yosanangaiyou.pdf",
+      sourceUrl:
+        "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/20250131_reiwa7nendo_tokyotoyosanangaiyou/7yosanangaiyou.pdf",
       localPath: "data/raw/documents/fy2025/budget-proposal-overview.pdf",
     },
     {
       id: "document-fy2025-budget-proposal-visual-summary",
       title: "令和7年度 東京都予算案説明資料（図解）",
       fiscalYears: [2025],
-      sourceUrl: "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/20250131_reiwa7nendo_tokyotoyosanangaiyou/7yosan_gaiyoushiryou.pdf",
+      sourceUrl:
+        "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/20250131_reiwa7nendo_tokyotoyosanangaiyou/7yosan_gaiyoushiryou.pdf",
       localPath: "data/raw/documents/fy2025/budget-proposal-visual-summary.pdf",
     },
     {
       id: "document-fy2025-major-projects",
       title: "令和7年度 主要事業",
       fiscalYears: [2025],
-      sourceUrl: "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/20250131_reiwa7nendo_tokyotoyosanangaiyou/7shuyouzigyou.pdf",
+      sourceUrl:
+        "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/20250131_reiwa7nendo_tokyotoyosanangaiyou/7shuyouzigyou.pdf",
       localPath: "data/raw/documents/fy2025/major-projects.pdf",
     },
     {
       id: "document-fy2025-general-account-closing-estimate",
       title: "令和7年度 一般会計決算（見込み）",
       fiscalYears: [2025],
-      sourceUrl: "https://www.zaimu.metro.tokyo.lg.jp/documents/d/zaimu/20260731_reiwa7nendo_ippankaikeikessan_mikomi_",
+      sourceUrl:
+        "https://www.zaimu.metro.tokyo.lg.jp/documents/d/zaimu/20260731_reiwa7nendo_ippankaikeikessan_mikomi_",
       localPath: "data/raw/documents/fy2025/general-account-closing-estimate.pdf",
       notes: "2026年7月31日公表の見込み値。確定した普通会計決算ではない。",
     },
@@ -294,7 +358,8 @@ const definitions: SourceDefinition[] = [
     title: "東京都会計管理局: 公開データ（令和7年度）",
     category: "reference",
     fiscalYears: [2025],
-    sourceUrl: "https://www.kaikeikanri.metro.tokyo.lg.jp/about/jyouhoukoukai/koukinsisyutsu/07koukaidata",
+    sourceUrl:
+      "https://www.kaikeikanri.metro.tokyo.lg.jp/about/jyouhoukoukai/koukinsisyutsu/07koukaidata",
     expectedStatus: "reference-only",
   },
   {
@@ -302,7 +367,8 @@ const definitions: SourceDefinition[] = [
     title: "東京都会計管理局: 公開データ（令和8年度）",
     category: "reference",
     fiscalYears: [2026],
-    sourceUrl: "https://www.kaikeikanri.metro.tokyo.lg.jp/about/jyouhoukoukai/koukinsisyutsu/08koukaidata",
+    sourceUrl:
+      "https://www.kaikeikanri.metro.tokyo.lg.jp/about/jyouhoukoukai/koukinsisyutsu/08koukaidata",
     expectedStatus: "reference-only",
   },
   {
@@ -351,10 +417,15 @@ const manifest: DataManifest = {
 };
 await mkdir(join(ROOT, "data"), { recursive: true });
 await mkdir(join(ROOT, "sources"), { recursive: true });
-await writeFile(join(ROOT, "data", "manifest.json"), `${JSON.stringify(manifest, null, 2)}\n`, "utf8");
+await writeFile(
+  join(ROOT, "data", "manifest.json"),
+  `${JSON.stringify(manifest, null, 2)}\n`,
+  "utf8",
+);
 
 const categoryCounts = new Map<string, number>();
-for (const source of sources) categoryCounts.set(source.category, (categoryCounts.get(source.category) ?? 0) + 1);
+for (const source of sources)
+  categoryCounts.set(source.category, (categoryCounts.get(source.category) ?? 0) + 1);
 const lines = [
   "# 公式ソース一覧",
   "",
@@ -380,4 +451,10 @@ const lines = [
   "",
 ];
 await writeFile(join(ROOT, "sources", "official-sources.md"), `${lines.join("\n")}\n`, "utf8");
-console.log(JSON.stringify({ sourceCount: sources.length, categoryCounts: Object.fromEntries(categoryCounts) }, null, 2));
+console.log(
+  JSON.stringify(
+    { sourceCount: sources.length, categoryCounts: Object.fromEntries(categoryCounts) },
+    null,
+    2,
+  ),
+);

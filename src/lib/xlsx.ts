@@ -53,7 +53,10 @@ function readZipEntries(buffer: Buffer): Map<string, Buffer> {
     let data: Buffer;
     if (entry.compressionMethod === 0) data = Buffer.from(compressed);
     else if (entry.compressionMethod === 8) data = inflateRawSync(compressed);
-    else throw new Error(`Unsupported ZIP compression method ${entry.compressionMethod} for ${entry.name}`);
+    else
+      throw new Error(
+        `Unsupported ZIP compression method ${entry.compressionMethod} for ${entry.name}`,
+      );
     output.set(entry.name, data);
   }
   return output;
@@ -61,8 +64,12 @@ function readZipEntries(buffer: Buffer): Map<string, Buffer> {
 
 function decodeXmlEntities(value: string): string {
   return value
-    .replace(/&#x([0-9a-f]+);/giu, (_, hex: string) => String.fromCodePoint(Number.parseInt(hex, 16)))
-    .replace(/&#(\d+);/gu, (_, decimal: string) => String.fromCodePoint(Number.parseInt(decimal, 10)))
+    .replace(/&#x([0-9a-f]+);/giu, (_, hex: string) =>
+      String.fromCodePoint(Number.parseInt(hex, 16)),
+    )
+    .replace(/&#(\d+);/gu, (_, decimal: string) =>
+      String.fromCodePoint(Number.parseInt(decimal, 10)),
+    )
     .replaceAll("&lt;", "<")
     .replaceAll("&gt;", ">")
     .replaceAll("&quot;", '"')

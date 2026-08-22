@@ -1,12 +1,6 @@
 import { once } from "node:events";
 import { createWriteStream } from "node:fs";
-import {
-  mkdir,
-  readFile,
-  readdir,
-  rm,
-  writeFile,
-} from "node:fs/promises";
+import { mkdir, readFile, readdir, rm, writeFile } from "node:fs/promises";
 import { basename, extname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { decodeText, parseCsv } from "../src/lib/csv.ts";
@@ -21,11 +15,7 @@ import {
   splitObjectAndSubObject,
   uniqueHeaders,
 } from "../src/lib/normalize.ts";
-import type {
-  PayrollRecord,
-  PublicExpenditureRecord,
-  SubsidyRecord,
-} from "../src/types.ts";
+import type { PayrollRecord, PublicExpenditureRecord, SubsidyRecord } from "../src/types.ts";
 
 const ROOT = resolve(fileURLToPath(new URL("../", import.meta.url)));
 const RAW = join(ROOT, "data", "raw");
@@ -236,7 +226,9 @@ function addAggregate(
 function sortedAggregates(
   map: Map<string, { key: string; transactionCount: number; amountYen: number }>,
 ): { key: string; transactionCount: number; amountYen: number }[] {
-  return [...map.values()].sort((a, b) => b.amountYen - a.amountYen || a.key.localeCompare(b.key, "ja"));
+  return [...map.values()].sort(
+    (a, b) => b.amountYen - a.amountYen || a.key.localeCompare(b.key, "ja"),
+  );
 }
 
 async function writeLine(
@@ -295,7 +287,11 @@ async function normalizePublicExpenditureYear(fiscalYear: 2025 | 2026): Promise<
     const { rows } = await readTabular(sourcePath);
     const detectedHeaderIndex = rows.findIndex((row) => {
       const normalized = row.map(normalizeHeader);
-      return normalized.includes("局名") && normalized.includes("支払日") && normalized.some((value) => value.startsWith("支払額"));
+      return (
+        normalized.includes("局名") &&
+        normalized.includes("支払日") &&
+        normalized.some((value) => value.startsWith("支払額"))
+      );
     });
     if (detectedHeaderIndex < 0) throw new Error(`Header not found: ${file}`);
     const headers = rows[detectedHeaderIndex];
@@ -325,7 +321,9 @@ async function normalizePublicExpenditureYear(fiscalYear: 2025 | 2026): Promise<
       }
       const paidAt = parseJapaneseEraDate(row[paidAtIndex] ?? "");
       if (!paidAt) invalidDateCount += 1;
-      const [expenseSection, expenseSubsection] = splitObjectAndSubObject(row[subObjectIndex] ?? "");
+      const [expenseSection, expenseSubsection] = splitObjectAndSubObject(
+        row[subObjectIndex] ?? "",
+      );
       const record: PublicExpenditureRecord = {
         fiscalYear,
         sourceMonth,
@@ -387,7 +385,9 @@ async function normalizePublicExpenditureYear(fiscalYear: 2025 | 2026): Promise<
   if (payrollFile) {
     const payrollPath = join(sourceDirectory, payrollFile);
     const { rows: payrollRows } = await readTabular(payrollPath);
-    const payrollHeaderIndex = payrollRows.findIndex((row) => row.map(normalizeHeader).includes("支払年月"));
+    const payrollHeaderIndex = payrollRows.findIndex((row) =>
+      row.map(normalizeHeader).includes("支払年月"),
+    );
     if (payrollHeaderIndex < 0) throw new Error(`Payroll header not found: ${payrollFile}`);
     const payrollHeaders = uniqueHeaders(payrollRows[payrollHeaderIndex]);
     for (let rowIndex = payrollHeaderIndex + 1; rowIndex < payrollRows.length; rowIndex += 1) {
@@ -421,7 +421,8 @@ async function normalizePublicExpenditureYear(fiscalYear: 2025 | 2026): Promise<
     }
   }
   for (const monthAggregate of monthly.values()) {
-    monthAggregate.combinedAmountYen = monthAggregate.transactionAmountYen + monthAggregate.payrollAmountYen;
+    monthAggregate.combinedAmountYen =
+      monthAggregate.transactionAmountYen + monthAggregate.payrollAmountYen;
   }
 
   const monthSummary = [...monthly.values()].sort((a, b) => a.month.localeCompare(b.month));
@@ -438,7 +439,11 @@ async function normalizePublicExpenditureYear(fiscalYear: 2025 | 2026): Promise<
   await writeJson(join(outputDirectory, "by-chapter.json"), sortedAggregates(byChapter));
   await writeJson(join(outputDirectory, "summary.json"), {
     fiscalYear,
-    sourceMonths: [...new Set(transactionFiles.map((file) => basename(file, extname(file)).replace(/-closing$/u, "")))].sort(),
+    sourceMonths: [
+      ...new Set(
+        transactionFiles.map((file) => basename(file, extname(file)).replace(/-closing$/u, "")),
+      ),
+    ].sort(),
     sourceFiles: transactionFiles,
     transactionFileCount: transactionFiles.length,
     transactionCount,
@@ -497,7 +502,8 @@ function normalizeSubsidyRows(
   sourceFile: string,
 ): SubsidyRecord[] {
   const headers = rows[0].map(normalizeHeader);
-  const column = (name: string): number => headers.findIndex((header) => header === normalizeHeader(name));
+  const column = (name: string): number =>
+    headers.findIndex((header) => header === normalizeHeader(name));
   const indexes = {
     bureauNo: column("所管局№"),
     bureau: column("所管局"),
@@ -551,7 +557,9 @@ function subsidyAggregate(
     aggregate.budgetThousandYen += record.budgetThousandYen ?? 0;
     map.set(key, aggregate);
   }
-  return [...map.values()].sort((a, b) => b.budgetThousandYen - a.budgetThousandYen || a.key.localeCompare(b.key, "ja"));
+  return [...map.values()].sort(
+    (a, b) => b.budgetThousandYen - a.budgetThousandYen || a.key.localeCompare(b.key, "ja"),
+  );
 }
 
 async function normalizeSubsidies(): Promise<unknown[]> {
@@ -565,7 +573,10 @@ async function normalizeSubsidies(): Promise<unknown[]> {
     const records = normalizeSubsidyRows(rows, fiscalYear, `data/raw/subsidies/${file}`);
     const jsonl = records.map((record) => JSON.stringify(record)).join("\n") + "\n";
     await writeFile(join(outputDirectory, `${fiscalYear}.jsonl`), jsonl, "utf8");
-    const totalBudgetThousandYen = records.reduce((sum, record) => sum + (record.budgetThousandYen ?? 0), 0);
+    const totalBudgetThousandYen = records.reduce(
+      (sum, record) => sum + (record.budgetThousandYen ?? 0),
+      0,
+    );
     const summary = {
       fiscalYear,
       sourceFile: `data/raw/subsidies/${file}`,
@@ -706,7 +717,9 @@ async function main(): Promise<void> {
     ],
   };
   await writeJson(join(NORMALIZED, "coverage.json"), coverage);
-  console.log(JSON.stringify({ budget, settlement, publicExpenditure, subsidies, closingEstimate }, null, 2));
+  console.log(
+    JSON.stringify({ budget, settlement, publicExpenditure, subsidies, closingEstimate }, null, 2),
+  );
 }
 
 await main();

@@ -17,10 +17,7 @@ export function decodeText(bytes: Uint8Array): DecodedText {
   }
 }
 
-export function parseCsvEach(
-  text: string,
-  onRow: (row: string[], rowIndex: number) => void,
-): void {
+export function parseCsvEach(text: string, onRow: (row: string[], rowIndex: number) => void): void {
   let row: string[] = [];
   let field = "";
   let quoted = false;

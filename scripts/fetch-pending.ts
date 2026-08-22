@@ -4,7 +4,9 @@ import { fileURLToPath } from "node:url";
 import type { DataManifest, SourceEntry } from "../src/types.ts";
 
 const ROOT = resolve(fileURLToPath(new URL("../", import.meta.url)));
-const manifest = JSON.parse(await readFile(join(ROOT, "data", "manifest.json"), "utf8")) as DataManifest;
+const manifest = JSON.parse(
+  await readFile(join(ROOT, "data", "manifest.json"), "utf8"),
+) as DataManifest;
 const pending = manifest.sources.filter(
   (source): source is SourceEntry & { localPath: string } =>
     source.status === "pending-upstream-503" && Boolean(source.localPath),
