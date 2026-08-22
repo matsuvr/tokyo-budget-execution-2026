@@ -332,6 +332,41 @@ const definitions: SourceDefinition[] = [
       localPath: "data/raw/documents/fy2025/general-account-closing-estimate.pdf",
       notes: "2026年7月31日公表の見込み値。確定した普通会計決算ではない。",
     },
+    ...[
+      {
+        id: "er-fy2024-settlement-all-accounts-statement",
+        title: "令和6年度 東京都各会計歳入歳出決算書",
+        remoteName: "06kessan-1",
+        fileName: "tokyo-all-accounts-settlement-statement.pdf",
+      },
+      {
+        id: "er-fy2024-settlement-general-account-detail",
+        title: "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+        remoteName: "06kessan-2",
+        fileName: "general-account-settlement-detail.pdf",
+        notes: "2024年度一般会計の正式決算数値の正。執行レビューの分母・分子はここから取得する。",
+      },
+      {
+        id: "er-fy2024-settlement-reference-total-overview",
+        title: "令和6年度 東京都決算参考書 決算の総括",
+        remoteName: "06kessan-6",
+        fileName: "settlement-reference-total-overview.pdf",
+      },
+      {
+        id: "er-fy2024-settlement-reference-general-account",
+        title: "令和6年度 東京都決算参考書 一般会計",
+        remoteName: "06kessan-7",
+        fileName: "settlement-reference-general-account.pdf",
+      },
+    ].map((document) => ({
+      id: document.id,
+      title: document.title,
+      category: "document" as const,
+      fiscalYears: [2024] as number[],
+      sourceUrl: `https://www.kaikeikanri.metro.tokyo.lg.jp/documents/d/kaikeikanri/${document.remoteName}`,
+      localPath: `data/raw/execution-review/fy2024/settlement/${document.fileName}`,
+      notes: document.notes,
+    })),
   ].map((document) => ({
     ...document,
     category: "document" as const,

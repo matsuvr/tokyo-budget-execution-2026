@@ -1,6 +1,6 @@
 # 公式ソース一覧
 
-生成日時: 2026-08-21T07:29:20.365Z
+生成日時: 2026-08-22T04:36:28.492Z
 
 原本URL、ローカル原本、取得状態、SHA-256は `data/manifest.json` を正とします。
 
@@ -11,7 +11,7 @@
 - public-expenditure: 19
 - subsidy: 2
 - catalog: 1
-- document: 8
+- document: 12
 - reference: 5
 
 ## 取得待ち
