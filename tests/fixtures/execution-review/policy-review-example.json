@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "note": "フォーマット例。実在の候補とは対応しない。",
+  "records": [
+    {
+      "reviewId": "rev-0001",
+      "comparisonId": "cmp-0042",
+      "policyTitle": "地域公共交通活性化・再生事業",
+      "bureau": "都市整備局",
+      "executionMethod": "subsidy",
+      "officialDescription": "バス路線維持のため市町村への補助を行う経費。",
+      "reasonStatus": "confirmed",
+      "reasonTags": ["low-demand", "external-condition-change"],
+      "improvementStatus": "confirmed",
+      "improvementSummary": "補助要件の見直しを令和8年度予算案で実施。",
+      "evidenceReferences": [
+        {
+          "title": "令和6年度 主要施策の成果",
+          "url": "https://www.zaimu.metro.tokyo.lg.jp/documents/d/zaimu/20250924shuyousisakunoseika",
+          "page": 42,
+          "summary": "利用者数の減少と燃料価格高騰を理由として記載。"
+        },
+        {
+          "title": "令和8年度予算案 主要な施策",
+          "url": "https://www.metro.tokyo.lg.jp/documents/d/tosei/20260130_39_04",
+          "page": null,
+          "summary": "補助制度の見直し方針を記載。"
+        }
+      ],
+      "reviewerNotes": "公式資料の該当2か所を確認。推測によるタグ付けはしていない。"
+    },
+    {
+      "reviewId": "rev-0002",
+      "comparisonId": "cmp-0043",
+      "policyTitle": "（参考例）施設整備費",
+      "bureau": null,
+      "executionMethod": "construction",
+      "officialDescription": "入札不成立などにより事業執行が遅延した事例の説明。",
+      "reasonStatus": "confirmed",
+      "reasonTags": ["contract-or-specification-delay"],
+      "improvementStatus": "not-found",
+      "improvementSummary": "",
+      "evidenceReferences": [
+        {
+          "title": "令和6年度 決算参考書 一般会計",
+          "url": "https://www.kaikeikanri.metro.tokyo.lg.jp/information/update/r7/09/24/3",
+          "page": 12,
+          "summary": "入札不成立による繰越を記載。"
+        }
+      ],
+      "reviewerNotes": "改善策の記載は確認できず not-found。"
+    },
+    {
+      "reviewId": "rev-0003",
+      "comparisonId": "cmp-0044",
+      "policyTitle": "（参考例）予備費",
+      "bureau": "財務局",
+      "executionMethod": "unknown",
+      "officialDescription": "予備費は性質上、個別の低執行理由の概念が適用されない。",
+      "reasonStatus": "not-applicable",
+      "reasonTags": [],
+      "improvementStatus": "not-applicable",
+      "improvementSummary": "",
+      "evidenceReferences": [
+        {
+          "title": "地方自治法第218条関係 資料",
+          "url": "https://www.reiki.metro.tokyo.lg.jp/",
+          "page": null,
+          "summary": "予備費の性格に関する一般的な説明。"
+        }
+      ],
+      "reviewerNotes": "理由タグは付けない。"
+    }
+  ]
+}
