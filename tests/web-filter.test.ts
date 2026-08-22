@@ -3,6 +3,7 @@ import assert from "node:assert/strict";
 import {
   applyCandidateFilters,
   availableBureaus,
+  clearFilters,
   defaultFilters,
 } from "../web/filter.ts";
 import type { ReviewCandidateView } from "../web/types.ts";
@@ -81,6 +82,22 @@ describe("applyCandidateFilters", () => {
       confidences: [],
     });
     assert.deepEqual(filtered.map((r) => r.comparisonId), ["cmp-0003", "cmp-0001"]);
+  });
+
+  it("clearFiltersは全条件を解除し全件表示に戻す", () => {
+    const cleared = clearFilters();
+    assert.equal(cleared.status, "all");
+    assert.equal(cleared.bureau, "all");
+    assert.deepEqual(cleared.confidences, []);
+    assert.equal(applyCandidateFilters(records, cleared).length, records.length);
+  });
+
+  it("既定条件はneeds-explanation・局すべて・A/B", () => {
+    assert.deepEqual(defaultFilters(), {
+      status: "needs-explanation",
+      bureau: "all",
+      confidences: ["A", "B"],
+    });
   });
 });
 

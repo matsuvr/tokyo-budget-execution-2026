@@ -12,6 +12,25 @@ describe("formatYen", () => {
     assert.equal(formatYen(-20_000_000), "△2,000万円");
   });
 
+  it("兆円・億円・万円の境界で正しく区分される", () => {
+    assert.equal(formatYen(99_990_000), "9,999万円");
+    assert.equal(formatYen(100_000_000), "1億円");
+    assert.equal(formatYen(999_900_000_000), "9,999億円");
+    assert.equal(formatYen(1_000_000_000_000), "1兆円");
+  });
+
+  it("0円は確認不能とせず、nullや非有限値とは区別する", () => {
+    assert.equal(formatYen(0), "0円");
+    assert.notEqual(formatYen(null), formatYen(0));
+  });
+
+  it("負数は△付きで明示し、非有限値は確認不能を返す", () => {
+    assert.equal(formatYen(-1_000_000_000), "△10億円");
+    assert.equal(formatYen(Number.NaN), "確認不能");
+    assert.equal(formatYen(Number.POSITIVE_INFINITY), "確認不能");
+    assert.equal(formatYen(Number.NEGATIVE_INFINITY), "確認不能");
+  });
+
   it("欠損は0とみなさず確認不能を返す", () => {
     assert.equal(formatYen(null), "確認不能");
     assert.equal(formatYen(undefined), "確認不能");
@@ -25,8 +44,16 @@ describe("formatRate", () => {
     assert.equal(formatRate(0), "0.0%");
   });
 
-  it("欠損は確認不能を返す", () => {
+  it("表示丸めは小数第2位を四捨五入した百分率（19.95%→20.0%）", () => {
+    assert.equal(formatRate(0.1995), "20.0%");
+    assert.equal(formatRate(0.19949), "19.9%");
+    assert.equal(formatRate(1), "100.0%");
+  });
+
+  it("欠損は0%に変換せず確認不能を返す", () => {
     assert.equal(formatRate(null), "確認不能");
+    assert.notEqual(formatRate(null), formatRate(0));
+    assert.equal(formatRate(Number.NaN), "確認不能");
   });
 });
 

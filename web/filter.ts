@@ -21,6 +21,11 @@ export function defaultFilters(): CandidateFilters {
   return { status: "needs-explanation", bureau: ALL, confidences: ["A", "B"] };
 }
 
+/** 「条件をリセット」相当。すべての条件を解除して全件表示に戻す */
+export function clearFilters(): CandidateFilters {
+  return { status: ALL, bureau: ALL, confidences: [] };
+}
+
 /** 局名の代わりに使う2024年度の款名（番号接頭辞を除す） */
 export function bureauOfCandidate(candidate: ReviewCandidateView): string {
   const chapter = candidate.fy2024Keys[0]?.chapter ?? "(不明)";

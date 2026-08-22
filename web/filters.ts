@@ -1,5 +1,5 @@
 import { el } from "./dom.js";
-import { ALL, availableBureaus } from "./filter.js";
+import { ALL, availableBureaus, clearFilters } from "./filter.js";
 import { confidenceLabel, STATUS_LABELS } from "./labels.js";
 import type { CandidateFilters } from "./filter.js";
 import type { ReviewCandidateView } from "./types.js";
@@ -76,7 +76,7 @@ export function renderFilterControls(
       const box = document.querySelector<HTMLInputElement>(`#confidence-${CSS.escape(choice)}`);
       if (box != null) box.checked = false;
     }
-    callbacks.onFiltersChange({ status: ALL, bureau: ALL, confidences: [] });
+    callbacks.onFiltersChange(clearFilters());
   });
 
   return el(
