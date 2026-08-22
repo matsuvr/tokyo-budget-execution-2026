@@ -1,12 +1,27 @@
 import { el } from "./dom.js";
 import { formatRate, formatYen, formatYenExact } from "./format.js";
 import { bureauOfChapter, confidenceLabel, statusLabel } from "./labels.js";
-import type { AccountKeyView, ReviewCandidateView } from "./types.js";
+import { renderDetailPanel } from "./detail.js";
+import type { AccountKeyView, PolicyReviewDetailView, ReviewCandidateView } from "./types.js";
 
 /**
- * 要説明候補の会計内訳一覧（Issue #49）。
+ * 要説明候補の会計内訳一覧（Issue #49、詳細パネル連携は#52）。
  * 予算現額を支出済・繰越・不用の3区分で示し、繰越と不用は常に別項目として表示する。
  */
+
+/** 詳細パネルの表示状態。reviewIdがnullの候補は対象外として表示する */
+export interface DetailSlot {
+  reviewId: string | null;
+  expanded: boolean;
+  loading: boolean;
+  error: string | null;
+  data: PolicyReviewDetailView | null;
+}
+
+export interface CandidateListCallbacks {
+  getDetailSlot(candidate: ReviewCandidateView): DetailSlot;
+  onToggleDetail(candidate: ReviewCandidateView): void;
+}
 
 export function bureauOfCandidate(candidate: ReviewCandidateView): string {
   return bureauOfChapter(candidate.fy2024Keys[0]?.chapter ?? "(不明)");
@@ -51,7 +66,39 @@ function breakdownBar(candidate: ReviewCandidateView): HTMLElement | null {
   return bar;
 }
 
-export function renderCandidateItem(candidate: ReviewCandidateView): HTMLElement {
+function detailSection(
+  candidate: ReviewCandidateView,
+  callbacks: CandidateListCallbacks,
+): HTMLElement | null {
+  const slot = callbacks.getDetailSlot(candidate);
+  if (slot.reviewId == null) {
+    return el(
+      "p",
+      { class: "sub detail-unavailable" },
+      "詳細レビュー対象外（この候補の執行方式は公式説明だけでは確定できませんでした）",
+    );
+  }
+  const button = el(
+    "button",
+    { type: "button", class: "detail-toggle", "aria-expanded": slot.expanded ? "true" : "false" },
+    slot.expanded ? "重点レビュー詳細を閉じる" : "重点レビュー詳細を見る",
+  );
+  button.addEventListener("click", () => callbacks.onToggleDetail(candidate));
+
+  const children: (Node | string | null)[] = [button];
+  if (slot.expanded) {
+    if (slot.loading) children.push(el("p", { class: "sub" }, "詳細を読み込み中…"));
+    else if (slot.error != null)
+      children.push(el("p", { class: "sub", role: "alert" }, `詳細の取得に失敗しました: ${slot.error}`));
+    else if (slot.data != null) children.push(renderDetailPanel(slot.data));
+  }
+  return el("div", { class: "detail-section" }, ...children);
+}
+
+export function renderCandidateItem(
+  candidate: ReviewCandidateView,
+  callbacks?: CandidateListCallbacks,
+): HTMLElement {
   const amounts = candidate.amounts;
   const rates = candidate.rates;
   const currentBudget = amounts.fy2024CurrentBudgetYen;
@@ -114,16 +161,20 @@ export function renderCandidateItem(candidate: ReviewCandidateView): HTMLElement
       " ＋ 不用 ",
       formatYenExact(amounts.fy2024UnusedYen),
     ),
+    callbacks != null ? detailSection(candidate, callbacks) : null,
   );
 }
 
-export function renderCandidateList(records: readonly ReviewCandidateView[]): HTMLElement {
+export function renderCandidateList(
+  records: readonly ReviewCandidateView[],
+  callbacks?: CandidateListCallbacks,
+): HTMLElement {
   return el(
     "section",
     { class: "candidate-list", "aria-label": "要説明候補一覧" },
     el("h2", {}, "候補一覧"),
     ...(records.length === 0
       ? [el("p", { class: "empty-note" }, "条件に一致する候補はありません。")]
-      : records.map((record) => renderCandidateItem(record))),
+      : records.map((record) => renderCandidateItem(record, callbacks))),
   );
 }

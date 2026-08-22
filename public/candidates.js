@@ -1,10 +1,7 @@
 import { el } from "./dom.js";
 import { formatRate, formatYen, formatYenExact } from "./format.js";
 import { bureauOfChapter, confidenceLabel, statusLabel } from "./labels.js";
-/**
- * 要説明候補の会計内訳一覧（Issue #49）。
- * 予算現額を支出済・繰越・不用の3区分で示し、繰越と不用は常に別項目として表示する。
- */
+import { renderDetailPanel } from "./detail.js";
 export function bureauOfCandidate(candidate) {
     return bureauOfChapter(candidate.fy2024Keys[0]?.chapter ?? "(不明)");
 }
@@ -40,7 +37,25 @@ function breakdownBar(candidate) {
     })));
     return bar;
 }
-export function renderCandidateItem(candidate) {
+function detailSection(candidate, callbacks) {
+    const slot = callbacks.getDetailSlot(candidate);
+    if (slot.reviewId == null) {
+        return el("p", { class: "sub detail-unavailable" }, "詳細レビュー対象外（この候補の執行方式は公式説明だけでは確定できませんでした）");
+    }
+    const button = el("button", { type: "button", class: "detail-toggle", "aria-expanded": slot.expanded ? "true" : "false" }, slot.expanded ? "重点レビュー詳細を閉じる" : "重点レビュー詳細を見る");
+    button.addEventListener("click", () => callbacks.onToggleDetail(candidate));
+    const children = [button];
+    if (slot.expanded) {
+        if (slot.loading)
+            children.push(el("p", { class: "sub" }, "詳細を読み込み中…"));
+        else if (slot.error != null)
+            children.push(el("p", { class: "sub", role: "alert" }, `詳細の取得に失敗しました: ${slot.error}`));
+        else if (slot.data != null)
+            children.push(renderDetailPanel(slot.data));
+    }
+    return el("div", { class: "detail-section" }, ...children);
+}
+export function renderCandidateItem(candidate, callbacks) {
     const amounts = candidate.amounts;
     const rates = candidate.rates;
     const currentBudget = amounts.fy2024CurrentBudgetYen;
@@ -60,10 +75,10 @@ export function renderCandidateItem(candidate) {
     const exactNote = currentBudget != null && amounts.fy2024SpentYen != null && amounts.fy2024UnusedYen != null
         ? null
         : el("p", { class: "sub" }, "金額の欠損があるため区分バーではなく「確認不能」と表示しています。");
-    return el("article", { class: "card candidate-item" }, el("header", {}, el("h3", { class: "candidate-title" }, keyText(candidate.fy2024Keys)), el("p", { class: "candidate-meta" }, el("span", { class: "badge status-badge" }, statusLabel(candidate.status)), ` 局（款）: ${bureauOfCandidate(candidate)}`, ` ・ 粒度: ${candidate.granularity}`)), bar != null ? bar : null, exactNote, definitionList, el("p", { class: "exact-amounts" }, "予算現額 ", formatYenExact(currentBudget), " ＝ 支出済 ", formatYenExact(amounts.fy2024SpentYen), " ＋ 繰越 ", formatYenExact(amounts.fy2024CarryoverYen), " ＋ 不用 ", formatYenExact(amounts.fy2024UnusedYen)));
+    return el("article", { class: "card candidate-item" }, el("header", {}, el("h3", { class: "candidate-title" }, keyText(candidate.fy2024Keys)), el("p", { class: "candidate-meta" }, el("span", { class: "badge status-badge" }, statusLabel(candidate.status)), ` 局（款）: ${bureauOfCandidate(candidate)}`, ` ・ 粒度: ${candidate.granularity}`)), bar != null ? bar : null, exactNote, definitionList, el("p", { class: "exact-amounts" }, "予算現額 ", formatYenExact(currentBudget), " ＝ 支出済 ", formatYenExact(amounts.fy2024SpentYen), " ＋ 繰越 ", formatYenExact(amounts.fy2024CarryoverYen), " ＋ 不用 ", formatYenExact(amounts.fy2024UnusedYen)), callbacks != null ? detailSection(candidate, callbacks) : null);
 }
-export function renderCandidateList(records) {
+export function renderCandidateList(records, callbacks) {
     return el("section", { class: "candidate-list", "aria-label": "要説明候補一覧" }, el("h2", {}, "候補一覧"), ...(records.length === 0
         ? [el("p", { class: "empty-note" }, "条件に一致する候補はありません。")]
-        : records.map((record) => renderCandidateItem(record))));
+        : records.map((record) => renderCandidateItem(record, callbacks))));
 }

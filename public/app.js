@@ -1,4 +1,4 @@
-import { ApiError, fetchBureauSummary, fetchExecutionReviewIndex, fetchReviewCandidates } from "./api.js";
+import { ApiError, fetchBureauSummary, fetchExecutionReviewIndex, fetchPolicyReviewDetail, fetchReviewCandidates } from "./api.js";
 import { renderCandidateList } from "./candidates.js";
 import { el } from "./dom.js";
 import { renderBureauSection } from "./bureaus.js";
@@ -14,7 +14,49 @@ const state = {
     bureaus: null,
     filters: defaultFilters(),
     view: "candidates",
+    expandedComparisonIds: new Set(),
+    detailCache: new Map(),
 };
+/** indexのfeaturedReviewsから comparisonId → reviewId の対応を作る */
+function reviewIdByComparison() {
+    const map = new Map();
+    if (state.index == null)
+        return map;
+    for (const featured of state.index.policyReviews.featuredReviews) {
+        if (featured.reviewId != null)
+            map.set(featured.comparisonId, featured.reviewId);
+    }
+    return map;
+}
+async function toggleDetail(candidate) {
+    if (candidate.comparisonId == null)
+        return;
+    const comparisonId = candidate.comparisonId;
+    if (!state.expandedComparisonIds.has(comparisonId)) {
+        state.expandedComparisonIds.add(comparisonId);
+        // 初回展開時だけ詳細APIを呼ぶ（失敗しても一覧全体は壊さない）
+        const reviewId = reviewIdByComparison().get(comparisonId);
+        if (reviewId != null && !state.detailCache.has(comparisonId)) {
+            state.detailCache.set(comparisonId, { loading: true, error: null, data: null });
+            renderSections();
+            try {
+                const data = await fetchPolicyReviewDetail(reviewId);
+                state.detailCache.set(comparisonId, { loading: false, error: null, data });
+            }
+            catch (error) {
+                state.detailCache.set(comparisonId, {
+                    loading: false,
+                    error: error instanceof ApiError ? error.message : "不明なエラー",
+                    data: null,
+                });
+            }
+        }
+    }
+    else {
+        state.expandedComparisonIds.delete(comparisonId);
+    }
+    renderSections();
+}
 function showError(message) {
     if (errorBox == null)
         return;
@@ -55,6 +97,7 @@ function renderSections() {
         return;
     const overview = renderOverviewCard(state.index, state.candidates);
     const records = state.candidates.records;
+    const reviewIds = reviewIdByComparison();
     const main = state.view === "bureaus" && state.bureaus != null
         ? renderBureauSection(state.bureaus, {
             onSelectBureau(bureau) {
@@ -63,7 +106,22 @@ function renderSections() {
                 renderSections();
             },
         })
-        : renderCandidateList(applyCandidateFilters(records, state.filters));
+        : renderCandidateList(applyCandidateFilters(records, state.filters), {
+            getDetailSlot(candidate) {
+                const comparisonId = candidate.comparisonId ?? "";
+                const cached = state.detailCache.get(comparisonId);
+                return {
+                    reviewId: reviewIds.get(comparisonId) ?? null,
+                    expanded: state.expandedComparisonIds.has(comparisonId),
+                    loading: cached?.loading ?? false,
+                    error: cached?.error ?? null,
+                    data: cached?.data ?? null,
+                };
+            },
+            onToggleDetail(candidate) {
+                void toggleDetail(candidate);
+            },
+        });
     // 候補一覧ビューのときだけフィルターを表示（局別ビューでは絞り込み対象が異なるため）
     const filterControls = state.view === "candidates"
         ? renderFilterControls(records, applyCandidateFilters(records, state.filters).length, state.filters, {

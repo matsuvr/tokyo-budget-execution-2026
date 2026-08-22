@@ -1,4 +1,4 @@
-import { ApiError, fetchBureauSummary, fetchExecutionReviewIndex, fetchReviewCandidates } from "./api.js";
+import { ApiError, fetchBureauSummary, fetchExecutionReviewIndex, fetchPolicyReviewDetail, fetchReviewCandidates } from "./api.js";
 import { renderCandidateList } from "./candidates.js";
 import { el } from "./dom.js";
 import { renderBureauSection } from "./bureaus.js";
@@ -12,16 +12,24 @@ import type { CandidateFilters } from "./filter.js";
 import type {
   BureauSummaryView,
   ExecutionReviewIndexView,
+  PolicyReviewDetailView,
   ReviewCandidatesView,
 } from "./types.js";
 
 /**
- * 画面の起動と状態管理（Issue #48〜#51）。
+ * 画面の起動と状態管理（Issue #48〜#52）。
  * 取得中・取得失敗・データなしを別表示にする。
  * フィルター状態の変更ではAPIを再取得せず、取得済みJSONへ再適用する。
+ * 詳細パネルは開いた候補だけを遅延取得する。
  */
 
 type ViewMode = "candidates" | "bureaus";
+
+interface DetailCacheEntry {
+  loading: boolean;
+  error: string | null;
+  data: PolicyReviewDetailView | null;
+}
 
 interface AppState {
   index: ExecutionReviewIndexView | null;
@@ -29,6 +37,8 @@ interface AppState {
   bureaus: BureauSummaryView | null;
   filters: CandidateFilters;
   view: ViewMode;
+  expandedComparisonIds: Set<string>;
+  detailCache: Map<string, DetailCacheEntry>;
 }
 
 const content = document.querySelector<HTMLElement>("#content");
@@ -41,7 +51,46 @@ const state: AppState = {
   bureaus: null,
   filters: defaultFilters(),
   view: "candidates",
+  expandedComparisonIds: new Set<string>(),
+  detailCache: new Map<string, DetailCacheEntry>(),
 };
+
+/** indexのfeaturedReviewsから comparisonId → reviewId の対応を作る */
+function reviewIdByComparison(): Map<string, string> {
+  const map = new Map<string, string>();
+  if (state.index == null) return map;
+  for (const featured of state.index.policyReviews.featuredReviews) {
+    if (featured.reviewId != null) map.set(featured.comparisonId, featured.reviewId);
+  }
+  return map;
+}
+
+async function toggleDetail(candidate: { comparisonId: string | null }): Promise<void> {
+  if (candidate.comparisonId == null) return;
+  const comparisonId = candidate.comparisonId;
+  if (!state.expandedComparisonIds.has(comparisonId)) {
+    state.expandedComparisonIds.add(comparisonId);
+    // 初回展開時だけ詳細APIを呼ぶ（失敗しても一覧全体は壊さない）
+    const reviewId = reviewIdByComparison().get(comparisonId);
+    if (reviewId != null && !state.detailCache.has(comparisonId)) {
+      state.detailCache.set(comparisonId, { loading: true, error: null, data: null });
+      renderSections();
+      try {
+        const data = await fetchPolicyReviewDetail(reviewId);
+        state.detailCache.set(comparisonId, { loading: false, error: null, data });
+      } catch (error) {
+        state.detailCache.set(comparisonId, {
+          loading: false,
+          error: error instanceof ApiError ? error.message : "不明なエラー",
+          data: null,
+        });
+      }
+    }
+  } else {
+    state.expandedComparisonIds.delete(comparisonId);
+  }
+  renderSections();
+}
 
 function showError(message: string): void {
   if (errorBox == null) return;
@@ -87,6 +136,7 @@ function renderSections(): void {
   if (content == null || state.index == null || state.candidates == null) return;
   const overview = renderOverviewCard(state.index, state.candidates);
   const records = state.candidates.records;
+  const reviewIds = reviewIdByComparison();
 
   const main =
     state.view === "bureaus" && state.bureaus != null
@@ -97,7 +147,22 @@ function renderSections(): void {
             renderSections();
           },
         })
-      : renderCandidateList(applyCandidateFilters(records, state.filters));
+      : renderCandidateList(applyCandidateFilters(records, state.filters), {
+          getDetailSlot(candidate) {
+            const comparisonId = candidate.comparisonId ?? "";
+            const cached = state.detailCache.get(comparisonId);
+            return {
+              reviewId: reviewIds.get(comparisonId) ?? null,
+              expanded: state.expandedComparisonIds.has(comparisonId),
+              loading: cached?.loading ?? false,
+              error: cached?.error ?? null,
+              data: cached?.data ?? null,
+            };
+          },
+          onToggleDetail(candidate) {
+            void toggleDetail(candidate);
+          },
+        });
 
   // 候補一覧ビューのときだけフィルターを表示（局別ビューでは絞り込み対象が異なるため）
   const filterControls =

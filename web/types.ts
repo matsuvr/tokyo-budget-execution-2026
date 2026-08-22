@@ -122,6 +122,7 @@ export interface PolicyReviewDetailView {
   comparisonId: string;
   policyTitle: string;
   bureau: string | null;
+  confidence: string;
   executionMethod: string;
   analysis: {
     status: string;
