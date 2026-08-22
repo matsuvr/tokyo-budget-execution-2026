@@ -1,3 +1,15 @@
+export type FiscalYear = 2024 | 2025 | 2026;
+
+export const FISCAL_YEARS = [2024, 2025, 2026] as const satisfies readonly FiscalYear[];
+
+/**
+ * Returns true if `value` is a supported fiscal year (2024, 2025, 2026).
+ * Uses strict numeric equality, not string partial matching.
+ */
+export function isFiscalYear(value: number): value is FiscalYear {
+  return value === 2024 || value === 2025 || value === 2026;
+}
+
 export type SourceStatus = "downloaded" | "pending-upstream-503" | "reference-only";
 
 export interface SourceEntry {
@@ -26,12 +38,12 @@ export interface DataManifest {
   packageName: string;
   packageVersion: string;
   timezone: "Asia/Tokyo";
-  requestedFiscalYears: [2025, 2026];
+  requestedFiscalYears: FiscalYear[];
   sources: SourceEntry[];
 }
 
 export interface PublicExpenditureRecord {
-  fiscalYear: 2025 | 2026;
+  fiscalYear: FiscalYear;
   sourceMonth: string;
   sourceFile: string;
   sourceRow: number;
@@ -51,7 +63,7 @@ export interface PublicExpenditureRecord {
 }
 
 export interface PayrollRecord {
-  fiscalYear: 2025 | 2026;
+  fiscalYear: FiscalYear;
   sourceFile: string;
   paidMonth: string;
   category: string;
@@ -83,7 +95,7 @@ export interface ClosingEstimate {
 }
 
 export interface SubsidyRecord {
-  fiscalYear: 2025 | 2026;
+  fiscalYear: FiscalYear;
   bureauNo: string;
   bureau: string;
   policyAreaNo: string;
