@@ -1,0 +1,4460 @@
+{
+ "fiscalYearPair": [
+  2024,
+  2026
+ ],
+ "generatedFrom": "data/normalized/execution-review/budget-comparisons.json",
+ "thresholds": {
+  "needsUnusedRate": 0.2,
+  "needsBudgetContinuationRate": 0.9,
+  "needsMinCurrentBudgetYen": 100000000,
+  "carryoverRate": 0.2,
+  "executedRate": 0.9,
+  "reviewReflectedBudgetContinuationRate": 0.5
+ },
+ "records": [
+  {
+   "comparisonId": "cmp-0048",
+   "mappingId": "map-0048",
+   "confidence": "A",
+   "relationType": "exact",
+   "granularity": "item",
+   "fy2024Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "9:産業労働費",
+     "section": "4:農林水産費"
+    }
+   ],
+   "fy2026Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "09:産業労働費",
+     "section": "04:農林水産費"
+    }
+   ],
+   "amounts": {
+    "fy2024InitialBudgetYen": 30968000000,
+    "fy2024CurrentBudgetYen": 31006748000,
+    "fy2024SpentYen": 23097466451,
+    "fy2024CarryoverYen": 550843000,
+    "fy2024UnusedYen": 7358438549,
+    "fy2026InitialBudgetYen": 33498000000
+   },
+   "rates": {
+    "executionRate": 0.7449174112357736,
+    "carryoverRate": 0.0177652619358857,
+    "unusedRate": 0.23731732682834072,
+    "budgetContinuationRate": 1.081697235856368
+   },
+   "sources": {
+    "settlementPages": [
+     320
+    ],
+    "overviewFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+    "fy2026SourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "status": "needs-explanation",
+   "statusReasons": [
+    "unusedRate>=0.2",
+    "currentBudgetYen>=100000000",
+    "budgetContinuationRate>=0.9"
+   ],
+   "thresholdsUsed": {
+    "needsUnusedRate": 0.2,
+    "needsBudgetContinuationRate": 0.9,
+    "needsMinCurrentBudgetYen": 100000000,
+    "carryoverRate": 0.2,
+    "executedRate": 0.9,
+    "reviewReflectedBudgetContinuationRate": 0.5
+   },
+   "policyReviewExcluded": false,
+   "exclusionReasonCode": null
+  },
+  {
+   "comparisonId": "cmp-0024",
+   "mappingId": "map-0024",
+   "confidence": "A",
+   "relationType": "exact",
+   "granularity": "item",
+   "fy2024Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "2:総務費",
+     "section": "10:退職手当及年金費"
+    }
+   ],
+   "fy2026Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "02:総務費",
+     "section": "13:退職手当及年金費"
+    }
+   ],
+   "amounts": {
+    "fy2024InitialBudgetYen": 18953741000,
+    "fy2024CurrentBudgetYen": 18953741000,
+    "fy2024SpentYen": 14340151414,
+    "fy2024CarryoverYen": 0,
+    "fy2024UnusedYen": 4613589586,
+    "fy2026InitialBudgetYen": 17916647000
+   },
+   "rates": {
+    "executionRate": 0.7565868613483745,
+    "carryoverRate": 0,
+    "unusedRate": 0.24341313865162556,
+    "budgetContinuationRate": 0.9452828863705587
+   },
+   "sources": {
+    "settlementPages": [
+     168
+    ],
+    "overviewFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+    "fy2026SourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "status": "needs-explanation",
+   "statusReasons": [
+    "unusedRate>=0.2",
+    "currentBudgetYen>=100000000",
+    "budgetContinuationRate>=0.9"
+   ],
+   "thresholdsUsed": {
+    "needsUnusedRate": 0.2,
+    "needsBudgetContinuationRate": 0.9,
+    "needsMinCurrentBudgetYen": 100000000,
+    "carryoverRate": 0.2,
+    "executedRate": 0.9,
+    "reviewReflectedBudgetContinuationRate": 0.5
+   },
+   "policyReviewExcluded": false,
+   "exclusionReasonCode": null
+  },
+  {
+   "comparisonId": "cmp-0015",
+   "mappingId": "map-0015",
+   "confidence": "A",
+   "relationType": "exact",
+   "granularity": "chapter",
+   "fy2024Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "18:予備費"
+    }
+   ],
+   "fy2026Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "18:予備費"
+    }
+   ],
+   "amounts": {
+    "fy2024InitialBudgetYen": 5000000000,
+    "fy2024CurrentBudgetYen": 2568489000,
+    "fy2024SpentYen": 0,
+    "fy2024CarryoverYen": 0,
+    "fy2024UnusedYen": 2568489000,
+    "fy2026InitialBudgetYen": 5000000000
+   },
+   "rates": {
+    "executionRate": 0,
+    "carryoverRate": 0,
+    "unusedRate": 1,
+    "budgetContinuationRate": 1
+   },
+   "sources": {
+    "settlementPages": [
+     504
+    ],
+    "overviewFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+    "fy2026SourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "status": "needs-explanation",
+   "statusReasons": [
+    "unusedRate>=0.2",
+    "currentBudgetYen>=100000000",
+    "budgetContinuationRate>=0.9"
+   ],
+   "thresholdsUsed": {
+    "needsUnusedRate": 0.2,
+    "needsBudgetContinuationRate": 0.9,
+    "needsMinCurrentBudgetYen": 100000000,
+    "carryoverRate": 0.2,
+    "executedRate": 0.9,
+    "reviewReflectedBudgetContinuationRate": 0.5
+   },
+   "policyReviewExcluded": true,
+   "exclusionReasonCode": "reserve-fund"
+  },
+  {
+   "comparisonId": "cmp-0050",
+   "mappingId": "map-0050",
+   "confidence": "A",
+   "relationType": "exact",
+   "granularity": "item",
+   "fy2024Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "9:産業労働費",
+     "section": "6:施設整備費"
+    }
+   ],
+   "fy2026Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "09:産業労働費",
+     "section": "06:施設整備費"
+    }
+   ],
+   "amounts": {
+    "fy2024InitialBudgetYen": 5737000000,
+    "fy2024CurrentBudgetYen": 5766700000,
+    "fy2024SpentYen": 3424781970,
+    "fy2024CarryoverYen": 1149513000,
+    "fy2024UnusedYen": 1192405030,
+    "fy2026InitialBudgetYen": 10366000000
+   },
+   "rates": {
+    "executionRate": 0.5938893942809579,
+    "carryoverRate": 0.19933636221755943,
+    "unusedRate": 0.20677424350148266,
+    "budgetContinuationRate": 1.8068677008889664
+   },
+   "sources": {
+    "settlementPages": [
+     338
+    ],
+    "overviewFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+    "fy2026SourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "status": "needs-explanation",
+   "statusReasons": [
+    "unusedRate>=0.2",
+    "currentBudgetYen>=100000000",
+    "budgetContinuationRate>=0.9"
+   ],
+   "thresholdsUsed": {
+    "needsUnusedRate": 0.2,
+    "needsBudgetContinuationRate": 0.9,
+    "needsMinCurrentBudgetYen": 100000000,
+    "carryoverRate": 0.2,
+    "executedRate": 0.9,
+    "reviewReflectedBudgetContinuationRate": 0.5
+   },
+   "policyReviewExcluded": false,
+   "exclusionReasonCode": null
+  },
+  {
+   "comparisonId": "cmp-0001",
+   "mappingId": "map-0001",
+   "confidence": "A",
+   "relationType": "exact",
+   "granularity": "chapter",
+   "fy2024Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "1:議会費"
+    }
+   ],
+   "fy2026Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "01:議会費"
+    }
+   ],
+   "amounts": {
+    "fy2024InitialBudgetYen": 5419000000,
+    "fy2024CurrentBudgetYen": 5314472000,
+    "fy2024SpentYen": 4802993869,
+    "fy2024CarryoverYen": 0,
+    "fy2024UnusedYen": 511478131,
+    "fy2026InitialBudgetYen": 6010000000
+   },
+   "rates": {
+    "executionRate": 0.9037574887966293,
+    "carryoverRate": 0,
+    "unusedRate": 0.09624251120337073,
+    "budgetContinuationRate": 1.109060712308544
+   },
+   "sources": {
+    "settlementPages": [
+     116
+    ],
+    "overviewFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+    "fy2026SourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "status": "executed",
+   "statusReasons": [
+    "currentBudgetYen>=100000000",
+    "budgetContinuationRate>=0.9",
+    "executionRate>=0.9"
+   ],
+   "thresholdsUsed": {
+    "needsUnusedRate": 0.2,
+    "needsBudgetContinuationRate": 0.9,
+    "needsMinCurrentBudgetYen": 100000000,
+    "carryoverRate": 0.2,
+    "executedRate": 0.9,
+    "reviewReflectedBudgetContinuationRate": 0.5
+   },
+   "policyReviewExcluded": false,
+   "exclusionReasonCode": null
+  },
+  {
+   "comparisonId": "cmp-0003",
+   "mappingId": "map-0003",
+   "confidence": "A",
+   "relationType": "exact",
+   "granularity": "chapter",
+   "fy2024Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "3:徴税費"
+    }
+   ],
+   "fy2026Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "03:徴税費"
+    }
+   ],
+   "amounts": {
+    "fy2024InitialBudgetYen": 84784000000,
+    "fy2024CurrentBudgetYen": 83878594000,
+    "fy2024SpentYen": 82838827751,
+    "fy2024CarryoverYen": 0,
+    "fy2024UnusedYen": 1039766249,
+    "fy2026InitialBudgetYen": 103003000000
+   },
+   "rates": {
+    "executionRate": 0.9876039141881658,
+    "carryoverRate": 0,
+    "unusedRate": 0.012396085811834184,
+    "budgetContinuationRate": 1.2148872428760142
+   },
+   "sources": {
+    "settlementPages": [
+     172
+    ],
+    "overviewFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+    "fy2026SourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "status": "executed",
+   "statusReasons": [
+    "currentBudgetYen>=100000000",
+    "budgetContinuationRate>=0.9",
+    "executionRate>=0.9"
+   ],
+   "thresholdsUsed": {
+    "needsUnusedRate": 0.2,
+    "needsBudgetContinuationRate": 0.9,
+    "needsMinCurrentBudgetYen": 100000000,
+    "carryoverRate": 0.2,
+    "executedRate": 0.9,
+    "reviewReflectedBudgetContinuationRate": 0.5
+   },
+   "policyReviewExcluded": false,
+   "exclusionReasonCode": null
+  },
+  {
+   "comparisonId": "cmp-0006",
+   "mappingId": "map-0006",
+   "confidence": "A",
+   "relationType": "exact",
+   "granularity": "chapter",
+   "fy2024Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "7:福祉費"
+    }
+   ],
+   "fy2026Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "07:福祉費"
+    }
+   ],
+   "amounts": {
+    "fy2024InitialBudgetYen": 1104502000000,
+    "fy2024CurrentBudgetYen": 1145795413000,
+    "fy2024SpentYen": 1066495914576,
+    "fy2024CarryoverYen": 15682591000,
+    "fy2024UnusedYen": 63616907424,
+    "fy2026InitialBudgetYen": 1290411000000
+   },
+   "rates": {
+    "executionRate": 0.9307908745974357,
+    "carryoverRate": 0.01368707783437426,
+    "unusedRate": 0.05552204756819008,
+    "budgetContinuationRate": 1.1683192968414724
+   },
+   "sources": {
+    "settlementPages": [
+     240
+    ],
+    "overviewFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+    "fy2026SourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "status": "executed",
+   "statusReasons": [
+    "currentBudgetYen>=100000000",
+    "budgetContinuationRate>=0.9",
+    "executionRate>=0.9"
+   ],
+   "thresholdsUsed": {
+    "needsUnusedRate": 0.2,
+    "needsBudgetContinuationRate": 0.9,
+    "needsMinCurrentBudgetYen": 100000000,
+    "carryoverRate": 0.2,
+    "executedRate": 0.9,
+    "reviewReflectedBudgetContinuationRate": 0.5
+   },
+   "policyReviewExcluded": false,
+   "exclusionReasonCode": null
+  },
+  {
+   "comparisonId": "cmp-0007",
+   "mappingId": "map-0007",
+   "confidence": "A",
+   "relationType": "exact",
+   "granularity": "chapter",
+   "fy2024Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "8:保健医療費"
+    }
+   ],
+   "fy2026Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "08:保健医療費"
+    }
+   ],
+   "amounts": {
+    "fy2024InitialBudgetYen": 492753000000,
+    "fy2024CurrentBudgetYen": 514736980000,
+    "fy2024SpentYen": 474450019679,
+    "fy2024CarryoverYen": 6108888000,
+    "fy2024UnusedYen": 34178072321,
+    "fy2026InitialBudgetYen": 563895000000
+   },
+   "rates": {
+    "executionRate": 0.9217329201391359,
+    "carryoverRate": 0.011867979642729379,
+    "unusedRate": 0.06639910021813471,
+    "budgetContinuationRate": 1.1443765943586341
+   },
+   "sources": {
+    "settlementPages": [
+     276
+    ],
+    "overviewFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+    "fy2026SourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "status": "executed",
+   "statusReasons": [
+    "currentBudgetYen>=100000000",
+    "budgetContinuationRate>=0.9",
+    "executionRate>=0.9"
+   ],
+   "thresholdsUsed": {
+    "needsUnusedRate": 0.2,
+    "needsBudgetContinuationRate": 0.9,
+    "needsMinCurrentBudgetYen": 100000000,
+    "carryoverRate": 0.2,
+    "executedRate": 0.9,
+    "reviewReflectedBudgetContinuationRate": 0.5
+   },
+   "policyReviewExcluded": false,
+   "exclusionReasonCode": null
+  },
+  {
+   "comparisonId": "cmp-0010",
+   "mappingId": "map-0010",
+   "confidence": "A",
+   "relationType": "exact",
+   "granularity": "chapter",
+   "fy2024Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "12:教育費"
+    }
+   ],
+   "fy2026Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "12:教育費"
+    }
+   ],
+   "amounts": {
+    "fy2024InitialBudgetYen": 1009413000000,
+    "fy2024CurrentBudgetYen": 1023897510000,
+    "fy2024SpentYen": 973444990806,
+    "fy2024CarryoverYen": 0,
+    "fy2024UnusedYen": 50452519194,
+    "fy2026InitialBudgetYen": 1181231000000
+   },
+   "rates": {
+    "executionRate": 0.9507250298967911,
+    "carryoverRate": 0,
+    "unusedRate": 0.049274970103208866,
+    "budgetContinuationRate": 1.1702157590599684
+   },
+   "sources": {
+    "settlementPages": [
+     412
+    ],
+    "overviewFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+    "fy2026SourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "status": "executed",
+   "statusReasons": [
+    "currentBudgetYen>=100000000",
+    "budgetContinuationRate>=0.9",
+    "executionRate>=0.9"
+   ],
+   "thresholdsUsed": {
+    "needsUnusedRate": 0.2,
+    "needsBudgetContinuationRate": 0.9,
+    "needsMinCurrentBudgetYen": 100000000,
+    "carryoverRate": 0.2,
+    "executedRate": 0.9,
+    "reviewReflectedBudgetContinuationRate": 0.5
+   },
+   "policyReviewExcluded": false,
+   "exclusionReasonCode": null
+  },
+  {
+   "comparisonId": "cmp-0011",
+   "mappingId": "map-0011",
+   "confidence": "A",
+   "relationType": "exact",
+   "granularity": "chapter",
+   "fy2024Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "13:学務費"
+    }
+   ],
+   "fy2026Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "13:学務費"
+    }
+   ],
+   "amounts": {
+    "fy2024InitialBudgetYen": 298853000000,
+    "fy2024CurrentBudgetYen": 297687808000,
+    "fy2024SpentYen": 278713178716,
+    "fy2024CarryoverYen": 0,
+    "fy2024UnusedYen": 18974629284,
+    "fy2026InitialBudgetYen": 343249000000
+   },
+   "rates": {
+    "executionRate": 0.936259971775532,
+    "carryoverRate": 0,
+    "unusedRate": 0.06374002822446796,
+    "budgetContinuationRate": 1.1485546405758016
+   },
+   "sources": {
+    "settlementPages": [
+     454
+    ],
+    "overviewFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+    "fy2026SourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "status": "executed",
+   "statusReasons": [
+    "currentBudgetYen>=100000000",
+    "budgetContinuationRate>=0.9",
+    "executionRate>=0.9"
+   ],
+   "thresholdsUsed": {
+    "needsUnusedRate": 0.2,
+    "needsBudgetContinuationRate": 0.9,
+    "needsMinCurrentBudgetYen": 100000000,
+    "carryoverRate": 0.2,
+    "executedRate": 0.9,
+    "reviewReflectedBudgetContinuationRate": 0.5
+   },
+   "policyReviewExcluded": false,
+   "exclusionReasonCode": null
+  },
+  {
+   "comparisonId": "cmp-0012",
+   "mappingId": "map-0012",
+   "confidence": "A",
+   "relationType": "exact",
+   "granularity": "chapter",
+   "fy2024Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "15:消防費"
+    }
+   ],
+   "fy2026Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "15:消防費"
+    }
+   ],
+   "amounts": {
+    "fy2024InitialBudgetYen": 279384000000,
+    "fy2024CurrentBudgetYen": 288683607000,
+    "fy2024SpentYen": 278455504028,
+    "fy2024CarryoverYen": 3588650000,
+    "fy2024UnusedYen": 6639452972,
+    "fy2026InitialBudgetYen": 318582000000
+   },
+   "rates": {
+    "executionRate": 0.9645698518239728,
+    "carryoverRate": 0.01243108341790949,
+    "unusedRate": 0.0229990647581177,
+    "budgetContinuationRate": 1.1403015204879305
+   },
+   "sources": {
+    "settlementPages": [
+     478
+    ],
+    "overviewFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+    "fy2026SourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "status": "executed",
+   "statusReasons": [
+    "currentBudgetYen>=100000000",
+    "budgetContinuationRate>=0.9",
+    "executionRate>=0.9"
+   ],
+   "thresholdsUsed": {
+    "needsUnusedRate": 0.2,
+    "needsBudgetContinuationRate": 0.9,
+    "needsMinCurrentBudgetYen": 100000000,
+    "carryoverRate": 0.2,
+    "executedRate": 0.9,
+    "reviewReflectedBudgetContinuationRate": 0.5
+   },
+   "policyReviewExcluded": false,
+   "exclusionReasonCode": null
+  },
+  {
+   "comparisonId": "cmp-0013",
+   "mappingId": "map-0013",
+   "confidence": "A",
+   "relationType": "exact",
+   "granularity": "chapter",
+   "fy2024Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "16:公債費"
+    }
+   ],
+   "fy2026Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "16:公債費"
+    }
+   ],
+   "amounts": {
+    "fy2024InitialBudgetYen": 323848000000,
+    "fy2024CurrentBudgetYen": 412955089000,
+    "fy2024SpentYen": 406655395056,
+    "fy2024CarryoverYen": 0,
+    "fy2024UnusedYen": 6299693944,
+    "fy2026InitialBudgetYen": 279908000000
+   },
+   "rates": {
+    "executionRate": 0.9847448448710121,
+    "carryoverRate": 0,
+    "unusedRate": 0.01525515512898789,
+    "budgetContinuationRate": 0.8643190632642475
+   },
+   "sources": {
+    "settlementPages": [
+     494
+    ],
+    "overviewFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+    "fy2026SourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "status": "executed",
+   "statusReasons": [
+    "currentBudgetYen>=100000000",
+    "executionRate>=0.9"
+   ],
+   "thresholdsUsed": {
+    "needsUnusedRate": 0.2,
+    "needsBudgetContinuationRate": 0.9,
+    "needsMinCurrentBudgetYen": 100000000,
+    "carryoverRate": 0.2,
+    "executedRate": 0.9,
+    "reviewReflectedBudgetContinuationRate": 0.5
+   },
+   "policyReviewExcluded": true,
+   "exclusionReasonCode": "public-debt"
+  },
+  {
+   "comparisonId": "cmp-0014",
+   "mappingId": "map-0014",
+   "confidence": "A",
+   "relationType": "exact",
+   "granularity": "chapter",
+   "fy2024Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "17:諸支出金"
+    }
+   ],
+   "fy2026Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "17:諸支出金"
+    }
+   ],
+   "amounts": {
+    "fy2024InitialBudgetYen": 1973948000000,
+    "fy2024CurrentBudgetYen": 2382736314000,
+    "fy2024SpentYen": 2319031711747,
+    "fy2024CarryoverYen": 0,
+    "fy2024UnusedYen": 63704602253,
+    "fy2026InitialBudgetYen": 2347515000000
+   },
+   "rates": {
+    "executionRate": 0.9732640989778444,
+    "carryoverRate": 0,
+    "unusedRate": 0.026735901022155655,
+    "budgetContinuationRate": 1.1892486529533706
+   },
+   "sources": {
+    "settlementPages": [
+     496
+    ],
+    "overviewFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+    "fy2026SourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "status": "executed",
+   "statusReasons": [
+    "currentBudgetYen>=100000000",
+    "budgetContinuationRate>=0.9",
+    "executionRate>=0.9"
+   ],
+   "thresholdsUsed": {
+    "needsUnusedRate": 0.2,
+    "needsBudgetContinuationRate": 0.9,
+    "needsMinCurrentBudgetYen": 100000000,
+    "carryoverRate": 0.2,
+    "executedRate": 0.9,
+    "reviewReflectedBudgetContinuationRate": 0.5
+   },
+   "policyReviewExcluded": false,
+   "exclusionReasonCode": null
+  },
+  {
+   "comparisonId": "cmp-0016",
+   "mappingId": "map-0016",
+   "confidence": "A",
+   "relationType": "exact",
+   "granularity": "item",
+   "fy2024Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "2:総務費",
+     "section": "1:総務管理費"
+    }
+   ],
+   "fy2026Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "02:総務費",
+     "section": "01:総務管理費"
+    }
+   ],
+   "amounts": {
+    "fy2024InitialBudgetYen": 62437836000,
+    "fy2024CurrentBudgetYen": 61204397000,
+    "fy2024SpentYen": 56182202564,
+    "fy2024CarryoverYen": 0,
+    "fy2024UnusedYen": 5022194436,
+    "fy2026InitialBudgetYen": 69224104000
+   },
+   "rates": {
+    "executionRate": 0.9179438948479469,
+    "carryoverRate": 0,
+    "unusedRate": 0.08205610515205304,
+    "budgetContinuationRate": 1.1086883920832875
+   },
+   "sources": {
+    "settlementPages": [
+     120
+    ],
+    "overviewFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+    "fy2026SourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "status": "executed",
+   "statusReasons": [
+    "currentBudgetYen>=100000000",
+    "budgetContinuationRate>=0.9",
+    "executionRate>=0.9"
+   ],
+   "thresholdsUsed": {
+    "needsUnusedRate": 0.2,
+    "needsBudgetContinuationRate": 0.9,
+    "needsMinCurrentBudgetYen": 100000000,
+    "carryoverRate": 0.2,
+    "executedRate": 0.9,
+    "reviewReflectedBudgetContinuationRate": 0.5
+   },
+   "policyReviewExcluded": false,
+   "exclusionReasonCode": null
+  },
+  {
+   "comparisonId": "cmp-0019",
+   "mappingId": "map-0019",
+   "confidence": "A",
+   "relationType": "exact",
+   "granularity": "item",
+   "fy2024Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "2:総務費",
+     "section": "5:デジタルサービス費"
+    }
+   ],
+   "fy2026Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "02:総務費",
+     "section": "04:デジタルサービス費"
+    }
+   ],
+   "amounts": {
+    "fy2024InitialBudgetYen": 71974000000,
+    "fy2024CurrentBudgetYen": 141432972000,
+    "fy2024SpentYen": 131550951968,
+    "fy2024CarryoverYen": 940000000,
+    "fy2024UnusedYen": 8942020032,
+    "fy2026InitialBudgetYen": 78338000000
+   },
+   "rates": {
+    "executionRate": 0.9301293051241262,
+    "carryoverRate": 0.006646257847144724,
+    "unusedRate": 0.06322443702872906,
+    "budgetContinuationRate": 1.0884208186289492
+   },
+   "sources": {
+    "settlementPages": [
+     136
+    ],
+    "overviewFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+    "fy2026SourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "status": "executed",
+   "statusReasons": [
+    "currentBudgetYen>=100000000",
+    "budgetContinuationRate>=0.9",
+    "executionRate>=0.9"
+   ],
+   "thresholdsUsed": {
+    "needsUnusedRate": 0.2,
+    "needsBudgetContinuationRate": 0.9,
+    "needsMinCurrentBudgetYen": 100000000,
+    "carryoverRate": 0.2,
+    "executedRate": 0.9,
+    "reviewReflectedBudgetContinuationRate": 0.5
+   },
+   "policyReviewExcluded": false,
+   "exclusionReasonCode": null
+  },
+  {
+   "comparisonId": "cmp-0021",
+   "mappingId": "map-0021",
+   "confidence": "A",
+   "relationType": "exact",
+   "granularity": "item",
+   "fy2024Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "2:総務費",
+     "section": "7:選挙費"
+    }
+   ],
+   "fy2026Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "02:総務費",
+     "section": "06:選挙費"
+    }
+   ],
+   "amounts": {
+    "fy2024InitialBudgetYen": 6787000000,
+    "fy2024CurrentBudgetYen": 16714789000,
+    "fy2024SpentYen": 16585484601,
+    "fy2024CarryoverYen": 0,
+    "fy2024UnusedYen": 129304399,
+    "fy2026InitialBudgetYen": 425000000
+   },
+   "rates": {
+    "executionRate": 0.9922640723134465,
+    "carryoverRate": 0,
+    "unusedRate": 0.007735927686553507,
+    "budgetContinuationRate": 0.06261971415942243
+   },
+   "sources": {
+    "settlementPages": [
+     142
+    ],
+    "overviewFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+    "fy2026SourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "status": "executed",
+   "statusReasons": [
+    "currentBudgetYen>=100000000",
+    "executionRate>=0.9"
+   ],
+   "thresholdsUsed": {
+    "needsUnusedRate": 0.2,
+    "needsBudgetContinuationRate": 0.9,
+    "needsMinCurrentBudgetYen": 100000000,
+    "carryoverRate": 0.2,
+    "executedRate": 0.9,
+    "reviewReflectedBudgetContinuationRate": 0.5
+   },
+   "policyReviewExcluded": false,
+   "exclusionReasonCode": null
+  },
+  {
+   "comparisonId": "cmp-0025",
+   "mappingId": "map-0025",
+   "confidence": "A",
+   "relationType": "exact",
+   "granularity": "item",
+   "fy2024Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "5:都市整備費",
+     "section": "1:都市整備管理費"
+    }
+   ],
+   "fy2026Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "05:都市整備費",
+     "section": "01:都市整備管理費"
+    }
+   ],
+   "amounts": {
+    "fy2024InitialBudgetYen": 10202000000,
+    "fy2024CurrentBudgetYen": 10043362000,
+    "fy2024SpentYen": 9090433585,
+    "fy2024CarryoverYen": 0,
+    "fy2024UnusedYen": 952928415,
+    "fy2026InitialBudgetYen": 47963000000
+   },
+   "rates": {
+    "executionRate": 0.9051185832990984,
+    "carryoverRate": 0,
+    "unusedRate": 0.09488141670090156,
+    "budgetContinuationRate": 4.701333071946677
+   },
+   "sources": {
+    "settlementPages": [
+     196
+    ],
+    "overviewFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+    "fy2026SourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "status": "executed",
+   "statusReasons": [
+    "currentBudgetYen>=100000000",
+    "budgetContinuationRate>=0.9",
+    "executionRate>=0.9"
+   ],
+   "thresholdsUsed": {
+    "needsUnusedRate": 0.2,
+    "needsBudgetContinuationRate": 0.9,
+    "needsMinCurrentBudgetYen": 100000000,
+    "carryoverRate": 0.2,
+    "executedRate": 0.9,
+    "reviewReflectedBudgetContinuationRate": 0.5
+   },
+   "policyReviewExcluded": false,
+   "exclusionReasonCode": null
+  },
+  {
+   "comparisonId": "cmp-0026",
+   "mappingId": "map-0026",
+   "confidence": "A",
+   "relationType": "exact",
+   "granularity": "item",
+   "fy2024Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "5:都市整備費",
+     "section": "2:都市基盤整備費"
+    }
+   ],
+   "fy2026Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "05:都市整備費",
+     "section": "02:都市基盤整備費"
+    }
+   ],
+   "amounts": {
+    "fy2024InitialBudgetYen": 22897000000,
+    "fy2024CurrentBudgetYen": 108242938000,
+    "fy2024SpentYen": 103567354999,
+    "fy2024CarryoverYen": 2194687000,
+    "fy2024UnusedYen": 2480896001,
+    "fy2026InitialBudgetYen": 35711000000
+   },
+   "rates": {
+    "executionRate": 0.9568047293671944,
+    "carryoverRate": 0.020275567538641643,
+    "unusedRate": 0.022919703094163982,
+    "budgetContinuationRate": 1.5596366336201248
+   },
+   "sources": {
+    "settlementPages": [
+     200
+    ],
+    "overviewFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+    "fy2026SourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "status": "executed",
+   "statusReasons": [
+    "currentBudgetYen>=100000000",
+    "budgetContinuationRate>=0.9",
+    "executionRate>=0.9"
+   ],
+   "thresholdsUsed": {
+    "needsUnusedRate": 0.2,
+    "needsBudgetContinuationRate": 0.9,
+    "needsMinCurrentBudgetYen": 100000000,
+    "carryoverRate": 0.2,
+    "executedRate": 0.9,
+    "reviewReflectedBudgetContinuationRate": 0.5
+   },
+   "policyReviewExcluded": false,
+   "exclusionReasonCode": null
+  },
+  {
+   "comparisonId": "cmp-0029",
+   "mappingId": "map-0029",
+   "confidence": "A",
+   "relationType": "exact",
+   "granularity": "item",
+   "fy2024Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "6:環境費",
+     "section": "1:環境管理費"
+    }
+   ],
+   "fy2026Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "06:環境費",
+     "section": "01:環境管理費"
+    }
+   ],
+   "amounts": {
+    "fy2024InitialBudgetYen": 6410000000,
+    "fy2024CurrentBudgetYen": 6356738000,
+    "fy2024SpentYen": 6015559933,
+    "fy2024CarryoverYen": 0,
+    "fy2024UnusedYen": 341178067,
+    "fy2026InitialBudgetYen": 6337000000
+   },
+   "rates": {
+    "executionRate": 0.9463281219078087,
+    "carryoverRate": 0,
+    "unusedRate": 0.05367187809219131,
+    "budgetContinuationRate": 0.9886115444617785
+   },
+   "sources": {
+    "settlementPages": [
+     226
+    ],
+    "overviewFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+    "fy2026SourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "status": "executed",
+   "statusReasons": [
+    "currentBudgetYen>=100000000",
+    "budgetContinuationRate>=0.9",
+    "executionRate>=0.9"
+   ],
+   "thresholdsUsed": {
+    "needsUnusedRate": 0.2,
+    "needsBudgetContinuationRate": 0.9,
+    "needsMinCurrentBudgetYen": 100000000,
+    "carryoverRate": 0.2,
+    "executedRate": 0.9,
+    "reviewReflectedBudgetContinuationRate": 0.5
+   },
+   "policyReviewExcluded": false,
+   "exclusionReasonCode": null
+  },
+  {
+   "comparisonId": "cmp-0032",
+   "mappingId": "map-0032",
+   "confidence": "A",
+   "relationType": "exact",
+   "granularity": "item",
+   "fy2024Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "7:福祉費",
+     "section": "1:福祉管理費"
+    }
+   ],
+   "fy2026Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "07:福祉費",
+     "section": "01:福祉管理費"
+    }
+   ],
+   "amounts": {
+    "fy2024InitialBudgetYen": 7307000000,
+    "fy2024CurrentBudgetYen": 7354938000,
+    "fy2024SpentYen": 6853263375,
+    "fy2024CarryoverYen": 0,
+    "fy2024UnusedYen": 501674625,
+    "fy2026InitialBudgetYen": 9086000000
+   },
+   "rates": {
+    "executionRate": 0.9317907744429661,
+    "carryoverRate": 0,
+    "unusedRate": 0.06820922555703393,
+    "budgetContinuationRate": 1.2434651703845627
+   },
+   "sources": {
+    "settlementPages": [
+     240
+    ],
+    "overviewFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+    "fy2026SourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "status": "executed",
+   "statusReasons": [
+    "currentBudgetYen>=100000000",
+    "budgetContinuationRate>=0.9",
+    "executionRate>=0.9"
+   ],
+   "thresholdsUsed": {
+    "needsUnusedRate": 0.2,
+    "needsBudgetContinuationRate": 0.9,
+    "needsMinCurrentBudgetYen": 100000000,
+    "carryoverRate": 0.2,
+    "executedRate": 0.9,
+    "reviewReflectedBudgetContinuationRate": 0.5
+   },
+   "policyReviewExcluded": false,
+   "exclusionReasonCode": null
+  },
+  {
+   "comparisonId": "cmp-0034",
+   "mappingId": "map-0034",
+   "confidence": "A",
+   "relationType": "exact",
+   "granularity": "item",
+   "fy2024Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "7:福祉費",
+     "section": "3:子供・子育て支援費"
+    }
+   ],
+   "fy2026Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "07:福祉費",
+     "section": "03:子供・子育て支援費"
+    }
+   ],
+   "amounts": {
+    "fy2024InitialBudgetYen": 482489000000,
+    "fy2024CurrentBudgetYen": 495954780000,
+    "fy2024SpentYen": 472209223487,
+    "fy2024CarryoverYen": 1499124000,
+    "fy2024UnusedYen": 22246432513,
+    "fy2026InitialBudgetYen": 608973000000
+   },
+   "rates": {
+    "executionRate": 0.9521215290777115,
+    "carryoverRate": 0.0030227029972369657,
+    "unusedRate": 0.044855767925051554,
+    "budgetContinuationRate": 1.2621489816348144
+   },
+   "sources": {
+    "settlementPages": [
+     252
+    ],
+    "overviewFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+    "fy2026SourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "status": "executed",
+   "statusReasons": [
+    "currentBudgetYen>=100000000",
+    "budgetContinuationRate>=0.9",
+    "executionRate>=0.9"
+   ],
+   "thresholdsUsed": {
+    "needsUnusedRate": 0.2,
+    "needsBudgetContinuationRate": 0.9,
+    "needsMinCurrentBudgetYen": 100000000,
+    "carryoverRate": 0.2,
+    "executedRate": 0.9,
+    "reviewReflectedBudgetContinuationRate": 0.5
+   },
+   "policyReviewExcluded": false,
+   "exclusionReasonCode": null
+  },
+  {
+   "comparisonId": "cmp-0035",
+   "mappingId": "map-0035",
+   "confidence": "A",
+   "relationType": "exact",
+   "granularity": "item",
+   "fy2024Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "7:福祉費",
+     "section": "4:高齢者施策推進費"
+    }
+   ],
+   "fy2026Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "07:福祉費",
+     "section": "04:高齢者施策推進費"
+    }
+   ],
+   "amounts": {
+    "fy2024InitialBudgetYen": 262198000000,
+    "fy2024CurrentBudgetYen": 269181718000,
+    "fy2024SpentYen": 245630796745,
+    "fy2024CarryoverYen": 9486221000,
+    "fy2024UnusedYen": 14064700255,
+    "fy2026InitialBudgetYen": 283630000000
+   },
+   "rates": {
+    "executionRate": 0.9125092096521948,
+    "carryoverRate": 0.03524095570264545,
+    "unusedRate": 0.05224983464515967,
+    "budgetContinuationRate": 1.081739753926422
+   },
+   "sources": {
+    "settlementPages": [
+     260
+    ],
+    "overviewFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+    "fy2026SourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "status": "executed",
+   "statusReasons": [
+    "currentBudgetYen>=100000000",
+    "budgetContinuationRate>=0.9",
+    "executionRate>=0.9"
+   ],
+   "thresholdsUsed": {
+    "needsUnusedRate": 0.2,
+    "needsBudgetContinuationRate": 0.9,
+    "needsMinCurrentBudgetYen": 100000000,
+    "carryoverRate": 0.2,
+    "executedRate": 0.9,
+    "reviewReflectedBudgetContinuationRate": 0.5
+   },
+   "policyReviewExcluded": false,
+   "exclusionReasonCode": null
+  },
+  {
+   "comparisonId": "cmp-0036",
+   "mappingId": "map-0036",
+   "confidence": "A",
+   "relationType": "exact",
+   "granularity": "item",
+   "fy2024Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "7:福祉費",
+     "section": "5:障害者施策推進費"
+    }
+   ],
+   "fy2026Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "07:福祉費",
+     "section": "05:障害者施策推進費"
+    }
+   ],
+   "amounts": {
+    "fy2024InitialBudgetYen": 242654000000,
+    "fy2024CurrentBudgetYen": 246647886000,
+    "fy2024SpentYen": 230760121099,
+    "fy2024CarryoverYen": 4666594000,
+    "fy2024UnusedYen": 11221170901,
+    "fy2026InitialBudgetYen": 264248000000
+   },
+   "rates": {
+    "executionRate": 0.9355852378925316,
+    "carryoverRate": 0.0189200648571543,
+    "unusedRate": 0.04549469725031416,
+    "budgetContinuationRate": 1.088990908866122
+   },
+   "sources": {
+    "settlementPages": [
+     264
+    ],
+    "overviewFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+    "fy2026SourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "status": "executed",
+   "statusReasons": [
+    "currentBudgetYen>=100000000",
+    "budgetContinuationRate>=0.9",
+    "executionRate>=0.9"
+   ],
+   "thresholdsUsed": {
+    "needsUnusedRate": 0.2,
+    "needsBudgetContinuationRate": 0.9,
+    "needsMinCurrentBudgetYen": 100000000,
+    "carryoverRate": 0.2,
+    "executedRate": 0.9,
+    "reviewReflectedBudgetContinuationRate": 0.5
+   },
+   "policyReviewExcluded": false,
+   "exclusionReasonCode": null
+  },
+  {
+   "comparisonId": "cmp-0039",
+   "mappingId": "map-0039",
+   "confidence": "A",
+   "relationType": "exact",
+   "granularity": "item",
+   "fy2024Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "8:保健医療費",
+     "section": "2:保健政策費"
+    }
+   ],
+   "fy2026Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "08:保健医療費",
+     "section": "02:保健政策費"
+    }
+   ],
+   "amounts": {
+    "fy2024InitialBudgetYen": 341547000000,
+    "fy2024CurrentBudgetYen": 339500232000,
+    "fy2024SpentYen": 327695964731,
+    "fy2024CarryoverYen": 0,
+    "fy2024UnusedYen": 11804267269,
+    "fy2026InitialBudgetYen": 365876000000
+   },
+   "rates": {
+    "executionRate": 0.965230458902897,
+    "carryoverRate": 0,
+    "unusedRate": 0.03476954109710299,
+    "budgetContinuationRate": 1.0712317777641145
+   },
+   "sources": {
+    "settlementPages": [
+     278
+    ],
+    "overviewFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+    "fy2026SourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "status": "executed",
+   "statusReasons": [
+    "currentBudgetYen>=100000000",
+    "budgetContinuationRate>=0.9",
+    "executionRate>=0.9"
+   ],
+   "thresholdsUsed": {
+    "needsUnusedRate": 0.2,
+    "needsBudgetContinuationRate": 0.9,
+    "needsMinCurrentBudgetYen": 100000000,
+    "carryoverRate": 0.2,
+    "executedRate": 0.9,
+    "reviewReflectedBudgetContinuationRate": 0.5
+   },
+   "policyReviewExcluded": false,
+   "exclusionReasonCode": null
+  },
+  {
+   "comparisonId": "cmp-0041",
+   "mappingId": "map-0041",
+   "confidence": "A",
+   "relationType": "exact",
+   "granularity": "item",
+   "fy2024Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "8:保健医療費",
+     "section": "4:都立病院支援費"
+    }
+   ],
+   "fy2026Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "08:保健医療費",
+     "section": "04:都立病院支援費"
+    }
+   ],
+   "amounts": {
+    "fy2024InitialBudgetYen": 55246000000,
+    "fy2024CurrentBudgetYen": 55156000000,
+    "fy2024SpentYen": 55059184717,
+    "fy2024CarryoverYen": 0,
+    "fy2024UnusedYen": 96815283,
+    "fy2026InitialBudgetYen": 57452000000
+   },
+   "rates": {
+    "executionRate": 0.9982447007941112,
+    "carryoverRate": 0,
+    "unusedRate": 0.0017552992058887519,
+    "budgetContinuationRate": 1.0399304927053543
+   },
+   "sources": {
+    "settlementPages": [
+     292
+    ],
+    "overviewFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+    "fy2026SourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "status": "executed",
+   "statusReasons": [
+    "currentBudgetYen>=100000000",
+    "budgetContinuationRate>=0.9",
+    "executionRate>=0.9"
+   ],
+   "thresholdsUsed": {
+    "needsUnusedRate": 0.2,
+    "needsBudgetContinuationRate": 0.9,
+    "needsMinCurrentBudgetYen": 100000000,
+    "carryoverRate": 0.2,
+    "executedRate": 0.9,
+    "reviewReflectedBudgetContinuationRate": 0.5
+   },
+   "policyReviewExcluded": false,
+   "exclusionReasonCode": null
+  },
+  {
+   "comparisonId": "cmp-0045",
+   "mappingId": "map-0045",
+   "confidence": "A",
+   "relationType": "exact",
+   "granularity": "item",
+   "fy2024Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "9:産業労働費",
+     "section": "1:労働委員会費"
+    }
+   ],
+   "fy2026Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "09:産業労働費",
+     "section": "01:労働委員会費"
+    }
+   ],
+   "amounts": {
+    "fy2024InitialBudgetYen": 620000000,
+    "fy2024CurrentBudgetYen": 620000000,
+    "fy2024SpentYen": 583771905,
+    "fy2024CarryoverYen": 0,
+    "fy2024UnusedYen": 36228095,
+    "fy2026InitialBudgetYen": 645000000
+   },
+   "rates": {
+    "executionRate": 0.9415675887096774,
+    "carryoverRate": 0,
+    "unusedRate": 0.05843241129032258,
+    "budgetContinuationRate": 1.0403225806451613
+   },
+   "sources": {
+    "settlementPages": [
+     308
+    ],
+    "overviewFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+    "fy2026SourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "status": "executed",
+   "statusReasons": [
+    "currentBudgetYen>=100000000",
+    "budgetContinuationRate>=0.9",
+    "executionRate>=0.9"
+   ],
+   "thresholdsUsed": {
+    "needsUnusedRate": 0.2,
+    "needsBudgetContinuationRate": 0.9,
+    "needsMinCurrentBudgetYen": 100000000,
+    "carryoverRate": 0.2,
+    "executedRate": 0.9,
+    "reviewReflectedBudgetContinuationRate": 0.5
+   },
+   "policyReviewExcluded": false,
+   "exclusionReasonCode": null
+  },
+  {
+   "comparisonId": "cmp-0047",
+   "mappingId": "map-0047",
+   "confidence": "A",
+   "relationType": "exact",
+   "granularity": "item",
+   "fy2024Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "9:産業労働費",
+     "section": "3:商工業振興費"
+    }
+   ],
+   "fy2026Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "09:産業労働費",
+     "section": "03:商工業振興費"
+    }
+   ],
+   "amounts": {
+    "fy2024InitialBudgetYen": 580188000000,
+    "fy2024CurrentBudgetYen": 578327016000,
+    "fy2024SpentYen": 528300268968,
+    "fy2024CarryoverYen": 1989839000,
+    "fy2024UnusedYen": 48036908032,
+    "fy2026InitialBudgetYen": 608586000000
+   },
+   "rates": {
+    "executionRate": 0.9134974752208359,
+    "carryoverRate": 0.0034406813877773264,
+    "unusedRate": 0.08306184339138671,
+    "budgetContinuationRate": 1.048946203644336
+   },
+   "sources": {
+    "settlementPages": [
+     314
+    ],
+    "overviewFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+    "fy2026SourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "status": "executed",
+   "statusReasons": [
+    "currentBudgetYen>=100000000",
+    "budgetContinuationRate>=0.9",
+    "executionRate>=0.9"
+   ],
+   "thresholdsUsed": {
+    "needsUnusedRate": 0.2,
+    "needsBudgetContinuationRate": 0.9,
+    "needsMinCurrentBudgetYen": 100000000,
+    "carryoverRate": 0.2,
+    "executedRate": 0.9,
+    "reviewReflectedBudgetContinuationRate": 0.5
+   },
+   "policyReviewExcluded": false,
+   "exclusionReasonCode": null
+  },
+  {
+   "comparisonId": "cmp-0052",
+   "mappingId": "map-0052",
+   "confidence": "A",
+   "relationType": "exact",
+   "granularity": "item",
+   "fy2024Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "10:土木費",
+     "section": "4:土木管理費"
+    }
+   ],
+   "fy2026Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "10:土木費",
+     "section": "01:土木管理費"
+    }
+   ],
+   "amounts": {
+    "fy2024InitialBudgetYen": 25469000000,
+    "fy2024CurrentBudgetYen": 25841430000,
+    "fy2024SpentYen": 23284429422,
+    "fy2024CarryoverYen": 196812000,
+    "fy2024UnusedYen": 2360188578,
+    "fy2026InitialBudgetYen": 28134000000
+   },
+   "rates": {
+    "executionRate": 0.9010503452014846,
+    "carryoverRate": 0.007616141985950468,
+    "unusedRate": 0.09133351281256494,
+    "budgetContinuationRate": 1.1046370096980642
+   },
+   "sources": {
+    "settlementPages": [
+     342
+    ],
+    "overviewFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+    "fy2026SourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "status": "executed",
+   "statusReasons": [
+    "currentBudgetYen>=100000000",
+    "budgetContinuationRate>=0.9",
+    "executionRate>=0.9"
+   ],
+   "thresholdsUsed": {
+    "needsUnusedRate": 0.2,
+    "needsBudgetContinuationRate": 0.9,
+    "needsMinCurrentBudgetYen": 100000000,
+    "carryoverRate": 0.2,
+    "executedRate": 0.9,
+    "reviewReflectedBudgetContinuationRate": 0.5
+   },
+   "policyReviewExcluded": false,
+   "exclusionReasonCode": null
+  },
+  {
+   "comparisonId": "cmp-0055",
+   "mappingId": "map-0055",
+   "confidence": "A",
+   "relationType": "exact",
+   "granularity": "item",
+   "fy2024Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "11:港湾費",
+     "section": "3:港湾管理費"
+    }
+   ],
+   "fy2026Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "11:港湾費",
+     "section": "01:港湾管理費"
+    }
+   ],
+   "amounts": {
+    "fy2024InitialBudgetYen": 706000000,
+    "fy2024CurrentBudgetYen": 706000000,
+    "fy2024SpentYen": 638528578,
+    "fy2024CarryoverYen": 0,
+    "fy2024UnusedYen": 67471422,
+    "fy2026InitialBudgetYen": 899000000
+   },
+   "rates": {
+    "executionRate": 0.9044314135977337,
+    "carryoverRate": 0,
+    "unusedRate": 0.09556858640226629,
+    "budgetContinuationRate": 1.273371104815864
+   },
+   "sources": {
+    "settlementPages": [
+     388
+    ],
+    "overviewFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+    "fy2026SourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "status": "executed",
+   "statusReasons": [
+    "currentBudgetYen>=100000000",
+    "budgetContinuationRate>=0.9",
+    "executionRate>=0.9"
+   ],
+   "thresholdsUsed": {
+    "needsUnusedRate": 0.2,
+    "needsBudgetContinuationRate": 0.9,
+    "needsMinCurrentBudgetYen": 100000000,
+    "carryoverRate": 0.2,
+    "executedRate": 0.9,
+    "reviewReflectedBudgetContinuationRate": 0.5
+   },
+   "policyReviewExcluded": false,
+   "exclusionReasonCode": null
+  },
+  {
+   "comparisonId": "cmp-0056",
+   "mappingId": "map-0056",
+   "confidence": "A",
+   "relationType": "exact",
+   "granularity": "item",
+   "fy2024Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "12:教育費",
+     "section": "1:小中学校費"
+    }
+   ],
+   "fy2026Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "12:教育費",
+     "section": "02:小中学校費"
+    }
+   ],
+   "amounts": {
+    "fy2024InitialBudgetYen": 512813000000,
+    "fy2024CurrentBudgetYen": 511639011000,
+    "fy2024SpentYen": 506649331744,
+    "fy2024CarryoverYen": 0,
+    "fy2024UnusedYen": 4989679256,
+    "fy2026InitialBudgetYen": 575676000000
+   },
+   "rates": {
+    "executionRate": 0.990247656748754,
+    "carryoverRate": 0,
+    "unusedRate": 0.009752343251245946,
+    "budgetContinuationRate": 1.122584645865062
+   },
+   "sources": {
+    "settlementPages": [
+     424
+    ],
+    "overviewFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+    "fy2026SourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "status": "executed",
+   "statusReasons": [
+    "currentBudgetYen>=100000000",
+    "budgetContinuationRate>=0.9",
+    "executionRate>=0.9"
+   ],
+   "thresholdsUsed": {
+    "needsUnusedRate": 0.2,
+    "needsBudgetContinuationRate": 0.9,
+    "needsMinCurrentBudgetYen": 100000000,
+    "carryoverRate": 0.2,
+    "executedRate": 0.9,
+    "reviewReflectedBudgetContinuationRate": 0.5
+   },
+   "policyReviewExcluded": false,
+   "exclusionReasonCode": null
+  },
+  {
+   "comparisonId": "cmp-0057",
+   "mappingId": "map-0057",
+   "confidence": "A",
+   "relationType": "exact",
+   "granularity": "item",
+   "fy2024Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "12:教育費",
+     "section": "2:高等学校費"
+    }
+   ],
+   "fy2026Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "12:教育費",
+     "section": "03:高等学校費"
+    }
+   ],
+   "amounts": {
+    "fy2024InitialBudgetYen": 155345000000,
+    "fy2024CurrentBudgetYen": 154881380000,
+    "fy2024SpentYen": 146132096751,
+    "fy2024CarryoverYen": 0,
+    "fy2024UnusedYen": 8749283249,
+    "fy2026InitialBudgetYen": 194163000000
+   },
+   "rates": {
+    "executionRate": 0.9435097798779943,
+    "carryoverRate": 0,
+    "unusedRate": 0.05649022012200563,
+    "budgetContinuationRate": 1.2498825195532524
+   },
+   "sources": {
+    "settlementPages": [
+     430
+    ],
+    "overviewFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+    "fy2026SourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "status": "executed",
+   "statusReasons": [
+    "currentBudgetYen>=100000000",
+    "budgetContinuationRate>=0.9",
+    "executionRate>=0.9"
+   ],
+   "thresholdsUsed": {
+    "needsUnusedRate": 0.2,
+    "needsBudgetContinuationRate": 0.9,
+    "needsMinCurrentBudgetYen": 100000000,
+    "carryoverRate": 0.2,
+    "executedRate": 0.9,
+    "reviewReflectedBudgetContinuationRate": 0.5
+   },
+   "policyReviewExcluded": false,
+   "exclusionReasonCode": null
+  },
+  {
+   "comparisonId": "cmp-0058",
+   "mappingId": "map-0058",
+   "confidence": "A",
+   "relationType": "exact",
+   "granularity": "item",
+   "fy2024Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "12:教育費",
+     "section": "3:特別支援学校費"
+    }
+   ],
+   "fy2026Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "12:教育費",
+     "section": "04:特別支援学校費"
+    }
+   ],
+   "amounts": {
+    "fy2024InitialBudgetYen": 100962000000,
+    "fy2024CurrentBudgetYen": 101360000000,
+    "fy2024SpentYen": 96871193113,
+    "fy2024CarryoverYen": 0,
+    "fy2024UnusedYen": 4488806887,
+    "fy2026InitialBudgetYen": 119092000000
+   },
+   "rates": {
+    "executionRate": 0.9557142177683504,
+    "carryoverRate": 0,
+    "unusedRate": 0.04428578223164956,
+    "budgetContinuationRate": 1.1795725124304193
+   },
+   "sources": {
+    "settlementPages": [
+     434
+    ],
+    "overviewFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+    "fy2026SourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "status": "executed",
+   "statusReasons": [
+    "currentBudgetYen>=100000000",
+    "budgetContinuationRate>=0.9",
+    "executionRate>=0.9"
+   ],
+   "thresholdsUsed": {
+    "needsUnusedRate": 0.2,
+    "needsBudgetContinuationRate": 0.9,
+    "needsMinCurrentBudgetYen": 100000000,
+    "carryoverRate": 0.2,
+    "executedRate": 0.9,
+    "reviewReflectedBudgetContinuationRate": 0.5
+   },
+   "policyReviewExcluded": false,
+   "exclusionReasonCode": null
+  },
+  {
+   "comparisonId": "cmp-0060",
+   "mappingId": "map-0060",
+   "confidence": "A",
+   "relationType": "exact",
+   "granularity": "item",
+   "fy2024Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "12:教育費",
+     "section": "5:退職手当及年金費"
+    }
+   ],
+   "fy2026Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "12:教育費",
+     "section": "06:退職手当及年金費"
+    }
+   ],
+   "amounts": {
+    "fy2024InitialBudgetYen": 44851000000,
+    "fy2024CurrentBudgetYen": 44851000000,
+    "fy2024SpentYen": 42328578427,
+    "fy2024CarryoverYen": 0,
+    "fy2024UnusedYen": 2522421573,
+    "fy2026InitialBudgetYen": 39062000000
+   },
+   "rates": {
+    "executionRate": 0.9437599702793694,
+    "carryoverRate": 0,
+    "unusedRate": 0.05624002972063053,
+    "budgetContinuationRate": 0.8709281844329001
+   },
+   "sources": {
+    "settlementPages": [
+     440
+    ],
+    "overviewFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+    "fy2026SourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "status": "executed",
+   "statusReasons": [
+    "currentBudgetYen>=100000000",
+    "executionRate>=0.9"
+   ],
+   "thresholdsUsed": {
+    "needsUnusedRate": 0.2,
+    "needsBudgetContinuationRate": 0.9,
+    "needsMinCurrentBudgetYen": 100000000,
+    "carryoverRate": 0.2,
+    "executedRate": 0.9,
+    "reviewReflectedBudgetContinuationRate": 0.5
+   },
+   "policyReviewExcluded": false,
+   "exclusionReasonCode": null
+  },
+  {
+   "comparisonId": "cmp-0062",
+   "mappingId": "map-0062",
+   "confidence": "A",
+   "relationType": "exact",
+   "granularity": "item",
+   "fy2024Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "13:学務費",
+     "section": "1:東京都公立大学法人支援費"
+    }
+   ],
+   "fy2026Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "13:学務費",
+     "section": "01:東京都公立大学法人支援費"
+    }
+   ],
+   "amounts": {
+    "fy2024InitialBudgetYen": 27577000000,
+    "fy2024CurrentBudgetYen": 27577000000,
+    "fy2024SpentYen": 27195877105,
+    "fy2024CarryoverYen": 0,
+    "fy2024UnusedYen": 381122895,
+    "fy2026InitialBudgetYen": 35626000000
+   },
+   "rates": {
+    "executionRate": 0.9861796825252929,
+    "carryoverRate": 0,
+    "unusedRate": 0.013820317474707184,
+    "budgetContinuationRate": 1.2918736628349712
+   },
+   "sources": {
+    "settlementPages": [
+     454
+    ],
+    "overviewFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+    "fy2026SourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "status": "executed",
+   "statusReasons": [
+    "currentBudgetYen>=100000000",
+    "budgetContinuationRate>=0.9",
+    "executionRate>=0.9"
+   ],
+   "thresholdsUsed": {
+    "needsUnusedRate": 0.2,
+    "needsBudgetContinuationRate": 0.9,
+    "needsMinCurrentBudgetYen": 100000000,
+    "carryoverRate": 0.2,
+    "executedRate": 0.9,
+    "reviewReflectedBudgetContinuationRate": 0.5
+   },
+   "policyReviewExcluded": false,
+   "exclusionReasonCode": null
+  },
+  {
+   "comparisonId": "cmp-0063",
+   "mappingId": "map-0063",
+   "confidence": "A",
+   "relationType": "exact",
+   "granularity": "item",
+   "fy2024Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "13:学務費",
+     "section": "2:私立学校振興費"
+    }
+   ],
+   "fy2026Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "13:学務費",
+     "section": "02:私立学校振興費"
+    }
+   ],
+   "amounts": {
+    "fy2024InitialBudgetYen": 270995000000,
+    "fy2024CurrentBudgetYen": 269829808000,
+    "fy2024SpentYen": 251291355165,
+    "fy2024CarryoverYen": 0,
+    "fy2024UnusedYen": 18538452835,
+    "fy2026InitialBudgetYen": 307301000000
+   },
+   "rates": {
+    "executionRate": 0.9312957564903281,
+    "carryoverRate": 0,
+    "unusedRate": 0.06870424350967184,
+    "budgetContinuationRate": 1.133972951530471
+   },
+   "sources": {
+    "settlementPages": [
+     454
+    ],
+    "overviewFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+    "fy2026SourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "status": "executed",
+   "statusReasons": [
+    "currentBudgetYen>=100000000",
+    "budgetContinuationRate>=0.9",
+    "executionRate>=0.9"
+   ],
+   "thresholdsUsed": {
+    "needsUnusedRate": 0.2,
+    "needsBudgetContinuationRate": 0.9,
+    "needsMinCurrentBudgetYen": 100000000,
+    "carryoverRate": 0.2,
+    "executedRate": 0.9,
+    "reviewReflectedBudgetContinuationRate": 0.5
+   },
+   "policyReviewExcluded": false,
+   "exclusionReasonCode": null
+  },
+  {
+   "comparisonId": "cmp-0065",
+   "mappingId": "map-0065",
+   "confidence": "A",
+   "relationType": "exact",
+   "granularity": "item",
+   "fy2024Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "14:警察費",
+     "section": "1:警察管理費"
+    }
+   ],
+   "fy2026Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "14:警察費",
+     "section": "01:警察管理費"
+    }
+   ],
+   "amounts": {
+    "fy2024InitialBudgetYen": 543390515000,
+    "fy2024CurrentBudgetYen": 543237332000,
+    "fy2024SpentYen": 538323768885,
+    "fy2024CarryoverYen": 359473000,
+    "fy2024UnusedYen": 4554090115,
+    "fy2026InitialBudgetYen": 576667637000
+   },
+   "rates": {
+    "executionRate": 0.9909550341525497,
+    "carryoverRate": 0.0006617236681370049,
+    "unusedRate": 0.008383242179313258,
+    "budgetContinuationRate": 1.0612397917913603
+   },
+   "sources": {
+    "settlementPages": [
+     460
+    ],
+    "overviewFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+    "fy2026SourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "status": "executed",
+   "statusReasons": [
+    "currentBudgetYen>=100000000",
+    "budgetContinuationRate>=0.9",
+    "executionRate>=0.9"
+   ],
+   "thresholdsUsed": {
+    "needsUnusedRate": 0.2,
+    "needsBudgetContinuationRate": 0.9,
+    "needsMinCurrentBudgetYen": 100000000,
+    "carryoverRate": 0.2,
+    "executedRate": 0.9,
+    "reviewReflectedBudgetContinuationRate": 0.5
+   },
+   "policyReviewExcluded": false,
+   "exclusionReasonCode": null
+  },
+  {
+   "comparisonId": "cmp-0066",
+   "mappingId": "map-0066",
+   "confidence": "A",
+   "relationType": "exact",
+   "granularity": "item",
+   "fy2024Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "14:警察費",
+     "section": "2:退職手当及年金費"
+    }
+   ],
+   "fy2026Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "14:警察費",
+     "section": "02:退職手当及年金費"
+    }
+   ],
+   "amounts": {
+    "fy2024InitialBudgetYen": 28178118000,
+    "fy2024CurrentBudgetYen": 28958118000,
+    "fy2024SpentYen": 28872623437,
+    "fy2024CarryoverYen": 0,
+    "fy2024UnusedYen": 85494563,
+    "fy2026InitialBudgetYen": 25681049000
+   },
+   "rates": {
+    "executionRate": 0.9970476478133006,
+    "carryoverRate": 0,
+    "unusedRate": 0.0029523521866994256,
+    "budgetContinuationRate": 0.9113826906395949
+   },
+   "sources": {
+    "settlementPages": [
+     466
+    ],
+    "overviewFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+    "fy2026SourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "status": "executed",
+   "statusReasons": [
+    "currentBudgetYen>=100000000",
+    "budgetContinuationRate>=0.9",
+    "executionRate>=0.9"
+   ],
+   "thresholdsUsed": {
+    "needsUnusedRate": 0.2,
+    "needsBudgetContinuationRate": 0.9,
+    "needsMinCurrentBudgetYen": 100000000,
+    "carryoverRate": 0.2,
+    "executedRate": 0.9,
+    "reviewReflectedBudgetContinuationRate": 0.5
+   },
+   "policyReviewExcluded": false,
+   "exclusionReasonCode": null
+  },
+  {
+   "comparisonId": "cmp-0067",
+   "mappingId": "map-0067",
+   "confidence": "A",
+   "relationType": "exact",
+   "granularity": "item",
+   "fy2024Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "14:警察費",
+     "section": "3:警察活動費"
+    }
+   ],
+   "fy2026Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "14:警察費",
+     "section": "03:警察活動費"
+    }
+   ],
+   "amounts": {
+    "fy2024InitialBudgetYen": 60891476000,
+    "fy2024CurrentBudgetYen": 58668263000,
+    "fy2024SpentYen": 54346194877,
+    "fy2024CarryoverYen": 399143000,
+    "fy2024UnusedYen": 3922925123,
+    "fy2026InitialBudgetYen": 73527664000
+   },
+   "rates": {
+    "executionRate": 0.9263303888339084,
+    "carryoverRate": 0.006803388741882473,
+    "unusedRate": 0.06686622242420916,
+    "budgetContinuationRate": 1.2075198177163582
+   },
+   "sources": {
+    "settlementPages": [
+     468
+    ],
+    "overviewFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+    "fy2026SourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "status": "executed",
+   "statusReasons": [
+    "currentBudgetYen>=100000000",
+    "budgetContinuationRate>=0.9",
+    "executionRate>=0.9"
+   ],
+   "thresholdsUsed": {
+    "needsUnusedRate": 0.2,
+    "needsBudgetContinuationRate": 0.9,
+    "needsMinCurrentBudgetYen": 100000000,
+    "carryoverRate": 0.2,
+    "executedRate": 0.9,
+    "reviewReflectedBudgetContinuationRate": 0.5
+   },
+   "policyReviewExcluded": false,
+   "exclusionReasonCode": null
+  },
+  {
+   "comparisonId": "cmp-0069",
+   "mappingId": "map-0069",
+   "confidence": "A",
+   "relationType": "exact",
+   "granularity": "item",
+   "fy2024Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "15:消防費",
+     "section": "1:消防管理費"
+    }
+   ],
+   "fy2026Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "15:消防費",
+     "section": "01:消防管理費"
+    }
+   ],
+   "amounts": {
+    "fy2024InitialBudgetYen": 213341000000,
+    "fy2024CurrentBudgetYen": 220380652000,
+    "fy2024SpentYen": 217073700256,
+    "fy2024CarryoverYen": 0,
+    "fy2024UnusedYen": 3306951744,
+    "fy2026InitialBudgetYen": 237381000000
+   },
+   "rates": {
+    "executionRate": 0.9849943644599073,
+    "carryoverRate": 0,
+    "unusedRate": 0.015005635540092694,
+    "budgetContinuationRate": 1.1126834504385
+   },
+   "sources": {
+    "settlementPages": [
+     478
+    ],
+    "overviewFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+    "fy2026SourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "status": "executed",
+   "statusReasons": [
+    "currentBudgetYen>=100000000",
+    "budgetContinuationRate>=0.9",
+    "executionRate>=0.9"
+   ],
+   "thresholdsUsed": {
+    "needsUnusedRate": 0.2,
+    "needsBudgetContinuationRate": 0.9,
+    "needsMinCurrentBudgetYen": 100000000,
+    "carryoverRate": 0.2,
+    "executedRate": 0.9,
+    "reviewReflectedBudgetContinuationRate": 0.5
+   },
+   "policyReviewExcluded": false,
+   "exclusionReasonCode": null
+  },
+  {
+   "comparisonId": "cmp-0071",
+   "mappingId": "map-0071",
+   "confidence": "A",
+   "relationType": "exact",
+   "granularity": "item",
+   "fy2024Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "15:消防費",
+     "section": "3:消防団費"
+    }
+   ],
+   "fy2026Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "15:消防費",
+     "section": "03:消防団費"
+    }
+   ],
+   "amounts": {
+    "fy2024InitialBudgetYen": 3957000000,
+    "fy2024CurrentBudgetYen": 3957000000,
+    "fy2024SpentYen": 3771906854,
+    "fy2024CarryoverYen": 0,
+    "fy2024UnusedYen": 185093146,
+    "fy2026InitialBudgetYen": 4765000000
+   },
+   "rates": {
+    "executionRate": 0.9532238701036139,
+    "carryoverRate": 0,
+    "unusedRate": 0.04677612989638615,
+    "budgetContinuationRate": 1.2041950972959312
+   },
+   "sources": {
+    "settlementPages": [
+     488
+    ],
+    "overviewFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+    "fy2026SourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "status": "executed",
+   "statusReasons": [
+    "currentBudgetYen>=100000000",
+    "budgetContinuationRate>=0.9",
+    "executionRate>=0.9"
+   ],
+   "thresholdsUsed": {
+    "needsUnusedRate": 0.2,
+    "needsBudgetContinuationRate": 0.9,
+    "needsMinCurrentBudgetYen": 100000000,
+    "carryoverRate": 0.2,
+    "executedRate": 0.9,
+    "reviewReflectedBudgetContinuationRate": 0.5
+   },
+   "policyReviewExcluded": false,
+   "exclusionReasonCode": null
+  },
+  {
+   "comparisonId": "cmp-0072",
+   "mappingId": "map-0072",
+   "confidence": "A",
+   "relationType": "exact",
+   "granularity": "item",
+   "fy2024Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "15:消防費",
+     "section": "4:退職手当及年金費"
+    }
+   ],
+   "fy2026Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "15:消防費",
+     "section": "04:退職手当及年金費"
+    }
+   ],
+   "amounts": {
+    "fy2024InitialBudgetYen": 10314000000,
+    "fy2024CurrentBudgetYen": 10454509000,
+    "fy2024SpentYen": 10329717887,
+    "fy2024CarryoverYen": 0,
+    "fy2024UnusedYen": 124791113,
+    "fy2026InitialBudgetYen": 8259000000
+   },
+   "rates": {
+    "executionRate": 0.9880634171341762,
+    "carryoverRate": 0,
+    "unusedRate": 0.011936582865823732,
+    "budgetContinuationRate": 0.8007562536358348
+   },
+   "sources": {
+    "settlementPages": [
+     490
+    ],
+    "overviewFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+    "fy2026SourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "status": "executed",
+   "statusReasons": [
+    "currentBudgetYen>=100000000",
+    "executionRate>=0.9"
+   ],
+   "thresholdsUsed": {
+    "needsUnusedRate": 0.2,
+    "needsBudgetContinuationRate": 0.9,
+    "needsMinCurrentBudgetYen": 100000000,
+    "carryoverRate": 0.2,
+    "executedRate": 0.9,
+    "reviewReflectedBudgetContinuationRate": 0.5
+   },
+   "policyReviewExcluded": false,
+   "exclusionReasonCode": null
+  },
+  {
+   "comparisonId": "cmp-0074",
+   "mappingId": "map-0074",
+   "confidence": "A",
+   "relationType": "exact",
+   "granularity": "item",
+   "fy2024Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "17:諸支出金",
+     "section": "1:他会計支出金"
+    }
+   ],
+   "fy2026Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "17:諸支出金",
+     "section": "02:他会計支出金"
+    }
+   ],
+   "amounts": {
+    "fy2024InitialBudgetYen": 1424232980000,
+    "fy2024CurrentBudgetYen": 1502677654000,
+    "fy2024SpentYen": 1487773788502,
+    "fy2024CarryoverYen": 0,
+    "fy2024UnusedYen": 14903865498,
+    "fy2026InitialBudgetYen": 1595632980000
+   },
+   "rates": {
+    "executionRate": 0.9900817946827604,
+    "carryoverRate": 0,
+    "unusedRate": 0.009918205317239647,
+    "budgetContinuationRate": 1.1203454788696159
+   },
+   "sources": {
+    "settlementPages": [
+     498
+    ],
+    "overviewFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+    "fy2026SourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "status": "executed",
+   "statusReasons": [
+    "currentBudgetYen>=100000000",
+    "budgetContinuationRate>=0.9",
+    "executionRate>=0.9"
+   ],
+   "thresholdsUsed": {
+    "needsUnusedRate": 0.2,
+    "needsBudgetContinuationRate": 0.9,
+    "needsMinCurrentBudgetYen": 100000000,
+    "carryoverRate": 0.2,
+    "executedRate": 0.9,
+    "reviewReflectedBudgetContinuationRate": 0.5
+   },
+   "policyReviewExcluded": false,
+   "exclusionReasonCode": null
+  },
+  {
+   "comparisonId": "cmp-0075",
+   "mappingId": "map-manual-0001",
+   "confidence": "B",
+   "relationType": "renamed",
+   "granularity": "chapter",
+   "fy2024Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "14:警察費"
+    }
+   ],
+   "fy2026Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "14:警察費"
+    }
+   ],
+   "amounts": {
+    "fy2024InitialBudgetYen": 682260000000,
+    "fy2024CurrentBudgetYen": 671063604000,
+    "fy2024SpentYen": 654782736144,
+    "fy2024CarryoverYen": 758616000,
+    "fy2024UnusedYen": 15522251856,
+    "fy2026InitialBudgetYen": 738951000000
+   },
+   "rates": {
+    "executionRate": 0.9757387112652887,
+    "carryoverRate": 0.0011304681038848293,
+    "unusedRate": 0.023130820630826523,
+    "budgetContinuationRate": 1.0830929557646645
+   },
+   "sources": {
+    "settlementPages": [
+     460
+    ],
+    "overviewFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+    "fy2026SourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "status": "executed",
+   "statusReasons": [
+    "currentBudgetYen>=100000000",
+    "budgetContinuationRate>=0.9",
+    "executionRate>=0.9"
+   ],
+   "thresholdsUsed": {
+    "needsUnusedRate": 0.2,
+    "needsBudgetContinuationRate": 0.9,
+    "needsMinCurrentBudgetYen": 100000000,
+    "carryoverRate": 0.2,
+    "executedRate": 0.9,
+    "reviewReflectedBudgetContinuationRate": 0.5
+   },
+   "policyReviewExcluded": false,
+   "exclusionReasonCode": null
+  },
+  {
+   "comparisonId": "cmp-0077",
+   "mappingId": "map-manual-0003",
+   "confidence": "B",
+   "relationType": "renamed",
+   "granularity": "chapter",
+   "fy2024Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "04:生活文化スポーツ費"
+    }
+   ],
+   "fy2026Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "04:生活文化費"
+    }
+   ],
+   "amounts": {
+    "fy2024InitialBudgetYen": 91975000000,
+    "fy2024CurrentBudgetYen": 89434821000,
+    "fy2024SpentYen": 83265076434,
+    "fy2024CarryoverYen": 113831000,
+    "fy2024UnusedYen": 6055913566,
+    "fy2026InitialBudgetYen": 72739000000
+   },
+   "rates": {
+    "executionRate": 0.9310140670377145,
+    "carryoverRate": 0.001272781660735923,
+    "unusedRate": 0.06771315130154953,
+    "budgetContinuationRate": 0.7908562109268823
+   },
+   "sources": {
+    "settlementPages": [
+     182
+    ],
+    "overviewFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+    "fy2026SourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "status": "executed",
+   "statusReasons": [
+    "currentBudgetYen>=100000000",
+    "executionRate>=0.9"
+   ],
+   "thresholdsUsed": {
+    "needsUnusedRate": 0.2,
+    "needsBudgetContinuationRate": 0.9,
+    "needsMinCurrentBudgetYen": 100000000,
+    "carryoverRate": 0.2,
+    "executedRate": 0.9,
+    "reviewReflectedBudgetContinuationRate": 0.5
+   },
+   "policyReviewExcluded": false,
+   "exclusionReasonCode": null
+  },
+  {
+   "comparisonId": "cmp-0002",
+   "mappingId": "map-0002",
+   "confidence": "A",
+   "relationType": "exact",
+   "granularity": "chapter",
+   "fy2024Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "2:総務費"
+    }
+   ],
+   "fy2026Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "02:総務費"
+    }
+   ],
+   "amounts": {
+    "fy2024InitialBudgetYen": 368474000000,
+    "fy2024CurrentBudgetYen": 608605218000,
+    "fy2024SpentYen": 525048004615,
+    "fy2024CarryoverYen": 26105024000,
+    "fy2024UnusedYen": 57452189385,
+    "fy2026InitialBudgetYen": 396719000000
+   },
+   "rates": {
+    "executionRate": 0.8627070374789327,
+    "carryoverRate": 0.04289319780363763,
+    "unusedRate": 0.09439976471742968,
+    "budgetContinuationRate": 1.0766539837274816
+   },
+   "sources": {
+    "settlementPages": [
+     120
+    ],
+    "overviewFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+    "fy2026SourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "status": "incomparable",
+   "statusReasons": [
+    "currentBudgetYen>=100000000",
+    "budgetContinuationRate>=0.9"
+   ],
+   "thresholdsUsed": {
+    "needsUnusedRate": 0.2,
+    "needsBudgetContinuationRate": 0.9,
+    "needsMinCurrentBudgetYen": 100000000,
+    "carryoverRate": 0.2,
+    "executedRate": 0.9,
+    "reviewReflectedBudgetContinuationRate": 0.5
+   },
+   "policyReviewExcluded": false,
+   "exclusionReasonCode": null
+  },
+  {
+   "comparisonId": "cmp-0004",
+   "mappingId": "map-0004",
+   "confidence": "A",
+   "relationType": "exact",
+   "granularity": "chapter",
+   "fy2024Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "5:都市整備費"
+    }
+   ],
+   "fy2026Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "05:都市整備費"
+    }
+   ],
+   "amounts": {
+    "fy2024InitialBudgetYen": 143296000000,
+    "fy2024CurrentBudgetYen": 215282697000,
+    "fy2024SpentYen": 187000862896,
+    "fy2024CarryoverYen": 6339891000,
+    "fy2024UnusedYen": 21941943104,
+    "fy2026InitialBudgetYen": 186629000000
+   },
+   "rates": {
+    "executionRate": 0.8686293208970715,
+    "carryoverRate": 0.029449143328039967,
+    "unusedRate": 0.10192153577488859,
+    "budgetContinuationRate": 1.3024020209915141
+   },
+   "sources": {
+    "settlementPages": [
+     196
+    ],
+    "overviewFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+    "fy2026SourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "status": "incomparable",
+   "statusReasons": [
+    "currentBudgetYen>=100000000",
+    "budgetContinuationRate>=0.9"
+   ],
+   "thresholdsUsed": {
+    "needsUnusedRate": 0.2,
+    "needsBudgetContinuationRate": 0.9,
+    "needsMinCurrentBudgetYen": 100000000,
+    "carryoverRate": 0.2,
+    "executedRate": 0.9,
+    "reviewReflectedBudgetContinuationRate": 0.5
+   },
+   "policyReviewExcluded": false,
+   "exclusionReasonCode": null
+  },
+  {
+   "comparisonId": "cmp-0005",
+   "mappingId": "map-0005",
+   "confidence": "A",
+   "relationType": "exact",
+   "granularity": "chapter",
+   "fy2024Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "6:環境費"
+    }
+   ],
+   "fy2026Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "06:環境費"
+    }
+   ],
+   "amounts": {
+    "fy2024InitialBudgetYen": 175783000000,
+    "fy2024CurrentBudgetYen": 182607162000,
+    "fy2024SpentYen": 163882866133,
+    "fy2024CarryoverYen": 3645961000,
+    "fy2024UnusedYen": 15078334867,
+    "fy2026InitialBudgetYen": 281302000000
+   },
+   "rates": {
+    "executionRate": 0.8974613281214019,
+    "carryoverRate": 0.01996614459185341,
+    "unusedRate": 0.08257252728674465,
+    "budgetContinuationRate": 1.6002798905468674
+   },
+   "sources": {
+    "settlementPages": [
+     226
+    ],
+    "overviewFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+    "fy2026SourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "status": "incomparable",
+   "statusReasons": [
+    "currentBudgetYen>=100000000",
+    "budgetContinuationRate>=0.9"
+   ],
+   "thresholdsUsed": {
+    "needsUnusedRate": 0.2,
+    "needsBudgetContinuationRate": 0.9,
+    "needsMinCurrentBudgetYen": 100000000,
+    "carryoverRate": 0.2,
+    "executedRate": 0.9,
+    "reviewReflectedBudgetContinuationRate": 0.5
+   },
+   "policyReviewExcluded": false,
+   "exclusionReasonCode": null
+  },
+  {
+   "comparisonId": "cmp-0008",
+   "mappingId": "map-0008",
+   "confidence": "A",
+   "relationType": "exact",
+   "granularity": "chapter",
+   "fy2024Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "9:産業労働費"
+    }
+   ],
+   "fy2026Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "09:産業労働費"
+    }
+   ],
+   "amounts": {
+    "fy2024InitialBudgetYen": 676385000000,
+    "fy2024CurrentBudgetYen": 699049797000,
+    "fy2024SpentYen": 628635837776,
+    "fy2024CarryoverYen": 3690195000,
+    "fy2024UnusedYen": 66723764224,
+    "fy2026InitialBudgetYen": 774369000000
+   },
+   "rates": {
+    "executionRate": 0.8992718980447684,
+    "carryoverRate": 0.005278872858323711,
+    "unusedRate": 0.09544922909690795,
+    "budgetContinuationRate": 1.1448642415192531
+   },
+   "sources": {
+    "settlementPages": [
+     308
+    ],
+    "overviewFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+    "fy2026SourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "status": "incomparable",
+   "statusReasons": [
+    "currentBudgetYen>=100000000",
+    "budgetContinuationRate>=0.9"
+   ],
+   "thresholdsUsed": {
+    "needsUnusedRate": 0.2,
+    "needsBudgetContinuationRate": 0.9,
+    "needsMinCurrentBudgetYen": 100000000,
+    "carryoverRate": 0.2,
+    "executedRate": 0.9,
+    "reviewReflectedBudgetContinuationRate": 0.5
+   },
+   "policyReviewExcluded": false,
+   "exclusionReasonCode": null
+  },
+  {
+   "comparisonId": "cmp-0009",
+   "mappingId": "map-0009",
+   "confidence": "A",
+   "relationType": "exact",
+   "granularity": "chapter",
+   "fy2024Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "11:港湾費"
+    }
+   ],
+   "fy2026Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "11:港湾費"
+    }
+   ],
+   "amounts": {
+    "fy2024InitialBudgetYen": 100365000000,
+    "fy2024CurrentBudgetYen": 116988223000,
+    "fy2024SpentYen": 98215584612,
+    "fy2024CarryoverYen": 7597764000,
+    "fy2024UnusedYen": 11174874388,
+    "fy2026InitialBudgetYen": 105209000000
+   },
+   "rates": {
+    "executionRate": 0.839533947036703,
+    "carryoverRate": 0.06494469105663739,
+    "unusedRate": 0.09552136190665961,
+    "budgetContinuationRate": 1.0482638369949684
+   },
+   "sources": {
+    "settlementPages": [
+     388
+    ],
+    "overviewFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+    "fy2026SourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "status": "incomparable",
+   "statusReasons": [
+    "currentBudgetYen>=100000000",
+    "budgetContinuationRate>=0.9"
+   ],
+   "thresholdsUsed": {
+    "needsUnusedRate": 0.2,
+    "needsBudgetContinuationRate": 0.9,
+    "needsMinCurrentBudgetYen": 100000000,
+    "carryoverRate": 0.2,
+    "executedRate": 0.9,
+    "reviewReflectedBudgetContinuationRate": 0.5
+   },
+   "policyReviewExcluded": false,
+   "exclusionReasonCode": null
+  },
+  {
+   "comparisonId": "cmp-0017",
+   "mappingId": "map-0017",
+   "confidence": "A",
+   "relationType": "exact",
+   "granularity": "item",
+   "fy2024Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "2:総務費",
+     "section": "2:政策企画費"
+    }
+   ],
+   "fy2026Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "02:総務費",
+     "section": "02:政策企画費"
+    }
+   ],
+   "amounts": {
+    "fy2024InitialBudgetYen": 16096000000,
+    "fy2024CurrentBudgetYen": 16096000000,
+    "fy2024SpentYen": 14006385787,
+    "fy2024CarryoverYen": 0,
+    "fy2024UnusedYen": 2089614213,
+    "fy2026InitialBudgetYen": 12588000000
+   },
+   "rates": {
+    "executionRate": 0.8701780434269384,
+    "carryoverRate": 0,
+    "unusedRate": 0.12982195657306164,
+    "budgetContinuationRate": 0.7820576540755467
+   },
+   "sources": {
+    "settlementPages": [
+     128
+    ],
+    "overviewFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+    "fy2026SourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "status": "incomparable",
+   "statusReasons": [
+    "currentBudgetYen>=100000000"
+   ],
+   "thresholdsUsed": {
+    "needsUnusedRate": 0.2,
+    "needsBudgetContinuationRate": 0.9,
+    "needsMinCurrentBudgetYen": 100000000,
+    "carryoverRate": 0.2,
+    "executedRate": 0.9,
+    "reviewReflectedBudgetContinuationRate": 0.5
+   },
+   "policyReviewExcluded": false,
+   "exclusionReasonCode": null
+  },
+  {
+   "comparisonId": "cmp-0018",
+   "mappingId": "map-0018",
+   "confidence": "A",
+   "relationType": "exact",
+   "granularity": "item",
+   "fy2024Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "2:総務費",
+     "section": "3:子供政策連携費"
+    }
+   ],
+   "fy2026Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "02:総務費",
+     "section": "03:子供政策連携費"
+    }
+   ],
+   "amounts": {
+    "fy2024InitialBudgetYen": 13083000000,
+    "fy2024CurrentBudgetYen": 10169000000,
+    "fy2024SpentYen": 8311548667,
+    "fy2024CarryoverYen": 0,
+    "fy2024UnusedYen": 1857451333,
+    "fy2026InitialBudgetYen": 18509000000
+   },
+   "rates": {
+    "executionRate": 0.817341790441538,
+    "carryoverRate": 0,
+    "unusedRate": 0.182658209558462,
+    "budgetContinuationRate": 1.4147366811893296
+   },
+   "sources": {
+    "settlementPages": [
+     132
+    ],
+    "overviewFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+    "fy2026SourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "status": "incomparable",
+   "statusReasons": [
+    "currentBudgetYen>=100000000",
+    "budgetContinuationRate>=0.9"
+   ],
+   "thresholdsUsed": {
+    "needsUnusedRate": 0.2,
+    "needsBudgetContinuationRate": 0.9,
+    "needsMinCurrentBudgetYen": 100000000,
+    "carryoverRate": 0.2,
+    "executedRate": 0.9,
+    "reviewReflectedBudgetContinuationRate": 0.5
+   },
+   "policyReviewExcluded": false,
+   "exclusionReasonCode": null
+  },
+  {
+   "comparisonId": "cmp-0020",
+   "mappingId": "map-0020",
+   "confidence": "A",
+   "relationType": "exact",
+   "granularity": "item",
+   "fy2024Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "2:総務費",
+     "section": "6:区市町村振興費"
+    }
+   ],
+   "fy2026Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "02:総務費",
+     "section": "05:区市町村振興費"
+    }
+   ],
+   "amounts": {
+    "fy2024InitialBudgetYen": 112439306000,
+    "fy2024CurrentBudgetYen": 278429543000,
+    "fy2024SpentYen": 228858882603,
+    "fy2024CarryoverYen": 25151089000,
+    "fy2024UnusedYen": 24419571397,
+    "fy2026InitialBudgetYen": 133369157000
+   },
+   "rates": {
+    "executionRate": 0.8219633596963524,
+    "carryoverRate": 0.09033196954965371,
+    "unusedRate": 0.08770467075399395,
+    "budgetContinuationRate": 1.1861435448561022
+   },
+   "sources": {
+    "settlementPages": [
+     138
+    ],
+    "overviewFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+    "fy2026SourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "status": "incomparable",
+   "statusReasons": [
+    "currentBudgetYen>=100000000",
+    "budgetContinuationRate>=0.9"
+   ],
+   "thresholdsUsed": {
+    "needsUnusedRate": 0.2,
+    "needsBudgetContinuationRate": 0.9,
+    "needsMinCurrentBudgetYen": 100000000,
+    "carryoverRate": 0.2,
+    "executedRate": 0.9,
+    "reviewReflectedBudgetContinuationRate": 0.5
+   },
+   "policyReviewExcluded": false,
+   "exclusionReasonCode": null
+  },
+  {
+   "comparisonId": "cmp-0022",
+   "mappingId": "map-0022",
+   "confidence": "A",
+   "relationType": "exact",
+   "granularity": "item",
+   "fy2024Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "2:総務費",
+     "section": "8:防災管理費"
+    }
+   ],
+   "fy2026Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "02:総務費",
+     "section": "07:防災管理費"
+    }
+   ],
+   "amounts": {
+    "fy2024InitialBudgetYen": 16335840000,
+    "fy2024CurrentBudgetYen": 16512904000,
+    "fy2024SpentYen": 13352967071,
+    "fy2024CarryoverYen": 13935000,
+    "fy2024UnusedYen": 3146001929,
+    "fy2026InitialBudgetYen": 23871011000
+   },
+   "rates": {
+    "executionRate": 0.8086383273953509,
+    "carryoverRate": 0.0008438854849516475,
+    "unusedRate": 0.1905177871196974,
+    "budgetContinuationRate": 1.4612662097571965
+   },
+   "sources": {
+    "settlementPages": [
+     150
+    ],
+    "overviewFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+    "fy2026SourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "status": "incomparable",
+   "statusReasons": [
+    "currentBudgetYen>=100000000",
+    "budgetContinuationRate>=0.9"
+   ],
+   "thresholdsUsed": {
+    "needsUnusedRate": 0.2,
+    "needsBudgetContinuationRate": 0.9,
+    "needsMinCurrentBudgetYen": 100000000,
+    "carryoverRate": 0.2,
+    "executedRate": 0.9,
+    "reviewReflectedBudgetContinuationRate": 0.5
+   },
+   "policyReviewExcluded": false,
+   "exclusionReasonCode": null
+  },
+  {
+   "comparisonId": "cmp-0023",
+   "mappingId": "map-0023",
+   "confidence": "A",
+   "relationType": "exact",
+   "granularity": "item",
+   "fy2024Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "2:総務費",
+     "section": "9:建築保全費"
+    }
+   ],
+   "fy2026Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "02:総務費",
+     "section": "12:建築保全費"
+    }
+   ],
+   "amounts": {
+    "fy2024InitialBudgetYen": 14829000000,
+    "fy2024CurrentBudgetYen": 13345107000,
+    "fy2024SpentYen": 11798987891,
+    "fy2024CarryoverYen": 0,
+    "fy2024UnusedYen": 1546119109,
+    "fy2026InitialBudgetYen": 15203000000
+   },
+   "rates": {
+    "executionRate": 0.8841433711247126,
+    "carryoverRate": 0,
+    "unusedRate": 0.1158566288752874,
+    "budgetContinuationRate": 1.025220851035134
+   },
+   "sources": {
+    "settlementPages": [
+     166
+    ],
+    "overviewFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+    "fy2026SourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "status": "incomparable",
+   "statusReasons": [
+    "currentBudgetYen>=100000000",
+    "budgetContinuationRate>=0.9"
+   ],
+   "thresholdsUsed": {
+    "needsUnusedRate": 0.2,
+    "needsBudgetContinuationRate": 0.9,
+    "needsMinCurrentBudgetYen": 100000000,
+    "carryoverRate": 0.2,
+    "executedRate": 0.9,
+    "reviewReflectedBudgetContinuationRate": 0.5
+   },
+   "policyReviewExcluded": false,
+   "exclusionReasonCode": null
+  },
+  {
+   "comparisonId": "cmp-0027",
+   "mappingId": "map-0027",
+   "confidence": "A",
+   "relationType": "exact",
+   "granularity": "item",
+   "fy2024Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "5:都市整備費",
+     "section": "4:建築行政費"
+    }
+   ],
+   "fy2026Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "05:都市整備費",
+     "section": "04:建築行政費"
+    }
+   ],
+   "amounts": {
+    "fy2024InitialBudgetYen": 7106000000,
+    "fy2024CurrentBudgetYen": 4985000000,
+    "fy2024SpentYen": 4480298329,
+    "fy2024CarryoverYen": 0,
+    "fy2024UnusedYen": 504701671,
+    "fy2026InitialBudgetYen": 8254000000
+   },
+   "rates": {
+    "executionRate": 0.8987559336008024,
+    "carryoverRate": 0,
+    "unusedRate": 0.1012440663991976,
+    "budgetContinuationRate": 1.1615536166619758
+   },
+   "sources": {
+    "settlementPages": [
+     214
+    ],
+    "overviewFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+    "fy2026SourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "status": "incomparable",
+   "statusReasons": [
+    "currentBudgetYen>=100000000",
+    "budgetContinuationRate>=0.9"
+   ],
+   "thresholdsUsed": {
+    "needsUnusedRate": 0.2,
+    "needsBudgetContinuationRate": 0.9,
+    "needsMinCurrentBudgetYen": 100000000,
+    "carryoverRate": 0.2,
+    "executedRate": 0.9,
+    "reviewReflectedBudgetContinuationRate": 0.5
+   },
+   "policyReviewExcluded": false,
+   "exclusionReasonCode": null
+  },
+  {
+   "comparisonId": "cmp-0028",
+   "mappingId": "map-0028",
+   "confidence": "A",
+   "relationType": "exact",
+   "granularity": "item",
+   "fy2024Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "5:都市整備費",
+     "section": "5:住宅政策費"
+    }
+   ],
+   "fy2026Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "05:都市整備費",
+     "section": "05:住宅政策費"
+    }
+   ],
+   "amounts": {
+    "fy2024InitialBudgetYen": 45309000000,
+    "fy2024CurrentBudgetYen": 45485360000,
+    "fy2024SpentYen": 39660519320,
+    "fy2024CarryoverYen": 409799000,
+    "fy2024UnusedYen": 5415041680,
+    "fy2026InitialBudgetYen": 49501000000
+   },
+   "rates": {
+    "executionRate": 0.8719403192587681,
+    "carryoverRate": 0.009009470299894295,
+    "unusedRate": 0.11905021044133761,
+    "budgetContinuationRate": 1.0925202498399877
+   },
+   "sources": {
+    "settlementPages": [
+     218
+    ],
+    "overviewFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+    "fy2026SourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "status": "incomparable",
+   "statusReasons": [
+    "currentBudgetYen>=100000000",
+    "budgetContinuationRate>=0.9"
+   ],
+   "thresholdsUsed": {
+    "needsUnusedRate": 0.2,
+    "needsBudgetContinuationRate": 0.9,
+    "needsMinCurrentBudgetYen": 100000000,
+    "carryoverRate": 0.2,
+    "executedRate": 0.9,
+    "reviewReflectedBudgetContinuationRate": 0.5
+   },
+   "policyReviewExcluded": false,
+   "exclusionReasonCode": null
+  },
+  {
+   "comparisonId": "cmp-0030",
+   "mappingId": "map-0030",
+   "confidence": "A",
+   "relationType": "exact",
+   "granularity": "item",
+   "fy2024Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "6:環境費",
+     "section": "2:環境保全費"
+    }
+   ],
+   "fy2026Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "06:環境費",
+     "section": "02:環境保全費"
+    }
+   ],
+   "amounts": {
+    "fy2024InitialBudgetYen": 156215000000,
+    "fy2024CurrentBudgetYen": 163039162000,
+    "fy2024SpentYen": 146484842584,
+    "fy2024CarryoverYen": 3645961000,
+    "fy2024UnusedYen": 12908358416,
+    "fy2026InitialBudgetYen": 257143000000
+   },
+   "rates": {
+    "executionRate": 0.898464152949952,
+    "carryoverRate": 0.022362486136919667,
+    "unusedRate": 0.07917336091312835,
+    "budgetContinuationRate": 1.646083922798707
+   },
+   "sources": {
+    "settlementPages": [
+     228
+    ],
+    "overviewFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+    "fy2026SourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "status": "incomparable",
+   "statusReasons": [
+    "currentBudgetYen>=100000000",
+    "budgetContinuationRate>=0.9"
+   ],
+   "thresholdsUsed": {
+    "needsUnusedRate": 0.2,
+    "needsBudgetContinuationRate": 0.9,
+    "needsMinCurrentBudgetYen": 100000000,
+    "carryoverRate": 0.2,
+    "executedRate": 0.9,
+    "reviewReflectedBudgetContinuationRate": 0.5
+   },
+   "policyReviewExcluded": false,
+   "exclusionReasonCode": null
+  },
+  {
+   "comparisonId": "cmp-0031",
+   "mappingId": "map-0031",
+   "confidence": "A",
+   "relationType": "exact",
+   "granularity": "item",
+   "fy2024Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "6:環境費",
+     "section": "3:廃棄物費"
+    }
+   ],
+   "fy2026Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "06:環境費",
+     "section": "03:廃棄物費"
+    }
+   ],
+   "amounts": {
+    "fy2024InitialBudgetYen": 13158000000,
+    "fy2024CurrentBudgetYen": 13211262000,
+    "fy2024SpentYen": 11382463616,
+    "fy2024CarryoverYen": 0,
+    "fy2024UnusedYen": 1828798384,
+    "fy2026InitialBudgetYen": 17822000000
+   },
+   "rates": {
+    "executionRate": 0.8615727714733081,
+    "carryoverRate": 0,
+    "unusedRate": 0.13842722852669184,
+    "budgetContinuationRate": 1.3544611643106854
+   },
+   "sources": {
+    "settlementPages": [
+     234
+    ],
+    "overviewFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+    "fy2026SourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "status": "incomparable",
+   "statusReasons": [
+    "currentBudgetYen>=100000000",
+    "budgetContinuationRate>=0.9"
+   ],
+   "thresholdsUsed": {
+    "needsUnusedRate": 0.2,
+    "needsBudgetContinuationRate": 0.9,
+    "needsMinCurrentBudgetYen": 100000000,
+    "carryoverRate": 0.2,
+    "executedRate": 0.9,
+    "reviewReflectedBudgetContinuationRate": 0.5
+   },
+   "policyReviewExcluded": false,
+   "exclusionReasonCode": null
+  },
+  {
+   "comparisonId": "cmp-0033",
+   "mappingId": "map-0033",
+   "confidence": "A",
+   "relationType": "exact",
+   "granularity": "item",
+   "fy2024Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "7:福祉費",
+     "section": "2:生活福祉費"
+    }
+   ],
+   "fy2026Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "07:福祉費",
+     "section": "02:生活福祉費"
+    }
+   ],
+   "amounts": {
+    "fy2024InitialBudgetYen": 73917000000,
+    "fy2024CurrentBudgetYen": 96558398000,
+    "fy2024SpentYen": 84522604984,
+    "fy2024CarryoverYen": 30652000,
+    "fy2024UnusedYen": 12005141016,
+    "fy2026InitialBudgetYen": 86971000000
+   },
+   "rates": {
+    "executionRate": 0.8753521882581358,
+    "carryoverRate": 0.0003174452003646539,
+    "unusedRate": 0.12433036654149958,
+    "budgetContinuationRate": 1.1766034876956586
+   },
+   "sources": {
+    "settlementPages": [
+     242
+    ],
+    "overviewFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+    "fy2026SourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "status": "incomparable",
+   "statusReasons": [
+    "currentBudgetYen>=100000000",
+    "budgetContinuationRate>=0.9"
+   ],
+   "thresholdsUsed": {
+    "needsUnusedRate": 0.2,
+    "needsBudgetContinuationRate": 0.9,
+    "needsMinCurrentBudgetYen": 100000000,
+    "carryoverRate": 0.2,
+    "executedRate": 0.9,
+    "reviewReflectedBudgetContinuationRate": 0.5
+   },
+   "policyReviewExcluded": false,
+   "exclusionReasonCode": null
+  },
+  {
+   "comparisonId": "cmp-0037",
+   "mappingId": "map-0037",
+   "confidence": "A",
+   "relationType": "exact",
+   "granularity": "item",
+   "fy2024Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "7:福祉費",
+     "section": "6:施設整備費"
+    }
+   ],
+   "fy2026Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "07:福祉費",
+     "section": "06:施設整備費"
+    }
+   ],
+   "amounts": {
+    "fy2024InitialBudgetYen": 35937000000,
+    "fy2024CurrentBudgetYen": 30097693000,
+    "fy2024SpentYen": 26519904886,
+    "fy2024CarryoverYen": 0,
+    "fy2024UnusedYen": 3577788114,
+    "fy2026InitialBudgetYen": 37503000000
+   },
+   "rates": {
+    "executionRate": 0.8811274965825454,
+    "carryoverRate": 0,
+    "unusedRate": 0.11887250341745462,
+    "budgetContinuationRate": 1.0435762584522914
+   },
+   "sources": {
+    "settlementPages": [
+     274
+    ],
+    "overviewFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+    "fy2026SourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "status": "incomparable",
+   "statusReasons": [
+    "currentBudgetYen>=100000000",
+    "budgetContinuationRate>=0.9"
+   ],
+   "thresholdsUsed": {
+    "needsUnusedRate": 0.2,
+    "needsBudgetContinuationRate": 0.9,
+    "needsMinCurrentBudgetYen": 100000000,
+    "carryoverRate": 0.2,
+    "executedRate": 0.9,
+    "reviewReflectedBudgetContinuationRate": 0.5
+   },
+   "policyReviewExcluded": false,
+   "exclusionReasonCode": null
+  },
+  {
+   "comparisonId": "cmp-0038",
+   "mappingId": "map-0038",
+   "confidence": "A",
+   "relationType": "exact",
+   "granularity": "item",
+   "fy2024Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "8:保健医療費",
+     "section": "1:保健医療管理費"
+    }
+   ],
+   "fy2026Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "08:保健医療費",
+     "section": "01:保健医療管理費"
+    }
+   ],
+   "amounts": {
+    "fy2024InitialBudgetYen": 6182000000,
+    "fy2024CurrentBudgetYen": 6229801000,
+    "fy2024SpentYen": 5574612896,
+    "fy2024CarryoverYen": 0,
+    "fy2024UnusedYen": 655188104,
+    "fy2026InitialBudgetYen": 6365000000
+   },
+   "rates": {
+    "executionRate": 0.8948300107820458,
+    "carryoverRate": 0,
+    "unusedRate": 0.10516998921795415,
+    "budgetContinuationRate": 1.0296020705273374
+   },
+   "sources": {
+    "settlementPages": [
+     276
+    ],
+    "overviewFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+    "fy2026SourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "status": "incomparable",
+   "statusReasons": [
+    "currentBudgetYen>=100000000",
+    "budgetContinuationRate>=0.9"
+   ],
+   "thresholdsUsed": {
+    "needsUnusedRate": 0.2,
+    "needsBudgetContinuationRate": 0.9,
+    "needsMinCurrentBudgetYen": 100000000,
+    "carryoverRate": 0.2,
+    "executedRate": 0.9,
+    "reviewReflectedBudgetContinuationRate": 0.5
+   },
+   "policyReviewExcluded": false,
+   "exclusionReasonCode": null
+  },
+  {
+   "comparisonId": "cmp-0040",
+   "mappingId": "map-0040",
+   "confidence": "A",
+   "relationType": "exact",
+   "granularity": "item",
+   "fy2024Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "8:保健医療費",
+     "section": "3:医療政策費"
+    }
+   ],
+   "fy2026Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "08:保健医療費",
+     "section": "03:医療政策費"
+    }
+   ],
+   "amounts": {
+    "fy2024InitialBudgetYen": 52864000000,
+    "fy2024CurrentBudgetYen": 69217513000,
+    "fy2024SpentYen": 53401806225,
+    "fy2024CarryoverYen": 5542664000,
+    "fy2024UnusedYen": 10273042775,
+    "fy2026InitialBudgetYen": 93889000000
+   },
+   "rates": {
+    "executionRate": 0.7715071505819633,
+    "carryoverRate": 0.08007603509244836,
+    "unusedRate": 0.14841681432558837,
+    "budgetContinuationRate": 1.7760479721549636
+   },
+   "sources": {
+    "settlementPages": [
+     286
+    ],
+    "overviewFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+    "fy2026SourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "status": "incomparable",
+   "statusReasons": [
+    "currentBudgetYen>=100000000",
+    "budgetContinuationRate>=0.9"
+   ],
+   "thresholdsUsed": {
+    "needsUnusedRate": 0.2,
+    "needsBudgetContinuationRate": 0.9,
+    "needsMinCurrentBudgetYen": 100000000,
+    "carryoverRate": 0.2,
+    "executedRate": 0.9,
+    "reviewReflectedBudgetContinuationRate": 0.5
+   },
+   "policyReviewExcluded": false,
+   "exclusionReasonCode": null
+  },
+  {
+   "comparisonId": "cmp-0042",
+   "mappingId": "map-0042",
+   "confidence": "A",
+   "relationType": "exact",
+   "granularity": "item",
+   "fy2024Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "8:保健医療費",
+     "section": "5:健康安全費"
+    }
+   ],
+   "fy2026Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "08:保健医療費",
+     "section": "05:健康安全費"
+    }
+   ],
+   "amounts": {
+    "fy2024InitialBudgetYen": 10787000000,
+    "fy2024CurrentBudgetYen": 12961699000,
+    "fy2024SpentYen": 11303061685,
+    "fy2024CarryoverYen": 566224000,
+    "fy2024UnusedYen": 1092413315,
+    "fy2026InitialBudgetYen": 12147000000
+   },
+   "rates": {
+    "executionRate": 0.8720355012872927,
+    "carryoverRate": 0.04368439662115283,
+    "unusedRate": 0.08428010209155451,
+    "budgetContinuationRate": 1.1260776861036432
+   },
+   "sources": {
+    "settlementPages": [
+     294
+    ],
+    "overviewFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+    "fy2026SourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "status": "incomparable",
+   "statusReasons": [
+    "currentBudgetYen>=100000000",
+    "budgetContinuationRate>=0.9"
+   ],
+   "thresholdsUsed": {
+    "needsUnusedRate": 0.2,
+    "needsBudgetContinuationRate": 0.9,
+    "needsMinCurrentBudgetYen": 100000000,
+    "carryoverRate": 0.2,
+    "executedRate": 0.9,
+    "reviewReflectedBudgetContinuationRate": 0.5
+   },
+   "policyReviewExcluded": false,
+   "exclusionReasonCode": null
+  },
+  {
+   "comparisonId": "cmp-0043",
+   "mappingId": "map-0043",
+   "confidence": "A",
+   "relationType": "exact",
+   "granularity": "item",
+   "fy2024Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "8:保健医療費",
+     "section": "6:感染症対策費"
+    }
+   ],
+   "fy2026Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "08:保健医療費",
+     "section": "06:感染症対策費"
+    }
+   ],
+   "amounts": {
+    "fy2024InitialBudgetYen": 9391000000,
+    "fy2024CurrentBudgetYen": 19583766000,
+    "fy2024SpentYen": 10817950052,
+    "fy2024CarryoverYen": 0,
+    "fy2024UnusedYen": 8765815948,
+    "fy2026InitialBudgetYen": 7679000000
+   },
+   "rates": {
+    "executionRate": 0.5523937557260437,
+    "carryoverRate": 0,
+    "unusedRate": 0.4476062442739563,
+    "budgetContinuationRate": 0.8176977957618997
+   },
+   "sources": {
+    "settlementPages": [
+     302
+    ],
+    "overviewFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+    "fy2026SourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "status": "incomparable",
+   "statusReasons": [
+    "unusedRate>=0.2",
+    "currentBudgetYen>=100000000"
+   ],
+   "thresholdsUsed": {
+    "needsUnusedRate": 0.2,
+    "needsBudgetContinuationRate": 0.9,
+    "needsMinCurrentBudgetYen": 100000000,
+    "carryoverRate": 0.2,
+    "executedRate": 0.9,
+    "reviewReflectedBudgetContinuationRate": 0.5
+   },
+   "policyReviewExcluded": false,
+   "exclusionReasonCode": null
+  },
+  {
+   "comparisonId": "cmp-0044",
+   "mappingId": "map-0044",
+   "confidence": "A",
+   "relationType": "exact",
+   "granularity": "item",
+   "fy2024Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "8:保健医療費",
+     "section": "7:施設整備費"
+    }
+   ],
+   "fy2026Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "08:保健医療費",
+     "section": "07:施設整備費"
+    }
+   ],
+   "amounts": {
+    "fy2024InitialBudgetYen": 16736000000,
+    "fy2024CurrentBudgetYen": 12087969000,
+    "fy2024SpentYen": 10597439373,
+    "fy2024CarryoverYen": 0,
+    "fy2024UnusedYen": 1490529627,
+    "fy2026InitialBudgetYen": 20487000000
+   },
+   "rates": {
+    "executionRate": 0.8766931295902562,
+    "carryoverRate": 0,
+    "unusedRate": 0.12330687040974377,
+    "budgetContinuationRate": 1.2241276290630976
+   },
+   "sources": {
+    "settlementPages": [
+     306
+    ],
+    "overviewFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+    "fy2026SourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "status": "incomparable",
+   "statusReasons": [
+    "currentBudgetYen>=100000000",
+    "budgetContinuationRate>=0.9"
+   ],
+   "thresholdsUsed": {
+    "needsUnusedRate": 0.2,
+    "needsBudgetContinuationRate": 0.9,
+    "needsMinCurrentBudgetYen": 100000000,
+    "carryoverRate": 0.2,
+    "executedRate": 0.9,
+    "reviewReflectedBudgetContinuationRate": 0.5
+   },
+   "policyReviewExcluded": false,
+   "exclusionReasonCode": null
+  },
+  {
+   "comparisonId": "cmp-0046",
+   "mappingId": "map-0046",
+   "confidence": "A",
+   "relationType": "exact",
+   "granularity": "item",
+   "fy2024Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "9:産業労働費",
+     "section": "2:産業労働管理費"
+    }
+   ],
+   "fy2026Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "09:産業労働費",
+     "section": "02:産業労働管理費"
+    }
+   ],
+   "amounts": {
+    "fy2024InitialBudgetYen": 2872000000,
+    "fy2024CurrentBudgetYen": 27843533000,
+    "fy2024SpentYen": 23843983583,
+    "fy2024CarryoverYen": 0,
+    "fy2024UnusedYen": 3999549417,
+    "fy2026InitialBudgetYen": 19648000000
+   },
+   "rates": {
+    "executionRate": 0.8563562527427823,
+    "carryoverRate": 0,
+    "unusedRate": 0.14364374725721768,
+    "budgetContinuationRate": 6.841225626740947
+   },
+   "sources": {
+    "settlementPages": [
+     310
+    ],
+    "overviewFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+    "fy2026SourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "status": "incomparable",
+   "statusReasons": [
+    "currentBudgetYen>=100000000",
+    "budgetContinuationRate>=0.9"
+   ],
+   "thresholdsUsed": {
+    "needsUnusedRate": 0.2,
+    "needsBudgetContinuationRate": 0.9,
+    "needsMinCurrentBudgetYen": 100000000,
+    "carryoverRate": 0.2,
+    "executedRate": 0.9,
+    "reviewReflectedBudgetContinuationRate": 0.5
+   },
+   "policyReviewExcluded": false,
+   "exclusionReasonCode": null
+  },
+  {
+   "comparisonId": "cmp-0049",
+   "mappingId": "map-0049",
+   "confidence": "A",
+   "relationType": "exact",
+   "granularity": "item",
+   "fy2024Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "9:産業労働費",
+     "section": "5:労働費"
+    }
+   ],
+   "fy2026Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "09:産業労働費",
+     "section": "05:労働費"
+    }
+   ],
+   "amounts": {
+    "fy2024InitialBudgetYen": 56000000000,
+    "fy2024CurrentBudgetYen": 55485800000,
+    "fy2024SpentYen": 49385564899,
+    "fy2024CarryoverYen": 0,
+    "fy2024UnusedYen": 6100235101,
+    "fy2026InitialBudgetYen": 62424000000
+   },
+   "rates": {
+    "executionRate": 0.8900577246610845,
+    "carryoverRate": 0,
+    "unusedRate": 0.10994227533891554,
+    "budgetContinuationRate": 1.1147142857142858
+   },
+   "sources": {
+    "settlementPages": [
+     332
+    ],
+    "overviewFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+    "fy2026SourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "status": "incomparable",
+   "statusReasons": [
+    "currentBudgetYen>=100000000",
+    "budgetContinuationRate>=0.9"
+   ],
+   "thresholdsUsed": {
+    "needsUnusedRate": 0.2,
+    "needsBudgetContinuationRate": 0.9,
+    "needsMinCurrentBudgetYen": 100000000,
+    "carryoverRate": 0.2,
+    "executedRate": 0.9,
+    "reviewReflectedBudgetContinuationRate": 0.5
+   },
+   "policyReviewExcluded": false,
+   "exclusionReasonCode": null
+  },
+  {
+   "comparisonId": "cmp-0051",
+   "mappingId": "map-0051",
+   "confidence": "A",
+   "relationType": "exact",
+   "granularity": "item",
+   "fy2024Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "10:土木費",
+     "section": "3:公園霊園費"
+    }
+   ],
+   "fy2026Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "10:土木費",
+     "section": "04:公園霊園費"
+    }
+   ],
+   "amounts": {
+    "fy2024InitialBudgetYen": 86631000000,
+    "fy2024CurrentBudgetYen": 87222727000,
+    "fy2024SpentYen": 74405750344,
+    "fy2024CarryoverYen": 6641545000,
+    "fy2024UnusedYen": 6175431656,
+    "fy2026InitialBudgetYen": 77354000000
+   },
+   "rates": {
+    "executionRate": 0.8530546212342112,
+    "carryoverRate": 0.07614466124178851,
+    "unusedRate": 0.07080071752400037,
+    "budgetContinuationRate": 0.8929136221444979
+   },
+   "sources": {
+    "settlementPages": [
+     376
+    ],
+    "overviewFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+    "fy2026SourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "status": "incomparable",
+   "statusReasons": [
+    "currentBudgetYen>=100000000"
+   ],
+   "thresholdsUsed": {
+    "needsUnusedRate": 0.2,
+    "needsBudgetContinuationRate": 0.9,
+    "needsMinCurrentBudgetYen": 100000000,
+    "carryoverRate": 0.2,
+    "executedRate": 0.9,
+    "reviewReflectedBudgetContinuationRate": 0.5
+   },
+   "policyReviewExcluded": false,
+   "exclusionReasonCode": null
+  },
+  {
+   "comparisonId": "cmp-0053",
+   "mappingId": "map-0053",
+   "confidence": "A",
+   "relationType": "exact",
+   "granularity": "item",
+   "fy2024Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "11:港湾費",
+     "section": "1:東京港整備費"
+    }
+   ],
+   "fy2026Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "11:港湾費",
+     "section": "02:東京港整備費"
+    }
+   ],
+   "amounts": {
+    "fy2024InitialBudgetYen": 76227000000,
+    "fy2024CurrentBudgetYen": 94495877000,
+    "fy2024SpentYen": 80383766162,
+    "fy2024CarryoverYen": 6580417000,
+    "fy2024UnusedYen": 7531693838,
+    "fy2026InitialBudgetYen": 80173000000
+   },
+   "rates": {
+    "executionRate": 0.8506589780843031,
+    "carryoverRate": 0.069637080568076,
+    "unusedRate": 0.07970394134762092,
+    "budgetContinuationRate": 1.051766434465478
+   },
+   "sources": {
+    "settlementPages": [
+     390
+    ],
+    "overviewFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+    "fy2026SourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "status": "incomparable",
+   "statusReasons": [
+    "currentBudgetYen>=100000000",
+    "budgetContinuationRate>=0.9"
+   ],
+   "thresholdsUsed": {
+    "needsUnusedRate": 0.2,
+    "needsBudgetContinuationRate": 0.9,
+    "needsMinCurrentBudgetYen": 100000000,
+    "carryoverRate": 0.2,
+    "executedRate": 0.9,
+    "reviewReflectedBudgetContinuationRate": 0.5
+   },
+   "policyReviewExcluded": false,
+   "exclusionReasonCode": null
+  },
+  {
+   "comparisonId": "cmp-0054",
+   "mappingId": "map-0054",
+   "confidence": "A",
+   "relationType": "exact",
+   "granularity": "item",
+   "fy2024Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "11:港湾費",
+     "section": "2:島しょ等港湾整備費"
+    }
+   ],
+   "fy2026Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "11:港湾費",
+     "section": "03:島しょ等港湾整備費"
+    }
+   ],
+   "amounts": {
+    "fy2024InitialBudgetYen": 23432000000,
+    "fy2024CurrentBudgetYen": 21786346000,
+    "fy2024SpentYen": 17193289872,
+    "fy2024CarryoverYen": 1017347000,
+    "fy2024UnusedYen": 3575709128,
+    "fy2026InitialBudgetYen": 24137000000
+   },
+   "rates": {
+    "executionRate": 0.7891773072914567,
+    "carryoverRate": 0.0466965410353806,
+    "unusedRate": 0.16412615167316263,
+    "budgetContinuationRate": 1.030087060430181
+   },
+   "sources": {
+    "settlementPages": [
+     402
+    ],
+    "overviewFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+    "fy2026SourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "status": "incomparable",
+   "statusReasons": [
+    "currentBudgetYen>=100000000",
+    "budgetContinuationRate>=0.9"
+   ],
+   "thresholdsUsed": {
+    "needsUnusedRate": 0.2,
+    "needsBudgetContinuationRate": 0.9,
+    "needsMinCurrentBudgetYen": 100000000,
+    "carryoverRate": 0.2,
+    "executedRate": 0.9,
+    "reviewReflectedBudgetContinuationRate": 0.5
+   },
+   "policyReviewExcluded": false,
+   "exclusionReasonCode": null
+  },
+  {
+   "comparisonId": "cmp-0059",
+   "mappingId": "map-0059",
+   "confidence": "A",
+   "relationType": "exact",
+   "granularity": "item",
+   "fy2024Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "12:教育費",
+     "section": "4:社会教育費"
+    }
+   ],
+   "fy2026Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "12:教育費",
+     "section": "08:社会教育費"
+    }
+   ],
+   "amounts": {
+    "fy2024InitialBudgetYen": 10830000000,
+    "fy2024CurrentBudgetYen": 10815000000,
+    "fy2024SpentYen": 9672739426,
+    "fy2024CarryoverYen": 0,
+    "fy2024UnusedYen": 1142260574,
+    "fy2026InitialBudgetYen": 13588000000
+   },
+   "rates": {
+    "executionRate": 0.8943818239482201,
+    "carryoverRate": 0,
+    "unusedRate": 0.10561817605177994,
+    "budgetContinuationRate": 1.25466297322253
+   },
+   "sources": {
+    "settlementPages": [
+     446
+    ],
+    "overviewFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+    "fy2026SourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "status": "incomparable",
+   "statusReasons": [
+    "currentBudgetYen>=100000000",
+    "budgetContinuationRate>=0.9"
+   ],
+   "thresholdsUsed": {
+    "needsUnusedRate": 0.2,
+    "needsBudgetContinuationRate": 0.9,
+    "needsMinCurrentBudgetYen": 100000000,
+    "carryoverRate": 0.2,
+    "executedRate": 0.9,
+    "reviewReflectedBudgetContinuationRate": 0.5
+   },
+   "policyReviewExcluded": false,
+   "exclusionReasonCode": null
+  },
+  {
+   "comparisonId": "cmp-0061",
+   "mappingId": "map-0061",
+   "confidence": "A",
+   "relationType": "exact",
+   "granularity": "item",
+   "fy2024Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "12:教育費",
+     "section": "6:施設整備費"
+    }
+   ],
+   "fy2026Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "12:教育費",
+     "section": "09:施設整備費"
+    }
+   ],
+   "amounts": {
+    "fy2024InitialBudgetYen": 65740000000,
+    "fy2024CurrentBudgetYen": 60441403000,
+    "fy2024SpentYen": 49172665526,
+    "fy2024CarryoverYen": 0,
+    "fy2024UnusedYen": 11268737474,
+    "fy2026InitialBudgetYen": 66184000000
+   },
+   "rates": {
+    "executionRate": 0.8135593001704478,
+    "carryoverRate": 0,
+    "unusedRate": 0.18644069982955228,
+    "budgetContinuationRate": 1.0067538789169455
+   },
+   "sources": {
+    "settlementPages": [
+     450
+    ],
+    "overviewFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+    "fy2026SourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "status": "incomparable",
+   "statusReasons": [
+    "currentBudgetYen>=100000000",
+    "budgetContinuationRate>=0.9"
+   ],
+   "thresholdsUsed": {
+    "needsUnusedRate": 0.2,
+    "needsBudgetContinuationRate": 0.9,
+    "needsMinCurrentBudgetYen": 100000000,
+    "carryoverRate": 0.2,
+    "executedRate": 0.9,
+    "reviewReflectedBudgetContinuationRate": 0.5
+   },
+   "policyReviewExcluded": false,
+   "exclusionReasonCode": null
+  },
+  {
+   "comparisonId": "cmp-0064",
+   "mappingId": "map-0064",
+   "confidence": "A",
+   "relationType": "exact",
+   "granularity": "item",
+   "fy2024Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "13:学務費",
+     "section": "3:育英資金費"
+    }
+   ],
+   "fy2026Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "13:学務費",
+     "section": "03:育英資金費"
+    }
+   ],
+   "amounts": {
+    "fy2024InitialBudgetYen": 281000000,
+    "fy2024CurrentBudgetYen": 281000000,
+    "fy2024SpentYen": 225946446,
+    "fy2024CarryoverYen": 0,
+    "fy2024UnusedYen": 55053554,
+    "fy2026InitialBudgetYen": 322000000
+   },
+   "rates": {
+    "executionRate": 0.8040798790035587,
+    "carryoverRate": 0,
+    "unusedRate": 0.1959201209964413,
+    "budgetContinuationRate": 1.1459074733096086
+   },
+   "sources": {
+    "settlementPages": [
+     456
+    ],
+    "overviewFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+    "fy2026SourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "status": "incomparable",
+   "statusReasons": [
+    "currentBudgetYen>=100000000",
+    "budgetContinuationRate>=0.9"
+   ],
+   "thresholdsUsed": {
+    "needsUnusedRate": 0.2,
+    "needsBudgetContinuationRate": 0.9,
+    "needsMinCurrentBudgetYen": 100000000,
+    "carryoverRate": 0.2,
+    "executedRate": 0.9,
+    "reviewReflectedBudgetContinuationRate": 0.5
+   },
+   "policyReviewExcluded": false,
+   "exclusionReasonCode": null
+  },
+  {
+   "comparisonId": "cmp-0068",
+   "mappingId": "map-0068",
+   "confidence": "A",
+   "relationType": "exact",
+   "granularity": "item",
+   "fy2024Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "14:警察費",
+     "section": "4:警察施設費"
+    }
+   ],
+   "fy2026Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "14:警察費",
+     "section": "04:警察施設費"
+    }
+   ],
+   "amounts": {
+    "fy2024InitialBudgetYen": 49799891000,
+    "fy2024CurrentBudgetYen": 40199891000,
+    "fy2024SpentYen": 33240148945,
+    "fy2024CarryoverYen": 0,
+    "fy2024UnusedYen": 6959742055,
+    "fy2026InitialBudgetYen": 63074650000
+   },
+   "rates": {
+    "executionRate": 0.8268716187563793,
+    "carryoverRate": 0,
+    "unusedRate": 0.1731283812436208,
+    "budgetContinuationRate": 1.2665620091417469
+   },
+   "sources": {
+    "settlementPages": [
+     474
+    ],
+    "overviewFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+    "fy2026SourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "status": "incomparable",
+   "statusReasons": [
+    "currentBudgetYen>=100000000",
+    "budgetContinuationRate>=0.9"
+   ],
+   "thresholdsUsed": {
+    "needsUnusedRate": 0.2,
+    "needsBudgetContinuationRate": 0.9,
+    "needsMinCurrentBudgetYen": 100000000,
+    "carryoverRate": 0.2,
+    "executedRate": 0.9,
+    "reviewReflectedBudgetContinuationRate": 0.5
+   },
+   "policyReviewExcluded": false,
+   "exclusionReasonCode": null
+  },
+  {
+   "comparisonId": "cmp-0070",
+   "mappingId": "map-0070",
+   "confidence": "A",
+   "relationType": "exact",
+   "granularity": "item",
+   "fy2024Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "15:消防費",
+     "section": "2:消防活動費"
+    }
+   ],
+   "fy2026Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "15:消防費",
+     "section": "02:消防活動費"
+    }
+   ],
+   "amounts": {
+    "fy2024InitialBudgetYen": 33651000000,
+    "fy2024CurrentBudgetYen": 36988417000,
+    "fy2024SpentYen": 32697973507,
+    "fy2024CarryoverYen": 3484741000,
+    "fy2024UnusedYen": 805702493,
+    "fy2026InitialBudgetYen": 44962000000
+   },
+   "rates": {
+    "executionRate": 0.8840057552882028,
+    "carryoverRate": 0.09421168253834707,
+    "unusedRate": 0.021782562173450138,
+    "budgetContinuationRate": 1.336126712430537
+   },
+   "sources": {
+    "settlementPages": [
+     482
+    ],
+    "overviewFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+    "fy2026SourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "status": "incomparable",
+   "statusReasons": [
+    "currentBudgetYen>=100000000",
+    "budgetContinuationRate>=0.9"
+   ],
+   "thresholdsUsed": {
+    "needsUnusedRate": 0.2,
+    "needsBudgetContinuationRate": 0.9,
+    "needsMinCurrentBudgetYen": 100000000,
+    "carryoverRate": 0.2,
+    "executedRate": 0.9,
+    "reviewReflectedBudgetContinuationRate": 0.5
+   },
+   "policyReviewExcluded": false,
+   "exclusionReasonCode": null
+  },
+  {
+   "comparisonId": "cmp-0073",
+   "mappingId": "map-0073",
+   "confidence": "A",
+   "relationType": "exact",
+   "granularity": "item",
+   "fy2024Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "15:消防費",
+     "section": "5:建設費"
+    }
+   ],
+   "fy2026Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "15:消防費",
+     "section": "05:建設費"
+    }
+   ],
+   "amounts": {
+    "fy2024InitialBudgetYen": 18121000000,
+    "fy2024CurrentBudgetYen": 16903029000,
+    "fy2024SpentYen": 14582205524,
+    "fy2024CarryoverYen": 103909000,
+    "fy2024UnusedYen": 2216914476,
+    "fy2026InitialBudgetYen": 23215000000
+   },
+   "rates": {
+    "executionRate": 0.8626977758838371,
+    "carryoverRate": 0.006147359742446162,
+    "unusedRate": 0.13115486437371668,
+    "budgetContinuationRate": 1.281110314000331
+   },
+   "sources": {
+    "settlementPages": [
+     490
+    ],
+    "overviewFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+    "fy2026SourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "status": "incomparable",
+   "statusReasons": [
+    "currentBudgetYen>=100000000",
+    "budgetContinuationRate>=0.9"
+   ],
+   "thresholdsUsed": {
+    "needsUnusedRate": 0.2,
+    "needsBudgetContinuationRate": 0.9,
+    "needsMinCurrentBudgetYen": 100000000,
+    "carryoverRate": 0.2,
+    "executedRate": 0.9,
+    "reviewReflectedBudgetContinuationRate": 0.5
+   },
+   "policyReviewExcluded": false,
+   "exclusionReasonCode": null
+  },
+  {
+   "comparisonId": "cmp-0076",
+   "mappingId": "map-manual-0002",
+   "confidence": "B",
+   "relationType": "renamed",
+   "granularity": "chapter",
+   "fy2024Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "10:土木費"
+    }
+   ],
+   "fy2026Keys": [
+    {
+     "account": "一般会計",
+     "chapter": "10:土木費"
+    }
+   ],
+   "amounts": {
+    "fy2024InitialBudgetYen": 636558000000,
+    "fy2024CurrentBudgetYen": 594733158000,
+    "fy2024SpentYen": 498865730454,
+    "fy2024CarryoverYen": 37206011000,
+    "fy2024UnusedYen": 58661416546,
+    "fy2026InitialBudgetYen": 658278000000
+   },
+   "rates": {
+    "executionRate": 0.8388059817139034,
+    "carryoverRate": 0.06255916708111305,
+    "unusedRate": 0.0986348512049836,
+    "budgetContinuationRate": 1.0341210070409923
+   },
+   "sources": {
+    "settlementPages": [
+     342
+    ],
+    "overviewFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+    "fy2026SourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "status": "incomparable",
+   "statusReasons": [
+    "currentBudgetYen>=100000000",
+    "budgetContinuationRate>=0.9"
+   ],
+   "thresholdsUsed": {
+    "needsUnusedRate": 0.2,
+    "needsBudgetContinuationRate": 0.9,
+    "needsMinCurrentBudgetYen": 100000000,
+    "carryoverRate": 0.2,
+    "executedRate": 0.9,
+    "reviewReflectedBudgetContinuationRate": 0.5
+   },
+   "policyReviewExcluded": false,
+   "exclusionReasonCode": null
+  }
+ ],
+ "summary": {
+  "total": 77,
+  "byStatus": {
+   "needs-explanation": {
+    "count": 4,
+    "currentBudgetYen": 58295678000,
+    "unusedYen": 15732922165,
+    "fy2026Yen": 66780647000
+   },
+   "executed": {
+    "count": 40,
+    "currentBudgetYen": 12757941135000,
+    "unusedYen": 462052643514,
+    "fy2026Yen": 13503855434000
+   },
+   "incomparable": {
+    "count": 33,
+    "currentBudgetYen": 3677739455000,
+    "unusedYen": 372439129311,
+    "fy2026Yen": 3678888818000
+   }
+  },
+  "needsExplanationTop": [
+   {
+    "key": [
+     "9:産業労働費/4:農林水産費"
+    ],
+    "currentBudgetYen": 31006748000,
+    "unusedYen": 7358438549
+   },
+   {
+    "key": [
+     "2:総務費/10:退職手当及年金費"
+    ],
+    "currentBudgetYen": 18953741000,
+    "unusedYen": 4613589586
+   },
+   {
+    "key": [
+     "18:予備費"
+    ],
+    "currentBudgetYen": 2568489000,
+    "unusedYen": 2568489000
+   },
+   {
+    "key": [
+     "9:産業労働費/6:施設整備費"
+    ],
+    "currentBudgetYen": 5766700000,
+    "unusedYen": 1192405030
+   }
+  ]
+ }
+}
