@@ -1,0 +1,16 @@
+[
+  {
+    "fiscalYear": 2025,
+    "recordCount": 1838,
+    "totalBudgetThousandYen": 2083610210,
+    "jsonlPath": "data/normalized/subsidies/2025.jsonl",
+    "summaryPath": "data/normalized/subsidies/2025-summary.json"
+  },
+  {
+    "fiscalYear": 2026,
+    "recordCount": 1896,
+    "totalBudgetThousandYen": 2288442885,
+    "jsonlPath": "data/normalized/subsidies/2026.jsonl",
+    "summaryPath": "data/normalized/subsidies/2026-summary.json"
+  }
+]

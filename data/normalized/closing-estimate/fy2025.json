@@ -1,0 +1,59 @@
+{
+  "fiscalYear": 2025,
+  "status": "preliminary",
+  "publicationDate": "2026-07-31",
+  "unit": "億円",
+  "source": {
+    "title": "令和7年度一般会計決算（見込み）について",
+    "url": "https://www.zaimu.metro.tokyo.lg.jp/documents/d/zaimu/20260731_reiwa7nendo_ippankaikeikessan_mikomi_",
+    "localPath": "data/raw/documents/fy2025/general-account-closing-estimate.pdf",
+    "page": 1
+  },
+  "records": [
+    {
+      "metric": "revenue",
+      "label": "歳入",
+      "fiscalYear2025HundredMillionYen": 92960,
+      "fiscalYear2024HundredMillionYen": 89628,
+      "changeHundredMillionYen": 3332,
+      "changePercent": 3.7
+    },
+    {
+      "metric": "expenditure",
+      "label": "歳出",
+      "fiscalYear2025HundredMillionYen": 90819,
+      "fiscalYear2024HundredMillionYen": 87246,
+      "changeHundredMillionYen": 3573,
+      "changePercent": 4.1
+    },
+    {
+      "metric": "formalBalance",
+      "label": "形式収支",
+      "fiscalYear2025HundredMillionYen": 2141,
+      "fiscalYear2024HundredMillionYen": 2382,
+      "changeHundredMillionYen": null,
+      "changePercent": null
+    },
+    {
+      "metric": "carryoverResources",
+      "label": "翌年度へ繰り越すべき財源",
+      "fiscalYear2025HundredMillionYen": 2141,
+      "fiscalYear2024HundredMillionYen": 2382,
+      "changeHundredMillionYen": null,
+      "changePercent": null
+    },
+    {
+      "metric": "realBalance",
+      "label": "実質収支",
+      "fiscalYear2025HundredMillionYen": 0,
+      "fiscalYear2024HundredMillionYen": 0,
+      "changeHundredMillionYen": null,
+      "changePercent": null
+    }
+  ],
+  "cautions": [
+    "公表値は見込みであり、確定した普通会計決算ではない。",
+    "当初予算と決算見込みの単純比率は、補正・繰越・流用・予備費充当後の予算現額を反映しないため、執行率として扱わない。",
+    "表示単位未満の四捨五入により、合計等が一致しない場合がある。"
+  ]
+}

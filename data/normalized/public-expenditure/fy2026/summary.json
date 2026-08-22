@@ -1,0 +1,27 @@
+{
+  "fiscalYear": 2026,
+  "sourceMonths": [
+    "2026-04",
+    "2026-05",
+    "2026-06"
+  ],
+  "sourceFiles": [
+    "2026-04.xlsx",
+    "2026-05.xlsx",
+    "2026-06.xlsx"
+  ],
+  "transactionFileCount": 3,
+  "transactionCount": 75247,
+  "transactionAmountYen": 2224578606464,
+  "payrollFile": "payroll.xlsx",
+  "payrollRecordCount": 18,
+  "payrollAmountYen": 520755612656,
+  "combinedAmountYen": 2745334219120,
+  "invalidDateCount": 0,
+  "skippedNonDataRowCount": 6,
+  "notes": [
+    "公金支出の通常明細と給与関係費は別原本であり、別系列として保持した。",
+    "出納整理期間はisClosingPeriod=trueで識別できる。",
+    "予算系列と公金支出系列は分類粒度が異なるため、この集計だけから執行率を算出しない。"
+  ]
+}

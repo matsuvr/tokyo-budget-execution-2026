@@ -1,0 +1,29 @@
+[
+  {
+    "month": "2026-04",
+    "transactionCount": 12466,
+    "transactionAmountYen": 572411356033,
+    "payrollAmountYen": 107139802254,
+    "combinedAmountYen": 679551158287,
+    "ordinaryFileCount": 1,
+    "closingFileCount": 0
+  },
+  {
+    "month": "2026-05",
+    "transactionCount": 22988,
+    "transactionAmountYen": 884914027896,
+    "payrollAmountYen": 103429838836,
+    "combinedAmountYen": 988343866732,
+    "ordinaryFileCount": 1,
+    "closingFileCount": 0
+  },
+  {
+    "month": "2026-06",
+    "transactionCount": 39793,
+    "transactionAmountYen": 767253222535,
+    "payrollAmountYen": 310185971566,
+    "combinedAmountYen": 1077439194101,
+    "ordinaryFileCount": 1,
+    "closingFileCount": 0
+  }
+]

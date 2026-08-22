@@ -1,0 +1,111 @@
+{
+  "packageName": "tokyo-budget-execution-2026",
+  "version": "2026.08.21",
+  "generatedAt": "2026-08-22T01:30:52.539Z",
+  "timezone": "Asia/Tokyo",
+  "requestedFiscalYears": [
+    2025,
+    2026
+  ],
+  "contents": {
+    "manifestSources": 60,
+    "officialRawSourcesDownloaded": 55,
+    "referenceSources": 5,
+    "sourceCategories": {
+      "budget": 15,
+      "settlement": 10,
+      "public-expenditure": 19,
+      "subsidy": 2,
+      "catalog": 1,
+      "document": 8,
+      "reference": 5
+    },
+    "budget": {
+      "series": 15,
+      "records": 304,
+      "fiscalYears": [
+        2025,
+        2026
+      ]
+    },
+    "publicExpenditure": {
+      "fiscalYear2025": {
+        "coveredMonths": [
+          "2025-04",
+          "2025-05",
+          "2025-06",
+          "2025-07",
+          "2025-08",
+          "2025-09",
+          "2025-10",
+          "2025-11",
+          "2025-12",
+          "2026-01",
+          "2026-02",
+          "2026-03",
+          "2026-04",
+          "2026-05"
+        ],
+        "transactionCount": 509389,
+        "transactionAmountYen": 10890482453450,
+        "payrollAmountYen": 1489787016534,
+        "combinedAmountYen": 12380269469984
+      },
+      "fiscalYear2026": {
+        "coveredMonths": [
+          "2026-04",
+          "2026-05",
+          "2026-06"
+        ],
+        "transactionCount": 75247,
+        "transactionAmountYen": 2224578606464,
+        "payrollAmountYen": 520755612656,
+        "combinedAmountYen": 2745334219120
+      }
+    },
+    "subsidies": [
+      {
+        "fiscalYear": 2025,
+        "recordCount": 1838,
+        "totalBudgetThousandYen": 2083610210,
+        "jsonlPath": "data/normalized/subsidies/2025.jsonl",
+        "summaryPath": "data/normalized/subsidies/2025-summary.json"
+      },
+      {
+        "fiscalYear": 2026,
+        "recordCount": 1896,
+        "totalBudgetThousandYen": 2288442885,
+        "jsonlPath": "data/normalized/subsidies/2026.jsonl",
+        "summaryPath": "data/normalized/subsidies/2026-summary.json"
+      }
+    ],
+    "settlementComparison": {
+      "series": 10,
+      "latestFiscalYear": 2024,
+      "records": 5010
+    },
+    "preliminaryClosingEstimate": {
+      "fiscalYear": 2025,
+      "status": "preliminary",
+      "path": "data/normalized/closing-estimate/fy2025.json"
+    },
+    "relatedOfficialDocuments": 8,
+    "catalogExtractRows": 1497
+  },
+  "validation": {
+    "regenerationFromRaw": "passed",
+    "typecheck": "passed",
+    "typecheckCommand": "pnpm run typecheck",
+    "typecheckRequiresDevDependencies": true,
+    "verificationChecks": 196,
+    "failedChecks": 0,
+    "workerRoutesTested": true,
+    "sourceHashesVerified": true
+  },
+  "cautions": [
+    "URLのディレクトリ名ではなく、CSV内の年度列を年度判定に使用する。",
+    "公金支出明細と予算見える化CSVは分類体系・粒度が一致しないため、未検証の直接結合や執行率計算を避ける。",
+    "令和8年度は年度途中であり、執行実績は公開済み月までに限定される。",
+    "令和7年度一般会計決算は2026年7月31日時点の見込みであり、確定普通会計決算ではない。"
+  ]
+}

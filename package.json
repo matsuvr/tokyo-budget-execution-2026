@@ -1,0 +1,29 @@
+{
+  "name": "tokyo-budget-execution-2026",
+  "version": "2026.8.21",
+  "private": true,
+  "type": "module",
+  "description": "東京都の令和7・8年度予算、公金支出、補助金、決算比較データをTypeScriptで扱うための再現可能なデータパッケージ",
+  "engines": {
+    "node": ">=22.6"
+  },
+  "scripts": {
+    "filter:catalog": "node --experimental-strip-types scripts/filter-catalog.ts",
+    "normalize": "node --max-old-space-size=3072 --experimental-strip-types scripts/normalize.ts",
+    "manifest": "node --experimental-strip-types scripts/build-manifest.ts",
+    "summary": "node --experimental-strip-types scripts/build-package-summary.ts",
+    "verify": "node --experimental-strip-types scripts/verify.ts",
+    "prepare:data": "pnpm run filter:catalog && pnpm run normalize && pnpm run manifest && pnpm run verify && pnpm run summary",
+    "example": "node --experimental-strip-types scripts/example-analysis.ts",
+    "fetch:pending": "node --experimental-strip-types scripts/fetch-pending.ts",
+    "upload:r2": "node --experimental-strip-types scripts/upload-r2.ts",
+    "typecheck": "tsc --noEmit",
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "typescript": "latest",
+    "wrangler": "latest"
+  }
+}

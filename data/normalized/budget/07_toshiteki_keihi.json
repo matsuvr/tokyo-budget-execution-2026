@@ -1,0 +1,26 @@
+{
+  "dataset": "TOKYO予算見える化ボード",
+  "key": "07_toshiteki_keihi",
+  "title": "投資的経費",
+  "sourceFile": "data/raw/budget/07_toshiteki_keihi.csv",
+  "sourceEncoding": "shift_jis",
+  "fiscalYears": [
+    2025,
+    2026
+  ],
+  "columns": [
+    "年度",
+    "投資的経費（億円）"
+  ],
+  "recordCount": 2,
+  "records": [
+    {
+      "年度": 2025,
+      "投資的経費（億円）": "11,611"
+    },
+    {
+      "年度": 2026,
+      "投資的経費（億円）": "11,324"
+    }
+  ]
+}

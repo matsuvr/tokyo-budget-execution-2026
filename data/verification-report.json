@@ -1,0 +1,1350 @@
+{
+  "generatedAt": "2026-08-21T07:29:22.740Z",
+  "pass": true,
+  "checkCount": 196,
+  "failedCheckCount": 0,
+  "checks": [
+    {
+      "name": "budget series count is 15",
+      "pass": true,
+      "details": 15
+    },
+    {
+      "name": "every budget series contains FY2025 and FY2026",
+      "pass": true
+    },
+    {
+      "name": "settlement series count is 10",
+      "pass": true,
+      "details": 10
+    },
+    {
+      "name": "settlement comparison latest fiscal year is 2024",
+      "pass": true
+    },
+    {
+      "name": "FY2025 transaction JSONL count matches summary",
+      "pass": true,
+      "details": {
+        "transactionLineCount": 509389,
+        "summary": 509389
+      }
+    },
+    {
+      "name": "FY2025 public expenditure file coverage",
+      "pass": true,
+      "details": 14
+    },
+    {
+      "name": "FY2025 public expenditure amounts are positive",
+      "pass": true
+    },
+    {
+      "name": "FY2025 all transaction dates parsed",
+      "pass": true,
+      "details": 0
+    },
+    {
+      "name": "FY2025 non-data footers were skipped",
+      "pass": true,
+      "details": 30
+    },
+    {
+      "name": "FY2026 transaction JSONL count matches summary",
+      "pass": true,
+      "details": {
+        "transactionLineCount": 75247,
+        "summary": 75247
+      }
+    },
+    {
+      "name": "FY2026 public expenditure file coverage",
+      "pass": true,
+      "details": 3
+    },
+    {
+      "name": "FY2026 public expenditure amounts are positive",
+      "pass": true
+    },
+    {
+      "name": "FY2026 all transaction dates parsed",
+      "pass": true,
+      "details": 0
+    },
+    {
+      "name": "FY2026 non-data footers were skipped",
+      "pass": true,
+      "details": 6
+    },
+    {
+      "name": "subsidies include FY2025 and FY2026",
+      "pass": true,
+      "details": [
+        {
+          "fiscalYear": 2025,
+          "recordCount": 1838,
+          "totalBudgetThousandYen": 2083610210,
+          "jsonlPath": "data/normalized/subsidies/2025.jsonl",
+          "summaryPath": "data/normalized/subsidies/2025-summary.json"
+        },
+        {
+          "fiscalYear": 2026,
+          "recordCount": 1896,
+          "totalBudgetThousandYen": 2288442885,
+          "jsonlPath": "data/normalized/subsidies/2026.jsonl",
+          "summaryPath": "data/normalized/subsidies/2026-summary.json"
+        }
+      ]
+    },
+    {
+      "name": "subsidy rows are populated",
+      "pass": true
+    },
+    {
+      "name": "FY2025 preliminary closing estimate identity",
+      "pass": true
+    },
+    {
+      "name": "FY2025 preliminary closing estimate values",
+      "pass": true,
+      "details": {
+        "closingRevenue": {
+          "metric": "revenue",
+          "label": "歳入",
+          "fiscalYear2025HundredMillionYen": 92960,
+          "fiscalYear2024HundredMillionYen": 89628,
+          "changeHundredMillionYen": 3332,
+          "changePercent": 3.7
+        },
+        "closingExpenditure": {
+          "metric": "expenditure",
+          "label": "歳出",
+          "fiscalYear2025HundredMillionYen": 90819,
+          "fiscalYear2024HundredMillionYen": 87246,
+          "changeHundredMillionYen": 3573,
+          "changePercent": 4.1
+        }
+      }
+    },
+    {
+      "name": "manifest local file exists: budget-01_sainyu_saishutsu",
+      "pass": true,
+      "details": "data/raw/budget/01_sainyu_saishutsu.csv"
+    },
+    {
+      "name": "manifest hash: budget-01_sainyu_saishutsu",
+      "pass": true,
+      "details": {
+        "expected": "fbac177be5ab7da260343bd9ccffb88686aa2ee27b570f54bc572257c44d8dca",
+        "actual": "fbac177be5ab7da260343bd9ccffb88686aa2ee27b570f54bc572257c44d8dca"
+      }
+    },
+    {
+      "name": "manifest size: budget-01_sainyu_saishutsu",
+      "pass": true,
+      "details": {
+        "expected": 3063,
+        "actual": 3063
+      }
+    },
+    {
+      "name": "manifest local file exists: budget-02_zaiseikibo_ippansaishutsu_suii",
+      "pass": true,
+      "details": "data/raw/budget/02_zaiseikibo_ippansaishutsu_suii.csv"
+    },
+    {
+      "name": "manifest hash: budget-02_zaiseikibo_ippansaishutsu_suii",
+      "pass": true,
+      "details": {
+        "expected": "77bc03520a2f99967a33d0768a7e68887de879cb58167143b14c1c5fe207f86b",
+        "actual": "77bc03520a2f99967a33d0768a7e68887de879cb58167143b14c1c5fe207f86b"
+      }
+    },
+    {
+      "name": "manifest size: budget-02_zaiseikibo_ippansaishutsu_suii",
+      "pass": true,
+      "details": {
+        "expected": 880,
+        "actual": 880
+      }
+    },
+    {
+      "name": "manifest local file exists: budget-03_hitoriatari_yosan",
+      "pass": true,
+      "details": "data/raw/budget/03_hitoriatari_yosan.csv"
+    },
+    {
+      "name": "manifest hash: budget-03_hitoriatari_yosan",
+      "pass": true,
+      "details": {
+        "expected": "be069e4b5283d2c837060b1ba7a4dfbc04a9f4a2d75b4f475c4027cd4366d2c7",
+        "actual": "be069e4b5283d2c837060b1ba7a4dfbc04a9f4a2d75b4f475c4027cd4366d2c7"
+      }
+    },
+    {
+      "name": "manifest size: budget-03_hitoriatari_yosan",
+      "pass": true,
+      "details": {
+        "expected": 1336,
+        "actual": 1336
+      }
+    },
+    {
+      "name": "manifest local file exists: budget-04_seishitsubetsu",
+      "pass": true,
+      "details": "data/raw/budget/04_seishitsubetsu.csv"
+    },
+    {
+      "name": "manifest hash: budget-04_seishitsubetsu",
+      "pass": true,
+      "details": {
+        "expected": "413eed23fbad798e3bba929199fed24bfa22515bc0f62e06ad575cc34dd152a6",
+        "actual": "413eed23fbad798e3bba929199fed24bfa22515bc0f62e06ad575cc34dd152a6"
+      }
+    },
+    {
+      "name": "manifest size: budget-04_seishitsubetsu",
+      "pass": true,
+      "details": {
+        "expected": 1201,
+        "actual": 1201
+      }
+    },
+    {
+      "name": "manifest local file exists: budget-05_mokutekibetsu",
+      "pass": true,
+      "details": "data/raw/budget/05_mokutekibetsu.csv"
+    },
+    {
+      "name": "manifest hash: budget-05_mokutekibetsu",
+      "pass": true,
+      "details": {
+        "expected": "38a476ce1d9272a137af4cbaae22904eaa7cb02c053e138139641a597bc01fb4",
+        "actual": "38a476ce1d9272a137af4cbaae22904eaa7cb02c053e138139641a597bc01fb4"
+      }
+    },
+    {
+      "name": "manifest size: budget-05_mokutekibetsu",
+      "pass": true,
+      "details": {
+        "expected": 3622,
+        "actual": 3622
+      }
+    },
+    {
+      "name": "manifest local file exists: budget-06_kyuyo_kankeihi",
+      "pass": true,
+      "details": "data/raw/budget/06_kyuyo_kankeihi.csv"
+    },
+    {
+      "name": "manifest hash: budget-06_kyuyo_kankeihi",
+      "pass": true,
+      "details": {
+        "expected": "aa854bf9a9bc41b96e20734623090472b6cd2ab3bad230bcece7e05fb92bb36e",
+        "actual": "aa854bf9a9bc41b96e20734623090472b6cd2ab3bad230bcece7e05fb92bb36e"
+      }
+    },
+    {
+      "name": "manifest size: budget-06_kyuyo_kankeihi",
+      "pass": true,
+      "details": {
+        "expected": 385,
+        "actual": 385
+      }
+    },
+    {
+      "name": "manifest local file exists: budget-07_toshiteki_keihi",
+      "pass": true,
+      "details": "data/raw/budget/07_toshiteki_keihi.csv"
+    },
+    {
+      "name": "manifest hash: budget-07_toshiteki_keihi",
+      "pass": true,
+      "details": {
+        "expected": "defbed110742439ca61bd1b38c07122156b13b0d59c509327fcd27777e2b5d5c",
+        "actual": "defbed110742439ca61bd1b38c07122156b13b0d59c509327fcd27777e2b5d5c"
+      }
+    },
+    {
+      "name": "manifest size: budget-07_toshiteki_keihi",
+      "pass": true,
+      "details": {
+        "expected": 371,
+        "actual": 371
+      }
+    },
+    {
+      "name": "manifest local file exists: budget-08_sainyu_uchiwake",
+      "pass": true,
+      "details": "data/raw/budget/08_sainyu_uchiwake.csv"
+    },
+    {
+      "name": "manifest hash: budget-08_sainyu_uchiwake",
+      "pass": true,
+      "details": {
+        "expected": "626e2c23df092384b33574aa59210508973997a832799e88b88cfb03162925fe",
+        "actual": "626e2c23df092384b33574aa59210508973997a832799e88b88cfb03162925fe"
+      }
+    },
+    {
+      "name": "manifest size: budget-08_sainyu_uchiwake",
+      "pass": true,
+      "details": {
+        "expected": 5519,
+        "actual": 5519
+      }
+    },
+    {
+      "name": "manifest local file exists: budget-09_tozei_uchiwake",
+      "pass": true,
+      "details": "data/raw/budget/09_tozei_uchiwake.csv"
+    },
+    {
+      "name": "manifest hash: budget-09_tozei_uchiwake",
+      "pass": true,
+      "details": {
+        "expected": "40ede7a5aaa74cc009e1d8a1a06c602e4223c9eedb0e0124981a2062257f3f46",
+        "actual": "40ede7a5aaa74cc009e1d8a1a06c602e4223c9eedb0e0124981a2062257f3f46"
+      }
+    },
+    {
+      "name": "manifest size: budget-09_tozei_uchiwake",
+      "pass": true,
+      "details": {
+        "expected": 3958,
+        "actual": 3958
+      }
+    },
+    {
+      "name": "manifest local file exists: budget-10_tozei_suii",
+      "pass": true,
+      "details": "data/raw/budget/10_tozei_suii.csv"
+    },
+    {
+      "name": "manifest hash: budget-10_tozei_suii",
+      "pass": true,
+      "details": {
+        "expected": "17f70f76594f29225f58a4a5dbf63458a68f06ad9233d73d20dc50e2cdff1daf",
+        "actual": "17f70f76594f29225f58a4a5dbf63458a68f06ad9233d73d20dc50e2cdff1daf"
+      }
+    },
+    {
+      "name": "manifest size: budget-10_tozei_suii",
+      "pass": true,
+      "details": {
+        "expected": 3267,
+        "actual": 3267
+      }
+    },
+    {
+      "name": "manifest local file exists: budget-14_kikin_zandaka_suii",
+      "pass": true,
+      "details": "data/raw/budget/14_kikin_zandaka_suii.csv"
+    },
+    {
+      "name": "manifest hash: budget-14_kikin_zandaka_suii",
+      "pass": true,
+      "details": {
+        "expected": "bb6f747ab40b8140a4d3dd91cd4eccf7db3204cbf784dfb6bbfdc7e3295b28e1",
+        "actual": "bb6f747ab40b8140a4d3dd91cd4eccf7db3204cbf784dfb6bbfdc7e3295b28e1"
+      }
+    },
+    {
+      "name": "manifest size: budget-14_kikin_zandaka_suii",
+      "pass": true,
+      "details": {
+        "expected": 4894,
+        "actual": 4894
+      }
+    },
+    {
+      "name": "manifest local file exists: budget-15_kikin_tsumitate_torikuzushi_jyokyo",
+      "pass": true,
+      "details": "data/raw/budget/15_kikin_tsumitate_torikuzushi_jyokyo.csv"
+    },
+    {
+      "name": "manifest hash: budget-15_kikin_tsumitate_torikuzushi_jyokyo",
+      "pass": true,
+      "details": {
+        "expected": "ed45c8cfbfe5bc734545951f7fad615f2fc51260505fab10f26071982820d31b",
+        "actual": "ed45c8cfbfe5bc734545951f7fad615f2fc51260505fab10f26071982820d31b"
+      }
+    },
+    {
+      "name": "manifest size: budget-15_kikin_tsumitate_torikuzushi_jyokyo",
+      "pass": true,
+      "details": {
+        "expected": 59063,
+        "actual": 59063
+      }
+    },
+    {
+      "name": "manifest local file exists: budget-16_tosai_hakkougaku_zandaka_suii",
+      "pass": true,
+      "details": "data/raw/budget/16_tosai_hakkougaku_zandaka_suii.csv"
+    },
+    {
+      "name": "manifest hash: budget-16_tosai_hakkougaku_zandaka_suii",
+      "pass": true,
+      "details": {
+        "expected": "cd79bcfde74c31c50dabcecc06c9a6542ce57948df26d76ba9d245bdc80ff2b4",
+        "actual": "cd79bcfde74c31c50dabcecc06c9a6542ce57948df26d76ba9d245bdc80ff2b4"
+      }
+    },
+    {
+      "name": "manifest size: budget-16_tosai_hakkougaku_zandaka_suii",
+      "pass": true,
+      "details": {
+        "expected": 825,
+        "actual": 825
+      }
+    },
+    {
+      "name": "manifest local file exists: budget-17_kisai_izondo_suii",
+      "pass": true,
+      "details": "data/raw/budget/17_kisai_izondo_suii.csv"
+    },
+    {
+      "name": "manifest hash: budget-17_kisai_izondo_suii",
+      "pass": true,
+      "details": {
+        "expected": "0e5967e42d647177f32efccf20981377a39c37dd74c714f16d274173ca4f64c9",
+        "actual": "0e5967e42d647177f32efccf20981377a39c37dd74c714f16d274173ca4f64c9"
+      }
+    },
+    {
+      "name": "manifest size: budget-17_kisai_izondo_suii",
+      "pass": true,
+      "details": {
+        "expected": 1867,
+        "actual": 1867
+      }
+    },
+    {
+      "name": "manifest local file exists: budget-18_nation_region",
+      "pass": true,
+      "details": "data/raw/budget/18_nation_region.csv"
+    },
+    {
+      "name": "manifest hash: budget-18_nation_region",
+      "pass": true,
+      "details": {
+        "expected": "ebc59006c773d67b1d330de91ce99ad2050e85dc52d2454c7388c5492fed7b40",
+        "actual": "ebc59006c773d67b1d330de91ce99ad2050e85dc52d2454c7388c5492fed7b40"
+      }
+    },
+    {
+      "name": "manifest size: budget-18_nation_region",
+      "pass": true,
+      "details": {
+        "expected": 3907,
+        "actual": 3907
+      }
+    },
+    {
+      "name": "manifest local file exists: settlement-01_sainyu",
+      "pass": true,
+      "details": "data/raw/settlement/01_sainyu.csv"
+    },
+    {
+      "name": "manifest hash: settlement-01_sainyu",
+      "pass": true,
+      "details": {
+        "expected": "b973bffdadc7412fe07bcb7375f888193a8798ea713747d5308e00e373b7a224",
+        "actual": "b973bffdadc7412fe07bcb7375f888193a8798ea713747d5308e00e373b7a224"
+      }
+    },
+    {
+      "name": "manifest size: settlement-01_sainyu",
+      "pass": true,
+      "details": {
+        "expected": 145349,
+        "actual": 145349
+      }
+    },
+    {
+      "name": "manifest local file exists: settlement-02_tozeiutiwake",
+      "pass": true,
+      "details": "data/raw/settlement/02_tozeiutiwake.csv"
+    },
+    {
+      "name": "manifest hash: settlement-02_tozeiutiwake",
+      "pass": true,
+      "details": {
+        "expected": "86395186fce4a55b2054eed5dc622a6fc739aebb5d5bdfb0d3b5534cd9c4e5f0",
+        "actual": "86395186fce4a55b2054eed5dc622a6fc739aebb5d5bdfb0d3b5534cd9c4e5f0"
+      }
+    },
+    {
+      "name": "manifest size: settlement-02_tozeiutiwake",
+      "pass": true,
+      "details": {
+        "expected": 61438,
+        "actual": 61438
+      }
+    },
+    {
+      "name": "manifest local file exists: settlement-03_seisitubetusaishutu",
+      "pass": true,
+      "details": "data/raw/settlement/03_seisitubetusaishutu.csv"
+    },
+    {
+      "name": "manifest hash: settlement-03_seisitubetusaishutu",
+      "pass": true,
+      "details": {
+        "expected": "b4df086b3327a325a3d81a56fb27eff7a64827ceab082d4b4948fd6e298b7c75",
+        "actual": "b4df086b3327a325a3d81a56fb27eff7a64827ceab082d4b4948fd6e298b7c75"
+      }
+    },
+    {
+      "name": "manifest size: settlement-03_seisitubetusaishutu",
+      "pass": true,
+      "details": {
+        "expected": 88256,
+        "actual": 88256
+      }
+    },
+    {
+      "name": "manifest local file exists: settlement-04_mokutekibetusaishutu",
+      "pass": true,
+      "details": "data/raw/settlement/04_mokutekibetusaishutu.csv"
+    },
+    {
+      "name": "manifest hash: settlement-04_mokutekibetusaishutu",
+      "pass": true,
+      "details": {
+        "expected": "e3da2a66e6d9814338798fd463bc82b5d20ee5513911679454da57b301583981",
+        "actual": "e3da2a66e6d9814338798fd463bc82b5d20ee5513911679454da57b301583981"
+      }
+    },
+    {
+      "name": "manifest size: settlement-04_mokutekibetusaishutu",
+      "pass": true,
+      "details": {
+        "expected": 123159,
+        "actual": 123159
+      }
+    },
+    {
+      "name": "manifest local file exists: settlement-05_jissituakajihiritu",
+      "pass": true,
+      "details": "data/raw/settlement/05_jissituakajihiritu.csv"
+    },
+    {
+      "name": "manifest hash: settlement-05_jissituakajihiritu",
+      "pass": true,
+      "details": {
+        "expected": "b2c37aa0ac065300b2592f0bab66e672d116468db9f60c7c00ba2ba301f30238",
+        "actual": "b2c37aa0ac065300b2592f0bab66e672d116468db9f60c7c00ba2ba301f30238"
+      }
+    },
+    {
+      "name": "manifest size: settlement-05_jissituakajihiritu",
+      "pass": true,
+      "details": {
+        "expected": 444,
+        "actual": 444
+      }
+    },
+    {
+      "name": "manifest local file exists: settlement-06_renketujissituakajihiritu",
+      "pass": true,
+      "details": "data/raw/settlement/06_renketujissituakajihiritu.csv"
+    },
+    {
+      "name": "manifest hash: settlement-06_renketujissituakajihiritu",
+      "pass": true,
+      "details": {
+        "expected": "38f656cb6235a7fe38e8adf059af4280f445a392149ce87251d9e99fa7ef1e12",
+        "actual": "38f656cb6235a7fe38e8adf059af4280f445a392149ce87251d9e99fa7ef1e12"
+      }
+    },
+    {
+      "name": "manifest size: settlement-06_renketujissituakajihiritu",
+      "pass": true,
+      "details": {
+        "expected": 467,
+        "actual": 467
+      }
+    },
+    {
+      "name": "manifest local file exists: settlement-07_jissitukousaihihiritu",
+      "pass": true,
+      "details": "data/raw/settlement/07_jissitukousaihihiritu.csv"
+    },
+    {
+      "name": "manifest hash: settlement-07_jissitukousaihihiritu",
+      "pass": true,
+      "details": {
+        "expected": "831dc1dc501e0e5027b556e4c959e872177d21dccd0cb4f77eb683af86a0ea10",
+        "actual": "831dc1dc501e0e5027b556e4c959e872177d21dccd0cb4f77eb683af86a0ea10"
+      }
+    },
+    {
+      "name": "manifest size: settlement-07_jissitukousaihihiritu",
+      "pass": true,
+      "details": {
+        "expected": 482,
+        "actual": 482
+      }
+    },
+    {
+      "name": "manifest local file exists: settlement-08_shouraihutanhiritu",
+      "pass": true,
+      "details": "data/raw/settlement/08_shouraihutanhiritu.csv"
+    },
+    {
+      "name": "manifest hash: settlement-08_shouraihutanhiritu",
+      "pass": true,
+      "details": {
+        "expected": "dd7403d0aba75287b80e08d3b82621f632ce7096e7d3fb1961ea20f060ae320c",
+        "actual": "dd7403d0aba75287b80e08d3b82621f632ce7096e7d3fb1961ea20f060ae320c"
+      }
+    },
+    {
+      "name": "manifest size: settlement-08_shouraihutanhiritu",
+      "pass": true,
+      "details": {
+        "expected": 390,
+        "actual": 390
+      }
+    },
+    {
+      "name": "manifest local file exists: settlement-09_keijoushusihiritu",
+      "pass": true,
+      "details": "data/raw/settlement/09_keijoushusihiritu.csv"
+    },
+    {
+      "name": "manifest hash: settlement-09_keijoushusihiritu",
+      "pass": true,
+      "details": {
+        "expected": "0ac99a715e8e3c03a86dbee24d8d345ebae117f64bafbab51783c77171f74ee5",
+        "actual": "0ac99a715e8e3c03a86dbee24d8d345ebae117f64bafbab51783c77171f74ee5"
+      }
+    },
+    {
+      "name": "manifest size: settlement-09_keijoushusihiritu",
+      "pass": true,
+      "details": {
+        "expected": 519,
+        "actual": 519
+      }
+    },
+    {
+      "name": "manifest local file exists: settlement-10_kousaihihutanhiritu",
+      "pass": true,
+      "details": "data/raw/settlement/10_kousaihihutanhiritu.csv"
+    },
+    {
+      "name": "manifest hash: settlement-10_kousaihihutanhiritu",
+      "pass": true,
+      "details": {
+        "expected": "e53d95e32f41bd7c14339627d66789bbb835d03de78100dfa60ca4f9e309fa36",
+        "actual": "e53d95e32f41bd7c14339627d66789bbb835d03de78100dfa60ca4f9e309fa36"
+      }
+    },
+    {
+      "name": "manifest size: settlement-10_kousaihihutanhiritu",
+      "pass": true,
+      "details": {
+        "expected": 488,
+        "actual": 488
+      }
+    },
+    {
+      "name": "manifest local file exists: expenditure-2025-04",
+      "pass": true,
+      "details": "data/raw/public-expenditure/fy2025/2025-04.csv"
+    },
+    {
+      "name": "manifest hash: expenditure-2025-04",
+      "pass": true,
+      "details": {
+        "expected": "8eb6306042d7dbef7c533a946c1aa90101aed94783f6a98e062f4e397c0a7070",
+        "actual": "8eb6306042d7dbef7c533a946c1aa90101aed94783f6a98e062f4e397c0a7070"
+      }
+    },
+    {
+      "name": "manifest size: expenditure-2025-04",
+      "pass": true,
+      "details": {
+        "expected": 1701872,
+        "actual": 1701872
+      }
+    },
+    {
+      "name": "manifest local file exists: expenditure-2025-05",
+      "pass": true,
+      "details": "data/raw/public-expenditure/fy2025/2025-05.csv"
+    },
+    {
+      "name": "manifest hash: expenditure-2025-05",
+      "pass": true,
+      "details": {
+        "expected": "9a7284746fde2bb303e042fb40d52fa1e0ce1d916feec3d90e3c24addc87ebe7",
+        "actual": "9a7284746fde2bb303e042fb40d52fa1e0ce1d916feec3d90e3c24addc87ebe7"
+      }
+    },
+    {
+      "name": "manifest size: expenditure-2025-05",
+      "pass": true,
+      "details": {
+        "expected": 3558088,
+        "actual": 3558088
+      }
+    },
+    {
+      "name": "manifest local file exists: expenditure-2025-06",
+      "pass": true,
+      "details": "data/raw/public-expenditure/fy2025/2025-06.csv"
+    },
+    {
+      "name": "manifest hash: expenditure-2025-06",
+      "pass": true,
+      "details": {
+        "expected": "948f61a6fd16e0cf27fe830806456956ef2c48e6a708c7fcdc7c35072471e67d",
+        "actual": "948f61a6fd16e0cf27fe830806456956ef2c48e6a708c7fcdc7c35072471e67d"
+      }
+    },
+    {
+      "name": "manifest size: expenditure-2025-06",
+      "pass": true,
+      "details": {
+        "expected": 5413381,
+        "actual": 5413381
+      }
+    },
+    {
+      "name": "manifest local file exists: expenditure-2025-07",
+      "pass": true,
+      "details": "data/raw/public-expenditure/fy2025/2025-07.csv"
+    },
+    {
+      "name": "manifest hash: expenditure-2025-07",
+      "pass": true,
+      "details": {
+        "expected": "31c3d12c3378400452353e8e551d92a96533be6f03a3c137eadc62c87429ced8",
+        "actual": "31c3d12c3378400452353e8e551d92a96533be6f03a3c137eadc62c87429ced8"
+      }
+    },
+    {
+      "name": "manifest size: expenditure-2025-07",
+      "pass": true,
+      "details": {
+        "expected": 6463830,
+        "actual": 6463830
+      }
+    },
+    {
+      "name": "manifest local file exists: expenditure-2025-08",
+      "pass": true,
+      "details": "data/raw/public-expenditure/fy2025/2025-08.csv"
+    },
+    {
+      "name": "manifest hash: expenditure-2025-08",
+      "pass": true,
+      "details": {
+        "expected": "3264a31c5e0c1f814079975976712f4ea2baf7521a9872e796186683cdccb75d",
+        "actual": "3264a31c5e0c1f814079975976712f4ea2baf7521a9872e796186683cdccb75d"
+      }
+    },
+    {
+      "name": "manifest size: expenditure-2025-08",
+      "pass": true,
+      "details": {
+        "expected": 5505681,
+        "actual": 5505681
+      }
+    },
+    {
+      "name": "manifest local file exists: expenditure-2025-09",
+      "pass": true,
+      "details": "data/raw/public-expenditure/fy2025/2025-09.csv"
+    },
+    {
+      "name": "manifest hash: expenditure-2025-09",
+      "pass": true,
+      "details": {
+        "expected": "2b044ba9e483df465d76594b1c1bc6b7424d9b62b1ecda80bdbc46971fbd7f06",
+        "actual": "2b044ba9e483df465d76594b1c1bc6b7424d9b62b1ecda80bdbc46971fbd7f06"
+      }
+    },
+    {
+      "name": "manifest size: expenditure-2025-09",
+      "pass": true,
+      "details": {
+        "expected": 5731957,
+        "actual": 5731957
+      }
+    },
+    {
+      "name": "manifest local file exists: expenditure-2025-10",
+      "pass": true,
+      "details": "data/raw/public-expenditure/fy2025/2025-10.csv"
+    },
+    {
+      "name": "manifest hash: expenditure-2025-10",
+      "pass": true,
+      "details": {
+        "expected": "96aaf7c779c95fa68d7776df2adb0ac431f7c9c23a3da8065777504c607ab06d",
+        "actual": "96aaf7c779c95fa68d7776df2adb0ac431f7c9c23a3da8065777504c607ab06d"
+      }
+    },
+    {
+      "name": "manifest size: expenditure-2025-10",
+      "pass": true,
+      "details": {
+        "expected": 6452243,
+        "actual": 6452243
+      }
+    },
+    {
+      "name": "manifest local file exists: expenditure-2025-11",
+      "pass": true,
+      "details": "data/raw/public-expenditure/fy2025/2025-11.csv"
+    },
+    {
+      "name": "manifest hash: expenditure-2025-11",
+      "pass": true,
+      "details": {
+        "expected": "8e9f14419fa1abd53f63de55896b4e0904500ef2887c8a59bded0f090b1ee18a",
+        "actual": "8e9f14419fa1abd53f63de55896b4e0904500ef2887c8a59bded0f090b1ee18a"
+      }
+    },
+    {
+      "name": "manifest size: expenditure-2025-11",
+      "pass": true,
+      "details": {
+        "expected": 5423960,
+        "actual": 5423960
+      }
+    },
+    {
+      "name": "manifest local file exists: expenditure-2025-12",
+      "pass": true,
+      "details": "data/raw/public-expenditure/fy2025/2025-12.csv"
+    },
+    {
+      "name": "manifest hash: expenditure-2025-12",
+      "pass": true,
+      "details": {
+        "expected": "df9544a77c1178dc37f658006ee7845d432acfab1da5b768e085f681eedf7057",
+        "actual": "df9544a77c1178dc37f658006ee7845d432acfab1da5b768e085f681eedf7057"
+      }
+    },
+    {
+      "name": "manifest size: expenditure-2025-12",
+      "pass": true,
+      "details": {
+        "expected": 6136133,
+        "actual": 6136133
+      }
+    },
+    {
+      "name": "manifest local file exists: expenditure-2026-01-fy2025",
+      "pass": true,
+      "details": "data/raw/public-expenditure/fy2025/2026-01.csv"
+    },
+    {
+      "name": "manifest hash: expenditure-2026-01-fy2025",
+      "pass": true,
+      "details": {
+        "expected": "f54d5631507c343be60f2f6c5bdf43bd0c6012d3877ce69fca51ef6dabdfb984",
+        "actual": "f54d5631507c343be60f2f6c5bdf43bd0c6012d3877ce69fca51ef6dabdfb984"
+      }
+    },
+    {
+      "name": "manifest size: expenditure-2026-01-fy2025",
+      "pass": true,
+      "details": {
+        "expected": 6258331,
+        "actual": 6258331
+      }
+    },
+    {
+      "name": "manifest local file exists: expenditure-payroll-fy2025",
+      "pass": true,
+      "details": "data/raw/public-expenditure/fy2025/payroll.csv"
+    },
+    {
+      "name": "manifest hash: expenditure-payroll-fy2025",
+      "pass": true,
+      "details": {
+        "expected": "6a025d85ca925bb700be3334e649475433113fe1562a688c9b6aab89a79f6232",
+        "actual": "6a025d85ca925bb700be3334e649475433113fe1562a688c9b6aab89a79f6232"
+      }
+    },
+    {
+      "name": "manifest size: expenditure-payroll-fy2025",
+      "pass": true,
+      "details": {
+        "expected": 1305,
+        "actual": 1305
+      }
+    },
+    {
+      "name": "manifest local file exists: subsidies-2025",
+      "pass": true,
+      "details": "data/raw/subsidies/hojokin2025.csv"
+    },
+    {
+      "name": "manifest hash: subsidies-2025",
+      "pass": true,
+      "details": {
+        "expected": "d587efd7fea4e8fdd2e76620363ba62acf964e1e3f47b24eb2dedc04284be1ee",
+        "actual": "d587efd7fea4e8fdd2e76620363ba62acf964e1e3f47b24eb2dedc04284be1ee"
+      }
+    },
+    {
+      "name": "manifest size: subsidies-2025",
+      "pass": true,
+      "details": {
+        "expected": 798308,
+        "actual": 798308
+      }
+    },
+    {
+      "name": "manifest local file exists: subsidies-2026",
+      "pass": true,
+      "details": "data/raw/subsidies/hojokin2026.csv"
+    },
+    {
+      "name": "manifest hash: subsidies-2026",
+      "pass": true,
+      "details": {
+        "expected": "35f693e2c958b0b79b1e4d23ccb5674a2d2a11fb68e5c66b9ebcfc53caf5a46d",
+        "actual": "35f693e2c958b0b79b1e4d23ccb5674a2d2a11fb68e5c66b9ebcfc53caf5a46d"
+      }
+    },
+    {
+      "name": "manifest size: subsidies-2026",
+      "pass": true,
+      "details": {
+        "expected": 833875,
+        "actual": 833875
+      }
+    },
+    {
+      "name": "manifest local file exists: catalog-relevant-api-list",
+      "pass": true,
+      "details": "data/raw/catalog/relevant-api-catalog.csv"
+    },
+    {
+      "name": "manifest hash: catalog-relevant-api-list",
+      "pass": true,
+      "details": {
+        "expected": "23a6ea89852fb429078ad9f08dc3da2403fec996c74a1d83978d508601b5ad52",
+        "actual": "23a6ea89852fb429078ad9f08dc3da2403fec996c74a1d83978d508601b5ad52"
+      }
+    },
+    {
+      "name": "manifest size: catalog-relevant-api-list",
+      "pass": true,
+      "details": {
+        "expected": 1722402,
+        "actual": 1722402
+      }
+    },
+    {
+      "name": "manifest local file exists: expenditure-pending-fy2025-2026-02",
+      "pass": true,
+      "details": "data/raw/public-expenditure/fy2025/2026-02.xlsx"
+    },
+    {
+      "name": "manifest hash: expenditure-pending-fy2025-2026-02",
+      "pass": true,
+      "details": {
+        "expected": "bf327af67c34ddea04b08bad2bff2b857ba358b64c671632ba228fc0c6a79d52",
+        "actual": "bf327af67c34ddea04b08bad2bff2b857ba358b64c671632ba228fc0c6a79d52"
+      }
+    },
+    {
+      "name": "manifest size: expenditure-pending-fy2025-2026-02",
+      "pass": true,
+      "details": {
+        "expected": 2570388,
+        "actual": 2570388
+      }
+    },
+    {
+      "name": "manifest local file exists: expenditure-pending-fy2025-2026-03",
+      "pass": true,
+      "details": "data/raw/public-expenditure/fy2025/2026-03.xlsx"
+    },
+    {
+      "name": "manifest hash: expenditure-pending-fy2025-2026-03",
+      "pass": true,
+      "details": {
+        "expected": "f6cee3fad809aed1a765e59021b9d60bdce1588de975cae1e102520156a268ad",
+        "actual": "f6cee3fad809aed1a765e59021b9d60bdce1588de975cae1e102520156a268ad"
+      }
+    },
+    {
+      "name": "manifest size: expenditure-pending-fy2025-2026-03",
+      "pass": true,
+      "details": {
+        "expected": 3308171,
+        "actual": 3308171
+      }
+    },
+    {
+      "name": "manifest local file exists: expenditure-pending-fy2025-closing-04",
+      "pass": true,
+      "details": "data/raw/public-expenditure/fy2025/2026-04-closing.xlsx"
+    },
+    {
+      "name": "manifest hash: expenditure-pending-fy2025-closing-04",
+      "pass": true,
+      "details": {
+        "expected": "920d454ccb83733bc7d8ca3032054b3aa8972450231e83ae437ea6abe1bb5e2a",
+        "actual": "920d454ccb83733bc7d8ca3032054b3aa8972450231e83ae437ea6abe1bb5e2a"
+      }
+    },
+    {
+      "name": "manifest size: expenditure-pending-fy2025-closing-04",
+      "pass": true,
+      "details": {
+        "expected": 2845401,
+        "actual": 2845401
+      }
+    },
+    {
+      "name": "manifest local file exists: expenditure-pending-fy2025-closing-05",
+      "pass": true,
+      "details": "data/raw/public-expenditure/fy2025/2026-05-closing.xlsx"
+    },
+    {
+      "name": "manifest hash: expenditure-pending-fy2025-closing-05",
+      "pass": true,
+      "details": {
+        "expected": "0c0d5118b7ce2de3481d62746e84bbb8c7518100751d40823a3a0db46c21875c",
+        "actual": "0c0d5118b7ce2de3481d62746e84bbb8c7518100751d40823a3a0db46c21875c"
+      }
+    },
+    {
+      "name": "manifest size: expenditure-pending-fy2025-closing-05",
+      "pass": true,
+      "details": {
+        "expected": 766446,
+        "actual": 766446
+      }
+    },
+    {
+      "name": "manifest local file exists: expenditure-pending-fy2026-2026-04",
+      "pass": true,
+      "details": "data/raw/public-expenditure/fy2026/2026-04.xlsx"
+    },
+    {
+      "name": "manifest hash: expenditure-pending-fy2026-2026-04",
+      "pass": true,
+      "details": {
+        "expected": "5deb1d9500809f23306fe25491ba4cef77024986e7d723fa066406403b8e242e",
+        "actual": "5deb1d9500809f23306fe25491ba4cef77024986e7d723fa066406403b8e242e"
+      }
+    },
+    {
+      "name": "manifest size: expenditure-pending-fy2026-2026-04",
+      "pass": true,
+      "details": {
+        "expected": 760568,
+        "actual": 760568
+      }
+    },
+    {
+      "name": "manifest local file exists: expenditure-pending-fy2026-2026-05",
+      "pass": true,
+      "details": "data/raw/public-expenditure/fy2026/2026-05.xlsx"
+    },
+    {
+      "name": "manifest hash: expenditure-pending-fy2026-2026-05",
+      "pass": true,
+      "details": {
+        "expected": "7b3c140b5ef25cd2815c3c64ed444de1dbb8a64bc152f1855773892681b3972a",
+        "actual": "7b3c140b5ef25cd2815c3c64ed444de1dbb8a64bc152f1855773892681b3972a"
+      }
+    },
+    {
+      "name": "manifest size: expenditure-pending-fy2026-2026-05",
+      "pass": true,
+      "details": {
+        "expected": 1458968,
+        "actual": 1458968
+      }
+    },
+    {
+      "name": "manifest local file exists: expenditure-pending-fy2026-2026-06",
+      "pass": true,
+      "details": "data/raw/public-expenditure/fy2026/2026-06.xlsx"
+    },
+    {
+      "name": "manifest hash: expenditure-pending-fy2026-2026-06",
+      "pass": true,
+      "details": {
+        "expected": "ccc0635bd2ad065237a5f5bae831fd0fdf2d428f3775c63920918bf93bab1542",
+        "actual": "ccc0635bd2ad065237a5f5bae831fd0fdf2d428f3775c63920918bf93bab1542"
+      }
+    },
+    {
+      "name": "manifest size: expenditure-pending-fy2026-2026-06",
+      "pass": true,
+      "details": {
+        "expected": 2486765,
+        "actual": 2486765
+      }
+    },
+    {
+      "name": "manifest local file exists: expenditure-pending-fy2026-payroll",
+      "pass": true,
+      "details": "data/raw/public-expenditure/fy2026/payroll.xlsx"
+    },
+    {
+      "name": "manifest hash: expenditure-pending-fy2026-payroll",
+      "pass": true,
+      "details": {
+        "expected": "47cc0927be893a034620556d7543cdaa1ce34364172efe8dc1bf44c15c3afabe",
+        "actual": "47cc0927be893a034620556d7543cdaa1ce34364172efe8dc1bf44c15c3afabe"
+      }
+    },
+    {
+      "name": "manifest size: expenditure-pending-fy2026-payroll",
+      "pass": true,
+      "details": {
+        "expected": 13359,
+        "actual": 13359
+      }
+    },
+    {
+      "name": "manifest local file exists: document-fy2026-budget-proposal-overview",
+      "pass": true,
+      "details": "data/raw/documents/fy2026/budget-proposal-overview.pdf"
+    },
+    {
+      "name": "manifest hash: document-fy2026-budget-proposal-overview",
+      "pass": true,
+      "details": {
+        "expected": "d063f526d369f52bc3ef9b6027b184f7db92defd3efe260c569b5ec943038d06",
+        "actual": "d063f526d369f52bc3ef9b6027b184f7db92defd3efe260c569b5ec943038d06"
+      }
+    },
+    {
+      "name": "manifest size: document-fy2026-budget-proposal-overview",
+      "pass": true,
+      "details": {
+        "expected": 32618758,
+        "actual": 32618758
+      }
+    },
+    {
+      "name": "manifest local file exists: document-fy2026-budget-proposal-visual-summary",
+      "pass": true,
+      "details": "data/raw/documents/fy2026/budget-proposal-visual-summary.pdf"
+    },
+    {
+      "name": "manifest hash: document-fy2026-budget-proposal-visual-summary",
+      "pass": true,
+      "details": {
+        "expected": "2987af5ce7272d15088b93a2f1044547214b2be011c42e25aa220c3c02b3f4ae",
+        "actual": "2987af5ce7272d15088b93a2f1044547214b2be011c42e25aa220c3c02b3f4ae"
+      }
+    },
+    {
+      "name": "manifest size: document-fy2026-budget-proposal-visual-summary",
+      "pass": true,
+      "details": {
+        "expected": 2038867,
+        "actual": 2038867
+      }
+    },
+    {
+      "name": "manifest local file exists: document-fy2026-major-projects",
+      "pass": true,
+      "details": "data/raw/documents/fy2026/major-projects.pdf"
+    },
+    {
+      "name": "manifest hash: document-fy2026-major-projects",
+      "pass": true,
+      "details": {
+        "expected": "fde6b7b787d4ecffc147b4264ebaba67ab846963ae15c310fb646f7e98cd7ad6",
+        "actual": "fde6b7b787d4ecffc147b4264ebaba67ab846963ae15c310fb646f7e98cd7ad6"
+      }
+    },
+    {
+      "name": "manifest size: document-fy2026-major-projects",
+      "pass": true,
+      "details": {
+        "expected": 5140412,
+        "actual": 5140412
+      }
+    },
+    {
+      "name": "manifest local file exists: document-fy2026-subsidy-execution-review",
+      "pass": true,
+      "details": "data/raw/documents/fy2026/subsidy-execution-review.pdf"
+    },
+    {
+      "name": "manifest hash: document-fy2026-subsidy-execution-review",
+      "pass": true,
+      "details": {
+        "expected": "5daac7dbbe3aed34b26659dd5bfd6c97313c40de65bf388ae8f96fc32afd4caf",
+        "actual": "5daac7dbbe3aed34b26659dd5bfd6c97313c40de65bf388ae8f96fc32afd4caf"
+      }
+    },
+    {
+      "name": "manifest size: document-fy2026-subsidy-execution-review",
+      "pass": true,
+      "details": {
+        "expected": 250131,
+        "actual": 250131
+      }
+    },
+    {
+      "name": "manifest local file exists: document-fy2025-budget-proposal-overview",
+      "pass": true,
+      "details": "data/raw/documents/fy2025/budget-proposal-overview.pdf"
+    },
+    {
+      "name": "manifest hash: document-fy2025-budget-proposal-overview",
+      "pass": true,
+      "details": {
+        "expected": "c1e6cf6e375cbd30767990cb67f923017bd0fc2cb7324b978f4f49099a4f52fe",
+        "actual": "c1e6cf6e375cbd30767990cb67f923017bd0fc2cb7324b978f4f49099a4f52fe"
+      }
+    },
+    {
+      "name": "manifest size: document-fy2025-budget-proposal-overview",
+      "pass": true,
+      "details": {
+        "expected": 15400451,
+        "actual": 15400451
+      }
+    },
+    {
+      "name": "manifest local file exists: document-fy2025-budget-proposal-visual-summary",
+      "pass": true,
+      "details": "data/raw/documents/fy2025/budget-proposal-visual-summary.pdf"
+    },
+    {
+      "name": "manifest hash: document-fy2025-budget-proposal-visual-summary",
+      "pass": true,
+      "details": {
+        "expected": "f76655d82e682b8ea50f83912e7f78e16afb88ea6e66e3d3662ab2400d91960d",
+        "actual": "f76655d82e682b8ea50f83912e7f78e16afb88ea6e66e3d3662ab2400d91960d"
+      }
+    },
+    {
+      "name": "manifest size: document-fy2025-budget-proposal-visual-summary",
+      "pass": true,
+      "details": {
+        "expected": 2096443,
+        "actual": 2096443
+      }
+    },
+    {
+      "name": "manifest local file exists: document-fy2025-major-projects",
+      "pass": true,
+      "details": "data/raw/documents/fy2025/major-projects.pdf"
+    },
+    {
+      "name": "manifest hash: document-fy2025-major-projects",
+      "pass": true,
+      "details": {
+        "expected": "01261557adfa93a76ab67f8328cec800b0e7e89882148aeb0fe24f1cb3a5c0fa",
+        "actual": "01261557adfa93a76ab67f8328cec800b0e7e89882148aeb0fe24f1cb3a5c0fa"
+      }
+    },
+    {
+      "name": "manifest size: document-fy2025-major-projects",
+      "pass": true,
+      "details": {
+        "expected": 4611693,
+        "actual": 4611693
+      }
+    },
+    {
+      "name": "manifest local file exists: document-fy2025-general-account-closing-estimate",
+      "pass": true,
+      "details": "data/raw/documents/fy2025/general-account-closing-estimate.pdf"
+    },
+    {
+      "name": "manifest hash: document-fy2025-general-account-closing-estimate",
+      "pass": true,
+      "details": {
+        "expected": "4eb4b2ee2147e625d7b0ac50f31604761b9aa5cdfd5c7db1c30a9016f05658b2",
+        "actual": "4eb4b2ee2147e625d7b0ac50f31604761b9aa5cdfd5c7db1c30a9016f05658b2"
+      }
+    },
+    {
+      "name": "manifest size: document-fy2025-general-account-closing-estimate",
+      "pass": true,
+      "details": {
+        "expected": 140743,
+        "actual": 140743
+      }
+    },
+    {
+      "name": "downloaded source hashes verified",
+      "pass": true,
+      "details": 55
+    },
+    {
+      "name": "worker endpoint /",
+      "pass": true,
+      "details": 200
+    },
+    {
+      "name": "worker endpoint /manifest",
+      "pass": true,
+      "details": 200
+    },
+    {
+      "name": "worker endpoint /coverage",
+      "pass": true,
+      "details": 200
+    },
+    {
+      "name": "worker endpoint /budget",
+      "pass": true,
+      "details": 200
+    },
+    {
+      "name": "worker endpoint /budget/01_sainyu_saishutsu?year=2026",
+      "pass": true,
+      "details": 200
+    },
+    {
+      "name": "worker endpoint /settlement/01_sainyu",
+      "pass": true,
+      "details": 200
+    },
+    {
+      "name": "worker endpoint /expenditure",
+      "pass": true,
+      "details": 200
+    },
+    {
+      "name": "worker endpoint /expenditure/summary?year=2025&dimension=month",
+      "pass": true,
+      "details": 200
+    },
+    {
+      "name": "worker endpoint /expenditure/summary?year=2026&dimension=month",
+      "pass": true,
+      "details": 200
+    },
+    {
+      "name": "worker endpoint /subsidies/summary?year=2026",
+      "pass": true,
+      "details": 200
+    },
+    {
+      "name": "worker endpoint /closing-estimate/2025",
+      "pass": true,
+      "details": 200
+    },
+    {
+      "name": "worker endpoint /catalog",
+      "pass": true,
+      "details": 200
+    }
+  ]
+}

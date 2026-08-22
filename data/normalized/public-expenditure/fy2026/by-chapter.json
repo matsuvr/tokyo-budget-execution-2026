@@ -1,0 +1,152 @@
+[
+  {
+    "key": "地方消費税清算費",
+    "transactionCount": 4,
+    "amountYen": 365988168691
+  },
+  {
+    "key": "公債費",
+    "transactionCount": 88,
+    "amountYen": 323867839996
+  },
+  {
+    "key": "産業労働費",
+    "transactionCount": 3907,
+    "amountYen": 315303495074
+  },
+  {
+    "key": "特別区交付金",
+    "transactionCount": 3,
+    "amountYen": 252249204000
+  },
+  {
+    "key": "諸支出金",
+    "transactionCount": 159,
+    "amountYen": 228129297254
+  },
+  {
+    "key": "国民健康保険事業費",
+    "transactionCount": 29,
+    "amountYen": 185388942453
+  },
+  {
+    "key": "福祉費",
+    "transactionCount": 5733,
+    "amountYen": 154873362796
+  },
+  {
+    "key": "保健医療費",
+    "transactionCount": 4190,
+    "amountYen": 88705419820
+  },
+  {
+    "key": "総務費",
+    "transactionCount": 3298,
+    "amountYen": 80964098323
+  },
+  {
+    "key": "環境費",
+    "transactionCount": 1300,
+    "amountYen": 71765493401
+  },
+  {
+    "key": "土木費",
+    "transactionCount": 5712,
+    "amountYen": 35307588566
+  },
+  {
+    "key": "教育費",
+    "transactionCount": 22186,
+    "amountYen": 27069826487
+  },
+  {
+    "key": "警察費",
+    "transactionCount": 13552,
+    "amountYen": 24756853513
+  },
+  {
+    "key": "学務費",
+    "transactionCount": 99,
+    "amountYen": 20482193112
+  },
+  {
+    "key": "都営住宅等事業費",
+    "transactionCount": 923,
+    "amountYen": 17922415307
+  },
+  {
+    "key": "生活文化費",
+    "transactionCount": 1189,
+    "amountYen": 10096633289
+  },
+  {
+    "key": "港湾費",
+    "transactionCount": 1381,
+    "amountYen": 7455873699
+  },
+  {
+    "key": "消防費",
+    "transactionCount": 8005,
+    "amountYen": 5768424790
+  },
+  {
+    "key": "都市整備費",
+    "transactionCount": 963,
+    "amountYen": 2945970031
+  },
+  {
+    "key": "徴税費",
+    "transactionCount": 1986,
+    "amountYen": 2055768464
+  },
+  {
+    "key": "扶養年金費",
+    "transactionCount": 7,
+    "amountYen": 1029658131
+  },
+  {
+    "key": "貸付費",
+    "transactionCount": 11,
+    "amountYen": 793849132
+  },
+  {
+    "key": "工業用水道事業清算費",
+    "transactionCount": 10,
+    "amountYen": 714888916
+  },
+  {
+    "key": "と場事業費",
+    "transactionCount": 168,
+    "amountYen": 503883572
+  },
+  {
+    "key": "議会費",
+    "transactionCount": 239,
+    "amountYen": 314885045
+  },
+  {
+    "key": "貸付等事業費",
+    "transactionCount": 12,
+    "amountYen": 61959974
+  },
+  {
+    "key": "返還金",
+    "transactionCount": 19,
+    "amountYen": 28474336
+  },
+  {
+    "key": "臨海都市基盤整備費",
+    "transactionCount": 52,
+    "amountYen": 20227735
+  },
+  {
+    "key": "用地費",
+    "transactionCount": 20,
+    "amountYen": 13894067
+  },
+  {
+    "key": "助成費",
+    "transactionCount": 2,
+    "amountYen": 16490
+  }
+]

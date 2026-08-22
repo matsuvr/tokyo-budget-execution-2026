@@ -1,0 +1,152 @@
+[
+  {
+    "key": "01_sainyu_saishutsu",
+    "title": "一般会計 歳入歳出予算",
+    "fiscalYears": [
+      2025,
+      2026
+    ],
+    "recordCount": 24,
+    "path": "data/normalized/budget/01_sainyu_saishutsu.json"
+  },
+  {
+    "key": "02_zaiseikibo_ippansaishutsu_suii",
+    "title": "財政規模・一般歳出の推移",
+    "fiscalYears": [
+      2025,
+      2026
+    ],
+    "recordCount": 2,
+    "path": "data/normalized/budget/02_zaiseikibo_ippansaishutsu_suii.json"
+  },
+  {
+    "key": "03_hitoriatari_yosan",
+    "title": "都民1人当たりの予算",
+    "fiscalYears": [
+      2025,
+      2026
+    ],
+    "recordCount": 18,
+    "path": "data/normalized/budget/03_hitoriatari_yosan.json"
+  },
+  {
+    "key": "04_seishitsubetsu",
+    "title": "一般会計歳出予算 性質別内訳",
+    "fiscalYears": [
+      2025,
+      2026
+    ],
+    "recordCount": 10,
+    "path": "data/normalized/budget/04_seishitsubetsu.json"
+  },
+  {
+    "key": "05_mokutekibetsu",
+    "title": "一般歳出 目的別内訳",
+    "fiscalYears": [
+      2025,
+      2026
+    ],
+    "recordCount": 18,
+    "path": "data/normalized/budget/05_mokutekibetsu.json"
+  },
+  {
+    "key": "06_kyuyo_kankeihi",
+    "title": "給与関係費",
+    "fiscalYears": [
+      2025,
+      2026
+    ],
+    "recordCount": 2,
+    "path": "data/normalized/budget/06_kyuyo_kankeihi.json"
+  },
+  {
+    "key": "07_toshiteki_keihi",
+    "title": "投資的経費",
+    "fiscalYears": [
+      2025,
+      2026
+    ],
+    "recordCount": 2,
+    "path": "data/normalized/budget/07_toshiteki_keihi.json"
+  },
+  {
+    "key": "08_sainyu_uchiwake",
+    "title": "一般会計 歳入内訳",
+    "fiscalYears": [
+      2025,
+      2026
+    ],
+    "recordCount": 36,
+    "path": "data/normalized/budget/08_sainyu_uchiwake.json"
+  },
+  {
+    "key": "09_tozei_uchiwake",
+    "title": "都税内訳",
+    "fiscalYears": [
+      2025,
+      2026
+    ],
+    "recordCount": 24,
+    "path": "data/normalized/budget/09_tozei_uchiwake.json"
+  },
+  {
+    "key": "10_tozei_suii",
+    "title": "都税収入の推移",
+    "fiscalYears": [
+      2025,
+      2026
+    ],
+    "recordCount": 6,
+    "path": "data/normalized/budget/10_tozei_suii.json"
+  },
+  {
+    "key": "14_kikin_zandaka_suii",
+    "title": "基金の残高推移",
+    "fiscalYears": [
+      2025,
+      2026
+    ],
+    "recordCount": 8,
+    "path": "data/normalized/budget/14_kikin_zandaka_suii.json"
+  },
+  {
+    "key": "15_kikin_tsumitate_torikuzushi_jyokyo",
+    "title": "基金の積立・取崩状況",
+    "fiscalYears": [
+      2025,
+      2026
+    ],
+    "recordCount": 128,
+    "path": "data/normalized/budget/15_kikin_tsumitate_torikuzushi_jyokyo.json"
+  },
+  {
+    "key": "16_tosai_hakkougaku_zandaka_suii",
+    "title": "都債発行額と都債残高の推移",
+    "fiscalYears": [
+      2025,
+      2026
+    ],
+    "recordCount": 2,
+    "path": "data/normalized/budget/16_tosai_hakkougaku_zandaka_suii.json"
+  },
+  {
+    "key": "17_kisai_izondo_suii",
+    "title": "起債依存度の推移",
+    "fiscalYears": [
+      2025,
+      2026
+    ],
+    "recordCount": 6,
+    "path": "data/normalized/budget/17_kisai_izondo_suii.json"
+  },
+  {
+    "key": "18_nation_region",
+    "title": "都予算・国予算・地方財政計画",
+    "fiscalYears": [
+      2025,
+      2026
+    ],
+    "recordCount": 18,
+    "path": "data/normalized/budget/18_nation_region.json"
+  }
+]

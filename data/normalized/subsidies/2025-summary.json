@@ -1,0 +1,223 @@
+{
+  "fiscalYear": 2025,
+  "sourceFile": "data/raw/subsidies/hojokin2025.csv",
+  "sourceEncoding": "shift_jis",
+  "recordCount": 1838,
+  "totalBudgetThousandYen": 2083610210,
+  "byBureau": [
+    {
+      "key": "福祉局",
+      "count": 447,
+      "budgetThousandYen": 871189344
+    },
+    {
+      "key": "保健医療局",
+      "count": 191,
+      "budgetThousandYen": 307619187
+    },
+    {
+      "key": "生活文化局",
+      "count": 136,
+      "budgetThousandYen": 280605082
+    },
+    {
+      "key": "財務局",
+      "count": 9,
+      "budgetThousandYen": 156989000
+    },
+    {
+      "key": "総務局",
+      "count": 53,
+      "budgetThousandYen": 145568411
+    },
+    {
+      "key": "産業労働局",
+      "count": 481,
+      "budgetThousandYen": 121363578
+    },
+    {
+      "key": "教育庁",
+      "count": 123,
+      "budgetThousandYen": 110552180
+    },
+    {
+      "key": "都市整備局",
+      "count": 138,
+      "budgetThousandYen": 35685947
+    },
+    {
+      "key": "子供政策連携室",
+      "count": 8,
+      "budgetThousandYen": 9638478
+    },
+    {
+      "key": "住宅政策本部",
+      "count": 75,
+      "budgetThousandYen": 9467154
+    },
+    {
+      "key": "建設局",
+      "count": 17,
+      "budgetThousandYen": 7819103
+    },
+    {
+      "key": "デジタルサービス局",
+      "count": 13,
+      "budgetThousandYen": 7562584
+    },
+    {
+      "key": "環境局",
+      "count": 76,
+      "budgetThousandYen": 6641040
+    },
+    {
+      "key": "都民安全総合対策本部",
+      "count": 14,
+      "budgetThousandYen": 6273285
+    },
+    {
+      "key": "港湾局",
+      "count": 27,
+      "budgetThousandYen": 4614847
+    },
+    {
+      "key": "スポーツ推進本部",
+      "count": 19,
+      "budgetThousandYen": 1562805
+    },
+    {
+      "key": "警視庁",
+      "count": 7,
+      "budgetThousandYen": 401415
+    },
+    {
+      "key": "主税局",
+      "count": 2,
+      "budgetThousandYen": 47750
+    },
+    {
+      "key": "東京消防庁",
+      "count": 2,
+      "budgetThousandYen": 9020
+    }
+  ],
+  "byPolicyArea": [
+    {
+      "key": "教育",
+      "count": 205,
+      "budgetThousandYen": 415371126
+    },
+    {
+      "key": "子供家庭",
+      "count": 182,
+      "budgetThousandYen": 365239483
+    },
+    {
+      "key": "保健、医療",
+      "count": 161,
+      "budgetThousandYen": 296647826
+    },
+    {
+      "key": "高齢者",
+      "count": 122,
+      "budgetThousandYen": 287768036
+    },
+    {
+      "key": "その他",
+      "count": 84,
+      "budgetThousandYen": 286414246
+    },
+    {
+      "key": "障害者",
+      "count": 87,
+      "budgetThousandYen": 168231106
+    },
+    {
+      "key": "中小企業支援",
+      "count": 148,
+      "budgetThousandYen": 94148578
+    },
+    {
+      "key": "都市の整備",
+      "count": 257,
+      "budgetThousandYen": 57587051
+    },
+    {
+      "key": "生活福祉",
+      "count": 51,
+      "budgetThousandYen": 55838425
+    },
+    {
+      "key": "生活文化・スポーツ",
+      "count": 91,
+      "budgetThousandYen": 14462152
+    },
+    {
+      "key": "農林水産",
+      "count": 186,
+      "budgetThousandYen": 9193737
+    },
+    {
+      "key": "環境",
+      "count": 119,
+      "budgetThousandYen": 8836748
+    },
+    {
+      "key": "雇用就業",
+      "count": 40,
+      "budgetThousandYen": 8656772
+    },
+    {
+      "key": "健康安全、感染症",
+      "count": 29,
+      "budgetThousandYen": 7216706
+    },
+    {
+      "key": "観光",
+      "count": 45,
+      "budgetThousandYen": 4928976
+    },
+    {
+      "key": "国際金融都市、特区・外国企業誘致",
+      "count": 22,
+      "budgetThousandYen": 2658807
+    },
+    {
+      "key": "警察と消防",
+      "count": 9,
+      "budgetThousandYen": 410435
+    }
+  ],
+  "byRecipient": [
+    {
+      "key": "区市町村",
+      "count": 684,
+      "budgetThousandYen": 1017827440
+    },
+    {
+      "key": "民間団体",
+      "count": 738,
+      "budgetThousandYen": 632480486
+    },
+    {
+      "key": "その他団体",
+      "count": 51,
+      "budgetThousandYen": 197720147
+    },
+    {
+      "key": "公営企業",
+      "count": 12,
+      "budgetThousandYen": 159217994
+    },
+    {
+      "key": "政策連携団体",
+      "count": 294,
+      "budgetThousandYen": 53922181
+    },
+    {
+      "key": "一般都民",
+      "count": 59,
+      "budgetThousandYen": 22441962
+    }
+  ]
+}

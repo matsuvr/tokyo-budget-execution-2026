@@ -1,0 +1,77 @@
+[
+  {
+    "key": "一般会計",
+    "transactionCount": 73900,
+    "amountYen": 1075997752157
+  },
+  {
+    "key": "地方消費税清算会計",
+    "transactionCount": 4,
+    "amountYen": 365988168691
+  },
+  {
+    "key": "公債費会計",
+    "transactionCount": 87,
+    "amountYen": 323865271503
+  },
+  {
+    "key": "特別区財政調整会計",
+    "transactionCount": 3,
+    "amountYen": 252249204000
+  },
+  {
+    "key": "国民健康保険事業会計",
+    "transactionCount": 29,
+    "amountYen": 185388942453
+  },
+  {
+    "key": "都営住宅等事業会計",
+    "transactionCount": 923,
+    "amountYen": 17922415307
+  },
+  {
+    "key": "心身障害者扶養年金会計",
+    "transactionCount": 7,
+    "amountYen": 1029658131
+  },
+  {
+    "key": "母子父子福祉貸付資金会計",
+    "transactionCount": 11,
+    "amountYen": 793849132
+  },
+  {
+    "key": "工業用水道事業清算会計",
+    "transactionCount": 10,
+    "amountYen": 714888916
+  },
+  {
+    "key": "と場会計",
+    "transactionCount": 168,
+    "amountYen": 503883572
+  },
+  {
+    "key": "地方独立行政法人東京都立病",
+    "transactionCount": 12,
+    "amountYen": 61959974
+  },
+  {
+    "key": "都営住宅等保証金会計",
+    "transactionCount": 19,
+    "amountYen": 28474336
+  },
+  {
+    "key": "臨海都市基盤整備事業会計",
+    "transactionCount": 52,
+    "amountYen": 20227735
+  },
+  {
+    "key": "用地会計",
+    "transactionCount": 20,
+    "amountYen": 13894067
+  },
+  {
+    "key": "中小企業設備導入等資金会計",
+    "transactionCount": 2,
+    "amountYen": 16490
+  }
+]

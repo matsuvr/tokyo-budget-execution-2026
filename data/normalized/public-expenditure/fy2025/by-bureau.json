@@ -1,0 +1,152 @@
+[
+  {
+    "key": "総務局",
+    "transactionCount": 27108,
+    "amountYen": 2187391608102
+  },
+  {
+    "key": "主税局",
+    "transactionCount": 12386,
+    "amountYen": 1545446526977
+  },
+  {
+    "key": "保健医療局",
+    "transactionCount": 30374,
+    "amountYen": 1448516988023
+  },
+  {
+    "key": "財務局",
+    "transactionCount": 4053,
+    "amountYen": 1308745176984
+  },
+  {
+    "key": "福祉局",
+    "transactionCount": 37925,
+    "amountYen": 1203914013507
+  },
+  {
+    "key": "産業労働局",
+    "transactionCount": 26204,
+    "amountYen": 655536828194
+  },
+  {
+    "key": "会計管理局",
+    "transactionCount": 635,
+    "amountYen": 496872072740
+  },
+  {
+    "key": "建設局",
+    "transactionCount": 41110,
+    "amountYen": 482650895579
+  },
+  {
+    "key": "環境局",
+    "transactionCount": 7592,
+    "amountYen": 306289562609
+  },
+  {
+    "key": "生活文化局",
+    "transactionCount": 6846,
+    "amountYen": 303261902093
+  },
+  {
+    "key": "教育庁",
+    "transactionCount": 147471,
+    "amountYen": 202654086253
+  },
+  {
+    "key": "住宅政策本部",
+    "transactionCount": 8885,
+    "amountYen": 171961173460
+  },
+  {
+    "key": "警視庁",
+    "transactionCount": 74639,
+    "amountYen": 155190261810
+  },
+  {
+    "key": "デジタルサービス局",
+    "transactionCount": 3583,
+    "amountYen": 101447075891
+  },
+  {
+    "key": "港湾局",
+    "transactionCount": 7807,
+    "amountYen": 83915169531
+  },
+  {
+    "key": "東京消防庁",
+    "transactionCount": 53271,
+    "amountYen": 77855745144
+  },
+  {
+    "key": "都市整備局",
+    "transactionCount": 7210,
+    "amountYen": 62846898192
+  },
+  {
+    "key": "スポーツ推進本部",
+    "transactionCount": 1552,
+    "amountYen": 31102859041
+  },
+  {
+    "key": "選挙管理委員会事務局",
+    "transactionCount": 793,
+    "amountYen": 23443714272
+  },
+  {
+    "key": "スタートアップ戦略本部",
+    "transactionCount": 1163,
+    "amountYen": 13250963893
+  },
+  {
+    "key": "政策企画局",
+    "transactionCount": 3101,
+    "amountYen": 6654587488
+  },
+  {
+    "key": "子供政策連携室",
+    "transactionCount": 498,
+    "amountYen": 5918164700
+  },
+  {
+    "key": "水道局",
+    "transactionCount": 25,
+    "amountYen": 4956967559
+  },
+  {
+    "key": "中央卸売市場",
+    "transactionCount": 1220,
+    "amountYen": 4585666097
+  },
+  {
+    "key": "都民安全総合対策本部",
+    "transactionCount": 1229,
+    "amountYen": 3928958248
+  },
+  {
+    "key": "議会局",
+    "transactionCount": 1380,
+    "amountYen": 1716244270
+  },
+  {
+    "key": "人事委員会事務局",
+    "transactionCount": 486,
+    "amountYen": 330127834
+  },
+  {
+    "key": "収用委員会事務局",
+    "transactionCount": 268,
+    "amountYen": 38835460
+  },
+  {
+    "key": "労働委員会事務局",
+    "transactionCount": 370,
+    "amountYen": 33473186
+  },
+  {
+    "key": "監査事務局",
+    "transactionCount": 205,
+    "amountYen": 25906313
+  }
+]

@@ -1,0 +1,29 @@
+{
+  "dataset": "TOKYO予算見える化ボード",
+  "key": "16_tosai_hakkougaku_zandaka_suii",
+  "title": "都債発行額と都債残高の推移",
+  "sourceFile": "data/raw/budget/16_tosai_hakkougaku_zandaka_suii.csv",
+  "sourceEncoding": "shift_jis",
+  "fiscalYears": [
+    2025,
+    2026
+  ],
+  "columns": [
+    "年度",
+    "都債残高（億円）",
+    "都債発行額（億円）"
+  ],
+  "recordCount": 2,
+  "records": [
+    {
+      "年度": 2025,
+      "都債残高（億円）": "42,491",
+      "都債発行額（億円）": "1,849"
+    },
+    {
+      "年度": 2026,
+      "都債残高（億円）": "42,372",
+      "都債発行額（億円）": "2,226"
+    }
+  ]
+}

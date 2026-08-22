@@ -1,0 +1,27 @@
+# dependencies
+node_modules/
+
+# wrangler / Cloudflare local state
+.wrangler/
+wrangler.jsonc
+*.partial
+
+# oversized generated files (regenerate with: pnpm run normalize)
+data/normalized/public-expenditure/*/transactions.jsonl
+
+# environment / secrets
+.env
+.env.*
+!.env.example
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# logs
+*.log
+
+# editor
+.idea/
+.vscode/

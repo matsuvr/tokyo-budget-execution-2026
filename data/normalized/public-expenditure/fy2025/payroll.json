@@ -1,0 +1,428 @@
+{
+  "fiscalYear": 2025,
+  "sourceFile": "data/raw/public-expenditure/fy2025/payroll.csv",
+  "recordCount": 60,
+  "amountYen": 1489787016534,
+  "records": [
+    {
+      "fiscalYear": 2025,
+      "sourceFile": "data/raw/public-expenditure/fy2025/payroll.csv",
+      "paidMonth": "2025-04",
+      "category": "報酬",
+      "amountYen": 3971717288
+    },
+    {
+      "fiscalYear": 2025,
+      "sourceFile": "data/raw/public-expenditure/fy2025/payroll.csv",
+      "paidMonth": "2025-04",
+      "category": "給料",
+      "amountYen": 53796713244
+    },
+    {
+      "fiscalYear": 2025,
+      "sourceFile": "data/raw/public-expenditure/fy2025/payroll.csv",
+      "paidMonth": "2025-04",
+      "category": "職員手当等",
+      "amountYen": 25075058503
+    },
+    {
+      "fiscalYear": 2025,
+      "sourceFile": "data/raw/public-expenditure/fy2025/payroll.csv",
+      "paidMonth": "2025-04",
+      "category": "共済費",
+      "amountYen": 17243209214
+    },
+    {
+      "fiscalYear": 2025,
+      "sourceFile": "data/raw/public-expenditure/fy2025/payroll.csv",
+      "paidMonth": "2025-04",
+      "category": "災害補償費",
+      "amountYen": 14392989
+    },
+    {
+      "fiscalYear": 2025,
+      "sourceFile": "data/raw/public-expenditure/fy2025/payroll.csv",
+      "paidMonth": "2025-04",
+      "category": "恩給及退職年金",
+      "amountYen": 101227841
+    },
+    {
+      "fiscalYear": 2025,
+      "sourceFile": "data/raw/public-expenditure/fy2025/payroll.csv",
+      "paidMonth": "2025-05",
+      "category": "報酬",
+      "amountYen": 5740314820
+    },
+    {
+      "fiscalYear": 2025,
+      "sourceFile": "data/raw/public-expenditure/fy2025/payroll.csv",
+      "paidMonth": "2025-05",
+      "category": "給料",
+      "amountYen": 54038069519
+    },
+    {
+      "fiscalYear": 2025,
+      "sourceFile": "data/raw/public-expenditure/fy2025/payroll.csv",
+      "paidMonth": "2025-05",
+      "category": "職員手当等",
+      "amountYen": 22771419080
+    },
+    {
+      "fiscalYear": 2025,
+      "sourceFile": "data/raw/public-expenditure/fy2025/payroll.csv",
+      "paidMonth": "2025-05",
+      "category": "共済費",
+      "amountYen": 15625087172
+    },
+    {
+      "fiscalYear": 2025,
+      "sourceFile": "data/raw/public-expenditure/fy2025/payroll.csv",
+      "paidMonth": "2025-05",
+      "category": "災害補償費",
+      "amountYen": 1827519
+    },
+    {
+      "fiscalYear": 2025,
+      "sourceFile": "data/raw/public-expenditure/fy2025/payroll.csv",
+      "paidMonth": "2025-05",
+      "category": "恩給及退職年金",
+      "amountYen": 720256
+    },
+    {
+      "fiscalYear": 2025,
+      "sourceFile": "data/raw/public-expenditure/fy2025/payroll.csv",
+      "paidMonth": "2025-06",
+      "category": "報酬",
+      "amountYen": 6480893761
+    },
+    {
+      "fiscalYear": 2025,
+      "sourceFile": "data/raw/public-expenditure/fy2025/payroll.csv",
+      "paidMonth": "2025-06",
+      "category": "給料",
+      "amountYen": 54045995832
+    },
+    {
+      "fiscalYear": 2025,
+      "sourceFile": "data/raw/public-expenditure/fy2025/payroll.csv",
+      "paidMonth": "2025-06",
+      "category": "職員手当等",
+      "amountYen": 200538307143
+    },
+    {
+      "fiscalYear": 2025,
+      "sourceFile": "data/raw/public-expenditure/fy2025/payroll.csv",
+      "paidMonth": "2025-06",
+      "category": "共済費",
+      "amountYen": 29317450055
+    },
+    {
+      "fiscalYear": 2025,
+      "sourceFile": "data/raw/public-expenditure/fy2025/payroll.csv",
+      "paidMonth": "2025-06",
+      "category": "災害補償費",
+      "amountYen": 18338458
+    },
+    {
+      "fiscalYear": 2025,
+      "sourceFile": "data/raw/public-expenditure/fy2025/payroll.csv",
+      "paidMonth": "2025-06",
+      "category": "恩給及退職年金",
+      "amountYen": 665457
+    },
+    {
+      "fiscalYear": 2025,
+      "sourceFile": "data/raw/public-expenditure/fy2025/payroll.csv",
+      "paidMonth": "2025-07",
+      "category": "報酬",
+      "amountYen": 6261962149
+    },
+    {
+      "fiscalYear": 2025,
+      "sourceFile": "data/raw/public-expenditure/fy2025/payroll.csv",
+      "paidMonth": "2025-07",
+      "category": "給料",
+      "amountYen": 53937856749
+    },
+    {
+      "fiscalYear": 2025,
+      "sourceFile": "data/raw/public-expenditure/fy2025/payroll.csv",
+      "paidMonth": "2025-07",
+      "category": "職員手当等",
+      "amountYen": 21596700019
+    },
+    {
+      "fiscalYear": 2025,
+      "sourceFile": "data/raw/public-expenditure/fy2025/payroll.csv",
+      "paidMonth": "2025-07",
+      "category": "共済費",
+      "amountYen": 35753350255
+    },
+    {
+      "fiscalYear": 2025,
+      "sourceFile": "data/raw/public-expenditure/fy2025/payroll.csv",
+      "paidMonth": "2025-07",
+      "category": "災害補償費",
+      "amountYen": 6751786
+    },
+    {
+      "fiscalYear": 2025,
+      "sourceFile": "data/raw/public-expenditure/fy2025/payroll.csv",
+      "paidMonth": "2025-07",
+      "category": "恩給及退職年金",
+      "amountYen": 97282081
+    },
+    {
+      "fiscalYear": 2025,
+      "sourceFile": "data/raw/public-expenditure/fy2025/payroll.csv",
+      "paidMonth": "2025-08",
+      "category": "報酬",
+      "amountYen": 6001328219
+    },
+    {
+      "fiscalYear": 2025,
+      "sourceFile": "data/raw/public-expenditure/fy2025/payroll.csv",
+      "paidMonth": "2025-08",
+      "category": "給料",
+      "amountYen": 53894734417
+    },
+    {
+      "fiscalYear": 2025,
+      "sourceFile": "data/raw/public-expenditure/fy2025/payroll.csv",
+      "paidMonth": "2025-08",
+      "category": "職員手当等",
+      "amountYen": 25011740884
+    },
+    {
+      "fiscalYear": 2025,
+      "sourceFile": "data/raw/public-expenditure/fy2025/payroll.csv",
+      "paidMonth": "2025-08",
+      "category": "共済費",
+      "amountYen": 18699642691
+    },
+    {
+      "fiscalYear": 2025,
+      "sourceFile": "data/raw/public-expenditure/fy2025/payroll.csv",
+      "paidMonth": "2025-08",
+      "category": "災害補償費",
+      "amountYen": 9823738
+    },
+    {
+      "fiscalYear": 2025,
+      "sourceFile": "data/raw/public-expenditure/fy2025/payroll.csv",
+      "paidMonth": "2025-08",
+      "category": "恩給及退職年金",
+      "amountYen": 137058
+    },
+    {
+      "fiscalYear": 2025,
+      "sourceFile": "data/raw/public-expenditure/fy2025/payroll.csv",
+      "paidMonth": "2025-09",
+      "category": "報酬",
+      "amountYen": 5745437337
+    },
+    {
+      "fiscalYear": 2025,
+      "sourceFile": "data/raw/public-expenditure/fy2025/payroll.csv",
+      "paidMonth": "2025-09",
+      "category": "給料",
+      "amountYen": 53819814189
+    },
+    {
+      "fiscalYear": 2025,
+      "sourceFile": "data/raw/public-expenditure/fy2025/payroll.csv",
+      "paidMonth": "2025-09",
+      "category": "職員手当等",
+      "amountYen": 21880807684
+    },
+    {
+      "fiscalYear": 2025,
+      "sourceFile": "data/raw/public-expenditure/fy2025/payroll.csv",
+      "paidMonth": "2025-09",
+      "category": "共済費",
+      "amountYen": 26246246979
+    },
+    {
+      "fiscalYear": 2025,
+      "sourceFile": "data/raw/public-expenditure/fy2025/payroll.csv",
+      "paidMonth": "2025-09",
+      "category": "災害補償費",
+      "amountYen": 13850102
+    },
+    {
+      "fiscalYear": 2025,
+      "sourceFile": "data/raw/public-expenditure/fy2025/payroll.csv",
+      "paidMonth": "2025-09",
+      "category": "恩給及退職年金",
+      "amountYen": 724349
+    },
+    {
+      "fiscalYear": 2025,
+      "sourceFile": "data/raw/public-expenditure/fy2025/payroll.csv",
+      "paidMonth": "2025-10",
+      "category": "報酬",
+      "amountYen": 7192158673
+    },
+    {
+      "fiscalYear": 2025,
+      "sourceFile": "data/raw/public-expenditure/fy2025/payroll.csv",
+      "paidMonth": "2025-10",
+      "category": "給料",
+      "amountYen": 54018060947
+    },
+    {
+      "fiscalYear": 2025,
+      "sourceFile": "data/raw/public-expenditure/fy2025/payroll.csv",
+      "paidMonth": "2025-10",
+      "category": "職員手当等",
+      "amountYen": 38149243296
+    },
+    {
+      "fiscalYear": 2025,
+      "sourceFile": "data/raw/public-expenditure/fy2025/payroll.csv",
+      "paidMonth": "2025-10",
+      "category": "共済費",
+      "amountYen": 16181854545
+    },
+    {
+      "fiscalYear": 2025,
+      "sourceFile": "data/raw/public-expenditure/fy2025/payroll.csv",
+      "paidMonth": "2025-10",
+      "category": "災害補償費",
+      "amountYen": 17571849
+    },
+    {
+      "fiscalYear": 2025,
+      "sourceFile": "data/raw/public-expenditure/fy2025/payroll.csv",
+      "paidMonth": "2025-10",
+      "category": "恩給及退職年金",
+      "amountYen": 93619516
+    },
+    {
+      "fiscalYear": 2025,
+      "sourceFile": "data/raw/public-expenditure/fy2025/payroll.csv",
+      "paidMonth": "2025-11",
+      "category": "報酬",
+      "amountYen": 6265422177
+    },
+    {
+      "fiscalYear": 2025,
+      "sourceFile": "data/raw/public-expenditure/fy2025/payroll.csv",
+      "paidMonth": "2025-11",
+      "category": "給料",
+      "amountYen": 53853732492
+    },
+    {
+      "fiscalYear": 2025,
+      "sourceFile": "data/raw/public-expenditure/fy2025/payroll.csv",
+      "paidMonth": "2025-11",
+      "category": "職員手当等",
+      "amountYen": 23456122231
+    },
+    {
+      "fiscalYear": 2025,
+      "sourceFile": "data/raw/public-expenditure/fy2025/payroll.csv",
+      "paidMonth": "2025-11",
+      "category": "共済費",
+      "amountYen": 15982217360
+    },
+    {
+      "fiscalYear": 2025,
+      "sourceFile": "data/raw/public-expenditure/fy2025/payroll.csv",
+      "paidMonth": "2025-11",
+      "category": "災害補償費",
+      "amountYen": 13315222
+    },
+    {
+      "fiscalYear": 2025,
+      "sourceFile": "data/raw/public-expenditure/fy2025/payroll.csv",
+      "paidMonth": "2025-11",
+      "category": "恩給及退職年金",
+      "amountYen": 380765
+    },
+    {
+      "fiscalYear": 2025,
+      "sourceFile": "data/raw/public-expenditure/fy2025/payroll.csv",
+      "paidMonth": "2025-12",
+      "category": "報酬",
+      "amountYen": 8135418886
+    },
+    {
+      "fiscalYear": 2025,
+      "sourceFile": "data/raw/public-expenditure/fy2025/payroll.csv",
+      "paidMonth": "2025-12",
+      "category": "給料",
+      "amountYen": 70838298247
+    },
+    {
+      "fiscalYear": 2025,
+      "sourceFile": "data/raw/public-expenditure/fy2025/payroll.csv",
+      "paidMonth": "2025-12",
+      "category": "職員手当等",
+      "amountYen": 225615471183
+    },
+    {
+      "fiscalYear": 2025,
+      "sourceFile": "data/raw/public-expenditure/fy2025/payroll.csv",
+      "paidMonth": "2025-12",
+      "category": "共済費",
+      "amountYen": 47215094258
+    },
+    {
+      "fiscalYear": 2025,
+      "sourceFile": "data/raw/public-expenditure/fy2025/payroll.csv",
+      "paidMonth": "2025-12",
+      "category": "災害補償費",
+      "amountYen": 21252874
+    },
+    {
+      "fiscalYear": 2025,
+      "sourceFile": "data/raw/public-expenditure/fy2025/payroll.csv",
+      "paidMonth": "2025-12",
+      "category": "恩給及退職年金",
+      "amountYen": 88404006
+    },
+    {
+      "fiscalYear": 2025,
+      "sourceFile": "data/raw/public-expenditure/fy2025/payroll.csv",
+      "paidMonth": "2026-01",
+      "category": "報酬",
+      "amountYen": 6299323479
+    },
+    {
+      "fiscalYear": 2025,
+      "sourceFile": "data/raw/public-expenditure/fy2025/payroll.csv",
+      "paidMonth": "2026-01",
+      "category": "給料",
+      "amountYen": 55842384303
+    },
+    {
+      "fiscalYear": 2025,
+      "sourceFile": "data/raw/public-expenditure/fy2025/payroll.csv",
+      "paidMonth": "2026-01",
+      "category": "職員手当等",
+      "amountYen": 23637578861
+    },
+    {
+      "fiscalYear": 2025,
+      "sourceFile": "data/raw/public-expenditure/fy2025/payroll.csv",
+      "paidMonth": "2026-01",
+      "category": "共済費",
+      "amountYen": 19101114518
+    },
+    {
+      "fiscalYear": 2025,
+      "sourceFile": "data/raw/public-expenditure/fy2025/payroll.csv",
+      "paidMonth": "2026-01",
+      "category": "災害補償費",
+      "amountYen": 8623209
+    },
+    {
+      "fiscalYear": 2025,
+      "sourceFile": "data/raw/public-expenditure/fy2025/payroll.csv",
+      "paidMonth": "2026-01",
+      "category": "恩給及退職年金",
+      "amountYen": 754800
+    }
+  ]
+}

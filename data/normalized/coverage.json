@@ -1,0 +1,72 @@
+{
+  "generatedAt": "2026-08-21T07:29:20.180Z",
+  "requestedFiscalYears": [
+    2025,
+    2026
+  ],
+  "budget": {
+    "seriesCount": 15,
+    "fiscalYears": [
+      2025,
+      2026
+    ],
+    "status": "complete-for-published-dashboard-series"
+  },
+  "publicExpenditure": {
+    "fiscalYear2025": {
+      "normalizedMonths": [
+        "2025-04",
+        "2025-05",
+        "2025-06",
+        "2025-07",
+        "2025-08",
+        "2025-09",
+        "2025-10",
+        "2025-11",
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05"
+      ],
+      "transactionCount": 509389,
+      "transactionFileCount": 14,
+      "payrollFile": "payroll.csv",
+      "status": "transactions-through-closing-period; payroll-published-through-2026-01-in-catalog-csv"
+    },
+    "fiscalYear2026": {
+      "normalizedMonths": [
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "transactionCount": 75247,
+      "transactionFileCount": 3,
+      "payrollFile": "payroll.xlsx",
+      "status": "published-through-2026-06"
+    }
+  },
+  "settlement": {
+    "seriesCount": 10,
+    "status": "comparison-data",
+    "latestFiscalYear": 2024
+  },
+  "subsidies": {
+    "fiscalYears": [
+      2025,
+      2026
+    ],
+    "seriesCount": 2
+  },
+  "closingEstimate": {
+    "fiscalYear": 2025,
+    "status": "preliminary",
+    "path": "data/normalized/closing-estimate/fy2025.json"
+  },
+  "cautions": [
+    "URLのディレクトリ名ではなく、CSV内の年度列を年度判定に使用する。",
+    "公金支出明細と予算見える化CSVは分類体系・粒度が一致しないため、未検証の直接結合や執行率計算を避ける。",
+    "令和8年度は年度途中であり、執行実績は公開済み月までに限定される。"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "dataset": "TOKYO予算見える化ボード",
+  "key": "02_zaiseikibo_ippansaishutsu_suii",
+  "title": "財政規模・一般歳出の推移",
+  "sourceFile": "data/raw/budget/02_zaiseikibo_ippansaishutsu_suii.csv",
+  "sourceEncoding": "shift_jis",
+  "fiscalYears": [
+    2025,
+    2026
+  ],
+  "columns": [
+    "年度",
+    "財政規模（億円）",
+    "一般歳出（億円）"
+  ],
+  "recordCount": 2,
+  "records": [
+    {
+      "年度": 2025,
+      "財政規模（億円）": "91,580",
+      "一般歳出（億円）": "68,978"
+    },
+    {
+      "年度": 2026,
+      "財政規模（億円）": "96,530",
+      "一般歳出（億円）": "72,678"
+    }
+  ]
+}

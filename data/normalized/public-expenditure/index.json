@@ -1,0 +1,41 @@
+[
+  {
+    "fiscalYear": 2025,
+    "transactionCount": 509389,
+    "transactionAmountYen": 10890482453450,
+    "payrollAmountYen": 1489787016534,
+    "months": [
+      "2025-04",
+      "2025-05",
+      "2025-06",
+      "2025-07",
+      "2025-08",
+      "2025-09",
+      "2025-10",
+      "2025-11",
+      "2025-12",
+      "2026-01",
+      "2026-02",
+      "2026-03",
+      "2026-04",
+      "2026-05"
+    ],
+    "transactionFileCount": 14,
+    "payrollFile": "payroll.csv",
+    "path": "data/normalized/public-expenditure/fy2025/summary.json"
+  },
+  {
+    "fiscalYear": 2026,
+    "transactionCount": 75247,
+    "transactionAmountYen": 2224578606464,
+    "payrollAmountYen": 520755612656,
+    "months": [
+      "2026-04",
+      "2026-05",
+      "2026-06"
+    ],
+    "transactionFileCount": 3,
+    "payrollFile": "payroll.xlsx",
+    "path": "data/normalized/public-expenditure/fy2026/summary.json"
+  }
+]

@@ -1,0 +1,128 @@
+[
+  {
+    "month": "2025-04",
+    "transactionCount": 11964,
+    "transactionAmountYen": 553265009607,
+    "payrollAmountYen": 100202319079,
+    "combinedAmountYen": 653467328686,
+    "ordinaryFileCount": 1,
+    "closingFileCount": 0
+  },
+  {
+    "month": "2025-05",
+    "transactionCount": 24572,
+    "transactionAmountYen": 776870407504,
+    "payrollAmountYen": 98177438366,
+    "combinedAmountYen": 875047845870,
+    "ordinaryFileCount": 1,
+    "closingFileCount": 0
+  },
+  {
+    "month": "2025-06",
+    "transactionCount": 37911,
+    "transactionAmountYen": 778535409979,
+    "payrollAmountYen": 290401650706,
+    "combinedAmountYen": 1068937060685,
+    "ordinaryFileCount": 1,
+    "closingFileCount": 0
+  },
+  {
+    "month": "2025-07",
+    "transactionCount": 44281,
+    "transactionAmountYen": 620261866949,
+    "payrollAmountYen": 117653903039,
+    "combinedAmountYen": 737915769988,
+    "ordinaryFileCount": 1,
+    "closingFileCount": 0
+  },
+  {
+    "month": "2025-08",
+    "transactionCount": 37493,
+    "transactionAmountYen": 1011397602871,
+    "payrollAmountYen": 103617407007,
+    "combinedAmountYen": 1115015009878,
+    "ordinaryFileCount": 1,
+    "closingFileCount": 0
+  },
+  {
+    "month": "2025-09",
+    "transactionCount": 39387,
+    "transactionAmountYen": 747510215599,
+    "payrollAmountYen": 107706880640,
+    "combinedAmountYen": 855217096239,
+    "ordinaryFileCount": 1,
+    "closingFileCount": 0
+  },
+  {
+    "month": "2025-10",
+    "transactionCount": 44167,
+    "transactionAmountYen": 508379758112,
+    "payrollAmountYen": 115652508826,
+    "combinedAmountYen": 624032266938,
+    "ordinaryFileCount": 1,
+    "closingFileCount": 0
+  },
+  {
+    "month": "2025-11",
+    "transactionCount": 36845,
+    "transactionAmountYen": 500424213532,
+    "payrollAmountYen": 99571190247,
+    "combinedAmountYen": 599995403779,
+    "ordinaryFileCount": 1,
+    "closingFileCount": 0
+  },
+  {
+    "month": "2025-12",
+    "transactionCount": 41759,
+    "transactionAmountYen": 932004600130,
+    "payrollAmountYen": 351913939454,
+    "combinedAmountYen": 1283918539584,
+    "ordinaryFileCount": 1,
+    "closingFileCount": 0
+  },
+  {
+    "month": "2026-01",
+    "transactionCount": 42830,
+    "transactionAmountYen": 493603185586,
+    "payrollAmountYen": 104889779170,
+    "combinedAmountYen": 598492964756,
+    "ordinaryFileCount": 1,
+    "closingFileCount": 0
+  },
+  {
+    "month": "2026-02",
+    "transactionCount": 40376,
+    "transactionAmountYen": 939408701245,
+    "payrollAmountYen": 0,
+    "combinedAmountYen": 939408701245,
+    "ordinaryFileCount": 1,
+    "closingFileCount": 0
+  },
+  {
+    "month": "2026-03",
+    "transactionCount": 52194,
+    "transactionAmountYen": 1648400016045,
+    "payrollAmountYen": 0,
+    "combinedAmountYen": 1648400016045,
+    "ordinaryFileCount": 1,
+    "closingFileCount": 0
+  },
+  {
+    "month": "2026-04",
+    "transactionCount": 44092,
+    "transactionAmountYen": 511953122222,
+    "payrollAmountYen": 0,
+    "combinedAmountYen": 511953122222,
+    "ordinaryFileCount": 0,
+    "closingFileCount": 1
+  },
+  {
+    "month": "2026-05",
+    "transactionCount": 11518,
+    "transactionAmountYen": 868468344069,
+    "payrollAmountYen": 0,
+    "combinedAmountYen": 868468344069,
+    "ordinaryFileCount": 0,
+    "closingFileCount": 1
+  }
+]

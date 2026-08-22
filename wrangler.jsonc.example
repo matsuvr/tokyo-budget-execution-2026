@@ -1,0 +1,15 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "tokyo-budget-execution-2026",
+  "main": "src/worker.ts",
+  "compatibility_date": "2026-08-21",
+  "observability": {
+    "enabled": true
+  },
+  "r2_buckets": [
+    {
+      "binding": "DATA",
+      "bucket_name": "tokyo-budget-execution-2026"
+    }
+  ]
+}
