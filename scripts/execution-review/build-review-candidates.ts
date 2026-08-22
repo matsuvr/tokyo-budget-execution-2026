@@ -7,7 +7,6 @@ import {
   type ComparisonInput,
 } from "../../src/execution-review/settlement/review-candidates.ts";
 import { checkExclusion } from "../../src/execution-review/exclusions.ts";
-import { normalizeAccountName } from "../../src/execution-review/mapping/normalize-account-name.ts";
 
 /**
  * Issue #30: 比較JSONへ状態分類を付け、要説明候補の一覧を生成する。
@@ -24,11 +23,6 @@ const OUTPUT_PATH = "data/normalized/execution-review/review-candidates.json";
 const comparisonsFile = JSON.parse(await readFile(resolve(ROOT, COMPARISONS_PATH), "utf8")) as {
   records: (ComparisonInput & { sources: unknown })[];
 };
-
-function stripCode(value: string): string {
-  const index = value.indexOf(":");
-  return normalizeAccountName(index >= 0 ? value.slice(index + 1) : value);
-}
 
 const rows = buildReviewCandidates(comparisonsFile.records as ComparisonInput[], {
   exclusionLookup: (chapterName, sectionName) => {

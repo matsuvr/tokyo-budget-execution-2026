@@ -21,7 +21,6 @@ function comparison(overrides: {
     granularity: "chapter",
     fy2024Keys: [{ chapter: "02:総務費" }],
     amounts: {
-      fy2024InitialBudgetYen: current,
       fy2024CurrentBudgetYen: current,
       fy2024SpentYen: current - unused,
       fy2024CarryoverYen: 0,
