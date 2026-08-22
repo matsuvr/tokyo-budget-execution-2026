@@ -3,6 +3,9 @@
   "name": "tokyo-budget-execution-2026",
   "main": "src/worker.ts",
   "compatibility_date": "2026-08-21",
+  "assets": {
+    "directory": "./public"
+  },
   "observability": {
     "enabled": true
   },

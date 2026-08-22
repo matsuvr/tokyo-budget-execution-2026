@@ -63,6 +63,37 @@ function safeDataKey(pathname: string): string | null {
   return `data/${decoded}`;
 }
 
+function apiMetadata(): Record<string, unknown> {
+  return {
+    name: "Tokyo Budget Execution Data API",
+    fiscalYears: [2025, 2026],
+    storage: "Cloudflare R2",
+    endpoints: {
+      manifest: "/manifest",
+      coverage: "/coverage",
+      budgetIndex: "/budget",
+      budgetSeries: "/budget/:key?year=2025|2026",
+      settlementIndex: "/settlement",
+      settlementSeries: "/settlement/:key",
+      expenditureIndex: "/expenditure",
+      expenditureSummary:
+        "/expenditure/summary?year=2025|2026&dimension=total|month|bureau|account|chapter",
+      subsidySummary: "/subsidies/summary?year=2025|2026",
+      closingEstimate: "/closing-estimate/2025",
+      catalog: "/catalog",
+      executionReviewIndex: "/execution-review",
+      executionReviewCandidates: "/execution-review/candidates",
+      executionReviewBureaus: "/execution-review/bureaus",
+      executionReviewItem: "/execution-review/items/:reviewId",
+      objectProxy: "/data/*",
+    },
+    cautions: [
+      "予算と公金支出は分類粒度が異なるため、未検証の直接結合で執行率を算出しないこと。",
+      "令和8年度は年度途中であり、公開済み月までのデータに限定される。",
+    ],
+  };
+}
+
 async function route(request: Request, env: Env): Promise<Response> {
   if (request.method === "OPTIONS")
     return new Response(null, { status: 204, headers: JSON_HEADERS });
@@ -73,35 +104,8 @@ async function route(request: Request, env: Env): Promise<Response> {
   const url = new URL(request.url);
   const path = url.pathname.replace(/\/+$/, "") || "/";
 
-  if (path === "/") {
-    return json({
-      name: "Tokyo Budget Execution Data API",
-      fiscalYears: [2025, 2026],
-      storage: "Cloudflare R2",
-      endpoints: {
-        manifest: "/manifest",
-        coverage: "/coverage",
-        budgetIndex: "/budget",
-        budgetSeries: "/budget/:key?year=2025|2026",
-        settlementIndex: "/settlement",
-        settlementSeries: "/settlement/:key",
-        expenditureIndex: "/expenditure",
-        expenditureSummary:
-          "/expenditure/summary?year=2025|2026&dimension=total|month|bureau|account|chapter",
-        subsidySummary: "/subsidies/summary?year=2025|2026",
-        closingEstimate: "/closing-estimate/2025",
-        catalog: "/catalog",
-        executionReviewIndex: "/execution-review",
-        executionReviewCandidates: "/execution-review/candidates",
-        executionReviewBureaus: "/execution-review/bureaus",
-        executionReviewItem: "/execution-review/items/:reviewId",
-        objectProxy: "/data/*",
-      },
-      cautions: [
-        "予算と公金支出は分類粒度が異なるため、未検証の直接結合で執行率を算出しないこと。",
-        "令和8年度は年度途中であり、公開済み月までのデータに限定される。",
-      ],
-    });
+  if (path === "/" || path === "/api") {
+    return json(apiMetadata());
   }
 
   if (path === "/manifest") return serveObject(env, "data/manifest.json", request.method);
