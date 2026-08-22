@@ -1,6 +1,6 @@
 import { el } from "./dom.js";
 import { formatRate, formatYen, formatYenExact } from "./format.js";
-import { confidenceLabel, statusLabel } from "./labels.js";
+import { bureauOfChapter, confidenceLabel, statusLabel } from "./labels.js";
 import type { AccountKeyView, ReviewCandidateView } from "./types.js";
 
 /**
@@ -8,10 +8,8 @@ import type { AccountKeyView, ReviewCandidateView } from "./types.js";
  * 予算現額を支出済・繰越・不用の3区分で示し、繰越と不用は常に別項目として表示する。
  */
 
-/** 局名の代わりに使う2024年度の款名（番号接頭辞を除す） */
 export function bureauOfCandidate(candidate: ReviewCandidateView): string {
-  const chapter = candidate.fy2024Keys[0]?.chapter ?? "(不明)";
-  return chapter.replace(/^[0-9]{1,2}:/u, "");
+  return bureauOfChapter(candidate.fy2024Keys[0]?.chapter ?? "(不明)");
 }
 
 export function keyText(keys: readonly AccountKeyView[]): string {

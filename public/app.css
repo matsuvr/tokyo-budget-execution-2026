@@ -151,6 +151,51 @@ header h1 {
   overflow-wrap: anywhere;
 }
 
+/* フィルター（#50） */
+
+.filter-controls {
+  align-items: end;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.filter-field {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin: 0;
+  padding: 0;
+}
+
+.filter-field label,
+.filter-field legend {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.checkbox-choice {
+  display: inline-flex;
+  gap: 0.25rem;
+  margin-right: 0.75rem;
+}
+
+.checkbox-choice input {
+  margin: 0;
+}
+
+.reset-button {
+  cursor: pointer;
+  font: inherit;
+  padding: 0.35rem 0.9rem;
+}
+
+.filter-count {
+  color: dimgray;
+  font-size: 0.85rem;
+}
+
 @media (max-width: 480px) {
   .overview-grid,
   .candidate-grid {

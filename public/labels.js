@@ -20,3 +20,7 @@ export function statusLabel(status) {
 export function confidenceLabel(confidence) {
     return CONFIDENCE_LABELS[confidence] ?? confidence;
 }
+/** 局名の代わりに使う2024年度の款名（番号接頭辞を除す）。純粋関数 */
+export function bureauOfChapter(chapter) {
+    return chapter.replace(/^[0-9]{1,2}:/u, "");
+}
