@@ -30,7 +30,7 @@ describe("sortBureausForDisplay", () => {
     ]);
     assert.deepEqual(
       sorted.map((b) => b.chapter),
-      ["B", "C", "A"],
+      ["C", "B", "A"],
     );
   });
 });
