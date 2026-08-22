@@ -120,15 +120,17 @@ export function reconstructHierarchy<const TCells extends Record<string, string>
       currentMoku = moku;
     }
 
+    const amountPattern = options.amountPattern;
     const hasAmounts =
-      options.amountPattern != null &&
-      Object.values(row.cells).some((value) => options.amountPattern.test(value));
+      amountPattern != null &&
+      Object.values(row.cells).some((value) => amountPattern.test(value));
     // 小計判定はセル単位（金額セルと結合しない）。
+    const subtotalPattern = options.subtotalPattern;
     const isSubtotal =
-      options.subtotalPattern != null &&
+      subtotalPattern != null &&
       Object.values(row.cells).some((value) => {
         const normalizedValue = normalizeName(value);
-        return normalizedValue.length > 0 && options.subtotalPattern.test(normalizedValue);
+        return normalizedValue.length > 0 && subtotalPattern.test(normalizedValue);
       });
     let kind: SettlementRowKind;
     if (kan) kind = "kan";
