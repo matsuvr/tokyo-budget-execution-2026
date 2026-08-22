@@ -88,7 +88,7 @@ export function normalizeTrailingNegativeSigns(
     const nextText = result[next];
     if (nextText == null || nextText.trim().length === 0) continue;
     result[current] = currentText.replace(/\s+△$/u, "");
-    result[next] = /^△/u.test(nextText.trim()) ? nextText : `△${nextText.trim()}`;
+    result[next] = nextText.trim().startsWith("△") ? nextText : `△${nextText.trim()}`;
   }
   return result;
 }
