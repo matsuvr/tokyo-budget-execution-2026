@@ -373,6 +373,18 @@ const definitions: SourceDefinition[] = [
     expectedStatus: "downloaded" as const,
   })),
   {
+    id: "er-fy2024-major-policy-results",
+    title: "令和6年度 主要施策の成果（本編・目次一体）",
+    category: "document",
+    fiscalYears: [2024],
+    sourceUrl:
+      "https://www.zaimu.metro.tokyo.lg.jp/documents/d/zaimu/20250924shuyousisakunoseika",
+    localPath: "data/raw/execution-review/fy2024/major-policy-results/major-policy-results.pdf",
+    expectedStatus: "downloaded",
+    notes:
+      "政策・事業別の成果と予算現額・決算額を確認できる原本。分割版・別索引は公開されていない。",
+  },
+  {
     id: "reference-budget-dataset",
     title: "東京都オープンデータカタログ: TOKYO予算見える化ボード",
     category: "reference",
