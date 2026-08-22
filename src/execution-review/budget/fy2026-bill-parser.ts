@@ -28,6 +28,7 @@ export interface BudgetBillParseResult {
   started: boolean;
 }
 
+
 const KAN_LINE = /^ {0,3}(\d{2})(\S[^(]*?) {2,}([0-9][0-9,]{3,}) *$/u;
 const KOU_LINE = /^ {4,}(\d{1,2}) +(\S.*?) {2,}([0-9][0-9,]{3,}) *$/u;
 
@@ -43,11 +44,6 @@ function cleanName(raw: string): string {
 export function parseBudgetBillExpenditure(text: string): BudgetBillParseResult {
   const rawLines = text.split(/\r?\n/u);
   let started = false;
-
-  // 総則の総額（例: それぞれ9,653,000,000千円）
-  const totalMatch = text.replace(/\s+/gu, "").match(/それぞれ([0-9,]+)千(?:円|圓)/u);
-  const declaredTotalThousandYen =
-    totalMatch?.[1] != null ? Number.parseInt(totalMatch[1].replace(/,/gu, ""), 10) : null;
 
   const lines: BudgetBillLine[] = [];
   for (let lineIndex = 0; lineIndex < rawLines.length; lineIndex += 1) {

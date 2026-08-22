@@ -35,7 +35,7 @@ describe("parseBudgetBillExpenditure", () => {
     const kan = result.lines.filter((line) => line.level === "kan");
     assert.deepEqual(
       kan.map((line) => `${line.number}:${line.name}`),
-      ["1:議会費", "2:総務費"],
+      ["01:議会費", "02:総務費"],
     );
     assert.equal(kan[0].initialBudgetYen, 6_010_000_000);
     const kou = result.lines.filter((line) => line.level === "kou");
