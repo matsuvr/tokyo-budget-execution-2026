@@ -412,7 +412,7 @@ const manifest: DataManifest = {
   packageName: "tokyo-budget-execution-2026",
   packageVersion: "2026.08.21",
   timezone: "Asia/Tokyo",
-  requestedFiscalYears: [2025, 2026],
+  requestedFiscalYears: [2024, 2025, 2026],
   sources,
 };
 await mkdir(join(ROOT, "data"), { recursive: true });

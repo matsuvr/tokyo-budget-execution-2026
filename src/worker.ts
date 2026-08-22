@@ -35,7 +35,8 @@ function contentTypeForKey(key: string): string {
   if (key.endsWith(".csv")) return "text/csv; charset=utf-8";
   if (key.endsWith(".md")) return "text/markdown; charset=utf-8";
   if (key.endsWith(".pdf")) return "application/pdf";
-  if (key.endsWith(".xlsx")) return "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
+  if (key.endsWith(".xlsx"))
+    return "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
   return "application/octet-stream";
 }
 
@@ -63,7 +64,8 @@ function safeDataKey(pathname: string): string | null {
 }
 
 async function route(request: Request, env: Env): Promise<Response> {
-  if (request.method === "OPTIONS") return new Response(null, { status: 204, headers: JSON_HEADERS });
+  if (request.method === "OPTIONS")
+    return new Response(null, { status: 204, headers: JSON_HEADERS });
   if (request.method !== "GET" && request.method !== "HEAD") {
     return json({ error: "method_not_allowed" }, 405, { allow: "GET, HEAD, OPTIONS" });
   }
@@ -84,7 +86,8 @@ async function route(request: Request, env: Env): Promise<Response> {
         settlementIndex: "/settlement",
         settlementSeries: "/settlement/:key",
         expenditureIndex: "/expenditure",
-        expenditureSummary: "/expenditure/summary?year=2025|2026&dimension=total|month|bureau|account|chapter",
+        expenditureSummary:
+          "/expenditure/summary?year=2025|2026&dimension=total|month|bureau|account|chapter",
         subsidySummary: "/subsidies/summary?year=2025|2026",
         closingEstimate: "/closing-estimate/2025",
         catalog: "/catalog",
@@ -98,7 +101,8 @@ async function route(request: Request, env: Env): Promise<Response> {
   }
 
   if (path === "/manifest") return serveObject(env, "data/manifest.json", request.method);
-  if (path === "/coverage") return serveObject(env, "data/normalized/coverage.json", request.method);
+  if (path === "/coverage")
+    return serveObject(env, "data/normalized/coverage.json", request.method);
   if (path === "/catalog") {
     return serveObject(env, "data/normalized/catalog/relevant-api-catalog.json", request.method);
   }
@@ -114,7 +118,10 @@ async function route(request: Request, env: Env): Promise<Response> {
     if (!yearText || request.method === "HEAD") return serveObject(env, objectKey, request.method);
     const year = Number(yearText);
     if (year !== 2025 && year !== 2026) return json({ error: "year_must_be_2025_or_2026" }, 400);
-    const table = await getJson<Record<string, unknown> & { records?: Record<string, unknown>[] }>(env, objectKey);
+    const table = await getJson<Record<string, unknown> & { records?: Record<string, unknown>[] }>(
+      env,
+      objectKey,
+    );
     if (!table) return json({ error: "not_found", key: objectKey }, 404);
     const records = (table.records ?? []).filter((record) => Number(record["年度"]) === year);
     return json({ ...table, fiscalYears: [year], recordCount: records.length, records });
