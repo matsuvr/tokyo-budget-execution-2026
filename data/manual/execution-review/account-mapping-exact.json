@@ -1,0 +1,2679 @@
+{
+ "version": 1,
+ "updatedAt": "2026-08-22T07:26:28.295Z",
+ "note": "#25の自動候補を、独立原本（決算明細書）との金額突合により確認したもの。確認日: 2026-08-22。",
+ "mappings": [
+  {
+   "mappingId": "map-0001",
+   "granularity": "chapter",
+   "confidence": "A",
+   "relationType": "exact",
+   "fy2024": {
+    "chapterRaw": "1:議会費",
+    "sectionRaw": null,
+    "initialBudgetYen": 5419000000,
+    "sources": [
+     {
+      "title": "令和6年度予算概要 第1一般会計",
+      "file": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+      "page": 6
+     },
+     {
+      "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+      "file": "data/raw/execution-review/fy2024/settlement/general-account-settlement-detail.pdf",
+      "page": 116
+     }
+    ]
+   },
+   "fy2026": {
+    "chapterRaw": "01:議会費",
+    "sectionRaw": null,
+    "initialBudgetYen": 6010000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "verification": {
+    "method": "予算概要と決算明細書の当初予算額が正規化名称・金額とも一致。2026側は議案の項合計=款額を検証済み。",
+    "settlementMatchYen": 5419000000,
+    "settlementPage": 116
+   }
+  },
+  {
+   "mappingId": "map-0002",
+   "granularity": "chapter",
+   "confidence": "A",
+   "relationType": "exact",
+   "fy2024": {
+    "chapterRaw": "2:総務費",
+    "sectionRaw": null,
+    "initialBudgetYen": 368474000000,
+    "sources": [
+     {
+      "title": "令和6年度予算概要 第1一般会計",
+      "file": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+      "page": 6
+     },
+     {
+      "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+      "file": "data/raw/execution-review/fy2024/settlement/general-account-settlement-detail.pdf",
+      "page": 120
+     }
+    ]
+   },
+   "fy2026": {
+    "chapterRaw": "02:総務費",
+    "sectionRaw": null,
+    "initialBudgetYen": 396719000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "verification": {
+    "method": "予算概要と決算明細書の当初予算額が正規化名称・金額とも一致。2026側は議案の項合計=款額を検証済み。",
+    "settlementMatchYen": 368474000000,
+    "settlementPage": 120
+   }
+  },
+  {
+   "mappingId": "map-0003",
+   "granularity": "chapter",
+   "confidence": "A",
+   "relationType": "exact",
+   "fy2024": {
+    "chapterRaw": "3:徴税費",
+    "sectionRaw": null,
+    "initialBudgetYen": 84784000000,
+    "sources": [
+     {
+      "title": "令和6年度予算概要 第1一般会計",
+      "file": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+      "page": 8
+     },
+     {
+      "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+      "file": "data/raw/execution-review/fy2024/settlement/general-account-settlement-detail.pdf",
+      "page": 172
+     }
+    ]
+   },
+   "fy2026": {
+    "chapterRaw": "03:徴税費",
+    "sectionRaw": null,
+    "initialBudgetYen": 103003000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "verification": {
+    "method": "予算概要と決算明細書の当初予算額が正規化名称・金額とも一致。2026側は議案の項合計=款額を検証済み。",
+    "settlementMatchYen": 84784000000,
+    "settlementPage": 172
+   }
+  },
+  {
+   "mappingId": "map-0004",
+   "granularity": "chapter",
+   "confidence": "A",
+   "relationType": "exact",
+   "fy2024": {
+    "chapterRaw": "5:都市整備費",
+    "sectionRaw": null,
+    "initialBudgetYen": 143296000000,
+    "sources": [
+     {
+      "title": "令和6年度予算概要 第1一般会計",
+      "file": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+      "page": 8
+     },
+     {
+      "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+      "file": "data/raw/execution-review/fy2024/settlement/general-account-settlement-detail.pdf",
+      "page": 196
+     }
+    ]
+   },
+   "fy2026": {
+    "chapterRaw": "05:都市整備費",
+    "sectionRaw": null,
+    "initialBudgetYen": 186629000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "verification": {
+    "method": "予算概要と決算明細書の当初予算額が正規化名称・金額とも一致。2026側は議案の項合計=款額を検証済み。",
+    "settlementMatchYen": 143296000000,
+    "settlementPage": 196
+   }
+  },
+  {
+   "mappingId": "map-0005",
+   "granularity": "chapter",
+   "confidence": "A",
+   "relationType": "exact",
+   "fy2024": {
+    "chapterRaw": "6:環境費",
+    "sectionRaw": null,
+    "initialBudgetYen": 175783000000,
+    "sources": [
+     {
+      "title": "令和6年度予算概要 第1一般会計",
+      "file": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+      "page": 10
+     },
+     {
+      "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+      "file": "data/raw/execution-review/fy2024/settlement/general-account-settlement-detail.pdf",
+      "page": 226
+     }
+    ]
+   },
+   "fy2026": {
+    "chapterRaw": "06:環境費",
+    "sectionRaw": null,
+    "initialBudgetYen": 281302000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "verification": {
+    "method": "予算概要と決算明細書の当初予算額が正規化名称・金額とも一致。2026側は議案の項合計=款額を検証済み。",
+    "settlementMatchYen": 175783000000,
+    "settlementPage": 226
+   }
+  },
+  {
+   "mappingId": "map-0006",
+   "granularity": "chapter",
+   "confidence": "A",
+   "relationType": "exact",
+   "fy2024": {
+    "chapterRaw": "7:福祉費",
+    "sectionRaw": null,
+    "initialBudgetYen": 1104502000000,
+    "sources": [
+     {
+      "title": "令和6年度予算概要 第1一般会計",
+      "file": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+      "page": 11
+     },
+     {
+      "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+      "file": "data/raw/execution-review/fy2024/settlement/general-account-settlement-detail.pdf",
+      "page": 240
+     }
+    ]
+   },
+   "fy2026": {
+    "chapterRaw": "07:福祉費",
+    "sectionRaw": null,
+    "initialBudgetYen": 1290411000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "verification": {
+    "method": "予算概要と決算明細書の当初予算額が正規化名称・金額とも一致。2026側は議案の項合計=款額を検証済み。",
+    "settlementMatchYen": 1104502000000,
+    "settlementPage": 240
+   }
+  },
+  {
+   "mappingId": "map-0007",
+   "granularity": "chapter",
+   "confidence": "A",
+   "relationType": "exact",
+   "fy2024": {
+    "chapterRaw": "8:保健医療費",
+    "sectionRaw": null,
+    "initialBudgetYen": 492753000000,
+    "sources": [
+     {
+      "title": "令和6年度予算概要 第1一般会計",
+      "file": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+      "page": 14
+     },
+     {
+      "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+      "file": "data/raw/execution-review/fy2024/settlement/general-account-settlement-detail.pdf",
+      "page": 276
+     }
+    ]
+   },
+   "fy2026": {
+    "chapterRaw": "08:保健医療費",
+    "sectionRaw": null,
+    "initialBudgetYen": 563895000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "verification": {
+    "method": "予算概要と決算明細書の当初予算額が正規化名称・金額とも一致。2026側は議案の項合計=款額を検証済み。",
+    "settlementMatchYen": 492753000000,
+    "settlementPage": 276
+   }
+  },
+  {
+   "mappingId": "map-0008",
+   "granularity": "chapter",
+   "confidence": "A",
+   "relationType": "exact",
+   "fy2024": {
+    "chapterRaw": "9:産業労働費",
+    "sectionRaw": null,
+    "initialBudgetYen": 676385000000,
+    "sources": [
+     {
+      "title": "令和6年度予算概要 第1一般会計",
+      "file": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+      "page": 16
+     },
+     {
+      "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+      "file": "data/raw/execution-review/fy2024/settlement/general-account-settlement-detail.pdf",
+      "page": 308
+     }
+    ]
+   },
+   "fy2026": {
+    "chapterRaw": "09:産業労働費",
+    "sectionRaw": null,
+    "initialBudgetYen": 774369000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "verification": {
+    "method": "予算概要と決算明細書の当初予算額が正規化名称・金額とも一致。2026側は議案の項合計=款額を検証済み。",
+    "settlementMatchYen": 676385000000,
+    "settlementPage": 308
+   }
+  },
+  {
+   "mappingId": "map-0009",
+   "granularity": "chapter",
+   "confidence": "A",
+   "relationType": "exact",
+   "fy2024": {
+    "chapterRaw": "11:港湾費",
+    "sectionRaw": null,
+    "initialBudgetYen": 100365000000,
+    "sources": [
+     {
+      "title": "令和6年度予算概要 第1一般会計",
+      "file": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+      "page": 19
+     },
+     {
+      "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+      "file": "data/raw/execution-review/fy2024/settlement/general-account-settlement-detail.pdf",
+      "page": 388
+     }
+    ]
+   },
+   "fy2026": {
+    "chapterRaw": "11:港湾費",
+    "sectionRaw": null,
+    "initialBudgetYen": 105209000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "verification": {
+    "method": "予算概要と決算明細書の当初予算額が正規化名称・金額とも一致。2026側は議案の項合計=款額を検証済み。",
+    "settlementMatchYen": 100365000000,
+    "settlementPage": 388
+   }
+  },
+  {
+   "mappingId": "map-0010",
+   "granularity": "chapter",
+   "confidence": "A",
+   "relationType": "exact",
+   "fy2024": {
+    "chapterRaw": "12:教育費",
+    "sectionRaw": null,
+    "initialBudgetYen": 1009413000000,
+    "sources": [
+     {
+      "title": "令和6年度予算概要 第1一般会計",
+      "file": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+      "page": 20
+     },
+     {
+      "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+      "file": "data/raw/execution-review/fy2024/settlement/general-account-settlement-detail.pdf",
+      "page": 412
+     }
+    ]
+   },
+   "fy2026": {
+    "chapterRaw": "12:教育費",
+    "sectionRaw": null,
+    "initialBudgetYen": 1181231000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "verification": {
+    "method": "予算概要と決算明細書の当初予算額が正規化名称・金額とも一致。2026側は議案の項合計=款額を検証済み。",
+    "settlementMatchYen": 1009413000000,
+    "settlementPage": 412
+   }
+  },
+  {
+   "mappingId": "map-0011",
+   "granularity": "chapter",
+   "confidence": "A",
+   "relationType": "exact",
+   "fy2024": {
+    "chapterRaw": "13:学務費",
+    "sectionRaw": null,
+    "initialBudgetYen": 298853000000,
+    "sources": [
+     {
+      "title": "令和6年度予算概要 第1一般会計",
+      "file": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+      "page": 22
+     },
+     {
+      "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+      "file": "data/raw/execution-review/fy2024/settlement/general-account-settlement-detail.pdf",
+      "page": 454
+     }
+    ]
+   },
+   "fy2026": {
+    "chapterRaw": "13:学務費",
+    "sectionRaw": null,
+    "initialBudgetYen": 343249000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "verification": {
+    "method": "予算概要と決算明細書の当初予算額が正規化名称・金額とも一致。2026側は議案の項合計=款額を検証済み。",
+    "settlementMatchYen": 298853000000,
+    "settlementPage": 454
+   }
+  },
+  {
+   "mappingId": "map-0012",
+   "granularity": "chapter",
+   "confidence": "A",
+   "relationType": "exact",
+   "fy2024": {
+    "chapterRaw": "15:消防費",
+    "sectionRaw": null,
+    "initialBudgetYen": 279384000000,
+    "sources": [
+     {
+      "title": "令和6年度予算概要 第1一般会計",
+      "file": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+      "page": 24
+     },
+     {
+      "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+      "file": "data/raw/execution-review/fy2024/settlement/general-account-settlement-detail.pdf",
+      "page": 478
+     }
+    ]
+   },
+   "fy2026": {
+    "chapterRaw": "15:消防費",
+    "sectionRaw": null,
+    "initialBudgetYen": 318582000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "verification": {
+    "method": "予算概要と決算明細書の当初予算額が正規化名称・金額とも一致。2026側は議案の項合計=款額を検証済み。",
+    "settlementMatchYen": 279384000000,
+    "settlementPage": 478
+   }
+  },
+  {
+   "mappingId": "map-0013",
+   "granularity": "chapter",
+   "confidence": "A",
+   "relationType": "exact",
+   "fy2024": {
+    "chapterRaw": "16:公債費",
+    "sectionRaw": null,
+    "initialBudgetYen": 323848000000,
+    "sources": [
+     {
+      "title": "令和6年度予算概要 第1一般会計",
+      "file": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+      "page": 25
+     },
+     {
+      "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+      "file": "data/raw/execution-review/fy2024/settlement/general-account-settlement-detail.pdf",
+      "page": 494
+     }
+    ]
+   },
+   "fy2026": {
+    "chapterRaw": "16:公債費",
+    "sectionRaw": null,
+    "initialBudgetYen": 279908000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "verification": {
+    "method": "予算概要と決算明細書の当初予算額が正規化名称・金額とも一致。2026側は議案の項合計=款額を検証済み。",
+    "settlementMatchYen": 323848000000,
+    "settlementPage": 494
+   }
+  },
+  {
+   "mappingId": "map-0014",
+   "granularity": "chapter",
+   "confidence": "A",
+   "relationType": "exact",
+   "fy2024": {
+    "chapterRaw": "17:諸支出金",
+    "sectionRaw": null,
+    "initialBudgetYen": 1973948000000,
+    "sources": [
+     {
+      "title": "令和6年度予算概要 第1一般会計",
+      "file": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+      "page": 25
+     },
+     {
+      "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+      "file": "data/raw/execution-review/fy2024/settlement/general-account-settlement-detail.pdf",
+      "page": 496
+     }
+    ]
+   },
+   "fy2026": {
+    "chapterRaw": "17:諸支出金",
+    "sectionRaw": null,
+    "initialBudgetYen": 2347515000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "verification": {
+    "method": "予算概要と決算明細書の当初予算額が正規化名称・金額とも一致。2026側は議案の項合計=款額を検証済み。",
+    "settlementMatchYen": 1973948000000,
+    "settlementPage": 496
+   }
+  },
+  {
+   "mappingId": "map-0015",
+   "granularity": "chapter",
+   "confidence": "A",
+   "relationType": "exact",
+   "fy2024": {
+    "chapterRaw": "18:予備費",
+    "sectionRaw": null,
+    "initialBudgetYen": 5000000000,
+    "sources": [
+     {
+      "title": "令和6年度予算概要 第1一般会計",
+      "file": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+      "page": 26
+     },
+     {
+      "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+      "file": "data/raw/execution-review/fy2024/settlement/general-account-settlement-detail.pdf",
+      "page": 504
+     }
+    ]
+   },
+   "fy2026": {
+    "chapterRaw": "18:予備費",
+    "sectionRaw": null,
+    "initialBudgetYen": 5000000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "verification": {
+    "method": "予算概要と決算明細書の当初予算額が正規化名称・金額とも一致。2026側は議案の項合計=款額を検証済み。",
+    "settlementMatchYen": 5000000000,
+    "settlementPage": 504
+   }
+  },
+  {
+   "mappingId": "map-0016",
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "fy2024": {
+    "chapterRaw": "2:総務費",
+    "sectionRaw": "1:総務管理費",
+    "initialBudgetYen": 62437836000,
+    "sources": [
+     {
+      "title": "令和6年度予算概要 第1一般会計",
+      "file": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+      "page": 6
+     },
+     {
+      "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+      "file": "data/raw/execution-review/fy2024/settlement/general-account-settlement-detail.pdf",
+      "page": 120
+     }
+    ]
+   },
+   "fy2026": {
+    "chapterRaw": "02:総務費",
+    "sectionRaw": "01:総務管理費",
+    "initialBudgetYen": 69224104000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "verification": {
+    "method": "予算概要と決算明細書の当初予算額が正規化名称・金額とも一致。2026側は議案の項合計=款額を検証済み。",
+    "settlementMatchYen": 62437836000,
+    "settlementPage": 120
+   }
+  },
+  {
+   "mappingId": "map-0017",
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "fy2024": {
+    "chapterRaw": "2:総務費",
+    "sectionRaw": "2:政策企画費",
+    "initialBudgetYen": 16096000000,
+    "sources": [
+     {
+      "title": "令和6年度予算概要 第1一般会計",
+      "file": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+      "page": 6
+     },
+     {
+      "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+      "file": "data/raw/execution-review/fy2024/settlement/general-account-settlement-detail.pdf",
+      "page": 128
+     }
+    ]
+   },
+   "fy2026": {
+    "chapterRaw": "02:総務費",
+    "sectionRaw": "02:政策企画費",
+    "initialBudgetYen": 12588000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "verification": {
+    "method": "予算概要と決算明細書の当初予算額が正規化名称・金額とも一致。2026側は議案の項合計=款額を検証済み。",
+    "settlementMatchYen": 16096000000,
+    "settlementPage": 128
+   }
+  },
+  {
+   "mappingId": "map-0018",
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "fy2024": {
+    "chapterRaw": "2:総務費",
+    "sectionRaw": "3:子供政策連携費",
+    "initialBudgetYen": 13083000000,
+    "sources": [
+     {
+      "title": "令和6年度予算概要 第1一般会計",
+      "file": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+      "page": 6
+     },
+     {
+      "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+      "file": "data/raw/execution-review/fy2024/settlement/general-account-settlement-detail.pdf",
+      "page": 132
+     }
+    ]
+   },
+   "fy2026": {
+    "chapterRaw": "02:総務費",
+    "sectionRaw": "03:子供政策連携費",
+    "initialBudgetYen": 18509000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "verification": {
+    "method": "予算概要と決算明細書の当初予算額が正規化名称・金額とも一致。2026側は議案の項合計=款額を検証済み。",
+    "settlementMatchYen": 13083000000,
+    "settlementPage": 132
+   }
+  },
+  {
+   "mappingId": "map-0019",
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "fy2024": {
+    "chapterRaw": "2:総務費",
+    "sectionRaw": "5:デジタルサービス費",
+    "initialBudgetYen": 71974000000,
+    "sources": [
+     {
+      "title": "令和6年度予算概要 第1一般会計",
+      "file": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+      "page": 6
+     },
+     {
+      "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+      "file": "data/raw/execution-review/fy2024/settlement/general-account-settlement-detail.pdf",
+      "page": 136
+     }
+    ]
+   },
+   "fy2026": {
+    "chapterRaw": "02:総務費",
+    "sectionRaw": "04:デジタルサービス費",
+    "initialBudgetYen": 78338000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "verification": {
+    "method": "予算概要と決算明細書の当初予算額が正規化名称・金額とも一致。2026側は議案の項合計=款額を検証済み。",
+    "settlementMatchYen": 71974000000,
+    "settlementPage": 136
+   }
+  },
+  {
+   "mappingId": "map-0020",
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "fy2024": {
+    "chapterRaw": "2:総務費",
+    "sectionRaw": "6:区市町村振興費",
+    "initialBudgetYen": 112439306000,
+    "sources": [
+     {
+      "title": "令和6年度予算概要 第1一般会計",
+      "file": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+      "page": 7
+     },
+     {
+      "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+      "file": "data/raw/execution-review/fy2024/settlement/general-account-settlement-detail.pdf",
+      "page": 138
+     }
+    ]
+   },
+   "fy2026": {
+    "chapterRaw": "02:総務費",
+    "sectionRaw": "05:区市町村振興費",
+    "initialBudgetYen": 133369157000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "verification": {
+    "method": "予算概要と決算明細書の当初予算額が正規化名称・金額とも一致。2026側は議案の項合計=款額を検証済み。",
+    "settlementMatchYen": 112439306000,
+    "settlementPage": 138
+   }
+  },
+  {
+   "mappingId": "map-0021",
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "fy2024": {
+    "chapterRaw": "2:総務費",
+    "sectionRaw": "7:選挙費",
+    "initialBudgetYen": 6787000000,
+    "sources": [
+     {
+      "title": "令和6年度予算概要 第1一般会計",
+      "file": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+      "page": 7
+     },
+     {
+      "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+      "file": "data/raw/execution-review/fy2024/settlement/general-account-settlement-detail.pdf",
+      "page": 142
+     }
+    ]
+   },
+   "fy2026": {
+    "chapterRaw": "02:総務費",
+    "sectionRaw": "06:選挙費",
+    "initialBudgetYen": 425000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "verification": {
+    "method": "予算概要と決算明細書の当初予算額が正規化名称・金額とも一致。2026側は議案の項合計=款額を検証済み。",
+    "settlementMatchYen": 6787000000,
+    "settlementPage": 142
+   }
+  },
+  {
+   "mappingId": "map-0022",
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "fy2024": {
+    "chapterRaw": "2:総務費",
+    "sectionRaw": "8:防災管理費",
+    "initialBudgetYen": 16335840000,
+    "sources": [
+     {
+      "title": "令和6年度予算概要 第1一般会計",
+      "file": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+      "page": 7
+     },
+     {
+      "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+      "file": "data/raw/execution-review/fy2024/settlement/general-account-settlement-detail.pdf",
+      "page": 150
+     }
+    ]
+   },
+   "fy2026": {
+    "chapterRaw": "02:総務費",
+    "sectionRaw": "07:防災管理費",
+    "initialBudgetYen": 23871011000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "verification": {
+    "method": "予算概要と決算明細書の当初予算額が正規化名称・金額とも一致。2026側は議案の項合計=款額を検証済み。",
+    "settlementMatchYen": 16335840000,
+    "settlementPage": 150
+   }
+  },
+  {
+   "mappingId": "map-0023",
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "fy2024": {
+    "chapterRaw": "2:総務費",
+    "sectionRaw": "9:建築保全費",
+    "initialBudgetYen": 14829000000,
+    "sources": [
+     {
+      "title": "令和6年度予算概要 第1一般会計",
+      "file": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+      "page": 7
+     },
+     {
+      "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+      "file": "data/raw/execution-review/fy2024/settlement/general-account-settlement-detail.pdf",
+      "page": 166
+     }
+    ]
+   },
+   "fy2026": {
+    "chapterRaw": "02:総務費",
+    "sectionRaw": "12:建築保全費",
+    "initialBudgetYen": 15203000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "verification": {
+    "method": "予算概要と決算明細書の当初予算額が正規化名称・金額とも一致。2026側は議案の項合計=款額を検証済み。",
+    "settlementMatchYen": 14829000000,
+    "settlementPage": 166
+   }
+  },
+  {
+   "mappingId": "map-0024",
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "fy2024": {
+    "chapterRaw": "2:総務費",
+    "sectionRaw": "10:退職手当及年金費",
+    "initialBudgetYen": 18953741000,
+    "sources": [
+     {
+      "title": "令和6年度予算概要 第1一般会計",
+      "file": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+      "page": 7
+     },
+     {
+      "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+      "file": "data/raw/execution-review/fy2024/settlement/general-account-settlement-detail.pdf",
+      "page": 168
+     }
+    ]
+   },
+   "fy2026": {
+    "chapterRaw": "02:総務費",
+    "sectionRaw": "13:退職手当及年金費",
+    "initialBudgetYen": 17916647000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "verification": {
+    "method": "予算概要と決算明細書の当初予算額が正規化名称・金額とも一致。2026側は議案の項合計=款額を検証済み。",
+    "settlementMatchYen": 18953741000,
+    "settlementPage": 168
+   }
+  },
+  {
+   "mappingId": "map-0025",
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "fy2024": {
+    "chapterRaw": "5:都市整備費",
+    "sectionRaw": "1:都市整備管理費",
+    "initialBudgetYen": 10202000000,
+    "sources": [
+     {
+      "title": "令和6年度予算概要 第1一般会計",
+      "file": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+      "page": 9
+     },
+     {
+      "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+      "file": "data/raw/execution-review/fy2024/settlement/general-account-settlement-detail.pdf",
+      "page": 196
+     }
+    ]
+   },
+   "fy2026": {
+    "chapterRaw": "05:都市整備費",
+    "sectionRaw": "01:都市整備管理費",
+    "initialBudgetYen": 47963000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "verification": {
+    "method": "予算概要と決算明細書の当初予算額が正規化名称・金額とも一致。2026側は議案の項合計=款額を検証済み。",
+    "settlementMatchYen": 10202000000,
+    "settlementPage": 196
+   }
+  },
+  {
+   "mappingId": "map-0026",
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "fy2024": {
+    "chapterRaw": "5:都市整備費",
+    "sectionRaw": "2:都市基盤整備費",
+    "initialBudgetYen": 22897000000,
+    "sources": [
+     {
+      "title": "令和6年度予算概要 第1一般会計",
+      "file": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+      "page": 9
+     },
+     {
+      "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+      "file": "data/raw/execution-review/fy2024/settlement/general-account-settlement-detail.pdf",
+      "page": 200
+     }
+    ]
+   },
+   "fy2026": {
+    "chapterRaw": "05:都市整備費",
+    "sectionRaw": "02:都市基盤整備費",
+    "initialBudgetYen": 35711000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "verification": {
+    "method": "予算概要と決算明細書の当初予算額が正規化名称・金額とも一致。2026側は議案の項合計=款額を検証済み。",
+    "settlementMatchYen": 22897000000,
+    "settlementPage": 200
+   }
+  },
+  {
+   "mappingId": "map-0027",
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "fy2024": {
+    "chapterRaw": "5:都市整備費",
+    "sectionRaw": "4:建築行政費",
+    "initialBudgetYen": 7106000000,
+    "sources": [
+     {
+      "title": "令和6年度予算概要 第1一般会計",
+      "file": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+      "page": 9
+     },
+     {
+      "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+      "file": "data/raw/execution-review/fy2024/settlement/general-account-settlement-detail.pdf",
+      "page": 214
+     }
+    ]
+   },
+   "fy2026": {
+    "chapterRaw": "05:都市整備費",
+    "sectionRaw": "04:建築行政費",
+    "initialBudgetYen": 8254000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "verification": {
+    "method": "予算概要と決算明細書の当初予算額が正規化名称・金額とも一致。2026側は議案の項合計=款額を検証済み。",
+    "settlementMatchYen": 7106000000,
+    "settlementPage": 214
+   }
+  },
+  {
+   "mappingId": "map-0028",
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "fy2024": {
+    "chapterRaw": "5:都市整備費",
+    "sectionRaw": "5:住宅政策費",
+    "initialBudgetYen": 45309000000,
+    "sources": [
+     {
+      "title": "令和6年度予算概要 第1一般会計",
+      "file": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+      "page": 10
+     },
+     {
+      "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+      "file": "data/raw/execution-review/fy2024/settlement/general-account-settlement-detail.pdf",
+      "page": 218
+     }
+    ]
+   },
+   "fy2026": {
+    "chapterRaw": "05:都市整備費",
+    "sectionRaw": "05:住宅政策費",
+    "initialBudgetYen": 49501000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "verification": {
+    "method": "予算概要と決算明細書の当初予算額が正規化名称・金額とも一致。2026側は議案の項合計=款額を検証済み。",
+    "settlementMatchYen": 45309000000,
+    "settlementPage": 218
+   }
+  },
+  {
+   "mappingId": "map-0029",
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "fy2024": {
+    "chapterRaw": "6:環境費",
+    "sectionRaw": "1:環境管理費",
+    "initialBudgetYen": 6410000000,
+    "sources": [
+     {
+      "title": "令和6年度予算概要 第1一般会計",
+      "file": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+      "page": 10
+     },
+     {
+      "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+      "file": "data/raw/execution-review/fy2024/settlement/general-account-settlement-detail.pdf",
+      "page": 226
+     }
+    ]
+   },
+   "fy2026": {
+    "chapterRaw": "06:環境費",
+    "sectionRaw": "01:環境管理費",
+    "initialBudgetYen": 6337000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "verification": {
+    "method": "予算概要と決算明細書の当初予算額が正規化名称・金額とも一致。2026側は議案の項合計=款額を検証済み。",
+    "settlementMatchYen": 6410000000,
+    "settlementPage": 226
+   }
+  },
+  {
+   "mappingId": "map-0030",
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "fy2024": {
+    "chapterRaw": "6:環境費",
+    "sectionRaw": "2:環境保全費",
+    "initialBudgetYen": 156215000000,
+    "sources": [
+     {
+      "title": "令和6年度予算概要 第1一般会計",
+      "file": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+      "page": 10
+     },
+     {
+      "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+      "file": "data/raw/execution-review/fy2024/settlement/general-account-settlement-detail.pdf",
+      "page": 228
+     }
+    ]
+   },
+   "fy2026": {
+    "chapterRaw": "06:環境費",
+    "sectionRaw": "02:環境保全費",
+    "initialBudgetYen": 257143000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "verification": {
+    "method": "予算概要と決算明細書の当初予算額が正規化名称・金額とも一致。2026側は議案の項合計=款額を検証済み。",
+    "settlementMatchYen": 156215000000,
+    "settlementPage": 228
+   }
+  },
+  {
+   "mappingId": "map-0031",
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "fy2024": {
+    "chapterRaw": "6:環境費",
+    "sectionRaw": "3:廃棄物費",
+    "initialBudgetYen": 13158000000,
+    "sources": [
+     {
+      "title": "令和6年度予算概要 第1一般会計",
+      "file": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+      "page": 11
+     },
+     {
+      "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+      "file": "data/raw/execution-review/fy2024/settlement/general-account-settlement-detail.pdf",
+      "page": 234
+     }
+    ]
+   },
+   "fy2026": {
+    "chapterRaw": "06:環境費",
+    "sectionRaw": "03:廃棄物費",
+    "initialBudgetYen": 17822000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "verification": {
+    "method": "予算概要と決算明細書の当初予算額が正規化名称・金額とも一致。2026側は議案の項合計=款額を検証済み。",
+    "settlementMatchYen": 13158000000,
+    "settlementPage": 234
+   }
+  },
+  {
+   "mappingId": "map-0032",
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "fy2024": {
+    "chapterRaw": "7:福祉費",
+    "sectionRaw": "1:福祉管理費",
+    "initialBudgetYen": 7307000000,
+    "sources": [
+     {
+      "title": "令和6年度予算概要 第1一般会計",
+      "file": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+      "page": 11
+     },
+     {
+      "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+      "file": "data/raw/execution-review/fy2024/settlement/general-account-settlement-detail.pdf",
+      "page": 240
+     }
+    ]
+   },
+   "fy2026": {
+    "chapterRaw": "07:福祉費",
+    "sectionRaw": "01:福祉管理費",
+    "initialBudgetYen": 9086000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "verification": {
+    "method": "予算概要と決算明細書の当初予算額が正規化名称・金額とも一致。2026側は議案の項合計=款額を検証済み。",
+    "settlementMatchYen": 7307000000,
+    "settlementPage": 240
+   }
+  },
+  {
+   "mappingId": "map-0033",
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "fy2024": {
+    "chapterRaw": "7:福祉費",
+    "sectionRaw": "2:生活福祉費",
+    "initialBudgetYen": 73917000000,
+    "sources": [
+     {
+      "title": "令和6年度予算概要 第1一般会計",
+      "file": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+      "page": 12
+     },
+     {
+      "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+      "file": "data/raw/execution-review/fy2024/settlement/general-account-settlement-detail.pdf",
+      "page": 242
+     }
+    ]
+   },
+   "fy2026": {
+    "chapterRaw": "07:福祉費",
+    "sectionRaw": "02:生活福祉費",
+    "initialBudgetYen": 86971000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "verification": {
+    "method": "予算概要と決算明細書の当初予算額が正規化名称・金額とも一致。2026側は議案の項合計=款額を検証済み。",
+    "settlementMatchYen": 73917000000,
+    "settlementPage": 242
+   }
+  },
+  {
+   "mappingId": "map-0034",
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "fy2024": {
+    "chapterRaw": "7:福祉費",
+    "sectionRaw": "3:子供・子育て支援費",
+    "initialBudgetYen": 482489000000,
+    "sources": [
+     {
+      "title": "令和6年度予算概要 第1一般会計",
+      "file": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+      "page": 12
+     },
+     {
+      "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+      "file": "data/raw/execution-review/fy2024/settlement/general-account-settlement-detail.pdf",
+      "page": 252
+     }
+    ]
+   },
+   "fy2026": {
+    "chapterRaw": "07:福祉費",
+    "sectionRaw": "03:子供・子育て支援費",
+    "initialBudgetYen": 608973000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "verification": {
+    "method": "予算概要と決算明細書の当初予算額が正規化名称・金額とも一致。2026側は議案の項合計=款額を検証済み。",
+    "settlementMatchYen": 482489000000,
+    "settlementPage": 252
+   }
+  },
+  {
+   "mappingId": "map-0035",
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "fy2024": {
+    "chapterRaw": "7:福祉費",
+    "sectionRaw": "4:高齢者施策推進費",
+    "initialBudgetYen": 262198000000,
+    "sources": [
+     {
+      "title": "令和6年度予算概要 第1一般会計",
+      "file": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+      "page": 13
+     },
+     {
+      "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+      "file": "data/raw/execution-review/fy2024/settlement/general-account-settlement-detail.pdf",
+      "page": 260
+     }
+    ]
+   },
+   "fy2026": {
+    "chapterRaw": "07:福祉費",
+    "sectionRaw": "04:高齢者施策推進費",
+    "initialBudgetYen": 283630000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "verification": {
+    "method": "予算概要と決算明細書の当初予算額が正規化名称・金額とも一致。2026側は議案の項合計=款額を検証済み。",
+    "settlementMatchYen": 262198000000,
+    "settlementPage": 260
+   }
+  },
+  {
+   "mappingId": "map-0036",
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "fy2024": {
+    "chapterRaw": "7:福祉費",
+    "sectionRaw": "5:障害者施策推進費",
+    "initialBudgetYen": 242654000000,
+    "sources": [
+     {
+      "title": "令和6年度予算概要 第1一般会計",
+      "file": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+      "page": 13
+     },
+     {
+      "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+      "file": "data/raw/execution-review/fy2024/settlement/general-account-settlement-detail.pdf",
+      "page": 264
+     }
+    ]
+   },
+   "fy2026": {
+    "chapterRaw": "07:福祉費",
+    "sectionRaw": "05:障害者施策推進費",
+    "initialBudgetYen": 264248000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "verification": {
+    "method": "予算概要と決算明細書の当初予算額が正規化名称・金額とも一致。2026側は議案の項合計=款額を検証済み。",
+    "settlementMatchYen": 242654000000,
+    "settlementPage": 264
+   }
+  },
+  {
+   "mappingId": "map-0037",
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "fy2024": {
+    "chapterRaw": "7:福祉費",
+    "sectionRaw": "6:施設整備費",
+    "initialBudgetYen": 35937000000,
+    "sources": [
+     {
+      "title": "令和6年度予算概要 第1一般会計",
+      "file": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+      "page": 13
+     },
+     {
+      "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+      "file": "data/raw/execution-review/fy2024/settlement/general-account-settlement-detail.pdf",
+      "page": 274
+     }
+    ]
+   },
+   "fy2026": {
+    "chapterRaw": "07:福祉費",
+    "sectionRaw": "06:施設整備費",
+    "initialBudgetYen": 37503000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "verification": {
+    "method": "予算概要と決算明細書の当初予算額が正規化名称・金額とも一致。2026側は議案の項合計=款額を検証済み。",
+    "settlementMatchYen": 35937000000,
+    "settlementPage": 274
+   }
+  },
+  {
+   "mappingId": "map-0038",
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "fy2024": {
+    "chapterRaw": "8:保健医療費",
+    "sectionRaw": "1:保健医療管理費",
+    "initialBudgetYen": 6182000000,
+    "sources": [
+     {
+      "title": "令和6年度予算概要 第1一般会計",
+      "file": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+      "page": 14
+     },
+     {
+      "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+      "file": "data/raw/execution-review/fy2024/settlement/general-account-settlement-detail.pdf",
+      "page": 276
+     }
+    ]
+   },
+   "fy2026": {
+    "chapterRaw": "08:保健医療費",
+    "sectionRaw": "01:保健医療管理費",
+    "initialBudgetYen": 6365000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "verification": {
+    "method": "予算概要と決算明細書の当初予算額が正規化名称・金額とも一致。2026側は議案の項合計=款額を検証済み。",
+    "settlementMatchYen": 6182000000,
+    "settlementPage": 276
+   }
+  },
+  {
+   "mappingId": "map-0039",
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "fy2024": {
+    "chapterRaw": "8:保健医療費",
+    "sectionRaw": "2:保健政策費",
+    "initialBudgetYen": 341547000000,
+    "sources": [
+     {
+      "title": "令和6年度予算概要 第1一般会計",
+      "file": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+      "page": 14
+     },
+     {
+      "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+      "file": "data/raw/execution-review/fy2024/settlement/general-account-settlement-detail.pdf",
+      "page": 278
+     }
+    ]
+   },
+   "fy2026": {
+    "chapterRaw": "08:保健医療費",
+    "sectionRaw": "02:保健政策費",
+    "initialBudgetYen": 365876000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "verification": {
+    "method": "予算概要と決算明細書の当初予算額が正規化名称・金額とも一致。2026側は議案の項合計=款額を検証済み。",
+    "settlementMatchYen": 341547000000,
+    "settlementPage": 278
+   }
+  },
+  {
+   "mappingId": "map-0040",
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "fy2024": {
+    "chapterRaw": "8:保健医療費",
+    "sectionRaw": "3:医療政策費",
+    "initialBudgetYen": 52864000000,
+    "sources": [
+     {
+      "title": "令和6年度予算概要 第1一般会計",
+      "file": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+      "page": 15
+     },
+     {
+      "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+      "file": "data/raw/execution-review/fy2024/settlement/general-account-settlement-detail.pdf",
+      "page": 286
+     }
+    ]
+   },
+   "fy2026": {
+    "chapterRaw": "08:保健医療費",
+    "sectionRaw": "03:医療政策費",
+    "initialBudgetYen": 93889000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "verification": {
+    "method": "予算概要と決算明細書の当初予算額が正規化名称・金額とも一致。2026側は議案の項合計=款額を検証済み。",
+    "settlementMatchYen": 52864000000,
+    "settlementPage": 286
+   }
+  },
+  {
+   "mappingId": "map-0041",
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "fy2024": {
+    "chapterRaw": "8:保健医療費",
+    "sectionRaw": "4:都立病院支援費",
+    "initialBudgetYen": 55246000000,
+    "sources": [
+     {
+      "title": "令和6年度予算概要 第1一般会計",
+      "file": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+      "page": 15
+     },
+     {
+      "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+      "file": "data/raw/execution-review/fy2024/settlement/general-account-settlement-detail.pdf",
+      "page": 292
+     }
+    ]
+   },
+   "fy2026": {
+    "chapterRaw": "08:保健医療費",
+    "sectionRaw": "04:都立病院支援費",
+    "initialBudgetYen": 57452000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "verification": {
+    "method": "予算概要と決算明細書の当初予算額が正規化名称・金額とも一致。2026側は議案の項合計=款額を検証済み。",
+    "settlementMatchYen": 55246000000,
+    "settlementPage": 292
+   }
+  },
+  {
+   "mappingId": "map-0042",
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "fy2024": {
+    "chapterRaw": "8:保健医療費",
+    "sectionRaw": "5:健康安全費",
+    "initialBudgetYen": 10787000000,
+    "sources": [
+     {
+      "title": "令和6年度予算概要 第1一般会計",
+      "file": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+      "page": 15
+     },
+     {
+      "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+      "file": "data/raw/execution-review/fy2024/settlement/general-account-settlement-detail.pdf",
+      "page": 294
+     }
+    ]
+   },
+   "fy2026": {
+    "chapterRaw": "08:保健医療費",
+    "sectionRaw": "05:健康安全費",
+    "initialBudgetYen": 12147000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "verification": {
+    "method": "予算概要と決算明細書の当初予算額が正規化名称・金額とも一致。2026側は議案の項合計=款額を検証済み。",
+    "settlementMatchYen": 10787000000,
+    "settlementPage": 294
+   }
+  },
+  {
+   "mappingId": "map-0043",
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "fy2024": {
+    "chapterRaw": "8:保健医療費",
+    "sectionRaw": "6:感染症対策費",
+    "initialBudgetYen": 9391000000,
+    "sources": [
+     {
+      "title": "令和6年度予算概要 第1一般会計",
+      "file": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+      "page": 16
+     },
+     {
+      "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+      "file": "data/raw/execution-review/fy2024/settlement/general-account-settlement-detail.pdf",
+      "page": 302
+     }
+    ]
+   },
+   "fy2026": {
+    "chapterRaw": "08:保健医療費",
+    "sectionRaw": "06:感染症対策費",
+    "initialBudgetYen": 7679000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "verification": {
+    "method": "予算概要と決算明細書の当初予算額が正規化名称・金額とも一致。2026側は議案の項合計=款額を検証済み。",
+    "settlementMatchYen": 9391000000,
+    "settlementPage": 302
+   }
+  },
+  {
+   "mappingId": "map-0044",
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "fy2024": {
+    "chapterRaw": "8:保健医療費",
+    "sectionRaw": "7:施設整備費",
+    "initialBudgetYen": 16736000000,
+    "sources": [
+     {
+      "title": "令和6年度予算概要 第1一般会計",
+      "file": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+      "page": 16
+     },
+     {
+      "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+      "file": "data/raw/execution-review/fy2024/settlement/general-account-settlement-detail.pdf",
+      "page": 306
+     }
+    ]
+   },
+   "fy2026": {
+    "chapterRaw": "08:保健医療費",
+    "sectionRaw": "07:施設整備費",
+    "initialBudgetYen": 20487000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "verification": {
+    "method": "予算概要と決算明細書の当初予算額が正規化名称・金額とも一致。2026側は議案の項合計=款額を検証済み。",
+    "settlementMatchYen": 16736000000,
+    "settlementPage": 306
+   }
+  },
+  {
+   "mappingId": "map-0045",
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "fy2024": {
+    "chapterRaw": "9:産業労働費",
+    "sectionRaw": "1:労働委員会費",
+    "initialBudgetYen": 620000000,
+    "sources": [
+     {
+      "title": "令和6年度予算概要 第1一般会計",
+      "file": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+      "page": 16
+     },
+     {
+      "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+      "file": "data/raw/execution-review/fy2024/settlement/general-account-settlement-detail.pdf",
+      "page": 308
+     }
+    ]
+   },
+   "fy2026": {
+    "chapterRaw": "09:産業労働費",
+    "sectionRaw": "01:労働委員会費",
+    "initialBudgetYen": 645000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "verification": {
+    "method": "予算概要と決算明細書の当初予算額が正規化名称・金額とも一致。2026側は議案の項合計=款額を検証済み。",
+    "settlementMatchYen": 620000000,
+    "settlementPage": 308
+   }
+  },
+  {
+   "mappingId": "map-0046",
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "fy2024": {
+    "chapterRaw": "9:産業労働費",
+    "sectionRaw": "2:産業労働管理費",
+    "initialBudgetYen": 2872000000,
+    "sources": [
+     {
+      "title": "令和6年度予算概要 第1一般会計",
+      "file": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+      "page": 16
+     },
+     {
+      "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+      "file": "data/raw/execution-review/fy2024/settlement/general-account-settlement-detail.pdf",
+      "page": 310
+     }
+    ]
+   },
+   "fy2026": {
+    "chapterRaw": "09:産業労働費",
+    "sectionRaw": "02:産業労働管理費",
+    "initialBudgetYen": 19648000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "verification": {
+    "method": "予算概要と決算明細書の当初予算額が正規化名称・金額とも一致。2026側は議案の項合計=款額を検証済み。",
+    "settlementMatchYen": 2872000000,
+    "settlementPage": 310
+   }
+  },
+  {
+   "mappingId": "map-0047",
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "fy2024": {
+    "chapterRaw": "9:産業労働費",
+    "sectionRaw": "3:商工業振興費",
+    "initialBudgetYen": 580188000000,
+    "sources": [
+     {
+      "title": "令和6年度予算概要 第1一般会計",
+      "file": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+      "page": 16
+     },
+     {
+      "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+      "file": "data/raw/execution-review/fy2024/settlement/general-account-settlement-detail.pdf",
+      "page": 314
+     }
+    ]
+   },
+   "fy2026": {
+    "chapterRaw": "09:産業労働費",
+    "sectionRaw": "03:商工業振興費",
+    "initialBudgetYen": 608586000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "verification": {
+    "method": "予算概要と決算明細書の当初予算額が正規化名称・金額とも一致。2026側は議案の項合計=款額を検証済み。",
+    "settlementMatchYen": 580188000000,
+    "settlementPage": 314
+   }
+  },
+  {
+   "mappingId": "map-0048",
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "fy2024": {
+    "chapterRaw": "9:産業労働費",
+    "sectionRaw": "4:農林水産費",
+    "initialBudgetYen": 30968000000,
+    "sources": [
+     {
+      "title": "令和6年度予算概要 第1一般会計",
+      "file": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+      "page": 17
+     },
+     {
+      "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+      "file": "data/raw/execution-review/fy2024/settlement/general-account-settlement-detail.pdf",
+      "page": 320
+     }
+    ]
+   },
+   "fy2026": {
+    "chapterRaw": "09:産業労働費",
+    "sectionRaw": "04:農林水産費",
+    "initialBudgetYen": 33498000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "verification": {
+    "method": "予算概要と決算明細書の当初予算額が正規化名称・金額とも一致。2026側は議案の項合計=款額を検証済み。",
+    "settlementMatchYen": 30968000000,
+    "settlementPage": 320
+   }
+  },
+  {
+   "mappingId": "map-0049",
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "fy2024": {
+    "chapterRaw": "9:産業労働費",
+    "sectionRaw": "5:労働費",
+    "initialBudgetYen": 56000000000,
+    "sources": [
+     {
+      "title": "令和6年度予算概要 第1一般会計",
+      "file": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+      "page": 17
+     },
+     {
+      "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+      "file": "data/raw/execution-review/fy2024/settlement/general-account-settlement-detail.pdf",
+      "page": 332
+     }
+    ]
+   },
+   "fy2026": {
+    "chapterRaw": "09:産業労働費",
+    "sectionRaw": "05:労働費",
+    "initialBudgetYen": 62424000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "verification": {
+    "method": "予算概要と決算明細書の当初予算額が正規化名称・金額とも一致。2026側は議案の項合計=款額を検証済み。",
+    "settlementMatchYen": 56000000000,
+    "settlementPage": 332
+   }
+  },
+  {
+   "mappingId": "map-0050",
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "fy2024": {
+    "chapterRaw": "9:産業労働費",
+    "sectionRaw": "6:施設整備費",
+    "initialBudgetYen": 5737000000,
+    "sources": [
+     {
+      "title": "令和6年度予算概要 第1一般会計",
+      "file": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+      "page": 17
+     },
+     {
+      "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+      "file": "data/raw/execution-review/fy2024/settlement/general-account-settlement-detail.pdf",
+      "page": 338
+     }
+    ]
+   },
+   "fy2026": {
+    "chapterRaw": "09:産業労働費",
+    "sectionRaw": "06:施設整備費",
+    "initialBudgetYen": 10366000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "verification": {
+    "method": "予算概要と決算明細書の当初予算額が正規化名称・金額とも一致。2026側は議案の項合計=款額を検証済み。",
+    "settlementMatchYen": 5737000000,
+    "settlementPage": 338
+   }
+  },
+  {
+   "mappingId": "map-0051",
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "fy2024": {
+    "chapterRaw": "10:土木費",
+    "sectionRaw": "3:公園霊園費",
+    "initialBudgetYen": 86631000000,
+    "sources": [
+     {
+      "title": "令和6年度予算概要 第1一般会計",
+      "file": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+      "page": 19
+     },
+     {
+      "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+      "file": "data/raw/execution-review/fy2024/settlement/general-account-settlement-detail.pdf",
+      "page": 376
+     }
+    ]
+   },
+   "fy2026": {
+    "chapterRaw": "10:土木費",
+    "sectionRaw": "04:公園霊園費",
+    "initialBudgetYen": 77354000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "verification": {
+    "method": "予算概要と決算明細書の当初予算額が正規化名称・金額とも一致。2026側は議案の項合計=款額を検証済み。",
+    "settlementMatchYen": 86631000000,
+    "settlementPage": 376
+   }
+  },
+  {
+   "mappingId": "map-0052",
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "fy2024": {
+    "chapterRaw": "10:土木費",
+    "sectionRaw": "4:土木管理費",
+    "initialBudgetYen": 25469000000,
+    "sources": [
+     {
+      "title": "令和6年度予算概要 第1一般会計",
+      "file": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+      "page": 19
+     },
+     {
+      "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+      "file": "data/raw/execution-review/fy2024/settlement/general-account-settlement-detail.pdf",
+      "page": 342
+     }
+    ]
+   },
+   "fy2026": {
+    "chapterRaw": "10:土木費",
+    "sectionRaw": "01:土木管理費",
+    "initialBudgetYen": 28134000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "verification": {
+    "method": "予算概要と決算明細書の当初予算額が正規化名称・金額とも一致。2026側は議案の項合計=款額を検証済み。",
+    "settlementMatchYen": 25469000000,
+    "settlementPage": 342
+   }
+  },
+  {
+   "mappingId": "map-0053",
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "fy2024": {
+    "chapterRaw": "11:港湾費",
+    "sectionRaw": "1:東京港整備費",
+    "initialBudgetYen": 76227000000,
+    "sources": [
+     {
+      "title": "令和6年度予算概要 第1一般会計",
+      "file": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+      "page": 19
+     },
+     {
+      "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+      "file": "data/raw/execution-review/fy2024/settlement/general-account-settlement-detail.pdf",
+      "page": 390
+     }
+    ]
+   },
+   "fy2026": {
+    "chapterRaw": "11:港湾費",
+    "sectionRaw": "02:東京港整備費",
+    "initialBudgetYen": 80173000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "verification": {
+    "method": "予算概要と決算明細書の当初予算額が正規化名称・金額とも一致。2026側は議案の項合計=款額を検証済み。",
+    "settlementMatchYen": 76227000000,
+    "settlementPage": 390
+   }
+  },
+  {
+   "mappingId": "map-0054",
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "fy2024": {
+    "chapterRaw": "11:港湾費",
+    "sectionRaw": "2:島しょ等港湾整備費",
+    "initialBudgetYen": 23432000000,
+    "sources": [
+     {
+      "title": "令和6年度予算概要 第1一般会計",
+      "file": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+      "page": 20
+     },
+     {
+      "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+      "file": "data/raw/execution-review/fy2024/settlement/general-account-settlement-detail.pdf",
+      "page": 402
+     }
+    ]
+   },
+   "fy2026": {
+    "chapterRaw": "11:港湾費",
+    "sectionRaw": "03:島しょ等港湾整備費",
+    "initialBudgetYen": 24137000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "verification": {
+    "method": "予算概要と決算明細書の当初予算額が正規化名称・金額とも一致。2026側は議案の項合計=款額を検証済み。",
+    "settlementMatchYen": 23432000000,
+    "settlementPage": 402
+   }
+  },
+  {
+   "mappingId": "map-0055",
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "fy2024": {
+    "chapterRaw": "11:港湾費",
+    "sectionRaw": "3:港湾管理費",
+    "initialBudgetYen": 706000000,
+    "sources": [
+     {
+      "title": "令和6年度予算概要 第1一般会計",
+      "file": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+      "page": 20
+     },
+     {
+      "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+      "file": "data/raw/execution-review/fy2024/settlement/general-account-settlement-detail.pdf",
+      "page": 388
+     }
+    ]
+   },
+   "fy2026": {
+    "chapterRaw": "11:港湾費",
+    "sectionRaw": "01:港湾管理費",
+    "initialBudgetYen": 899000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "verification": {
+    "method": "予算概要と決算明細書の当初予算額が正規化名称・金額とも一致。2026側は議案の項合計=款額を検証済み。",
+    "settlementMatchYen": 706000000,
+    "settlementPage": 388
+   }
+  },
+  {
+   "mappingId": "map-0056",
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "fy2024": {
+    "chapterRaw": "12:教育費",
+    "sectionRaw": "1:小中学校費",
+    "initialBudgetYen": 512813000000,
+    "sources": [
+     {
+      "title": "令和6年度予算概要 第1一般会計",
+      "file": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+      "page": 20
+     },
+     {
+      "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+      "file": "data/raw/execution-review/fy2024/settlement/general-account-settlement-detail.pdf",
+      "page": 424
+     }
+    ]
+   },
+   "fy2026": {
+    "chapterRaw": "12:教育費",
+    "sectionRaw": "02:小中学校費",
+    "initialBudgetYen": 575676000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "verification": {
+    "method": "予算概要と決算明細書の当初予算額が正規化名称・金額とも一致。2026側は議案の項合計=款額を検証済み。",
+    "settlementMatchYen": 512813000000,
+    "settlementPage": 424
+   }
+  },
+  {
+   "mappingId": "map-0057",
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "fy2024": {
+    "chapterRaw": "12:教育費",
+    "sectionRaw": "2:高等学校費",
+    "initialBudgetYen": 155345000000,
+    "sources": [
+     {
+      "title": "令和6年度予算概要 第1一般会計",
+      "file": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+      "page": 21
+     },
+     {
+      "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+      "file": "data/raw/execution-review/fy2024/settlement/general-account-settlement-detail.pdf",
+      "page": 430
+     }
+    ]
+   },
+   "fy2026": {
+    "chapterRaw": "12:教育費",
+    "sectionRaw": "03:高等学校費",
+    "initialBudgetYen": 194163000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "verification": {
+    "method": "予算概要と決算明細書の当初予算額が正規化名称・金額とも一致。2026側は議案の項合計=款額を検証済み。",
+    "settlementMatchYen": 155345000000,
+    "settlementPage": 430
+   }
+  },
+  {
+   "mappingId": "map-0058",
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "fy2024": {
+    "chapterRaw": "12:教育費",
+    "sectionRaw": "3:特別支援学校費",
+    "initialBudgetYen": 100962000000,
+    "sources": [
+     {
+      "title": "令和6年度予算概要 第1一般会計",
+      "file": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+      "page": 21
+     },
+     {
+      "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+      "file": "data/raw/execution-review/fy2024/settlement/general-account-settlement-detail.pdf",
+      "page": 434
+     }
+    ]
+   },
+   "fy2026": {
+    "chapterRaw": "12:教育費",
+    "sectionRaw": "04:特別支援学校費",
+    "initialBudgetYen": 119092000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "verification": {
+    "method": "予算概要と決算明細書の当初予算額が正規化名称・金額とも一致。2026側は議案の項合計=款額を検証済み。",
+    "settlementMatchYen": 100962000000,
+    "settlementPage": 434
+   }
+  },
+  {
+   "mappingId": "map-0059",
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "fy2024": {
+    "chapterRaw": "12:教育費",
+    "sectionRaw": "4:社会教育費",
+    "initialBudgetYen": 10830000000,
+    "sources": [
+     {
+      "title": "令和6年度予算概要 第1一般会計",
+      "file": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+      "page": 21
+     },
+     {
+      "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+      "file": "data/raw/execution-review/fy2024/settlement/general-account-settlement-detail.pdf",
+      "page": 446
+     }
+    ]
+   },
+   "fy2026": {
+    "chapterRaw": "12:教育費",
+    "sectionRaw": "08:社会教育費",
+    "initialBudgetYen": 13588000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "verification": {
+    "method": "予算概要と決算明細書の当初予算額が正規化名称・金額とも一致。2026側は議案の項合計=款額を検証済み。",
+    "settlementMatchYen": 10830000000,
+    "settlementPage": 446
+   }
+  },
+  {
+   "mappingId": "map-0060",
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "fy2024": {
+    "chapterRaw": "12:教育費",
+    "sectionRaw": "5:退職手当及年金費",
+    "initialBudgetYen": 44851000000,
+    "sources": [
+     {
+      "title": "令和6年度予算概要 第1一般会計",
+      "file": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+      "page": 21
+     },
+     {
+      "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+      "file": "data/raw/execution-review/fy2024/settlement/general-account-settlement-detail.pdf",
+      "page": 440
+     }
+    ]
+   },
+   "fy2026": {
+    "chapterRaw": "12:教育費",
+    "sectionRaw": "06:退職手当及年金費",
+    "initialBudgetYen": 39062000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "verification": {
+    "method": "予算概要と決算明細書の当初予算額が正規化名称・金額とも一致。2026側は議案の項合計=款額を検証済み。",
+    "settlementMatchYen": 44851000000,
+    "settlementPage": 440
+   }
+  },
+  {
+   "mappingId": "map-0061",
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "fy2024": {
+    "chapterRaw": "12:教育費",
+    "sectionRaw": "6:施設整備費",
+    "initialBudgetYen": 65740000000,
+    "sources": [
+     {
+      "title": "令和6年度予算概要 第1一般会計",
+      "file": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+      "page": 22
+     },
+     {
+      "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+      "file": "data/raw/execution-review/fy2024/settlement/general-account-settlement-detail.pdf",
+      "page": 450
+     }
+    ]
+   },
+   "fy2026": {
+    "chapterRaw": "12:教育費",
+    "sectionRaw": "09:施設整備費",
+    "initialBudgetYen": 66184000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "verification": {
+    "method": "予算概要と決算明細書の当初予算額が正規化名称・金額とも一致。2026側は議案の項合計=款額を検証済み。",
+    "settlementMatchYen": 65740000000,
+    "settlementPage": 450
+   }
+  },
+  {
+   "mappingId": "map-0062",
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "fy2024": {
+    "chapterRaw": "13:学務費",
+    "sectionRaw": "1:東京都公立大学法人支援費",
+    "initialBudgetYen": 27577000000,
+    "sources": [
+     {
+      "title": "令和6年度予算概要 第1一般会計",
+      "file": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+      "page": 22
+     },
+     {
+      "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+      "file": "data/raw/execution-review/fy2024/settlement/general-account-settlement-detail.pdf",
+      "page": 454
+     }
+    ]
+   },
+   "fy2026": {
+    "chapterRaw": "13:学務費",
+    "sectionRaw": "01:東京都公立大学法人支援費",
+    "initialBudgetYen": 35626000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "verification": {
+    "method": "予算概要と決算明細書の当初予算額が正規化名称・金額とも一致。2026側は議案の項合計=款額を検証済み。",
+    "settlementMatchYen": 27577000000,
+    "settlementPage": 454
+   }
+  },
+  {
+   "mappingId": "map-0063",
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "fy2024": {
+    "chapterRaw": "13:学務費",
+    "sectionRaw": "2:私立学校振興費",
+    "initialBudgetYen": 270995000000,
+    "sources": [
+     {
+      "title": "令和6年度予算概要 第1一般会計",
+      "file": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+      "page": 22
+     },
+     {
+      "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+      "file": "data/raw/execution-review/fy2024/settlement/general-account-settlement-detail.pdf",
+      "page": 454
+     }
+    ]
+   },
+   "fy2026": {
+    "chapterRaw": "13:学務費",
+    "sectionRaw": "02:私立学校振興費",
+    "initialBudgetYen": 307301000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "verification": {
+    "method": "予算概要と決算明細書の当初予算額が正規化名称・金額とも一致。2026側は議案の項合計=款額を検証済み。",
+    "settlementMatchYen": 270995000000,
+    "settlementPage": 454
+   }
+  },
+  {
+   "mappingId": "map-0064",
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "fy2024": {
+    "chapterRaw": "13:学務費",
+    "sectionRaw": "3:育英資金費",
+    "initialBudgetYen": 281000000,
+    "sources": [
+     {
+      "title": "令和6年度予算概要 第1一般会計",
+      "file": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+      "page": 23
+     },
+     {
+      "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+      "file": "data/raw/execution-review/fy2024/settlement/general-account-settlement-detail.pdf",
+      "page": 456
+     }
+    ]
+   },
+   "fy2026": {
+    "chapterRaw": "13:学務費",
+    "sectionRaw": "03:育英資金費",
+    "initialBudgetYen": 322000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "verification": {
+    "method": "予算概要と決算明細書の当初予算額が正規化名称・金額とも一致。2026側は議案の項合計=款額を検証済み。",
+    "settlementMatchYen": 281000000,
+    "settlementPage": 456
+   }
+  },
+  {
+   "mappingId": "map-0065",
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "fy2024": {
+    "chapterRaw": "14:警察費",
+    "sectionRaw": "1:警察管理費",
+    "initialBudgetYen": 543390515000,
+    "sources": [
+     {
+      "title": "令和6年度予算概要 第1一般会計",
+      "file": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+      "page": 23
+     },
+     {
+      "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+      "file": "data/raw/execution-review/fy2024/settlement/general-account-settlement-detail.pdf",
+      "page": 460
+     }
+    ]
+   },
+   "fy2026": {
+    "chapterRaw": "14:警察費",
+    "sectionRaw": "01:警察管理費",
+    "initialBudgetYen": 576667637000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "verification": {
+    "method": "予算概要と決算明細書の当初予算額が正規化名称・金額とも一致。2026側は議案の項合計=款額を検証済み。",
+    "settlementMatchYen": 543390515000,
+    "settlementPage": 460
+   }
+  },
+  {
+   "mappingId": "map-0066",
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "fy2024": {
+    "chapterRaw": "14:警察費",
+    "sectionRaw": "2:退職手当及年金費",
+    "initialBudgetYen": 28178118000,
+    "sources": [
+     {
+      "title": "令和6年度予算概要 第1一般会計",
+      "file": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+      "page": 23
+     },
+     {
+      "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+      "file": "data/raw/execution-review/fy2024/settlement/general-account-settlement-detail.pdf",
+      "page": 466
+     }
+    ]
+   },
+   "fy2026": {
+    "chapterRaw": "14:警察費",
+    "sectionRaw": "02:退職手当及年金費",
+    "initialBudgetYen": 25681049000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "verification": {
+    "method": "予算概要と決算明細書の当初予算額が正規化名称・金額とも一致。2026側は議案の項合計=款額を検証済み。",
+    "settlementMatchYen": 28178118000,
+    "settlementPage": 466
+   }
+  },
+  {
+   "mappingId": "map-0067",
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "fy2024": {
+    "chapterRaw": "14:警察費",
+    "sectionRaw": "3:警察活動費",
+    "initialBudgetYen": 60891476000,
+    "sources": [
+     {
+      "title": "令和6年度予算概要 第1一般会計",
+      "file": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+      "page": 24
+     },
+     {
+      "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+      "file": "data/raw/execution-review/fy2024/settlement/general-account-settlement-detail.pdf",
+      "page": 468
+     }
+    ]
+   },
+   "fy2026": {
+    "chapterRaw": "14:警察費",
+    "sectionRaw": "03:警察活動費",
+    "initialBudgetYen": 73527664000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "verification": {
+    "method": "予算概要と決算明細書の当初予算額が正規化名称・金額とも一致。2026側は議案の項合計=款額を検証済み。",
+    "settlementMatchYen": 60891476000,
+    "settlementPage": 468
+   }
+  },
+  {
+   "mappingId": "map-0068",
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "fy2024": {
+    "chapterRaw": "14:警察費",
+    "sectionRaw": "4:警察施設費",
+    "initialBudgetYen": 49799891000,
+    "sources": [
+     {
+      "title": "令和6年度予算概要 第1一般会計",
+      "file": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+      "page": 24
+     },
+     {
+      "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+      "file": "data/raw/execution-review/fy2024/settlement/general-account-settlement-detail.pdf",
+      "page": 474
+     }
+    ]
+   },
+   "fy2026": {
+    "chapterRaw": "14:警察費",
+    "sectionRaw": "04:警察施設費",
+    "initialBudgetYen": 63074650000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "verification": {
+    "method": "予算概要と決算明細書の当初予算額が正規化名称・金額とも一致。2026側は議案の項合計=款額を検証済み。",
+    "settlementMatchYen": 49799891000,
+    "settlementPage": 474
+   }
+  },
+  {
+   "mappingId": "map-0069",
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "fy2024": {
+    "chapterRaw": "15:消防費",
+    "sectionRaw": "1:消防管理費",
+    "initialBudgetYen": 213341000000,
+    "sources": [
+     {
+      "title": "令和6年度予算概要 第1一般会計",
+      "file": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+      "page": 24
+     },
+     {
+      "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+      "file": "data/raw/execution-review/fy2024/settlement/general-account-settlement-detail.pdf",
+      "page": 478
+     }
+    ]
+   },
+   "fy2026": {
+    "chapterRaw": "15:消防費",
+    "sectionRaw": "01:消防管理費",
+    "initialBudgetYen": 237381000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "verification": {
+    "method": "予算概要と決算明細書の当初予算額が正規化名称・金額とも一致。2026側は議案の項合計=款額を検証済み。",
+    "settlementMatchYen": 213341000000,
+    "settlementPage": 478
+   }
+  },
+  {
+   "mappingId": "map-0070",
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "fy2024": {
+    "chapterRaw": "15:消防費",
+    "sectionRaw": "2:消防活動費",
+    "initialBudgetYen": 33651000000,
+    "sources": [
+     {
+      "title": "令和6年度予算概要 第1一般会計",
+      "file": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+      "page": 24
+     },
+     {
+      "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+      "file": "data/raw/execution-review/fy2024/settlement/general-account-settlement-detail.pdf",
+      "page": 482
+     }
+    ]
+   },
+   "fy2026": {
+    "chapterRaw": "15:消防費",
+    "sectionRaw": "02:消防活動費",
+    "initialBudgetYen": 44962000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "verification": {
+    "method": "予算概要と決算明細書の当初予算額が正規化名称・金額とも一致。2026側は議案の項合計=款額を検証済み。",
+    "settlementMatchYen": 33651000000,
+    "settlementPage": 482
+   }
+  },
+  {
+   "mappingId": "map-0071",
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "fy2024": {
+    "chapterRaw": "15:消防費",
+    "sectionRaw": "3:消防団費",
+    "initialBudgetYen": 3957000000,
+    "sources": [
+     {
+      "title": "令和6年度予算概要 第1一般会計",
+      "file": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+      "page": 25
+     },
+     {
+      "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+      "file": "data/raw/execution-review/fy2024/settlement/general-account-settlement-detail.pdf",
+      "page": 488
+     }
+    ]
+   },
+   "fy2026": {
+    "chapterRaw": "15:消防費",
+    "sectionRaw": "03:消防団費",
+    "initialBudgetYen": 4765000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "verification": {
+    "method": "予算概要と決算明細書の当初予算額が正規化名称・金額とも一致。2026側は議案の項合計=款額を検証済み。",
+    "settlementMatchYen": 3957000000,
+    "settlementPage": 488
+   }
+  },
+  {
+   "mappingId": "map-0072",
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "fy2024": {
+    "chapterRaw": "15:消防費",
+    "sectionRaw": "4:退職手当及年金費",
+    "initialBudgetYen": 10314000000,
+    "sources": [
+     {
+      "title": "令和6年度予算概要 第1一般会計",
+      "file": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+      "page": 25
+     },
+     {
+      "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+      "file": "data/raw/execution-review/fy2024/settlement/general-account-settlement-detail.pdf",
+      "page": 490
+     }
+    ]
+   },
+   "fy2026": {
+    "chapterRaw": "15:消防費",
+    "sectionRaw": "04:退職手当及年金費",
+    "initialBudgetYen": 8259000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "verification": {
+    "method": "予算概要と決算明細書の当初予算額が正規化名称・金額とも一致。2026側は議案の項合計=款額を検証済み。",
+    "settlementMatchYen": 10314000000,
+    "settlementPage": 490
+   }
+  },
+  {
+   "mappingId": "map-0073",
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "fy2024": {
+    "chapterRaw": "15:消防費",
+    "sectionRaw": "5:建設費",
+    "initialBudgetYen": 18121000000,
+    "sources": [
+     {
+      "title": "令和6年度予算概要 第1一般会計",
+      "file": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+      "page": 25
+     },
+     {
+      "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+      "file": "data/raw/execution-review/fy2024/settlement/general-account-settlement-detail.pdf",
+      "page": 490
+     }
+    ]
+   },
+   "fy2026": {
+    "chapterRaw": "15:消防費",
+    "sectionRaw": "05:建設費",
+    "initialBudgetYen": 23215000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "verification": {
+    "method": "予算概要と決算明細書の当初予算額が正規化名称・金額とも一致。2026側は議案の項合計=款額を検証済み。",
+    "settlementMatchYen": 18121000000,
+    "settlementPage": 490
+   }
+  },
+  {
+   "mappingId": "map-0074",
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "fy2024": {
+    "chapterRaw": "17:諸支出金",
+    "sectionRaw": "1:他会計支出金",
+    "initialBudgetYen": 1424232980000,
+    "sources": [
+     {
+      "title": "令和6年度予算概要 第1一般会計",
+      "file": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
+      "page": 25
+     },
+     {
+      "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+      "file": "data/raw/execution-review/fy2024/settlement/general-account-settlement-detail.pdf",
+      "page": 498
+     }
+    ]
+   },
+   "fy2026": {
+    "chapterRaw": "17:諸支出金",
+    "sectionRaw": "02:他会計支出金",
+    "initialBudgetYen": 1595632980000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   "verification": {
+    "method": "予算概要と決算明細書の当初予算額が正規化名称・金額とも一致。2026側は議案の項合計=款額を検証済み。",
+    "settlementMatchYen": 1424232980000,
+    "settlementPage": 498
+   }
+  }
+ ],
+ "rejected": [
+  {
+   "candidate": {
+    "status": "candidate",
+    "granularity": "chapter",
+    "fy2024": [
+     {
+      "fiscalYear": 2024,
+      "chapterRaw": "10:土木費",
+      "sectionRaw": null,
+      "chapterNormalized": "土木費",
+      "sectionNormalized": null,
+      "initialBudgetYen": 636558000000,
+      "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+     }
+    ],
+    "fy2026": [
+     {
+      "fiscalYear": 2026,
+      "chapterRaw": "10:土木費",
+      "sectionRaw": null,
+      "chapterNormalized": "土木費",
+      "sectionNormalized": null,
+      "initialBudgetYen": 658278000000,
+      "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+     }
+    ]
+   },
+   "reason": "settlement-side-entry-not-found"
+  },
+  {
+   "candidate": {
+    "status": "candidate",
+    "granularity": "chapter",
+    "fy2024": [
+     {
+      "fiscalYear": 2024,
+      "chapterRaw": "14:警察費",
+      "sectionRaw": null,
+      "chapterNormalized": "警察費",
+      "sectionNormalized": null,
+      "initialBudgetYen": 682260000000,
+      "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+     }
+    ],
+    "fy2026": [
+     {
+      "fiscalYear": 2026,
+      "chapterRaw": "14:警察費",
+      "sectionRaw": null,
+      "chapterNormalized": "警察費",
+      "sectionNormalized": null,
+      "initialBudgetYen": 738951000000,
+      "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+     }
+    ]
+   },
+   "reason": "settlement-side-entry-not-found"
+  },
+  {
+   "candidate": {
+    "status": "candidate",
+    "granularity": "item",
+    "fy2024": [
+     {
+      "fiscalYear": 2024,
+      "chapterRaw": "5:都市整備費",
+      "sectionRaw": "3:市街地整備費",
+      "chapterNormalized": "都市整備費",
+      "sectionNormalized": "市街地整備費",
+      "initialBudgetYen": 57782000000,
+      "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+     }
+    ],
+    "fy2026": [
+     {
+      "fiscalYear": 2026,
+      "chapterRaw": "05:都市整備費",
+      "sectionRaw": "03:市街地整備費",
+      "chapterNormalized": "都市整備費",
+      "sectionNormalized": "市街地整備費",
+      "initialBudgetYen": 45200000000,
+      "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+     }
+    ]
+   },
+   "reason": "settlement-side-entry-not-found"
+  },
+  {
+   "candidate": {
+    "status": "candidate",
+    "granularity": "item",
+    "fy2024": [
+     {
+      "fiscalYear": 2024,
+      "chapterRaw": "10:土木費",
+      "sectionRaw": "1:道路橋梁費",
+      "chapterNormalized": "土木費",
+      "sectionNormalized": "道路橋梁費",
+      "initialBudgetYen": 399016000000,
+      "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+     }
+    ],
+    "fy2026": [
+     {
+      "fiscalYear": 2026,
+      "chapterRaw": "10:土木費",
+      "sectionRaw": "02:道路橋梁費",
+      "chapterNormalized": "土木費",
+      "sectionNormalized": "道路橋梁費",
+      "initialBudgetYen": 419022000000,
+      "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+     }
+    ]
+   },
+   "reason": "settlement-side-entry-not-found"
+  },
+  {
+   "candidate": {
+    "status": "candidate",
+    "granularity": "item",
+    "fy2024": [
+     {
+      "fiscalYear": 2024,
+      "chapterRaw": "10:土木費",
+      "sectionRaw": "2:河川海岸費",
+      "chapterNormalized": "土木費",
+      "sectionNormalized": "河川海岸費",
+      "initialBudgetYen": 125442000000,
+      "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+     }
+    ],
+    "fy2026": [
+     {
+      "fiscalYear": 2026,
+      "chapterRaw": "10:土木費",
+      "sectionRaw": "03:河川海岸費",
+      "chapterNormalized": "土木費",
+      "sectionNormalized": "河川海岸費",
+      "initialBudgetYen": 133768000000,
+      "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+     }
+    ]
+   },
+   "reason": "settlement-side-entry-not-found"
+  }
+ ],
+ "summary": {
+  "candidatesChecked": 79,
+  "confirmedCount": 74,
+  "rejectedCount": 5,
+  "byGranularity": {
+   "chapter": 15,
+   "item": 59
+  }
+ }
+}
