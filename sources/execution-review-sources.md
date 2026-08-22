@@ -40,6 +40,7 @@
 | 2026年度（令和8） | 令和8年度予算案 概要（既存を再利用・複製しない） | `data/raw/documents/fy2026/budget-proposal-overview.pdf` | SHA-256で同一内容を確認済み。 |
 | 2026年度（令和8） | 令和8年度予算案 計数表 | `data/raw/execution-review/fy2026/budget/counting-table.pdf` | 局・款・項・目レベルの計数。科目対応のR8側の正。 |
 | 2026年度（令和8） | 令和8年度予算案 主要な施策 | `data/raw/execution-review/fy2026/budget/major-policies.pdf` | 政策レビューのR8側根拠。主要事業は既存`major-projects.pdf`を再利用。 |
+| 2026年度（令和8） | 議案第1号 令和8年度東京都一般会計予算 | `data/raw/execution-review/fy2026/budget/budget-bill.pdf` | **R8款・項別当初予算額の正**。概要・計数表・主要施策PDFは数字グリフのToUnicodeが欠落しておりテキスト抽出できないため、正式議案を使用する。 |
 
 - 令和6年度の「予算概要CSVデータ集」はPower BIダッシュボードのみで提供され、直接ファイルURLが公開されていないため機械可読原本としては採用しない（推測URLを作らない）。
 

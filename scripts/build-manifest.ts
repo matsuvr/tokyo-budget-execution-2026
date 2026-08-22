@@ -467,6 +467,18 @@ const definitions: SourceDefinition[] = [
     expectedStatus: "downloaded",
   },
   {
+    id: "er-fy2026-budget-budget-bill",
+    title: "議案第1号 令和8年度東京都一般会計予算",
+    category: "document",
+    subcategory: "execution-review",
+    fiscalYears: [2026],
+    sourceUrl: "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+    localPath: "data/raw/execution-review/fy2026/budget/budget-bill.pdf",
+    expectedStatus: "downloaded",
+    notes:
+      "正式議案。概要・計数表PDFは数字グリフのToUnicodeが欠落しているため、款・項の当初予算額は本議案を正とする。",
+  },
+  {
     id: "er-fy2026-budget-counting-table",
     title: "令和8年度予算案 計数表",
     category: "document",

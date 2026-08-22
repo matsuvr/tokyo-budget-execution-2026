@@ -30,7 +30,8 @@
     "build:execution-records": "node --experimental-strip-types scripts/execution-review/build-fy2024-execution-records.ts",
     "verify:execution": "node --experimental-strip-types scripts/execution-review/verify-fy2024-execution-records.ts",
     "build:execution-scan": "node --experimental-strip-types scripts/execution-review/build-execution-scan.ts",
-    "normalize:fy2024-budget": "node --experimental-strip-types scripts/execution-review/normalize-fy2024-budget.ts"
+    "normalize:fy2024-budget": "node --experimental-strip-types scripts/execution-review/normalize-fy2024-budget.ts",
+    "normalize:fy2026-budget": "node --experimental-strip-types scripts/execution-review/normalize-fy2026-budget.ts"
   },
   "devDependencies": {
     "@types/node": "latest",
