@@ -9,10 +9,19 @@
   line-height: 1.6;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0 auto;
   max-width: 60rem;
   padding: 1rem;
+}
+
+:focus-visible {
+  outline: 3px solid #1b6ac9;
+  outline-offset: 2px;
 }
 
 header h1 {
@@ -257,6 +266,26 @@ header h1 {
     animation: none !important;
     transition: none !important;
   }
+}
+
+/* 方法論・注意事項フッター（#53） */
+
+.methodology {
+  border-top: 2px solid #d0d0d0;
+  font-size: 0.85rem;
+  margin-top: 2rem;
+}
+
+.methodology h2 {
+  font-size: 1rem;
+}
+
+.methodology h3 {
+  font-size: 0.9rem;
+}
+
+.methodology ul {
+  padding-left: 1.25rem;
 }
 
 @media (max-width: 480px) {
