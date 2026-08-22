@@ -94,6 +94,7 @@ async function route(request: Request, env: Env): Promise<Response> {
         executionReviewIndex: "/execution-review",
         executionReviewCandidates: "/execution-review/candidates",
         executionReviewBureaus: "/execution-review/bureaus",
+        executionReviewItem: "/execution-review/items/:reviewId",
         objectProxy: "/data/*",
       },
       cautions: [
@@ -176,6 +177,21 @@ async function route(request: Request, env: Env): Promise<Response> {
   }
   if (path === "/execution-review/bureaus") {
     return serveObject(env, "data/normalized/execution-review/bureau-summary.json", request.method);
+  }
+  if (path.startsWith("/execution-review/items/")) {
+    const reviewId = path.slice("/execution-review/items/".length);
+    if (!/^[A-Za-z0-9_-]+$/u.test(reviewId)) {
+      return json({ error: "invalid_review_id" }, 400);
+    }
+    const details = await getJson<{
+      records?: { reviewId: string | null; comparisonId: string }[];
+    }>(env, "data/normalized/execution-review/policy-review-details.json");
+    const record = details?.records?.find((entry) => entry.reviewId === reviewId);
+    if (!record) return json({ error: "not_found", reviewId }, 404);
+    if (request.method === "HEAD") {
+      return new Response(null, { status: 200, headers: JSON_HEADERS });
+    }
+    return json(record);
   }
 
   if (path.startsWith("/data/")) {
