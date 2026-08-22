@@ -38,7 +38,8 @@
     "validate:mappings": "node --experimental-strip-types scripts/execution-review/validate-account-mappings.ts",
     "build:comparisons": "node --experimental-strip-types scripts/execution-review/build-budget-comparisons.ts",
     "build:review-candidates": "node --experimental-strip-types scripts/execution-review/build-review-candidates.ts",
-    "build:bureau-summary": "node --experimental-strip-types scripts/execution-review/build-bureau-summary.ts"
+    "build:bureau-summary": "node --experimental-strip-types scripts/execution-review/build-bureau-summary.ts",
+    "build:payment-evidence": "node --experimental-strip-types scripts/execution-review/build-payment-evidence.ts"
   },
   "devDependencies": {
     "@types/node": "latest",
