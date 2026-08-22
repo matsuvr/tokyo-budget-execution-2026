@@ -47,14 +47,15 @@ export function parseAmountYen(
   // ダッシュのみは原本上のゼロ表現。
   if (DASH_PATTERN.test(text)) return 0;
 
-  // 負数: 「△」接頭辞または後置（例: "△1,234" / "1,234 △"）。
+  // 負数: 「△」接頭辞のみを負数とみなす。
+  // 後置の「△」は本来次の列の符号であるため、この関数ではエラーとして扱う
+  // （normalizeTrailingNegativeSigns を通していれば発生しない）。
   let sign = 1;
   if (text.startsWith("△")) {
     sign = -1;
     text = text.slice(1);
-  } else if (text.endsWith("△")) {
-    sign = -1;
-    text = text.slice(0, -1);
+  } else if (/\s*△$/u.test(text) || text.endsWith("△")) {
+    throw new SyntaxError(`後置△は次の列の符号です（normalizeTrailingNegativeSignsを使ってください）: ${JSON.stringify(input)}`);
   }
 
   // カンマ区切りの検証: カンマがある場合は3桁区切りであること。

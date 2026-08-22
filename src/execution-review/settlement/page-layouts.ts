@@ -43,17 +43,19 @@ export const WRAPPED_NAME_COLUMNS = ["accountAndName", "sectionName"] as const;
  * - 裏ページの金額列は右端揃え（右端X: 180/242/304/366/418）を実測した値。
  */
 export const SETTLEMENT_DETAIL_SPREAD_FRONT_COLUMNS: readonly PageColumnLayout[] = [
+  // 左端判定: コード・名称・節列
   { name: "kanCode", xMin: 85, xMax: 96 },
   { name: "kouCell", xMin: 96, xMax: 105 },
-  { name: "mokuCell", xMin: 105, xMax: 155 },
-  { name: "initialBudget", xMin: 156, xMax: 200 },
-  { name: "supplementaryBudget", xMin: 200, xMax: 264 },
-  { name: "priorYearCarryover", xMin: 264, xMax: 320 },
-  { name: "continuingReserveAdjustment", xMin: 320, xMax: 388 },
-  { name: "currentBudgetTotal", xMin: 388, xMax: 444 },
-  { name: "sectionCode", xMin: 444, xMax: 454 },
-  { name: "sectionName", xMin: 454, xMax: 500 },
-  { name: "sectionSpentAmount", xMin: 500, xMax: 560 },
+  { name: "mokuCell", xMin: 105, xMax: 154 },
+  { name: "sectionCode", xMin: 444, xMax: 456 },
+  { name: "sectionName", xMin: 456, xMax: 500 },
+  { name: "sectionSpentAmount", xMin: 500, xMax: 580 },
+  // 右端判定: 金額は右端揃え（実測R = 208 / 265 / 322 / 388〜393 / 444〜450）
+  { name: "initialBudget", xMin: 150, xMax: 235, matchBy: "right" },
+  { name: "supplementaryBudget", xMin: 235, xMax: 292, matchBy: "right" },
+  { name: "priorYearCarryover", xMin: 292, xMax: 355, matchBy: "right" },
+  { name: "continuingReserveAdjustment", xMin: 355, xMax: 415, matchBy: "right" },
+  { name: "currentBudgetTotal", xMin: 415, xMax: 465, matchBy: "right" },
 ];
 
 /** 裏ページ（支出済額・翌年度繰越額・不用額・備考）の列設定。 */

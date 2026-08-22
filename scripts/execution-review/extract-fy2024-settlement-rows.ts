@@ -10,7 +10,6 @@ import {
 } from "../../src/execution-review/pdf/extract-text-items.ts";
 import { filterStructuralRows, groupPageRows } from "../../src/execution-review/settlement/group-page-rows.ts";
 import {
-  DATA_ROW_HEURISTICS,
   FY2024_EXPENDITURE_PAGE_RANGE,
   SETTLEMENT_DETAIL_HIERARCHY_SPECS,
   SETTLEMENT_DETAIL_SPREAD_BACK_COLUMNS,
@@ -33,6 +32,15 @@ const PDF_PATH =
 const OUTPUT_PATH = "data/normalized/execution-review/fy2024/settlement-rows.jsonl";
 
 const SUBTOTAL_PATTERN = /^(小計|合計|累計|計)$/;
+/**
+ * 行採用ヒューリスティクス。
+ * - 桁区切り付き金額、または単体の「0」（右端揃え表でのゼロ値）を含む行をデータ行とする。
+ * - タイトル行（例: 「17 諸支出金」）やヘッダーはコード接頭辞があっても除外する。
+ */
+const ROW_HEURISTICS = {
+  amountPattern: /\d{1,3}(?:,\d{3})+/,
+  codePrefixPattern: /^0$/,
+} as const;
 /** 単位記号のみの項目（表の「円」など）は行グループ化の前に除去する。 */
 const UNIT_MARK_PATTERN = /^(?:\u5186|\u5343\u5186)$/u;
 const AMOUNT_CELL_PATTERN = /(?:\d{1,3}(?:,\d{3})+)|^\s*(?:\u25b3\s*)?(?:\d{1,3}(?:,\d{3})+|0)\s*\u25b3?\s*$/u;
@@ -102,12 +110,12 @@ for (let frontPage = firstPage; frontPage <= lastPage; frontPage += 2) {
     );
     frontRows = filterStructuralRows(
       groupPageRows(frontItems, { columns: SETTLEMENT_DETAIL_SPREAD_FRONT_COLUMNS }),
-      DATA_ROW_HEURISTICS,
+      ROW_HEURISTICS,
     );
     backRows = hasBack
       ? filterStructuralRows(
           groupPageRows(backItems, { columns: SETTLEMENT_DETAIL_SPREAD_BACK_COLUMNS }),
-          DATA_ROW_HEURISTICS,
+          ROW_HEURISTICS,
         )
       : [];
   } catch (error) {

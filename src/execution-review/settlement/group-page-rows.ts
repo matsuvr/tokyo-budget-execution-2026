@@ -10,10 +10,15 @@ import type { PdfTextItem } from "../pdf/extract-text-items.ts";
 export interface PageColumnLayout {
   /** 列ID（出力cellsのキー）。 */
   name: string;
-  /** この列へ割り当てるX座標の下限（含む）。 */
+  /** この列へ割り当てる座標の下限（含む）。 */
   xMin: number;
-  /** この列へ割り当てるX座標の上限（含まない）。 */
+  /** この列へ割り当てる座標の上限（含まない）。 */
   xMax: number;
+  /**
+   * 判定に使う項目の辺。"left"（既定）は項目の左端、"right"は右端を使う。
+   * 右端揃えの金額列は、長短で左端が大きく動くため "right" を使う。
+   */
+  matchBy?: "left" | "right";
 }
 
 export interface GroupPageRowsOptions {
@@ -69,10 +74,25 @@ export function groupPageRows(
     const cells: Record<string, string> = {};
     const cellX: Record<string, number> = {};
     for (const item of band) {
-      const column = columns.find((layout) => item.x >= layout.xMin && item.x < layout.xMax);
+      let column: PageColumnLayout | undefined;
+      let matchX = item.x;
+      // 左端判定の列を先に探し、見つからなければ右端判定の列へ落とす。
+      column = columns.find(
+        (layout) =>
+          (layout.matchBy ?? "left") === "left" &&
+          item.x >= layout.xMin &&
+          item.x < layout.xMax,
+      );
+      if (!column) {
+        const rightEdge = round2(item.x + item.width);
+        column = columns.find(
+          (layout) => layout.matchBy === "right" && rightEdge >= layout.xMin && rightEdge < layout.xMax,
+        );
+        if (column) matchX = rightEdge;
+      }
       if (!column) continue;
       cells[column.name] = (cells[column.name] ?? "") + item.text;
-      cellX[column.name] ??= round2(item.x);
+      cellX[column.name] ??= round2(matchX);
     }
     return { y: round2(band[0].y), cells, cellX };
   });

@@ -36,9 +36,13 @@ describe("parseAmountYen", () => {
     assert.equal(parseAmountYen("（注）"), null);
   });
 
-  it("△付きは負数として解釈する（接頭・後置どちらも）", () => {
+  it("接頭△付きは負数として解釈する", () => {
     assert.equal(parseAmountYen("△992,309,000"), -992_309_000);
-    assert.equal(parseAmountYen("62,437,836,000 △"), -62_437_836_000);
+  });
+
+  it("後置△は次の列の符号のためエラーとする（fail-closed）", () => {
+    assert.throws(() => parseAmountYen("62,437,836,000 △"), SyntaxError);
+    assert.throws(() => parseAmountYen("1,234 △"), SyntaxError);
   });
 
   it("全角数字を解釈する", () => {
