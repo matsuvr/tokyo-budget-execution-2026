@@ -1,0 +1,349 @@
+{
+ "version": 1,
+ "updatedAt": "2026-08-22T07:34:11.878Z",
+ "note": "#27の手動対応。判定は令和6年度予算概要と議案第1号の実文書確認に基づく。対象外行やA確定済み行は含まない。",
+ "selections": [
+  {
+   "rank": 1,
+   "key": "一般会計:14:警察費::",
+   "currentBudgetYen": 671063604000
+  },
+  {
+   "rank": 2,
+   "key": "一般会計:10:土木費::",
+   "currentBudgetYen": 594733158000
+  },
+  {
+   "rank": 3,
+   "key": "一般会計:10:土木費:02:道路橋梁費:",
+   "currentBudgetYen": 360904084000
+  },
+  {
+   "rank": 4,
+   "key": "一般会計:10:土木費:02:道路橋梁費:10:街路整備費",
+   "currentBudgetYen": 175481369000
+  },
+  {
+   "rank": 5,
+   "key": "一般会計:10:土木費:03:河川海岸費:",
+   "currentBudgetYen": 120764917000
+  },
+  {
+   "rank": 6,
+   "key": "一般会計:04:生活文化スポーツ費::",
+   "currentBudgetYen": 89434821000
+  },
+  {
+   "rank": 7,
+   "key": "一般会計:04:生活文化スポーツ費:01:生活文化スポーツ費:",
+   "currentBudgetYen": 89434821000
+  },
+  {
+   "rank": 8,
+   "key": "一般会計:10:土木費:03:河川海岸費:06:中小河川整備費",
+   "currentBudgetYen": 50516635000
+  },
+  {
+   "rank": 9,
+   "key": "一般会計:04:生活文化スポーツ費:01:生活文化スポーツ費:06:文化振興費",
+   "currentBudgetYen": 45460596000
+  },
+  {
+   "rank": 10,
+   "key": "一般会計:10:土木費:02:道路橋梁費:07:交通安全施設費",
+   "currentBudgetYen": 38647375000
+  },
+  {
+   "rank": 11,
+   "key": "一般会計:10:土木費:03:河川海岸費:07:高潮防御施設費",
+   "currentBudgetYen": 35852938000
+  },
+  {
+   "rank": 12,
+   "key": "一般会計:10:土木費:02:道路橋梁費:06:道路補修費",
+   "currentBudgetYen": 34502791000
+  },
+  {
+   "rank": 13,
+   "key": "一般会計:10:土木費:02:道路橋梁費:04:道路維持費",
+   "currentBudgetYen": 28709993000
+  },
+  {
+   "rank": 14,
+   "key": "一般会計:10:土木費:02:道路橋梁費:11:橋梁整備費",
+   "currentBudgetYen": 28250175000
+  },
+  {
+   "rank": 15,
+   "key": "一般会計:10:土木費:02:道路橋梁費:09:道路整備費",
+   "currentBudgetYen": 22737572000
+  },
+  {
+   "rank": 16,
+   "key": "一般会計:10:土木費:02:道路橋梁費:13:直轄事業負担金",
+   "currentBudgetYen": 17706000000
+  },
+  {
+   "rank": 17,
+   "key": "一般会計:04:生活文化スポーツ費:01:生活文化スポーツ費:08:スポーツ施設費",
+   "currentBudgetYen": 14924797000
+  },
+  {
+   "rank": 18,
+   "key": "一般会計:10:土木費:03:河川海岸費:10:直轄事業負担金",
+   "currentBudgetYen": 11095269000
+  },
+  {
+   "rank": 19,
+   "key": "一般会計:04:生活文化スポーツ費:01:生活文化スポーツ費:07:スポーツ総合推進費",
+   "currentBudgetYen": 10021496000
+  },
+  {
+   "rank": 20,
+   "key": "一般会計:04:生活文化スポーツ費:01:生活文化スポーツ費:01:管理費",
+   "currentBudgetYen": 8842887000
+  }
+ ],
+ "mappings": [
+  {
+   "mappingId": "map-0001",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "14:警察費"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "14:警察費"
+    }
+   ],
+   "granularity": "chapter",
+   "confidence": "B",
+   "relationType": "renamed",
+   "evidence": {
+    "title": "令和6年度予算概要 第1一般会計",
+    "url": "https://www.zaimu.metro.tokyo.lg.jp/zaisei/yosan/r6/6yosangaiyounituite",
+    "page": 23
+   },
+   "evidenceList": [
+    {
+     "title": "令和6年度予算概要 第1一般会計",
+     "url": "https://www.zaimu.metro.tokyo.lg.jp/zaisei/yosan/r6/6yosangaiyounituite",
+     "page": 23
+    },
+    {
+     "title": "議案第1号 令和8年度東京都一般会計予算",
+     "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+     "page": 16
+    }
+   ],
+   "note": "名称・範囲とも変更なし。決算明細書側の当初予算額が未抽出のためA確定できず、本表でB対応とする。（予算現額 6710.6億円・対象ランク 1位）"
+  },
+  {
+   "mappingId": "map-0002",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "10:土木費"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "10:土木費"
+    }
+   ],
+   "granularity": "chapter",
+   "confidence": "B",
+   "relationType": "renamed",
+   "evidence": {
+    "title": "令和6年度予算概要 第1一般会計",
+    "url": "https://www.zaimu.metro.tokyo.lg.jp/zaisei/yosan/r6/6yosangaiyounituite",
+    "page": 18
+   },
+   "evidenceList": [
+    {
+     "title": "令和6年度予算概要 第1一般会計",
+     "url": "https://www.zaimu.metro.tokyo.lg.jp/zaisei/yosan/r6/6yosangaiyounituite",
+     "page": 18
+    },
+    {
+     "title": "議案第1号 令和8年度東京都一般会計予算",
+     "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+     "page": 13
+    }
+   ],
+   "note": "名称・範囲とも変更なし。決算明細書側の当初予算額が未抽出のためA確定できず、本表でB対応とする。（予算現額 5947.3億円・対象ランク 2位）"
+  },
+  {
+   "mappingId": "map-0003",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "04:生活文化スポーツ費"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "04:生活文化費"
+    }
+   ],
+   "granularity": "chapter",
+   "confidence": "B",
+   "relationType": "renamed",
+   "evidence": {
+    "title": "令和6年度予算概要 第1一般会計",
+    "url": "https://www.zaimu.metro.tokyo.lg.jp/zaisei/yosan/r6/6yosangaiyounituite",
+    "page": 8
+   },
+   "evidenceList": [
+    {
+     "title": "令和6年度予算概要 第1一般会計",
+     "url": "https://www.zaimu.metro.tokyo.lg.jp/zaisei/yosan/r6/6yosangaiyounituite",
+     "page": 8
+    },
+    {
+     "title": "議案第1号 令和8年度東京都一般会計予算",
+     "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+     "page": 12
+    }
+   ],
+   "note": "第4款の改称（生活文化スポーツ費→生活文化費）。範囲は同一。（予算現額 894.3億円・対象ランク 6位）"
+  }
+ ],
+ "covered": [
+  {
+   "rank": 3,
+   "key": "一般会計:10:土木費:02:道路橋梁費:",
+   "currentBudgetYen": 360904084000,
+   "status": "covered",
+   "reason": "deduplicated-to-K:土木費"
+  },
+  {
+   "rank": 4,
+   "key": "一般会計:10:土木費:02:道路橋梁費:10:街路整備費",
+   "currentBudgetYen": 175481369000,
+   "status": "covered",
+   "reason": "deduplicated-to-K:土木費"
+  },
+  {
+   "rank": 5,
+   "key": "一般会計:10:土木費:03:河川海岸費:",
+   "currentBudgetYen": 120764917000,
+   "status": "covered",
+   "reason": "deduplicated-to-K:土木費"
+  },
+  {
+   "rank": 7,
+   "key": "一般会計:04:生活文化スポーツ費:01:生活文化スポーツ費:",
+   "currentBudgetYen": 89434821000,
+   "status": "covered",
+   "reason": "deduplicated-to-K:生活文化スポーツ費"
+  },
+  {
+   "rank": 8,
+   "key": "一般会計:10:土木費:03:河川海岸費:06:中小河川整備費",
+   "currentBudgetYen": 50516635000,
+   "status": "covered",
+   "reason": "deduplicated-to-K:土木費"
+  },
+  {
+   "rank": 9,
+   "key": "一般会計:04:生活文化スポーツ費:01:生活文化スポーツ費:06:文化振興費",
+   "currentBudgetYen": 45460596000,
+   "status": "covered",
+   "reason": "deduplicated-to-K:生活文化スポーツ費"
+  },
+  {
+   "rank": 10,
+   "key": "一般会計:10:土木費:02:道路橋梁費:07:交通安全施設費",
+   "currentBudgetYen": 38647375000,
+   "status": "covered",
+   "reason": "deduplicated-to-K:土木費"
+  },
+  {
+   "rank": 11,
+   "key": "一般会計:10:土木費:03:河川海岸費:07:高潮防御施設費",
+   "currentBudgetYen": 35852938000,
+   "status": "covered",
+   "reason": "deduplicated-to-K:土木費"
+  },
+  {
+   "rank": 12,
+   "key": "一般会計:10:土木費:02:道路橋梁費:06:道路補修費",
+   "currentBudgetYen": 34502791000,
+   "status": "covered",
+   "reason": "deduplicated-to-K:土木費"
+  },
+  {
+   "rank": 13,
+   "key": "一般会計:10:土木費:02:道路橋梁費:04:道路維持費",
+   "currentBudgetYen": 28709993000,
+   "status": "covered",
+   "reason": "deduplicated-to-K:土木費"
+  },
+  {
+   "rank": 14,
+   "key": "一般会計:10:土木費:02:道路橋梁費:11:橋梁整備費",
+   "currentBudgetYen": 28250175000,
+   "status": "covered",
+   "reason": "deduplicated-to-K:土木費"
+  },
+  {
+   "rank": 15,
+   "key": "一般会計:10:土木費:02:道路橋梁費:09:道路整備費",
+   "currentBudgetYen": 22737572000,
+   "status": "covered",
+   "reason": "deduplicated-to-K:土木費"
+  },
+  {
+   "rank": 16,
+   "key": "一般会計:10:土木費:02:道路橋梁費:13:直轄事業負担金",
+   "currentBudgetYen": 17706000000,
+   "status": "covered",
+   "reason": "deduplicated-to-K:土木費"
+  },
+  {
+   "rank": 17,
+   "key": "一般会計:04:生活文化スポーツ費:01:生活文化スポーツ費:08:スポーツ施設費",
+   "currentBudgetYen": 14924797000,
+   "status": "covered",
+   "reason": "deduplicated-to-K:生活文化スポーツ費"
+  },
+  {
+   "rank": 18,
+   "key": "一般会計:10:土木費:03:河川海岸費:10:直轄事業負担金",
+   "currentBudgetYen": 11095269000,
+   "status": "covered",
+   "reason": "deduplicated-to-K:土木費"
+  },
+  {
+   "rank": 19,
+   "key": "一般会計:04:生活文化スポーツ費:01:生活文化スポーツ費:07:スポーツ総合推進費",
+   "currentBudgetYen": 10021496000,
+   "status": "covered",
+   "reason": "deduplicated-to-K:生活文化スポーツ費"
+  },
+  {
+   "rank": 20,
+   "key": "一般会計:04:生活文化スポーツ費:01:生活文化スポーツ費:01:管理費",
+   "currentBudgetYen": 8842887000,
+   "status": "covered",
+   "reason": "deduplicated-to-K:生活文化スポーツ費"
+  }
+ ],
+ "unresolved": [],
+ "summary": {
+  "targetCount": 20,
+  "mappedCount": 3,
+  "coveredCount": 17,
+  "unresolvedCount": 0,
+  "byConfidence": {
+   "B": 3,
+   "C": 0
+  }
+ }
+}
