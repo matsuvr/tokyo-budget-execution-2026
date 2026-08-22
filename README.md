@@ -112,7 +112,98 @@ pnpm run upload:r2 -- tokyo-budget-execution-2026 --include-raw
 | `/subsidies/summary?year=2026` | 補助金集計 |
 | `/closing-estimate/2025` | 2025年度一般会計決算見込み |
 | `/catalog` | 財政関連APIカタログ抽出版 |
+| `/execution-review` | 執行レビュー概要index（対象年度・件数・閾値・注意事項） |
+| `/execution-review/candidates` | 要説明候補一覧（状態分類・率・金額付き） |
+| `/execution-review/bureaus` | 局別（款別）サマリー |
+| `/execution-review/items/:reviewId` | 重点レビュー詳細1件 |
 | `/data/*` | R2内のデータを直接取得 |
+
+## 予算執行レビュー（2024年度決算 → 2026年度予算）
+
+### この画面が答える問い
+
+> 2024年度に十分執行できなかった政策・行政事業について、理由や改善策が説明されないまま、2026年度にも同規模の予算が付いていないか。
+
+### 年度の選択理由
+
+執行を評価するには**正式決算**が必要です。令和6年度（2024年度）は正式決算が公表済みの最新年度であり、翌々年度の令和8年度（2026年度）当初予算と突き合わせることで「低執行だった科目がそのまま継続していないか」を確認できます。直近の2025年度は決算見込みの段階のため比較の正とはしません。
+
+### 対象としないもの
+
+- 一般会計のみを対象とします（普通会計＝一般会計＋公営企業会計等とは集計範囲が異なります）。
+- 公金支出明細は執行率の分子にはせず、「何へ支払ったか」の補助証拠としてだけ使います。
+- 人手不足などの原因を金額から推測しません。公式資料に記載がある場合だけ表示します。
+- 繰越と不用は意味が異なるため、常に別項目として扱います。
+
+### 必要なraw原本
+
+`prepare:execution-review` は取得済みの次の原本を使います（再ダウンロードしません）。
+
+| 用途 | ファイル | 取得先 |
+|---|---|---|
+| 正式決算の正 | `data/raw/execution-review/fy2024/settlement/general-account-settlement-detail.pdf` ほか同ディレクトリ | 会計管理局（06kessan-1〜7） |
+| 2024年度当初予算 | `data/raw/execution-review/fy2024/budget/*.pdf` | 財務局（予算概要） |
+| 2026年度当初予算の正 | `data/raw/execution-review/fy2026/budget/budget-bill.pdf` | 財務局（議案第1号） |
+| 公金支出明細 | `data/raw/public-expenditure/fy2024/` | 会計管理局 |
+
+### 再生成と検証コマンド
+
+```bash
+# raw正規化（既存のprepare:dataと独立。途中失敗時は非0で停止）
+pnpm run prepare:execution-review
+
+# 恒等式・対応表・参照整合・index件数の検証
+pnpm run verify:execution-review
+
+# Web asset生成（public/app.js）
+pnpm run build
+
+# 全ユニットテストと型検証
+pnpm test
+pnpm run typecheck
+```
+
+責務分担: `prepare:data`（normalize.ts）は予算見える化CSV系・公金支出・補助金など既存データの再生成、`prepare:execution-review` は執行レビュー固有のPDF正規化→比較→候補→詳細→indexの生成を担います。対応表の手動確定（suggest/confirm/manual mappings、select:policy-reviews、policy-reviews-*.json の調査記録）はコミット済みの手入力データとして扱い、自動再生成しません。
+
+### 生成される主要JSON
+
+| ファイル | 内容 |
+|---|---|
+| `data/normalized/execution-review/index.json` | 概要index（件数・閾値・注意事項・重点レビュー状態） |
+| `data/normalized/execution-review/fy2024/execution-scan.json` | 全408明細の執行率・繰越率・不用率スキャン |
+| `data/normalized/execution-review/budget-comparisons.json` | A/B対応77件の決算↔予算比較 |
+| `data/normalized/execution-review/review-candidates.json` | 状態分類付き候補一覧 |
+| `data/normalized/execution-review/bureau-summary.json` | 局別（款別）サマリー |
+| `data/normalized/execution-review/payment-evidence.json` | 支払件名上位の補助証拠 |
+| `data/normalized/execution-review/policy-review-details.json` | 重点レビュー20件の統合詳細 |
+| `data/manual/execution-review/policy-reviews-*.json` | 公式資料レビューの記録（手入力） |
+
+### R2アップロードとローカルデモ
+
+```bash
+cp wrangler.jsonc.example wrangler.jsonc   # 初回のみ。bucket名は環境に合わせる
+pnpm install
+
+# R2へアップロード（--listでdry-run。原本PDFと巨大JSONLは既定対象外）
+pnpm run upload:r2 -- <bucket-name> --list
+pnpm run upload:r2 -- <bucket-name>
+
+# ローカル起動
+pnpm run dev            # http://localhost:8787
+
+# 本番deploy
+pnpm run deploy
+```
+
+### 2分デモ手順
+
+1. `pnpm run dev` を実行し、`http://localhost:8787` を開く（約10秒）。
+2. 冒頭の概要カードで「2024年度正式決算 × 2026年度当初予算」の比較規模（比較可能77科目、要説明候補4件）を確認する。
+3. 「絞り込み」で信頼度A/B・要説明候補の初期条件を確認したら、局セレクトを切り替えて一覧が変わることを示す（API再取得なし）。
+4. 候補カードの3区分バー（支出済／繰越／不用）と円単位の内訳式を見せる。「繰越」と「不用」が別項目である点を強調する。
+5. 「9:産業労働費 6:施設整備費」などの重点レビュー対象で「重点レビュー詳細を見る」を開き、決算参考書・明細書・職業能力開発計画への公式リンク（ページ番号付き）を確認する。
+6. 「局別サマリー」へ切替え、件数と金額の分布を確認する（ランキング表示ではない点に注意）。
+7. 画面末尾の「この画面について」で限界・注意事項を読み上げて締める。
 
 ## 令和7年度決算見込み
 
