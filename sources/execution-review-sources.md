@@ -31,6 +31,18 @@
 - **2024年度当初予算**: #4（令和6年度予算概要）。
 - **2026年度当初予算・主要施策**: #5（令和8年度予算案概要）。
 
+## 当初予算の正（Issue #12で確定）
+
+| 年度 | 当初予算の正 | ローカル保存先 | 補足 |
+|------|--------------|----------------|------|
+| 2024年度（令和6） | 令和6年度予算概要（統合版） | `data/raw/execution-review/fy2024/budget/budget-overview-integrated.pdf` | 局・款別の当初予算。主要事業の記載も本編に含む。 |
+| 2024年度（令和6） | 同 分割版 第1 一般会計 | `data/raw/execution-review/fy2024/budget/budget-general-account.pdf` | 一般会計部分の参照に使う。 |
+| 2026年度（令和8） | 令和8年度予算案 概要（既存を再利用・複製しない） | `data/raw/documents/fy2026/budget-proposal-overview.pdf` | SHA-256で同一内容を確認済み。 |
+| 2026年度（令和8） | 令和8年度予算案 計数表 | `data/raw/execution-review/fy2026/budget/counting-table.pdf` | 局・款・項・目レベルの計数。科目対応のR8側の正。 |
+| 2026年度（令和8） | 令和8年度予算案 主要な施策 | `data/raw/execution-review/fy2026/budget/major-policies.pdf` | 政策レビューのR8側根拠。主要事業は既存`major-projects.pdf`を再利用。 |
+
+- 令和6年度の「予算概要CSVデータ集」はPower BIダッシュボードのみで提供され、直接ファイルURLが公開されていないため機械可読原本としては採用しない（推測URLを作らない）。
+
 ## 取得・運用ルール
 
 - すべて `metro.tokyo.lg.jp` 配下の一次資料のみを用いる。二次報道・集計サイトは用いない。
