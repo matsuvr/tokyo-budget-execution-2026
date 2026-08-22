@@ -1,0 +1,1962 @@
+{
+ "fiscalYearPair": [
+  2024,
+  2026
+ ],
+ "generatedFrom": {
+  "selections": "data/manual/execution-review/selected-policy-reviews.json",
+  "reviews": [
+   "data/manual/execution-review/policy-reviews-direct.json",
+   "data/manual/execution-review/policy-reviews-procurement.json",
+   "data/manual/execution-review/policy-reviews-construction.json",
+   "data/manual/execution-review/policy-reviews-subsidy.json"
+  ],
+  "candidates": "data/normalized/execution-review/review-candidates.json",
+  "paymentEvidence": "data/normalized/execution-review/payment-evidence.json"
+ },
+ "metadata": {
+  "note": [
+   "analysis は分析上の判定（#30の状態分類・率・金額）。review は公式資料で確認できた事実と確認できなかった事項（not-found）。paymentEvidence は公金支出の補助証拠であり執行率の分子にはしない。",
+   "executionMethod=unknown の候補は公式説明だけでは方式を確定できなかったもので、review は null のまま残す（推測で埋めない）。",
+   "支払実績のない候補は paymentEvidence を null で保持する。"
+  ]
+ },
+ "records": [
+  {
+   "reviewId": null,
+   "comparisonId": "cmp-0048",
+   "mappingId": "map-0048",
+   "policyTitle": "9:産業労働費 4:農林水産費",
+   "bureau": null,
+   "confidence": "A",
+   "granularity": "item",
+   "executionMethod": "unknown",
+   "analysis": {
+    "status": "needs-explanation",
+    "statusReasons": [
+     "unusedRate>=0.2",
+     "currentBudgetYen>=100000000",
+     "budgetContinuationRate>=0.9"
+    ],
+    "selectionReason": "不用額 73.6 億円。執行方式は科目名から確定できず。",
+    "rates": {
+     "executionRate": 0.7449174112357736,
+     "carryoverRate": 0.0177652619358857,
+     "unusedRate": 0.23731732682834072,
+     "budgetContinuationRate": 1.081697235856368
+    },
+    "amounts": {
+     "fy2024InitialBudgetYen": 30968000000,
+     "fy2024CurrentBudgetYen": 31006748000,
+     "fy2024SpentYen": 23097466451,
+     "fy2024CarryoverYen": 550843000,
+     "fy2024UnusedYen": 7358438549,
+     "fy2026InitialBudgetYen": 33498000000
+    }
+   },
+   "review": null,
+   "paymentEvidence": {
+    "transactionCount": 8306,
+    "totalAmountYen": 19377540179,
+    "ordinaryAmountYen": 13544456512,
+    "closingAmountYen": 5833083667,
+    "topPaymentNames": [
+     {
+      "name": "生産緑地・買取活用支援事業の出えん金支出",
+      "count": 1,
+      "amountYen": 2000000000
+     },
+     {
+      "name": "森林循環に資する花粉発生源対策に係る出えん金支出",
+      "count": 1,
+      "amountYen": 1856000000
+     },
+     {
+      "name": "WOODコレクション開催に係る負担金の支出について",
+      "count": 1,
+      "amountYen": 511644000
+     },
+     {
+      "name": "工事にかかる費用の支出",
+      "count": 1,
+      "amountYen": 410036000
+     },
+     {
+      "name": "林業先進技術導入事業に係る出えん金の支出（第4回）",
+      "count": 1,
+      "amountYen": 310000000
+     },
+     {
+      "name": "東京味わいフェスタ2024に係る東京都負担金の支出",
+      "count": 1,
+      "amountYen": 241250000
+     },
+     {
+      "name": "令和6年度水産振興に係る種苗生産事業委託",
+      "count": 4,
+      "amountYen": 223699000
+     },
+     {
+      "name": "R6業務委託料の概算払支出について（第1四半期）",
+      "count": 2,
+      "amountYen": 202600000
+     },
+     {
+      "name": "R6下期漁業調査指導船「みやこ」中間検査修繕工事",
+      "count": 1,
+      "amountYen": 197321300
+     },
+     {
+      "name": "R6漁業調査指導船「興洋」第一種中間検査及び修繕工事",
+      "count": 1,
+      "amountYen": 180246000
+     }
+    ]
+   }
+  },
+  {
+   "reviewId": "rev-0001",
+   "comparisonId": "cmp-0024",
+   "mappingId": "map-0024",
+   "policyTitle": "2:総務費 10:退職手当及年金費",
+   "bureau": null,
+   "confidence": "A",
+   "granularity": "item",
+   "executionMethod": "direct",
+   "analysis": {
+    "status": "needs-explanation",
+    "statusReasons": [
+     "unusedRate>=0.2",
+     "currentBudgetYen>=100000000",
+     "budgetContinuationRate>=0.9"
+    ],
+    "selectionReason": "不用額 46.1 億円。職員の退職手当等を直接支給する経費（予算概要）",
+    "rates": {
+     "executionRate": 0.7565868613483745,
+     "carryoverRate": 0,
+     "unusedRate": 0.24341313865162556,
+     "budgetContinuationRate": 0.9452828863705587
+    },
+    "amounts": {
+     "fy2024InitialBudgetYen": 18953741000,
+     "fy2024CurrentBudgetYen": 18953741000,
+     "fy2024SpentYen": 14340151414,
+     "fy2024CarryoverYen": 0,
+     "fy2024UnusedYen": 4613589586,
+     "fy2026InitialBudgetYen": 17916647000
+    }
+   },
+   "review": {
+    "officialDescription": "都職員の退職手当（教育庁・警視庁・東京消防庁・交通局・水道局・下水道局で支出するものを除く）及び地方公務員等共済組合法施行前に退職した職員（特別区職員を含む）の恩給などに要する経費。",
+    "reasonStatus": "confirmed",
+    "reasonTags": [
+     "other-official-reason"
+    ],
+    "improvementStatus": "confirmed",
+    "improvementSummary": "2026年度当初予算は17,916,647千円で、2024年度当初18,953,741千円から減少。制度面では、令和8年度予算案の概要が給与関係費について定年延長に伴う退職手当の増を前年度比増の要因として挙げている。",
+    "evidenceReferences": [
+     {
+      "title": "令和6年度 東京都決算参考書 一般会計",
+      "url": "https://www.kaikeikanri.metro.tokyo.lg.jp/documents/d/kaikeikanri/06kessan-7",
+      "page": 76,
+      "summary": "総務費の項別執行状況。「退職手当及び年金に要した経費」は予算現額18,953,741千円・支出済額14,340,151,414円・不用額4,613,589,586円・執行率75.7%。内訳は恩給及び事務費（同頁で執行率76.9%）と退職手当及び事務費（同75.7%）。同頁の総務費不用額説明には「退職手当の実績による残」4,597,234,897円との記載がある。人員不足等への言及はない。"
+     },
+     {
+      "title": "令和6年度予算概要 分割版 第1 一般会計",
+      "url": "https://www.zaimu.metro.tokyo.lg.jp/documents/d/zaimu/6yosangaiyou3",
+      "page": 7,
+      "summary": "項「10 退職手当及年金費（総務局所管）」は18,953,741千円（5年度比+9,893,461千円）。経費の性格説明と内訳（恩給及び退職年金66,356千円、退職手当18,882,367千円）。"
+     },
+     {
+      "title": "議案第1号 令和8年度東京都一般会計予算",
+      "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+      "page": 11,
+      "summary": "総務費13 退職手当及年金費 17,916,647千円（令和8年度当初）。"
+     },
+     {
+      "title": "令和8年度 東京都予算案の概要",
+      "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/20260130_reiwa8nendo_tokyotoyosanangaiyou/8yosanangaiyou.pdf",
+      "page": 23,
+      "summary": "「給与関係費」の説明頁。給与改定に伴う増や定年延長に伴う退職手当の増などにより前年度比増となった旨の記載。同PDFは数字グリフのToUnicodeが欠落し金額が抽出できないため、金額は未確認。"
+     }
+    ],
+    "reviewerNotes": "選定ファイル中 executionMethod=direct は本件1件のみ（上限5件以内）。理由タグは決算参考書の文言「実績による残」に基づき other-official-reason を使用し、推測タグは付けていない。staffing-or-delivery-capacity は公式資料に人員不足等の明記がないため不使用。主要施策の成果（R6）に本項目に対応する事業記載はなく、監査事務局公表の令和6年度決算審査意見書概要でも本項目固有の指摘は確認できず。R6予算概要は総務局所管と明記するが、2026年度側の議案に局の記載がないため bureau は null。"
+   },
+   "paymentEvidence": {
+    "transactionCount": 24,
+    "totalAmountYen": 2938756,
+    "ordinaryAmountYen": 2148358,
+    "closingAmountYen": 790398,
+    "topPaymentNames": [
+     {
+      "name": "令和６年度人事・給与等ｼｽﾃﾑ（恩給）の運用支援委託",
+      "count": 1,
+      "amountYen": 608217
+     },
+     {
+      "name": "人事・給与等ｼｽﾃﾑ及庶務事務ｼｽﾃﾑ用ｻｰﾊﾞ機器借入れ3月",
+      "count": 1,
+      "amountYen": 182181
+     },
+     {
+      "name": "人事・給与等ｼｽﾃﾑ及び庶務事務ｼｽﾃﾑ用ｻｰﾊﾞ機器等借入れ",
+      "count": 1,
+      "amountYen": 182174
+     },
+     {
+      "name": "人事・給与等ｼｽﾃﾑ及庶務事務ｼｽﾃﾑ用ｻｰﾊﾞ機器借入れ10月",
+      "count": 1,
+      "amountYen": 182174
+     },
+     {
+      "name": "人事・給与等ｼｽﾃﾑ及庶務事務ｼｽﾃﾑ用ｻｰﾊﾞ機器借入れ6月",
+      "count": 1,
+      "amountYen": 182174
+     },
+     {
+      "name": "人事・給与等ｼｽﾃﾑ及庶務事務ｼｽﾃﾑ用ｻｰﾊﾞ機器借入れ7月",
+      "count": 1,
+      "amountYen": 182174
+     },
+     {
+      "name": "人事・給与等ｼｽﾃﾑ及庶務事務ｼｽﾃﾑ用ｻｰﾊﾞ機器借入れ8月",
+      "count": 1,
+      "amountYen": 182174
+     },
+     {
+      "name": "人事・給与等ｼｽﾃﾑ及庶務事務ｼｽﾃﾑ用ｻｰﾊﾞ機器借入れ9月",
+      "count": 1,
+      "amountYen": 182174
+     },
+     {
+      "name": "人事・給与等ｼｽﾃﾑ及庶務事務ｼｽﾃﾑ用ｻｰﾊﾞ機器等借入11月",
+      "count": 1,
+      "amountYen": 182174
+     },
+     {
+      "name": "人事・給与等ｼｽﾃﾑ及庶務事務ｼｽﾃﾑ用ｻｰﾊﾞ機器等借入12月",
+      "count": 1,
+      "amountYen": 182174
+     }
+    ]
+   }
+  },
+  {
+   "reviewId": "rev-0001",
+   "comparisonId": "cmp-0050",
+   "mappingId": "map-0050",
+   "policyTitle": "9:産業労働費 6:施設整備費",
+   "bureau": null,
+   "confidence": "A",
+   "granularity": "item",
+   "executionMethod": "construction",
+   "analysis": {
+    "status": "needs-explanation",
+    "statusReasons": [
+     "unusedRate>=0.2",
+     "currentBudgetYen>=100000000",
+     "budgetContinuationRate>=0.9"
+    ],
+    "selectionReason": "不用額 11.9 億円。施設・道路等の整備・建設を行う経費（予算概要）",
+    "rates": {
+     "executionRate": 0.5938893942809579,
+     "carryoverRate": 0.19933636221755943,
+     "unusedRate": 0.20677424350148266,
+     "budgetContinuationRate": 1.8068677008889664
+    },
+    "amounts": {
+     "fy2024InitialBudgetYen": 5737000000,
+     "fy2024CurrentBudgetYen": 5766700000,
+     "fy2024SpentYen": 3424781970,
+     "fy2024CarryoverYen": 1149513000,
+     "fy2024UnusedYen": 1192405030,
+     "fy2026InitialBudgetYen": 10366000000
+    }
+   },
+   "review": {
+    "officialDescription": "「この経費は、産業労働施設の整備に要する経費である」（R6予算概要・産業労働局所管）。目レベルでは「職業能力開発センター等施設整備、農林水産施設・商工施設の整備等」（決算参考書）。",
+    "reasonStatus": "not-found",
+    "reasonTags": [],
+    "improvementStatus": "not-found",
+    "improvementSummary": "",
+    "evidenceReferences": [
+     {
+      "title": "令和6年度 東京都決算参考書 一般会計",
+      "url": "https://www.kaikeikanri.metro.tokyo.lg.jp/documents/d/kaikeikanri/06kessan-7",
+      "page": 95,
+      "summary": "項別執行状況「６ 施設整備に要した経費」は予算現額5,766,700,000円・支出済額3,424,781,970円・翌年度繰越額1,149,513,000円・不用額1,192,405,030円・執行率59.4%。"
+     },
+     {
+      "title": "令和6年度 東京都決算参考書 一般会計",
+      "url": "https://www.kaikeikanri.metro.tokyo.lg.jp/documents/d/kaikeikanri/06kessan-7",
+      "page": 96,
+      "summary": "目「⑴ 産業労働施設整備費」は項6と同額（単一目）。内容は職業能力開発センター等施設整備、農林水産施設・商工施設の整備等。同頁の不用額説明は款産業労働費全体（計66,723,764,224円）のもので、落札差金や実績による残などの列挙があるが項別の帰属は明示されておらず、本項固有の原因記載は確認できない。"
+     },
+     {
+      "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+      "url": "https://www.kaikeikanri.metro.tokyo.lg.jp/documents/d/kaikeikanri/06kessan-2",
+      "page": 338,
+      "summary": "項06施設整備費は当初5,737,000,000円＋補正29,700,000円＝現額5,766,700,000円。目01産業労働施設整備費が全額。"
+     },
+     {
+      "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+      "url": "https://www.kaikeikanri.metro.tokyo.lg.jp/documents/d/kaikeikanri/06kessan-2",
+      "page": 339,
+      "summary": "目01産業労働施設整備費の支出済額3,424,781,970円に対し、翌年度繰越額1,149,513,000円は全額が「繰越明許費」で事故繰越は0。不用額は1,192,405,030円。低執分の約半分は複数年度事業として認められた計画的な繰越であり、不用とは区別される。"
+     },
+     {
+      "title": "令和6年度予算概要 分割版 第1 一般会計",
+      "url": "https://www.zaimu.metro.tokyo.lg.jp/documents/d/zaimu/6yosangaiyou3",
+      "page": 17,
+      "summary": "「６ 施設整備費（産業労働局所管）」5,737,000千円（5年度17,699,000千円、△11,962,000）。「この経費は、産業労働施設の整備に要する経費である。」"
+     },
+     {
+      "title": "議案第1号 令和8年度東京都一般会計予算",
+      "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+      "page": 14,
+      "summary": "９産業労働費のうち「０６ 施設整備費」10,366,000千円（令和8年度当初）。R6当初5,737,000千円から約80%増。同款には新たに「０７ スタートアップ戦略推進費」39,202,000千円が創設。"
+     },
+     {
+      "title": "第11次東京都職業能力開発計画（概要版）【令和5年3月改訂】",
+      "url": "https://www.hataraku.metro.tokyo.lg.jp/plan/%E7%AC%AC11%E6%AC%A1%E6%9D%B1%E4%BA%AC%E9%83%BD%E8%81%B7%E6%A5%AD%E8%83%BD%E5%8A%9B%E9%96%8B%E7%99%BA%E8%A8%88%E7%94%BB%EF%BC%88%E6%A6%82%E8%A6%81%E7%89%88%EF%BC%89%E3%80%90%E4%BB%A4%E5%92%8C5%E5%B9%B43%E6%9C%88%E6%94%B9%E8%A8%82%E3%80%91%20.pdf",
+      "page": 10,
+      "summary": "重点施策(16)「職業能力開発センターの計画的な施設整備」。大田校の整備推進、高年齢者校の改修、城南センター・八王子校・赤羽校・板橋校など老朽化施設を「第二次主要施設10か年維持更新計画」等に基づき計画的な整備・改修を推進、「しごとセンター校（仮称）」を令和6年度を目途に新設、赤羽校の早期改築。施設整備費の執行が複数年度の計画事業であることを示す公式の方針文書。"
+     }
+    ],
+    "reviewerNotes": "選定ファイル中 executionMethod=construction は本件1件のみ（上限5件以内）。繰越と不用は同一視しない: 繰越1,149,513千円は明細書上すべて繰越明許費（事故繰越0）で、第11次職業能力開発計画の重点施策(16)にある計画的・複数年度の施設整備と整合し、これ自体を問題扱いしない。不用1,192,405,030円については、決算参考書の不用額説明が款レベルで項別帰属が明示されず、本項固有の原因（用地取得・関係者調整・入札不調・施工遅延等）は公式資料から確認できなかったため reasonStatus=not-found とし、タグは付けない。款レベルの「落札差金」を本項に帰属させることはしない。主要施策の成果（R6）に本項目に対応する記載はなく、監査事務局の令和6年度各会計歳入歳出決算審査意見書でも本項目固有の指摘は確認できず（産業労働局関係の指摘は出資による権利の登載に関するもの）。2026年度側の議案に局の記載がないため bureau は null。改善策の記載も確認できず improvementStatus=not-found。"
+   },
+   "paymentEvidence": {
+    "transactionCount": 328,
+    "totalAmountYen": 3129958604,
+    "ordinaryAmountYen": 2193378003,
+    "closingAmountYen": 936580601,
+    "topPaymentNames": [
+     {
+      "name": "都立城南職業能力開発センター大田校(5)改築工事",
+      "count": 1,
+      "amountYen": 833976000
+     },
+     {
+      "name": "地域振興センター等における設備改修工事に係る支出",
+      "count": 1,
+      "amountYen": 212340000
+     },
+     {
+      "name": "東京都小笠原亜熱帯農業ｾﾝﾀｰ(5)圃場管理棟改築工事",
+      "count": 2,
+      "amountYen": 162398000
+     },
+     {
+      "name": "東京都しごとセンター (3) 改修昇降機設備工事",
+      "count": 1,
+      "amountYen": 132859668
+     },
+     {
+      "name": "高年齢者校内装工事に係る支払い（ｻﾝｹﾝﾋﾞﾙｼﾁﾞﾝｸﾞ）",
+      "count": 1,
+      "amountYen": 95700000
+     },
+     {
+      "name": "東京都しごとセンター(3)改修工事監理業務",
+      "count": 1,
+      "amountYen": 78600000
+     },
+     {
+      "name": "R6業務委託料の概算払支出について（第2四半期）",
+      "count": 1,
+      "amountYen": 75813000
+     },
+     {
+      "name": "R6業務委託料の概算払支出について（第1四半期）",
+      "count": 1,
+      "amountYen": 72700000
+     },
+     {
+      "name": "協定書の締結にかかる支払",
+      "count": 1,
+      "amountYen": 70807000
+     },
+     {
+      "name": "デスク外209点の買入れ",
+      "count": 2,
+      "amountYen": 65010000
+     }
+    ]
+   }
+  },
+  {
+   "reviewId": null,
+   "comparisonId": "cmp-0001",
+   "mappingId": "map-0001",
+   "policyTitle": "1:議会費",
+   "bureau": null,
+   "confidence": "A",
+   "granularity": "chapter",
+   "executionMethod": "unknown",
+   "analysis": {
+    "status": "executed",
+    "statusReasons": [
+     "currentBudgetYen>=100000000",
+     "budgetContinuationRate>=0.9",
+     "executionRate>=0.9"
+    ],
+    "selectionReason": "不用額 5.1 億円。執行方式は科目名から確定できず。",
+    "rates": {
+     "executionRate": 0.9037574887966293,
+     "carryoverRate": 0,
+     "unusedRate": 0.09624251120337073,
+     "budgetContinuationRate": 1.109060712308544
+    },
+    "amounts": {
+     "fy2024InitialBudgetYen": 5419000000,
+     "fy2024CurrentBudgetYen": 5314472000,
+     "fy2024SpentYen": 4802993869,
+     "fy2024CarryoverYen": 0,
+     "fy2024UnusedYen": 511478131,
+     "fy2026InitialBudgetYen": 6010000000
+    }
+   },
+   "review": null,
+   "paymentEvidence": {
+    "transactionCount": 1424,
+    "totalAmountYen": 1744483945,
+    "ordinaryAmountYen": 1561911572,
+    "closingAmountYen": 182572373,
+    "topPaymentNames": [
+     {
+      "name": "令和6年度都議会中継等の制作及び放送（2・3月分）",
+      "count": 1,
+      "amountYen": 111575887
+     },
+     {
+      "name": "令和６年度東京都政務活動費の支出について（８月分）",
+      "count": 2,
+      "amountYen": 63500000
+     },
+     {
+      "name": "令和６年度東京都政務活動費の支出について（９月分）",
+      "count": 1,
+      "amountYen": 63500000
+     },
+     {
+      "name": "令和６年度東京都政務活動費の支出について（10月分）",
+      "count": 1,
+      "amountYen": 63000000
+     },
+     {
+      "name": "令和６年度東京都政務活動費の支出について（12月分）",
+      "count": 1,
+      "amountYen": 62000000
+     },
+     {
+      "name": "令和６年度東京都政務活動費の支出について（１月分）",
+      "count": 1,
+      "amountYen": 62000000
+     },
+     {
+      "name": "令和６年度東京都政務活動費の支出について（２月分）",
+      "count": 1,
+      "amountYen": 62000000
+     },
+     {
+      "name": "令和６年度東京都政務活動費の支出について（３月分）",
+      "count": 1,
+      "amountYen": 62000000
+     },
+     {
+      "name": "令和６年度東京都政務活動費の支出について（11月分）",
+      "count": 1,
+      "amountYen": 61500000
+     },
+     {
+      "name": "令和６年度東京都政務活動費の支出（６月分）",
+      "count": 2,
+      "amountYen": 59500000
+     }
+    ]
+   }
+  },
+  {
+   "reviewId": null,
+   "comparisonId": "cmp-0003",
+   "mappingId": "map-0003",
+   "policyTitle": "3:徴税費",
+   "bureau": null,
+   "confidence": "A",
+   "granularity": "chapter",
+   "executionMethod": "unknown",
+   "analysis": {
+    "status": "executed",
+    "statusReasons": [
+     "currentBudgetYen>=100000000",
+     "budgetContinuationRate>=0.9",
+     "executionRate>=0.9"
+    ],
+    "selectionReason": "不用額 10.4 億円。執行方式は科目名から確定できず。",
+    "rates": {
+     "executionRate": 0.9876039141881658,
+     "carryoverRate": 0,
+     "unusedRate": 0.012396085811834184,
+     "budgetContinuationRate": 1.2148872428760142
+    },
+    "amounts": {
+     "fy2024InitialBudgetYen": 84784000000,
+     "fy2024CurrentBudgetYen": 83878594000,
+     "fy2024SpentYen": 82838827751,
+     "fy2024CarryoverYen": 0,
+     "fy2024UnusedYen": 1039766249,
+     "fy2026InitialBudgetYen": 103003000000
+    }
+   },
+   "review": null,
+   "paymentEvidence": {
+    "transactionCount": 12255,
+    "totalAmountYen": 60517134803,
+    "ordinaryAmountYen": 51989145456,
+    "closingAmountYen": 8527989347,
+    "topPaymentNames": [
+     {
+      "name": "次期税務基幹システム設計・開発業務委託（区分１）",
+      "count": 3,
+      "amountYen": 14407710900
+     },
+     {
+      "name": "令和６年度都民税（個人）徴収取扱費の交付について",
+      "count": 4,
+      "amountYen": 6360083041
+     },
+     {
+      "name": "令和６年度個人都民税徴収取扱費の交付決定及び支出",
+      "count": 5,
+      "amountYen": 6111354264
+     },
+     {
+      "name": "税務総合支援システム運用委託",
+      "count": 1,
+      "amountYen": 4746169106
+     },
+     {
+      "name": "令和６年度都民税（個人）徴収取扱費の支出について",
+      "count": 4,
+      "amountYen": 3879205711
+     },
+     {
+      "name": "令和６年度個人都民税徴収取扱費の支出について",
+      "count": 2,
+      "amountYen": 2291189161
+     },
+     {
+      "name": "令和6年度個人都民税徴収取扱費の交付決定及び支出",
+      "count": 2,
+      "amountYen": 1850485298
+     },
+     {
+      "name": "令和６年度個人都民税徴収取扱費の支出",
+      "count": 1,
+      "amountYen": 1565642118
+     },
+     {
+      "name": "税務総合支援システム維持管理委託",
+      "count": 1,
+      "amountYen": 1235095072
+     },
+     {
+      "name": "「次期税務基幹システム基盤等構築委託」に係る支出",
+      "count": 1,
+      "amountYen": 1197900000
+     }
+    ]
+   }
+  },
+  {
+   "reviewId": null,
+   "comparisonId": "cmp-0006",
+   "mappingId": "map-0006",
+   "policyTitle": "7:福祉費",
+   "bureau": null,
+   "confidence": "A",
+   "granularity": "chapter",
+   "executionMethod": "unknown",
+   "analysis": {
+    "status": "executed",
+    "statusReasons": [
+     "currentBudgetYen>=100000000",
+     "budgetContinuationRate>=0.9",
+     "executionRate>=0.9"
+    ],
+    "selectionReason": "不用額 636.2 億円。執行方式は科目名から確定できず。",
+    "rates": {
+     "executionRate": 0.9307908745974357,
+     "carryoverRate": 0.01368707783437426,
+     "unusedRate": 0.05552204756819008,
+     "budgetContinuationRate": 1.1683192968414724
+    },
+    "amounts": {
+     "fy2024InitialBudgetYen": 1104502000000,
+     "fy2024CurrentBudgetYen": 1145795413000,
+     "fy2024SpentYen": 1066495914576,
+     "fy2024CarryoverYen": 15682591000,
+     "fy2024UnusedYen": 63616907424,
+     "fy2026InitialBudgetYen": 1290411000000
+    }
+   },
+   "review": null,
+   "paymentEvidence": {
+    "transactionCount": 35941,
+    "totalAmountYen": 1046814457815,
+    "ordinaryAmountYen": 953613443036,
+    "closingAmountYen": 93201014779,
+    "topPaymentNames": [
+     {
+      "name": "令和６年度障害者自立支援給付費都負担金の支出",
+      "count": 7,
+      "amountYen": 65927241300
+     },
+     {
+      "name": "令和６年度教育・保育給付都費分第二回支出",
+      "count": 7,
+      "amountYen": 39818307702
+     },
+     {
+      "name": "公費負担医療に関する診療報酬の支出（精神通院）",
+      "count": 12,
+      "amountYen": 34914823543
+     },
+     {
+      "name": "令和６年度子どものための教育・保育給付都費負担額",
+      "count": 7,
+      "amountYen": 32487184000
+     },
+     {
+      "name": "令和６年度多子世帯負担軽減事業支出（福祉分）",
+      "count": 1,
+      "amountYen": 28841975030
+     },
+     {
+      "name": "令和６年度東京都子育て推進交付金　第二回支出",
+      "count": 1,
+      "amountYen": 17823608000
+     },
+     {
+      "name": "令和6年度保育士等キャリアアップ補助金の支出(当初)",
+      "count": 1,
+      "amountYen": 16978995000
+     },
+     {
+      "name": "令和６年度障害児施設措置費(給付費等)都負担金の支出",
+      "count": 2,
+      "amountYen": 15758048753
+     },
+     {
+      "name": "令和６年度東京都子供子育て交付金の交付決定及び支出",
+      "count": 16,
+      "amountYen": 14946221000
+     },
+     {
+      "name": "児童養護施設に対する措置費継続支払",
+      "count": 676,
+      "amountYen": 13636584131
+     }
+    ]
+   }
+  },
+  {
+   "reviewId": null,
+   "comparisonId": "cmp-0007",
+   "mappingId": "map-0007",
+   "policyTitle": "8:保健医療費",
+   "bureau": null,
+   "confidence": "A",
+   "granularity": "chapter",
+   "executionMethod": "unknown",
+   "analysis": {
+    "status": "executed",
+    "statusReasons": [
+     "currentBudgetYen>=100000000",
+     "budgetContinuationRate>=0.9",
+     "executionRate>=0.9"
+    ],
+    "selectionReason": "不用額 341.8 億円。執行方式は科目名から確定できず。",
+    "rates": {
+     "executionRate": 0.9217329201391359,
+     "carryoverRate": 0.011867979642729379,
+     "unusedRate": 0.06639910021813471,
+     "budgetContinuationRate": 1.1443765943586341
+    },
+    "amounts": {
+     "fy2024InitialBudgetYen": 492753000000,
+     "fy2024CurrentBudgetYen": 514736980000,
+     "fy2024SpentYen": 474450019679,
+     "fy2024CarryoverYen": 6108888000,
+     "fy2024UnusedYen": 34178072321,
+     "fy2026InitialBudgetYen": 563895000000
+    }
+   },
+   "review": null,
+   "paymentEvidence": {
+    "transactionCount": 31564,
+    "totalAmountYen": 372575803937,
+    "ordinaryAmountYen": 333132818148,
+    "closingAmountYen": 39442985789,
+    "topPaymentNames": [
+     {
+      "name": "令和６年度国保基盤安定負担金の第３四半期分の支出",
+      "count": 1,
+      "amountYen": 29253770000
+     },
+     {
+      "name": "令和６年度後期高齢者医療保険基盤安定都負担金の支出",
+      "count": 1,
+      "amountYen": 20725668501
+     },
+     {
+      "name": "令和6年度後期高齢者医療給付費都負担金の支出(第1回)",
+      "count": 2,
+      "amountYen": 19255705810
+     },
+     {
+      "name": "公費負担医療費にかかる医療費の支出（難病）",
+      "count": 12,
+      "amountYen": 16484873106
+     },
+     {
+      "name": "令和6年度後期高齢者医療給付費都負担金の支出(第2回)",
+      "count": 2,
+      "amountYen": 14441778000
+     },
+     {
+      "name": "令和6年度後期高齢者医療給付費都負担金の支出(第3回)",
+      "count": 2,
+      "amountYen": 14441778000
+     },
+     {
+      "name": "Ｒ６年度　医療費の継続支払について（特殊疾病）",
+      "count": 12,
+      "amountYen": 12895007606
+     },
+     {
+      "name": "地域医療介護総合確保基金への支出について",
+      "count": 1,
+      "amountYen": 11467058000
+     },
+     {
+      "name": "R6東京都立病院機構運営費負担金（第四四半期分）",
+      "count": 1,
+      "amountYen": 9881600400
+     },
+     {
+      "name": "R6東京都立病院機構運営費負担金（第二四半期分）",
+      "count": 1,
+      "amountYen": 9881600400
+     }
+    ]
+   }
+  },
+  {
+   "reviewId": null,
+   "comparisonId": "cmp-0010",
+   "mappingId": "map-0010",
+   "policyTitle": "12:教育費",
+   "bureau": null,
+   "confidence": "A",
+   "granularity": "chapter",
+   "executionMethod": "unknown",
+   "analysis": {
+    "status": "executed",
+    "statusReasons": [
+     "currentBudgetYen>=100000000",
+     "budgetContinuationRate>=0.9",
+     "executionRate>=0.9"
+    ],
+    "selectionReason": "不用額 504.5 億円。執行方式は科目名から確定できず。",
+    "rates": {
+     "executionRate": 0.9507250298967911,
+     "carryoverRate": 0,
+     "unusedRate": 0.049274970103208866,
+     "budgetContinuationRate": 1.1702157590599684
+    },
+    "amounts": {
+     "fy2024InitialBudgetYen": 1009413000000,
+     "fy2024CurrentBudgetYen": 1023897510000,
+     "fy2024SpentYen": 973444990806,
+     "fy2024CarryoverYen": 0,
+     "fy2024UnusedYen": 50452519194,
+     "fy2026InitialBudgetYen": 1181231000000
+    }
+   },
+   "review": null,
+   "paymentEvidence": {
+    "transactionCount": 144979,
+    "totalAmountYen": 223444758070,
+    "ordinaryAmountYen": 152063327855,
+    "closingAmountYen": 71381430215,
+    "topPaymentNames": [
+     {
+      "name": "公立学校情報機器整備基金への支出について",
+      "count": 1,
+      "amountYen": 24050878000
+     },
+     {
+      "name": "令和６年度東京都公立学校給食費負担軽減事業補助金",
+      "count": 1,
+      "amountYen": 8576700000
+     },
+     {
+      "name": "土地の有償所管換に伴う代金の支払いについて",
+      "count": 1,
+      "amountYen": 5970000000
+     },
+     {
+      "name": "令和6年度東京都公立学校給食費負担軽減事業補助金",
+      "count": 3,
+      "amountYen": 5318180000
+     },
+     {
+      "name": "令和6年度公立学校給食費負担軽減事業補助金の精算",
+      "count": 3,
+      "amountYen": 5166196000
+     },
+     {
+      "name": "令和６年度高等学校等就学支援金の支出（７～12月分）",
+      "count": 1,
+      "amountYen": 4972883748
+     },
+     {
+      "name": "都立立川地区チャレンジスクール(仮称)(3)新築工事",
+      "count": 1,
+      "amountYen": 4039113000
+     },
+     {
+      "name": "都立学校施設維持管理業務委託の支出（上半期）",
+      "count": 14,
+      "amountYen": 3950661000
+     },
+     {
+      "name": "R6ｽｸｰﾙ･ｻﾎﾟｰﾄ･ｽﾀｯﾌ配置支援事業に係る補助金の支出",
+      "count": 1,
+      "amountYen": 3890428071
+     },
+     {
+      "name": "R6年度都立高等学校等端末購入支援金支出(概算払い）",
+      "count": 2,
+      "amountYen": 3771386000
+     }
+    ]
+   }
+  },
+  {
+   "reviewId": null,
+   "comparisonId": "cmp-0011",
+   "mappingId": "map-0011",
+   "policyTitle": "13:学務費",
+   "bureau": null,
+   "confidence": "A",
+   "granularity": "chapter",
+   "executionMethod": "unknown",
+   "analysis": {
+    "status": "executed",
+    "statusReasons": [
+     "currentBudgetYen>=100000000",
+     "budgetContinuationRate>=0.9",
+     "executionRate>=0.9"
+    ],
+    "selectionReason": "不用額 189.7 億円。執行方式は科目名から確定できず。",
+    "rates": {
+     "executionRate": 0.936259971775532,
+     "carryoverRate": 0,
+     "unusedRate": 0.06374002822446796,
+     "budgetContinuationRate": 1.1485546405758016
+    },
+    "amounts": {
+     "fy2024InitialBudgetYen": 298853000000,
+     "fy2024CurrentBudgetYen": 297687808000,
+     "fy2024SpentYen": 278713178716,
+     "fy2024CarryoverYen": 0,
+     "fy2024UnusedYen": 18974629284,
+     "fy2026InitialBudgetYen": 343249000000
+    }
+   },
+   "review": null,
+   "paymentEvidence": {
+    "transactionCount": 675,
+    "totalAmountYen": 278998116447,
+    "ordinaryAmountYen": 272535765493,
+    "closingAmountYen": 6462350954,
+    "topPaymentNames": [
+     {
+      "name": "令和6年度経常費補助金の支出(学校法人分)",
+      "count": 4,
+      "amountYen": 113385784300
+     },
+     {
+      "name": "令和６年度私立高等学校等特別奨学金の支出(２回目)",
+      "count": 1,
+      "amountYen": 33202589200
+     },
+     {
+      "name": "令和６年度私立高等学校等特別奨学金の支出（３回目)",
+      "count": 1,
+      "amountYen": 12859196049
+     },
+     {
+      "name": "東京都公立大学法人運営費支出（第１四半期）",
+      "count": 22,
+      "amountYen": 12741908000
+     },
+     {
+      "name": "令和６年度私立高等学校等就学支援金の支出（第２回）",
+      "count": 1,
+      "amountYen": 11239600100
+     },
+     {
+      "name": "令和6年度私立学校経常費補助金（一般補助）一部交付",
+      "count": 3,
+      "amountYen": 10342255000
+     },
+     {
+      "name": "令和６年度私立中学校等特別奨学金の支出（第２回）",
+      "count": 1,
+      "amountYen": 7077100000
+     },
+     {
+      "name": "東京都私学財団事業補助金の支出について（第３回）",
+      "count": 9,
+      "amountYen": 6694190050
+     },
+     {
+      "name": "令和6年度私立専修学校授業料等減免費用負担金支出(1)",
+      "count": 1,
+      "amountYen": 5326700300
+     },
+     {
+      "name": "令和６年度施設等利用費都費負担金第１回配分",
+      "count": 1,
+      "amountYen": 4868497761
+     }
+    ]
+   }
+  },
+  {
+   "reviewId": null,
+   "comparisonId": "cmp-0012",
+   "mappingId": "map-0012",
+   "policyTitle": "15:消防費",
+   "bureau": null,
+   "confidence": "A",
+   "granularity": "chapter",
+   "executionMethod": "unknown",
+   "analysis": {
+    "status": "executed",
+    "statusReasons": [
+     "currentBudgetYen>=100000000",
+     "budgetContinuationRate>=0.9",
+     "executionRate>=0.9"
+    ],
+    "selectionReason": "不用額 66.4 億円。執行方式は科目名から確定できず。",
+    "rates": {
+     "executionRate": 0.9645698518239728,
+     "carryoverRate": 0.01243108341790949,
+     "unusedRate": 0.0229990647581177,
+     "budgetContinuationRate": 1.1403015204879305
+    },
+    "amounts": {
+     "fy2024InitialBudgetYen": 279384000000,
+     "fy2024CurrentBudgetYen": 288683607000,
+     "fy2024SpentYen": 278455504028,
+     "fy2024CarryoverYen": 3588650000,
+     "fy2024UnusedYen": 6639452972,
+     "fy2026InitialBudgetYen": 318582000000
+    }
+   },
+   "review": null,
+   "paymentEvidence": {
+    "transactionCount": 53685,
+    "totalAmountYen": 64826819220,
+    "ordinaryAmountYen": 46550239993,
+    "closingAmountYen": 18276579227,
+    "topPaymentNames": [
+     {
+      "name": "指令装置製作委託",
+      "count": 1,
+      "amountYen": 4291159400
+     },
+     {
+      "name": "令和６年度下半期消火栓補償費の支出について",
+      "count": 1,
+      "amountYen": 1471662536
+     },
+     {
+      "name": "無線装置（基地用無線回線制御装置）外７点の買入れ",
+      "count": 1,
+      "amountYen": 1305425000
+     },
+     {
+      "name": "令和６年度民間借上住宅の建物賃借料の支出について",
+      "count": 2,
+      "amountYen": 1136688000
+     },
+     {
+      "name": "令和６年度上半期消火栓補償費の支出について",
+      "count": 1,
+      "amountYen": 1017477856
+     },
+     {
+      "name": "豊島署目白出張所（仮称）庁舎（６）改築工事その２",
+      "count": 1,
+      "amountYen": 638000000
+     },
+     {
+      "name": "無線機（移動用）（救急）外４点の買入れ（集合）",
+      "count": 4,
+      "amountYen": 531190000
+     },
+     {
+      "name": "クラウド基盤追加開発業務委託",
+      "count": 1,
+      "amountYen": 517636900
+     },
+     {
+      "name": "東京消防庁池袋都民防災教育ｾﾝﾀｰほか2か所業務委託",
+      "count": 4,
+      "amountYen": 472678800
+     },
+     {
+      "name": "特種用途自動車(はしご車(30ﾒｰﾄﾙ級))の買入れ(その2)",
+      "count": 2,
+      "amountYen": 466893160
+     }
+    ]
+   }
+  },
+  {
+   "reviewId": null,
+   "comparisonId": "cmp-0014",
+   "mappingId": "map-0014",
+   "policyTitle": "17:諸支出金",
+   "bureau": null,
+   "confidence": "A",
+   "granularity": "chapter",
+   "executionMethod": "unknown",
+   "analysis": {
+    "status": "executed",
+    "statusReasons": [
+     "currentBudgetYen>=100000000",
+     "budgetContinuationRate>=0.9",
+     "executionRate>=0.9"
+    ],
+    "selectionReason": "不用額 637.0 億円。執行方式は科目名から確定できず。",
+    "rates": {
+     "executionRate": 0.9732640989778444,
+     "carryoverRate": 0,
+     "unusedRate": 0.026735901022155655,
+     "budgetContinuationRate": 1.1892486529533706
+    },
+    "amounts": {
+     "fy2024InitialBudgetYen": 1973948000000,
+     "fy2024CurrentBudgetYen": 2382736314000,
+     "fy2024SpentYen": 2319031711747,
+     "fy2024CarryoverYen": 0,
+     "fy2024UnusedYen": 63704602253,
+     "fy2026InitialBudgetYen": 2347515000000
+    }
+   },
+   "review": null,
+   "paymentEvidence": {
+    "transactionCount": 1107,
+    "totalAmountYen": 1061471143342,
+    "ordinaryAmountYen": 839113512610,
+    "closingAmountYen": 222357630732,
+    "topPaymentNames": [
+     {
+      "name": "公営企業会計支出金の支出について",
+      "count": 37,
+      "amountYen": 152702340755
+     },
+     {
+      "name": "令和６年度地方消費税交付金（９月分）の交付",
+      "count": 1,
+      "amountYen": 118616556000
+     },
+     {
+      "name": "令和６年度地方消費税交付金（３月分）の交付",
+      "count": 1,
+      "amountYen": 110615753000
+     },
+     {
+      "name": "令和６年度地方消費税交付金（６月分）の交付",
+      "count": 1,
+      "amountYen": 95855149000
+     },
+     {
+      "name": "財政調整基金への支出について",
+      "count": 1,
+      "amountYen": 83337154000
+     },
+     {
+      "name": "東京強靱化推進基金への支出について",
+      "count": 1,
+      "amountYen": 81197049000
+     },
+     {
+      "name": "公営企業会計支出金について",
+      "count": 8,
+      "amountYen": 71534250000
+     },
+     {
+      "name": "令和６年度地方消費税交付金（12月分）の交付",
+      "count": 1,
+      "amountYen": 64804236000
+     },
+     {
+      "name": "令和６年度株式等譲渡所得割交付金の支出・交付",
+      "count": 1,
+      "amountYen": 62693334000
+     },
+     {
+      "name": "令和６年度配当割交付金（３月交付分）の交付・支出",
+      "count": 1,
+      "amountYen": 32530168000
+     }
+    ]
+   }
+  },
+  {
+   "reviewId": null,
+   "comparisonId": "cmp-0016",
+   "mappingId": "map-0016",
+   "policyTitle": "2:総務費 1:総務管理費",
+   "bureau": null,
+   "confidence": "A",
+   "granularity": "item",
+   "executionMethod": "unknown",
+   "analysis": {
+    "status": "executed",
+    "statusReasons": [
+     "currentBudgetYen>=100000000",
+     "budgetContinuationRate>=0.9",
+     "executionRate>=0.9"
+    ],
+    "selectionReason": "不用額 50.2 億円。執行方式は科目名から確定できず。",
+    "rates": {
+     "executionRate": 0.9179438948479469,
+     "carryoverRate": 0,
+     "unusedRate": 0.08205610515205304,
+     "budgetContinuationRate": 1.1086883920832875
+    },
+    "amounts": {
+     "fy2024InitialBudgetYen": 62437836000,
+     "fy2024CurrentBudgetYen": 61204397000,
+     "fy2024SpentYen": 56182202564,
+     "fy2024CarryoverYen": 0,
+     "fy2024UnusedYen": 5022194436,
+     "fy2026InitialBudgetYen": 69224104000
+    }
+   },
+   "review": null,
+   "paymentEvidence": {
+    "transactionCount": 6061,
+    "totalAmountYen": 13782595886,
+    "ordinaryAmountYen": 9783012925,
+    "closingAmountYen": 3999582961,
+    "topPaymentNames": [
+     {
+      "name": "知事部局等職員健康管理事業交付金の概算交付",
+      "count": 4,
+      "amountYen": 631681000
+     },
+     {
+      "name": "東京都予算計数情報システムアプリケーション構築委託",
+      "count": 1,
+      "amountYen": 430430000
+     },
+     {
+      "name": "R6東京都人材育成事業交付金の支出（第１四半期）",
+      "count": 1,
+      "amountYen": 423137000
+     },
+     {
+      "name": "令和６年度人事・給与等ｼｽﾃﾑ（給与）の変更業務委託",
+      "count": 3,
+      "amountYen": 397610400
+     },
+     {
+      "name": "令和６年度　東京都電子調達システムの運用委託",
+      "count": 4,
+      "amountYen": 281743000
+     },
+     {
+      "name": "東京都職員小平住宅(5)解体工事",
+      "count": 1,
+      "amountYen": 257321000
+     },
+     {
+      "name": "令和6年度e庶務事務ｼｽﾃﾑ運用支援委託",
+      "count": 1,
+      "amountYen": 231377520
+     },
+     {
+      "name": "人事業務ｼｽﾃﾑの再構築に係る要件定義支援委託(その２)",
+      "count": 1,
+      "amountYen": 204363995
+     },
+     {
+      "name": "R６年度ｅ庶務事務ｼｽﾃﾑ開発等委託（旅費申請）",
+      "count": 1,
+      "amountYen": 193762800
+     },
+     {
+      "name": "R6年人事・給与等ｼｽﾃﾑ(給与)の変更業務委託(その3)",
+      "count": 2,
+      "amountYen": 184032200
+     }
+    ]
+   }
+  },
+  {
+   "reviewId": null,
+   "comparisonId": "cmp-0019",
+   "mappingId": "map-0019",
+   "policyTitle": "2:総務費 5:デジタルサービス費",
+   "bureau": null,
+   "confidence": "A",
+   "granularity": "item",
+   "executionMethod": "unknown",
+   "analysis": {
+    "status": "executed",
+    "statusReasons": [
+     "currentBudgetYen>=100000000",
+     "budgetContinuationRate>=0.9",
+     "executionRate>=0.9"
+    ],
+    "selectionReason": "不用額 89.4 億円。執行方式は科目名から確定できず。",
+    "rates": {
+     "executionRate": 0.9301293051241262,
+     "carryoverRate": 0.006646257847144724,
+     "unusedRate": 0.06322443702872906,
+     "budgetContinuationRate": 1.0884208186289492
+    },
+    "amounts": {
+     "fy2024InitialBudgetYen": 71974000000,
+     "fy2024CurrentBudgetYen": 141432972000,
+     "fy2024SpentYen": 131550951968,
+     "fy2024CarryoverYen": 940000000,
+     "fy2024UnusedYen": 8942020032,
+     "fy2026InitialBudgetYen": 78338000000
+    }
+   },
+   "review": null,
+   "paymentEvidence": {
+    "transactionCount": 2393,
+    "totalAmountYen": 130127886083,
+    "ordinaryAmountYen": 105927882775,
+    "closingAmountYen": 24200003308,
+    "topPaymentNames": [
+     {
+      "name": "東京都公式アプリに係る出えん契約にかかる費用の支出",
+      "count": 1,
+      "amountYen": 79000000000
+     },
+     {
+      "name": "負担金（第１四半期分）の支出について",
+      "count": 8,
+      "amountYen": 6392878000
+     },
+     {
+      "name": "TAIMSｸﾗｳﾄﾞ利用拡大に係る構築等委託(STEP3)",
+      "count": 4,
+      "amountYen": 4189713000
+     },
+     {
+      "name": "TAIMS共通基盤用ｻｰﾊﾞ機器等(令和6年度更新分)の借入れ",
+      "count": 9,
+      "amountYen": 4126413699
+     },
+     {
+      "name": "R5御蔵島情報通信基盤改修工事の支払い（R6分）",
+      "count": 1,
+      "amountYen": 2298054000
+     },
+     {
+      "name": "契約請求システム設計・開発等委託（令和６年度）",
+      "count": 1,
+      "amountYen": 2280960000
+     },
+     {
+      "name": "TAIMSライセンス(令和6年度分)の買入れ",
+      "count": 1,
+      "amountYen": 1947165393
+     },
+     {
+      "name": "令和5年度利島情報通信基盤改修工事の支払(令和6年度)",
+      "count": 1,
+      "amountYen": 1894563000
+     },
+     {
+      "name": "貸付金の支出について",
+      "count": 1,
+      "amountYen": 1000000000
+     },
+     {
+      "name": "補助金（第２・３四半期）の支出について",
+      "count": 1,
+      "amountYen": 578351000
+     }
+    ]
+   }
+  },
+  {
+   "reviewId": null,
+   "comparisonId": "cmp-0021",
+   "mappingId": "map-0021",
+   "policyTitle": "2:総務費 7:選挙費",
+   "bureau": null,
+   "confidence": "A",
+   "granularity": "item",
+   "executionMethod": "unknown",
+   "analysis": {
+    "status": "executed",
+    "statusReasons": [
+     "currentBudgetYen>=100000000",
+     "executionRate>=0.9"
+    ],
+    "selectionReason": "不用額 1.3 億円。執行方式は科目名から確定できず。",
+    "rates": {
+     "executionRate": 0.9922640723134465,
+     "carryoverRate": 0,
+     "unusedRate": 0.007735927686553507,
+     "budgetContinuationRate": 0.06261971415942243
+    },
+    "amounts": {
+     "fy2024InitialBudgetYen": 6787000000,
+     "fy2024CurrentBudgetYen": 16714789000,
+     "fy2024SpentYen": 16585484601,
+     "fy2024CarryoverYen": 0,
+     "fy2024UnusedYen": 129304399,
+     "fy2026InitialBudgetYen": 425000000
+    }
+   },
+   "review": null,
+   "paymentEvidence": {
+    "transactionCount": 900,
+    "totalAmountYen": 16279755850,
+    "ordinaryAmountYen": 10592662727,
+    "closingAmountYen": 5687093123,
+    "topPaymentNames": [
+     {
+      "name": "令和6年執行東京都知事選挙に要する経費の支出",
+      "count": 2,
+      "amountYen": 5974614907
+     },
+     {
+      "name": "令和６年執行衆院選及び国民審査に要する経費の支出",
+      "count": 1,
+      "amountYen": 3186945046
+     },
+     {
+      "name": "令和6年執行衆院選及び国民審査に要する経費の支出",
+      "count": 1,
+      "amountYen": 2729722605
+     },
+     {
+      "name": "令和６年執行衆院選の公営新聞広告料の支払　その６",
+      "count": 1,
+      "amountYen": 741440799
+     },
+     {
+      "name": "令和６年執行衆院選の公営新聞広告料の支払　その５",
+      "count": 1,
+      "amountYen": 345667520
+     },
+     {
+      "name": "令和6年執行都議会議員補欠選挙に要した経費の交付",
+      "count": 1,
+      "amountYen": 292101907
+     },
+     {
+      "name": "令和６年執行衆院選の公営新聞広告料の支払　その７",
+      "count": 1,
+      "amountYen": 264644061
+     },
+     {
+      "name": "令和６年執行都知事選の公営新聞広告料の支払その６",
+      "count": 1,
+      "amountYen": 196842690
+     },
+     {
+      "name": "令和６年執行衆院選の公営新聞広告料の支払　その４",
+      "count": 1,
+      "amountYen": 175098880
+     },
+     {
+      "name": "衆議院(小選挙区選出)議員選挙投票用紙外5点の印刷",
+      "count": 2,
+      "amountYen": 149681136
+     }
+    ]
+   }
+  },
+  {
+   "reviewId": null,
+   "comparisonId": "cmp-0025",
+   "mappingId": "map-0025",
+   "policyTitle": "5:都市整備費 1:都市整備管理費",
+   "bureau": null,
+   "confidence": "A",
+   "granularity": "item",
+   "executionMethod": "unknown",
+   "analysis": {
+    "status": "executed",
+    "statusReasons": [
+     "currentBudgetYen>=100000000",
+     "budgetContinuationRate>=0.9",
+     "executionRate>=0.9"
+    ],
+    "selectionReason": "不用額 9.5 億円。執行方式は科目名から確定できず。",
+    "rates": {
+     "executionRate": 0.9051185832990984,
+     "carryoverRate": 0,
+     "unusedRate": 0.09488141670090156,
+     "budgetContinuationRate": 4.701333071946677
+    },
+    "amounts": {
+     "fy2024InitialBudgetYen": 10202000000,
+     "fy2024CurrentBudgetYen": 10043362000,
+     "fy2024SpentYen": 9090433585,
+     "fy2024CarryoverYen": 0,
+     "fy2024UnusedYen": 952928415,
+     "fy2026InitialBudgetYen": 47963000000
+    }
+   },
+   "review": null,
+   "paymentEvidence": {
+    "transactionCount": 1130,
+    "totalAmountYen": 6871488739,
+    "ordinaryAmountYen": 3728764574,
+    "closingAmountYen": 3142724165,
+    "topPaymentNames": [
+     {
+      "name": "特別緑地保全地区買取等補助事業出えん金の支出",
+      "count": 1,
+      "amountYen": 1989704000
+     },
+     {
+      "name": "令和６年度練馬区生産緑地の買取等事業補助金(西大泉)",
+      "count": 1,
+      "amountYen": 776952000
+     },
+     {
+      "name": "令和６年度世田谷区生産緑地買取り等補助金支出",
+      "count": 1,
+      "amountYen": 602739000
+     },
+     {
+      "name": "令和６年度練馬区生産緑地の買取等事業補助金（田柄）",
+      "count": 1,
+      "amountYen": 397109000
+     },
+     {
+      "name": "令和６年度国土調査事業費補助金の支出について",
+      "count": 1,
+      "amountYen": 388795500
+     },
+     {
+      "name": "築地市場跡地に係る埋蔵文化財試掘調査委託(6築-2)",
+      "count": 1,
+      "amountYen": 192885000
+     },
+     {
+      "name": "築地市場跡地に係る埋蔵文化財試掘調査委託(6築-1)",
+      "count": 1,
+      "amountYen": 181127100
+     },
+     {
+      "name": "令和６年度狛江市生産緑地買取り等補助事業について",
+      "count": 1,
+      "amountYen": 169111000
+     },
+     {
+      "name": "令和６年度杉並区生産緑地買取等補助金支出",
+      "count": 1,
+      "amountYen": 168840000
+     },
+     {
+      "name": "令和６年度建設発生土再利用センター大規模補修の支出",
+      "count": 1,
+      "amountYen": 162481000
+     }
+    ]
+   }
+  },
+  {
+   "reviewId": null,
+   "comparisonId": "cmp-0026",
+   "mappingId": "map-0026",
+   "policyTitle": "5:都市整備費 2:都市基盤整備費",
+   "bureau": null,
+   "confidence": "A",
+   "granularity": "item",
+   "executionMethod": "unknown",
+   "analysis": {
+    "status": "executed",
+    "statusReasons": [
+     "currentBudgetYen>=100000000",
+     "budgetContinuationRate>=0.9",
+     "executionRate>=0.9"
+    ],
+    "selectionReason": "不用額 24.8 億円。執行方式は科目名から確定できず。",
+    "rates": {
+     "executionRate": 0.9568047293671944,
+     "carryoverRate": 0.020275567538641643,
+     "unusedRate": 0.022919703094163982,
+     "budgetContinuationRate": 1.5596366336201248
+    },
+    "amounts": {
+     "fy2024InitialBudgetYen": 22897000000,
+     "fy2024CurrentBudgetYen": 108242938000,
+     "fy2024SpentYen": 103567354999,
+     "fy2024CarryoverYen": 2194687000,
+     "fy2024UnusedYen": 2480896001,
+     "fy2026InitialBudgetYen": 35711000000
+    }
+   },
+   "review": null,
+   "paymentEvidence": {
+    "transactionCount": 665,
+    "totalAmountYen": 102726910273,
+    "ordinaryAmountYen": 95894638720,
+    "closingAmountYen": 6832271553,
+    "topPaymentNames": [
+     {
+      "name": "鉄道新線建設等準備基金への支出について",
+      "count": 1,
+      "amountYen": 89858067080
+     },
+     {
+      "name": "株式の売出しにかかる引受手数料の支出について",
+      "count": 2,
+      "amountYen": 2876161745
+     },
+     {
+      "name": "令和６年度東京都運輸事業振興助成交付金の支出",
+      "count": 6,
+      "amountYen": 959390000
+     },
+     {
+      "name": "東京都都市再生交通拠点整備事業費補助金に係る支出",
+      "count": 1,
+      "amountYen": 947346000
+     },
+     {
+      "name": "令和６年度東京都鉄道駅総合バリアフリー推進事業",
+      "count": 23,
+      "amountYen": 766508000
+     },
+     {
+      "name": "東京都交通局に対する地下高速鉄道整備事業費補助",
+      "count": 1,
+      "amountYen": 647511463
+     },
+     {
+      "name": "令和６年度墨田区施行補助金の支出",
+      "count": 1,
+      "amountYen": 626400000
+     },
+     {
+      "name": "地下高速鉄道整備事業費の概算払（メトロ・第１回）",
+      "count": 1,
+      "amountYen": 616134813
+     },
+     {
+      "name": "東京地下鉄（株）に対する地下高速鉄道整備事業費補助",
+      "count": 1,
+      "amountYen": 332714239
+     },
+     {
+      "name": "都心部・臨海地域地下鉄の検討に係る調査に関する協定",
+      "count": 1,
+      "amountYen": 205000000
+     }
+    ]
+   }
+  },
+  {
+   "reviewId": null,
+   "comparisonId": "cmp-0029",
+   "mappingId": "map-0029",
+   "policyTitle": "6:環境費 1:環境管理費",
+   "bureau": null,
+   "confidence": "A",
+   "granularity": "item",
+   "executionMethod": "unknown",
+   "analysis": {
+    "status": "executed",
+    "statusReasons": [
+     "currentBudgetYen>=100000000",
+     "budgetContinuationRate>=0.9",
+     "executionRate>=0.9"
+    ],
+    "selectionReason": "不用額 3.4 億円。執行方式は科目名から確定できず。",
+    "rates": {
+     "executionRate": 0.9463281219078087,
+     "carryoverRate": 0,
+     "unusedRate": 0.05367187809219131,
+     "budgetContinuationRate": 0.9886115444617785
+    },
+    "amounts": {
+     "fy2024InitialBudgetYen": 6410000000,
+     "fy2024CurrentBudgetYen": 6356738000,
+     "fy2024SpentYen": 6015559933,
+     "fy2024CarryoverYen": 0,
+     "fy2024UnusedYen": 341178067,
+     "fy2026InitialBudgetYen": 6337000000
+    }
+   },
+   "review": null,
+   "paymentEvidence": {
+    "transactionCount": 944,
+    "totalAmountYen": 4424083434,
+    "ordinaryAmountYen": 4103780655,
+    "closingAmountYen": 320302779,
+    "topPaymentNames": [
+     {
+      "name": "環境政策加速化事業に係る出えん金の支出について",
+      "count": 1,
+      "amountYen": 2400000000
+     },
+     {
+      "name": "環境確保条例にかかる令和６年度市交付金（第１回）",
+      "count": 1,
+      "amountYen": 635709000
+     },
+     {
+      "name": "R6年度環科研業務委託における委託料支出(第4四半期)",
+      "count": 1,
+      "amountYen": 352640650
+     },
+     {
+      "name": "R6年度環科研業務委託における委託料支出(第1四半期)",
+      "count": 1,
+      "amountYen": 272742000
+     },
+     {
+      "name": "R6年度環科研業務委託における委託料支出(第3四半期)",
+      "count": 1,
+      "amountYen": 168835000
+     },
+     {
+      "name": "環境確保条例にかかる令和６年度市交付金（第２回）",
+      "count": 1,
+      "amountYen": 153529000
+     },
+     {
+      "name": "R6年度環科研業務委託における委託料支出(第2四半期)",
+      "count": 1,
+      "amountYen": 108713000
+     },
+     {
+      "name": "令和６年度気候変動適応センターの業務に係る経費",
+      "count": 1,
+      "amountYen": 42874494
+     },
+     {
+      "name": "令和６年度環境政策加速化事業事務費補助金について",
+      "count": 1,
+      "amountYen": 32743000
+     },
+     {
+      "name": "令和６年度資源循環等に係る技術支援等委託の支出",
+      "count": 1,
+      "amountYen": 26209700
+     }
+    ]
+   }
+  },
+  {
+   "reviewId": null,
+   "comparisonId": "cmp-0032",
+   "mappingId": "map-0032",
+   "policyTitle": "7:福祉費 1:福祉管理費",
+   "bureau": null,
+   "confidence": "A",
+   "granularity": "item",
+   "executionMethod": "unknown",
+   "analysis": {
+    "status": "executed",
+    "statusReasons": [
+     "currentBudgetYen>=100000000",
+     "budgetContinuationRate>=0.9",
+     "executionRate>=0.9"
+    ],
+    "selectionReason": "不用額 5.0 億円。執行方式は科目名から確定できず。",
+    "rates": {
+     "executionRate": 0.9317907744429661,
+     "carryoverRate": 0,
+     "unusedRate": 0.06820922555703393,
+     "budgetContinuationRate": 1.2434651703845627
+    },
+    "amounts": {
+     "fy2024InitialBudgetYen": 7307000000,
+     "fy2024CurrentBudgetYen": 7354938000,
+     "fy2024SpentYen": 6853263375,
+     "fy2024CarryoverYen": 0,
+     "fy2024UnusedYen": 501674625,
+     "fy2026InitialBudgetYen": 9086000000
+    }
+   },
+   "review": null,
+   "paymentEvidence": {
+    "transactionCount": 2006,
+    "totalAmountYen": 4349282479,
+    "ordinaryAmountYen": 3849926653,
+    "closingAmountYen": 499355826,
+    "topPaymentNames": [
+     {
+      "name": "６年度東京都福祉保健財団運営費補助金（第１四半期）",
+      "count": 3,
+      "amountYen": 568113000
+     },
+     {
+      "name": "６年度東京都福祉保健財団運営費補助金（第３四半期）",
+      "count": 3,
+      "amountYen": 421695000
+     },
+     {
+      "name": "６年度東京都福祉保健財団運営費補助金（第２四半期）",
+      "count": 3,
+      "amountYen": 381161000
+     },
+     {
+      "name": "６年度東京都福祉保健財団運営費補助金（第４四半期）",
+      "count": 3,
+      "amountYen": 311246000
+     },
+     {
+      "name": "令和6年度社会福祉事業団運営費補助金（第一四半期）",
+      "count": 1,
+      "amountYen": 252102000
+     },
+     {
+      "name": "指導検査業務システム改修業務委託",
+      "count": 1,
+      "amountYen": 191034800
+     },
+     {
+      "name": "R6年度福祉医療機構借入金利子補給費補助金第4四半期",
+      "count": 1,
+      "amountYen": 176648443
+     },
+     {
+      "name": "R6年度福祉医療機構借入金利子補給費補助金第3四半期",
+      "count": 1,
+      "amountYen": 175371516
+     },
+     {
+      "name": "R6年度福祉医療機構借入金利子補給費補助金第１四半期",
+      "count": 1,
+      "amountYen": 174694674
+     },
+     {
+      "name": "R6年度福祉医療機構借入金利子補給費補助金第2四半期",
+      "count": 1,
+      "amountYen": 160719998
+     }
+    ]
+   }
+  },
+  {
+   "reviewId": null,
+   "comparisonId": "cmp-0034",
+   "mappingId": "map-0034",
+   "policyTitle": "7:福祉費 3:子供・子育て支援費",
+   "bureau": null,
+   "confidence": "A",
+   "granularity": "item",
+   "executionMethod": "unknown",
+   "analysis": {
+    "status": "executed",
+    "statusReasons": [
+     "currentBudgetYen>=100000000",
+     "budgetContinuationRate>=0.9",
+     "executionRate>=0.9"
+    ],
+    "selectionReason": "不用額 222.5 億円。執行方式は科目名から確定できず。",
+    "rates": {
+     "executionRate": 0.9521215290777115,
+     "carryoverRate": 0.0030227029972369657,
+     "unusedRate": 0.044855767925051554,
+     "budgetContinuationRate": 1.2621489816348144
+    },
+    "amounts": {
+     "fy2024InitialBudgetYen": 482489000000,
+     "fy2024CurrentBudgetYen": 495954780000,
+     "fy2024SpentYen": 472209223487,
+     "fy2024CarryoverYen": 1499124000,
+     "fy2024UnusedYen": 22246432513,
+     "fy2026InitialBudgetYen": 608973000000
+    }
+   },
+   "review": null,
+   "paymentEvidence": {
+    "transactionCount": 15440,
+    "totalAmountYen": 460602922602,
+    "ordinaryAmountYen": 412751302572,
+    "closingAmountYen": 47851620030,
+    "topPaymentNames": [
+     {
+      "name": "令和６年度教育・保育給付都費分第二回支出",
+      "count": 7,
+      "amountYen": 39818307702
+     },
+     {
+      "name": "令和６年度子どものための教育・保育給付都費負担額",
+      "count": 7,
+      "amountYen": 32487184000
+     },
+     {
+      "name": "令和６年度多子世帯負担軽減事業支出（福祉分）",
+      "count": 1,
+      "amountYen": 28841975030
+     },
+     {
+      "name": "令和６年度東京都子育て推進交付金　第二回支出",
+      "count": 1,
+      "amountYen": 17823608000
+     },
+     {
+      "name": "令和6年度保育士等キャリアアップ補助金の支出(当初)",
+      "count": 1,
+      "amountYen": 16978995000
+     },
+     {
+      "name": "令和６年度東京都子供子育て交付金の交付決定及び支出",
+      "count": 16,
+      "amountYen": 14946221000
+     },
+     {
+      "name": "児童養護施設に対する措置費継続支払",
+      "count": 676,
+      "amountYen": 13636584131
+     },
+     {
+      "name": "R6保育従事職員宿舎借り上げ支援事業補助金の支出",
+      "count": 2,
+      "amountYen": 12022233000
+     },
+     {
+      "name": "令和６年度保育所等賃借料補助金の支出について",
+      "count": 1,
+      "amountYen": 11459387000
+     },
+     {
+      "name": "令和6年度児童手当等都負担金の支出(12月期、2月期分)",
+      "count": 1,
+      "amountYen": 11192654482
+     }
+    ]
+   }
+  },
+  {
+   "reviewId": null,
+   "comparisonId": "cmp-0035",
+   "mappingId": "map-0035",
+   "policyTitle": "7:福祉費 4:高齢者施策推進費",
+   "bureau": null,
+   "confidence": "A",
+   "granularity": "item",
+   "executionMethod": "unknown",
+   "analysis": {
+    "status": "executed",
+    "statusReasons": [
+     "currentBudgetYen>=100000000",
+     "budgetContinuationRate>=0.9",
+     "executionRate>=0.9"
+    ],
+    "selectionReason": "不用額 140.6 億円。執行方式は科目名から確定できず。",
+    "rates": {
+     "executionRate": 0.9125092096521948,
+     "carryoverRate": 0.03524095570264545,
+     "unusedRate": 0.05224983464515967,
+     "budgetContinuationRate": 1.081739753926422
+    },
+    "amounts": {
+     "fy2024InitialBudgetYen": 262198000000,
+     "fy2024CurrentBudgetYen": 269181718000,
+     "fy2024SpentYen": 245630796745,
+     "fy2024CarryoverYen": 9486221000,
+     "fy2024UnusedYen": 14064700255,
+     "fy2026InitialBudgetYen": 283630000000
+    }
+   },
+   "review": null,
+   "paymentEvidence": {
+    "transactionCount": 1361,
+    "totalAmountYen": 247228214326,
+    "ordinaryAmountYen": 236817967655,
+    "closingAmountYen": 10410246671,
+    "topPaymentNames": [
+     {
+      "name": "令和6年度シルバーパス補助金の支出（第1・四半期）",
+      "count": 2,
+      "amountYen": 13178556000
+     },
+     {
+      "name": "令和6年度介護給付費都負担金の支出について(第9回)",
+      "count": 1,
+      "amountYen": 12800985000
+     },
+     {
+      "name": "令和6年度介護給付費都負担金の支出について(第1回)",
+      "count": 1,
+      "amountYen": 12798714000
+     },
+     {
+      "name": "令和6年度介護給付費都負担金の支出について(第2回)",
+      "count": 1,
+      "amountYen": 12798714000
+     },
+     {
+      "name": "令和6年度介護給付費都負担金の支出について(第3回)",
+      "count": 1,
+      "amountYen": 12798714000
+     },
+     {
+      "name": "令和6年度介護給付費都負担金の支出について(第4回)",
+      "count": 1,
+      "amountYen": 12798714000
+     },
+     {
+      "name": "令和6年度介護給付費都負担金の支出について(第5回)",
+      "count": 1,
+      "amountYen": 12798714000
+     },
+     {
+      "name": "令和6年度介護給付費都負担金の支出について(第6回)",
+      "count": 1,
+      "amountYen": 12798524000
+     },
+     {
+      "name": "令和6年度介護給付費都負担金の支出について(第7回)",
+      "count": 1,
+      "amountYen": 12798524000
+     },
+     {
+      "name": "令和6年度介護給付費都負担金の支出について(第8回)",
+      "count": 1,
+      "amountYen": 12798524000
+     }
+    ]
+   }
+  }
+ ],
+ "summary": {
+  "detailCount": 20,
+  "reviewedCount": 2,
+  "unreviewedCount": 18,
+  "withPaymentEvidenceCount": 20,
+  "byExecutionMethod": {
+   "unknown": 18,
+   "direct": 1,
+   "construction": 1
+  }
+ }
+}

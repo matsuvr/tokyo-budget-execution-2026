@@ -40,7 +40,8 @@
     "build:review-candidates": "node --experimental-strip-types scripts/execution-review/build-review-candidates.ts",
     "build:bureau-summary": "node --experimental-strip-types scripts/execution-review/build-bureau-summary.ts",
     "build:payment-evidence": "node --experimental-strip-types scripts/execution-review/build-payment-evidence.ts",
-    "select:policy-reviews": "node --experimental-strip-types scripts/execution-review/build-policy-review-selections.ts"
+    "select:policy-reviews": "node --experimental-strip-types scripts/execution-review/build-policy-review-selections.ts",
+    "build:policy-details": "node --experimental-strip-types scripts/execution-review/build-policy-review-details.ts"
   },
   "devDependencies": {
     "@types/node": "latest",
