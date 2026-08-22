@@ -28,7 +28,6 @@ export interface BudgetAmountBand {
   currentYearToken: string;
 }
 
-const NUMERIC_TOKEN = /^△?[0-9]{1,3}(?:,[0-9]{3})+$/u;
 
 function toHalfWidthDigits(text: string): string {
   return text.replace(/[０-９]/g, (ch) => String.fromCharCode(ch.charCodeAt(0) - 0xfee0));
