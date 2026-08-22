@@ -1,5 +1,6 @@
 import { ApiError, fetchExecutionReviewIndex, fetchReviewCandidates } from "./api.js";
 import { el } from "./dom.js";
+import { renderCandidateList } from "./candidates.js";
 import { renderOverviewCard } from "./overview.js";
 
 /**
@@ -46,8 +47,13 @@ async function main(): Promise<void> {
       return;
     }
     const overview = renderOverviewCard(index, candidates);
-    // 後続Issue（#49以降）がこの領域に追加される
-    const sections = el("div", { class: "sections" }, overview);
+    // 初期表示はneeds-explanationのみ。順序は生成JSONの順序を保つ（#49）。
+    const needsExplanation = candidates.records.filter(
+      (record) => record.status === "needs-explanation",
+    );
+    const candidateList = renderCandidateList(needsExplanation);
+    // 後続Issue（#50以降）がこの領域に追加される
+    const sections = el("div", { class: "sections" }, overview, candidateList);
     content.replaceChildren(sections);
   } catch (error) {
     hideMessages();

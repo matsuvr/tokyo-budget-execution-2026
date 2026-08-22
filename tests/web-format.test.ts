@@ -6,7 +6,8 @@ describe("formatYen", () => {
   it("円データを兆円・億円・万円・円へ整形する", () => {
     assert.equal(formatYen(1_649_397_626_800), "1.65兆円");
     assert.equal(formatYen(5_766_700_000), "57.7億円");
-    assert.equal(formatYen(129_304_399), "12,930万円");
+    assert.equal(formatYen(129_304_399), "1.3億円");
+    assert.equal(formatYen(1_293_043), "129万円");
     assert.equal(formatYen(999), "999円");
     assert.equal(formatYen(-20_000_000), "△2,000万円");
   });

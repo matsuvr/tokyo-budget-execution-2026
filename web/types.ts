@@ -51,11 +51,21 @@ export interface ReviewCandidatesView {
   records: ReviewCandidateView[];
 }
 
+export interface AccountKeyView {
+  account: string;
+  chapter: string;
+  section?: string | null;
+  item?: string | null;
+}
+
 export interface ReviewCandidateView {
   comparisonId: string | null;
   mappingId: string;
   confidence: string;
+  relationType: string;
   granularity: string;
+  fy2024Keys: AccountKeyView[];
+  fy2026Keys: AccountKeyView[];
   status: string;
   statusReasons: string[];
   amounts: {
