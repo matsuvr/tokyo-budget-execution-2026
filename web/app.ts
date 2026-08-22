@@ -1,26 +1,63 @@
+import { ApiError, fetchExecutionReviewIndex, fetchReviewCandidates } from "./api.js";
+import { el } from "./dom.js";
+import { renderOverviewCard } from "./overview.js";
+
 /**
- * ブラウザ用エントリポイント（Issue #46）。
- * フレームワークを使わず、最小限のDOM操作だけを行う。
+ * 画面の起動と状態管理（Issue #48）。
+ * 取得中・取得失敗・データなしを別表示にする。
  */
 
+const content = document.querySelector<HTMLElement>("#content");
+const errorBox = document.querySelector<HTMLElement>("#error");
+const loading = document.querySelector<HTMLElement>("#loading");
+
 function showError(message: string): void {
-  const error = document.querySelector<HTMLElement>("#error");
-  const loading = document.querySelector<HTMLElement>("#loading");
-  if (error == null) return;
-  error.textContent = message;
-  error.hidden = false;
+  if (errorBox == null) return;
+  errorBox.textContent = message;
+  errorBox.hidden = false;
+}
+
+function hideMessages(): void {
+  if (errorBox != null) {
+    errorBox.textContent = "";
+    errorBox.hidden = true;
+  }
   if (loading != null) loading.hidden = true;
 }
 
-function main(): void {
-  const content = document.querySelector<HTMLElement>("#content");
-  const loading = document.querySelector<HTMLElement>("#loading");
-  if (content == null || loading == null) {
+function showEmpty(message: string): void {
+  if (content == null) return;
+  content.replaceChildren(el("p", { class: "empty-note" }, message));
+}
+
+async function main(): Promise<void> {
+  if (content == null) {
     showError("画面の初期化に失敗しました");
     return;
   }
-  // 後続Issue（#47以降）で執行レビューAPIからデータを取得して描画する。
-  loading.hidden = true;
+  try {
+    const [index, candidates] = await Promise.all([
+      fetchExecutionReviewIndex(),
+      fetchReviewCandidates(),
+    ]);
+    hideMessages();
+    if (index.comparisons.comparableCount === 0 || candidates.records.length === 0) {
+      showEmpty("表示できる比較データがまだありません。データ生成後に再度アクセスしてください。");
+      return;
+    }
+    const overview = renderOverviewCard(index, candidates);
+    // 後続Issue（#49以降）がこの領域に追加される
+    const sections = el("div", { class: "sections" }, overview);
+    content.replaceChildren(sections);
+  } catch (error) {
+    hideMessages();
+    if (error instanceof ApiError) {
+      showError(error.message);
+    } else {
+      showError("予期しないエラーで画面を表示できませんでした");
+    }
+    console.error(error);
+  }
 }
 
-main();
+void main();

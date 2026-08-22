@@ -36,3 +36,60 @@ header h1 {
 [hidden] {
   display: none !important;
 }
+
+.card {
+  border: 1px solid #d0d0d0;
+  border-radius: 6px;
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+.overview-grid {
+  display: grid;
+  gap: 0.25rem 1rem;
+  grid-template-columns: minmax(10em, max-content) 1fr;
+  margin: 0.5rem 0;
+}
+
+.overview-grid dt {
+  color: gray;
+  font-weight: 600;
+}
+
+.overview-grid dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.sub {
+  color: gray;
+  font-size: 0.85rem;
+  margin-left: 0.25rem;
+}
+
+.scope-note,
+.threshold-note,
+.caution-note {
+  font-size: 0.85rem;
+  margin: 0.25rem 0;
+}
+
+.threshold-note,
+.caution-note {
+  color: dimgray;
+}
+
+.empty-note {
+  color: gray;
+  margin-top: 1rem;
+}
+
+@media (max-width: 480px) {
+  .overview-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .overview-grid dt {
+    margin-top: 0.5rem;
+  }
+}
