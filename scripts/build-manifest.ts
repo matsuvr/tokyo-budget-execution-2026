@@ -384,6 +384,52 @@ const definitions: SourceDefinition[] = [
     notes:
       "政策・事業別の成果と予算現額・決算額を確認できる原本。分割版・別索引は公開されていない。",
   },
+  ...[
+    { month: "2024-04", remoteName: "0604koukinsisyutsu_1", closing: false },
+    { month: "2024-05", remoteName: "0605koukinsisyutsu_1", closing: false },
+    { month: "2024-06", remoteName: "0606koukinsisyutsu_1", closing: false },
+    { month: "2024-07", remoteName: "0607koukinsisyutsu_1", closing: false },
+    { month: "2024-08", remoteName: "0608koukinsisyutsu_1", closing: false },
+    { month: "2024-09", remoteName: "0609koukinsisyutsu_1", closing: false },
+    { month: "2024-10", remoteName: "0610koukinsisyutsu_1", closing: false },
+    { month: "2024-11", remoteName: "0611koukinsisyutsu_1-1", closing: false },
+    { month: "2024-12", remoteName: "0612koukinsisyutsu_1", closing: false },
+    { month: "2025-01", remoteName: "0701koukinsisyutsu_1", closing: false },
+    { month: "2025-02", remoteName: "0702koukinsisyutsu_1", closing: false },
+    { month: "2025-03", remoteName: "0703koukinsisyutsu-1-", closing: false },
+    { month: "2025-04", remoteName: "0704_suit_koukinsisyutsu-1-", closing: true },
+    { month: "2025-05", remoteName: "0705_suit_koukinsisyutsu-1-1", closing: true },
+  ].map(({ month, remoteName, closing }) => ({
+    id: `er-fy2024-expenditure-${closing ? "closing-" : ""}${month}`,
+    title: `公金支出情報 令和6年度 ${month}${closing ? " 出納整理期間" : ""}`,
+    category: "public-expenditure" as const,
+    fiscalYears: [2024] as number[],
+    sourceUrl: `https://www.kaikeikanri.metro.tokyo.lg.jp/documents/d/kaikeikanri/${remoteName}`,
+    localPath: `data/raw/public-expenditure/fy2024/${month}${closing ? "-closing" : ""}.xlsx`,
+    expectedStatus: "downloaded" as const,
+    notes: closing
+      ? "出納整理期間分。通常月と区別したうえで補助証拠集計に含めるかを検討する。"
+      : undefined,
+  })),
+  {
+    id: "er-fy2024-expenditure-payroll",
+    title: "公金支出情報 令和6年度 給与関係費等",
+    category: "public-expenditure",
+    fiscalYears: [2024],
+    sourceUrl:
+      "https://www.kaikeikanri.metro.tokyo.lg.jp/documents/d/kaikeikanri/06koukinsisyutsukyuuyo-3-",
+    localPath: "data/raw/public-expenditure/fy2024/payroll.xlsx",
+    expectedStatus: "downloaded",
+  },
+  {
+    id: "reference-expenditure-fy2024-page",
+    title: "東京都会計管理局: 公金支出情報（令和6年度）",
+    category: "reference",
+    fiscalYears: [2024],
+    sourceUrl:
+      "https://www.kaikeikanri.metro.tokyo.lg.jp/about/jyouhoukoukai/koukinsisyutsu/06koukaidata",
+    expectedStatus: "reference-only",
+  },
   {
     id: "reference-budget-dataset",
     title: "東京都オープンデータカタログ: TOKYO予算見える化ボード",

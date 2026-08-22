@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-22T04:40:46.175Z",
+  "generatedAt": "2026-08-22T04:42:27.648Z",
   "packageName": "tokyo-budget-execution-2026",
   "packageVersion": "2026.08.21",
   "timezone": "Asia/Tokyo",
@@ -23,7 +23,7 @@
       "status": "downloaded",
       "bytes": 3063,
       "sha256": "fbac177be5ab7da260343bd9ccffb88686aa2ee27b570f54bc572257c44d8dca",
-      "retrievedAt": "2026-08-22T04:40:46.175Z"
+      "retrievedAt": "2026-08-22T04:42:27.648Z"
     },
     {
       "id": "budget-02_zaiseikibo_ippansaishutsu_suii",
@@ -39,7 +39,7 @@
       "status": "downloaded",
       "bytes": 880,
       "sha256": "77bc03520a2f99967a33d0768a7e68887de879cb58167143b14c1c5fe207f86b",
-      "retrievedAt": "2026-08-22T04:40:46.175Z"
+      "retrievedAt": "2026-08-22T04:42:27.648Z"
     },
     {
       "id": "budget-03_hitoriatari_yosan",
@@ -55,7 +55,7 @@
       "status": "downloaded",
       "bytes": 1336,
       "sha256": "be069e4b5283d2c837060b1ba7a4dfbc04a9f4a2d75b4f475c4027cd4366d2c7",
-      "retrievedAt": "2026-08-22T04:40:46.175Z"
+      "retrievedAt": "2026-08-22T04:42:27.648Z"
     },
     {
       "id": "budget-04_seishitsubetsu",
@@ -71,7 +71,7 @@
       "status": "downloaded",
       "bytes": 1201,
       "sha256": "413eed23fbad798e3bba929199fed24bfa22515bc0f62e06ad575cc34dd152a6",
-      "retrievedAt": "2026-08-22T04:40:46.175Z"
+      "retrievedAt": "2026-08-22T04:42:27.648Z"
     },
     {
       "id": "budget-05_mokutekibetsu",
@@ -87,7 +87,7 @@
       "status": "downloaded",
       "bytes": 3622,
       "sha256": "38a476ce1d9272a137af4cbaae22904eaa7cb02c053e138139641a597bc01fb4",
-      "retrievedAt": "2026-08-22T04:40:46.175Z"
+      "retrievedAt": "2026-08-22T04:42:27.648Z"
     },
     {
       "id": "budget-06_kyuyo_kankeihi",
@@ -103,7 +103,7 @@
       "status": "downloaded",
       "bytes": 385,
       "sha256": "aa854bf9a9bc41b96e20734623090472b6cd2ab3bad230bcece7e05fb92bb36e",
-      "retrievedAt": "2026-08-22T04:40:46.175Z"
+      "retrievedAt": "2026-08-22T04:42:27.648Z"
     },
     {
       "id": "budget-07_toshiteki_keihi",
@@ -119,7 +119,7 @@
       "status": "downloaded",
       "bytes": 371,
       "sha256": "defbed110742439ca61bd1b38c07122156b13b0d59c509327fcd27777e2b5d5c",
-      "retrievedAt": "2026-08-22T04:40:46.175Z"
+      "retrievedAt": "2026-08-22T04:42:27.648Z"
     },
     {
       "id": "budget-08_sainyu_uchiwake",
@@ -135,7 +135,7 @@
       "status": "downloaded",
       "bytes": 5519,
       "sha256": "626e2c23df092384b33574aa59210508973997a832799e88b88cfb03162925fe",
-      "retrievedAt": "2026-08-22T04:40:46.175Z"
+      "retrievedAt": "2026-08-22T04:42:27.648Z"
     },
     {
       "id": "budget-09_tozei_uchiwake",
@@ -151,7 +151,7 @@
       "status": "downloaded",
       "bytes": 3958,
       "sha256": "40ede7a5aaa74cc009e1d8a1a06c602e4223c9eedb0e0124981a2062257f3f46",
-      "retrievedAt": "2026-08-22T04:40:46.175Z"
+      "retrievedAt": "2026-08-22T04:42:27.648Z"
     },
     {
       "id": "budget-10_tozei_suii",
@@ -167,7 +167,7 @@
       "status": "downloaded",
       "bytes": 3267,
       "sha256": "17f70f76594f29225f58a4a5dbf63458a68f06ad9233d73d20dc50e2cdff1daf",
-      "retrievedAt": "2026-08-22T04:40:46.175Z"
+      "retrievedAt": "2026-08-22T04:42:27.648Z"
     },
     {
       "id": "budget-14_kikin_zandaka_suii",
@@ -183,7 +183,7 @@
       "status": "downloaded",
       "bytes": 4894,
       "sha256": "bb6f747ab40b8140a4d3dd91cd4eccf7db3204cbf784dfb6bbfdc7e3295b28e1",
-      "retrievedAt": "2026-08-22T04:40:46.175Z"
+      "retrievedAt": "2026-08-22T04:42:27.648Z"
     },
     {
       "id": "budget-15_kikin_tsumitate_torikuzushi_jyokyo",
@@ -199,7 +199,7 @@
       "status": "downloaded",
       "bytes": 59063,
       "sha256": "ed45c8cfbfe5bc734545951f7fad615f2fc51260505fab10f26071982820d31b",
-      "retrievedAt": "2026-08-22T04:40:46.175Z"
+      "retrievedAt": "2026-08-22T04:42:27.648Z"
     },
     {
       "id": "budget-16_tosai_hakkougaku_zandaka_suii",
@@ -215,7 +215,7 @@
       "status": "downloaded",
       "bytes": 825,
       "sha256": "cd79bcfde74c31c50dabcecc06c9a6542ce57948df26d76ba9d245bdc80ff2b4",
-      "retrievedAt": "2026-08-22T04:40:46.175Z"
+      "retrievedAt": "2026-08-22T04:42:27.648Z"
     },
     {
       "id": "budget-17_kisai_izondo_suii",
@@ -231,7 +231,7 @@
       "status": "downloaded",
       "bytes": 1867,
       "sha256": "0e5967e42d647177f32efccf20981377a39c37dd74c714f16d274173ca4f64c9",
-      "retrievedAt": "2026-08-22T04:40:46.175Z"
+      "retrievedAt": "2026-08-22T04:42:27.648Z"
     },
     {
       "id": "budget-18_nation_region",
@@ -247,7 +247,7 @@
       "status": "downloaded",
       "bytes": 3907,
       "sha256": "ebc59006c773d67b1d330de91ce99ad2050e85dc52d2454c7388c5492fed7b40",
-      "retrievedAt": "2026-08-22T04:40:46.175Z"
+      "retrievedAt": "2026-08-22T04:42:27.648Z"
     },
     {
       "id": "settlement-01_sainyu",
@@ -262,7 +262,7 @@
       "status": "downloaded",
       "bytes": 145349,
       "sha256": "b973bffdadc7412fe07bcb7375f888193a8798ea713747d5308e00e373b7a224",
-      "retrievedAt": "2026-08-22T04:40:46.175Z"
+      "retrievedAt": "2026-08-22T04:42:27.648Z"
     },
     {
       "id": "settlement-02_tozeiutiwake",
@@ -277,7 +277,7 @@
       "status": "downloaded",
       "bytes": 61438,
       "sha256": "86395186fce4a55b2054eed5dc622a6fc739aebb5d5bdfb0d3b5534cd9c4e5f0",
-      "retrievedAt": "2026-08-22T04:40:46.175Z"
+      "retrievedAt": "2026-08-22T04:42:27.648Z"
     },
     {
       "id": "settlement-03_seisitubetusaishutu",
@@ -292,7 +292,7 @@
       "status": "downloaded",
       "bytes": 88256,
       "sha256": "b4df086b3327a325a3d81a56fb27eff7a64827ceab082d4b4948fd6e298b7c75",
-      "retrievedAt": "2026-08-22T04:40:46.175Z"
+      "retrievedAt": "2026-08-22T04:42:27.648Z"
     },
     {
       "id": "settlement-04_mokutekibetusaishutu",
@@ -307,7 +307,7 @@
       "status": "downloaded",
       "bytes": 123159,
       "sha256": "e3da2a66e6d9814338798fd463bc82b5d20ee5513911679454da57b301583981",
-      "retrievedAt": "2026-08-22T04:40:46.175Z"
+      "retrievedAt": "2026-08-22T04:42:27.648Z"
     },
     {
       "id": "settlement-05_jissituakajihiritu",
@@ -322,7 +322,7 @@
       "status": "downloaded",
       "bytes": 444,
       "sha256": "b2c37aa0ac065300b2592f0bab66e672d116468db9f60c7c00ba2ba301f30238",
-      "retrievedAt": "2026-08-22T04:40:46.175Z"
+      "retrievedAt": "2026-08-22T04:42:27.648Z"
     },
     {
       "id": "settlement-06_renketujissituakajihiritu",
@@ -337,7 +337,7 @@
       "status": "downloaded",
       "bytes": 467,
       "sha256": "38f656cb6235a7fe38e8adf059af4280f445a392149ce87251d9e99fa7ef1e12",
-      "retrievedAt": "2026-08-22T04:40:46.175Z"
+      "retrievedAt": "2026-08-22T04:42:27.648Z"
     },
     {
       "id": "settlement-07_jissitukousaihihiritu",
@@ -352,7 +352,7 @@
       "status": "downloaded",
       "bytes": 482,
       "sha256": "831dc1dc501e0e5027b556e4c959e872177d21dccd0cb4f77eb683af86a0ea10",
-      "retrievedAt": "2026-08-22T04:40:46.175Z"
+      "retrievedAt": "2026-08-22T04:42:27.648Z"
     },
     {
       "id": "settlement-08_shouraihutanhiritu",
@@ -367,7 +367,7 @@
       "status": "downloaded",
       "bytes": 390,
       "sha256": "dd7403d0aba75287b80e08d3b82621f632ce7096e7d3fb1961ea20f060ae320c",
-      "retrievedAt": "2026-08-22T04:40:46.175Z"
+      "retrievedAt": "2026-08-22T04:42:27.648Z"
     },
     {
       "id": "settlement-09_keijoushusihiritu",
@@ -382,7 +382,7 @@
       "status": "downloaded",
       "bytes": 519,
       "sha256": "0ac99a715e8e3c03a86dbee24d8d345ebae117f64bafbab51783c77171f74ee5",
-      "retrievedAt": "2026-08-22T04:40:46.175Z"
+      "retrievedAt": "2026-08-22T04:42:27.648Z"
     },
     {
       "id": "settlement-10_kousaihihutanhiritu",
@@ -397,7 +397,7 @@
       "status": "downloaded",
       "bytes": 488,
       "sha256": "e53d95e32f41bd7c14339627d66789bbb835d03de78100dfa60ca4f9e309fa36",
-      "retrievedAt": "2026-08-22T04:40:46.175Z"
+      "retrievedAt": "2026-08-22T04:42:27.648Z"
     },
     {
       "id": "expenditure-2025-04",
@@ -411,7 +411,7 @@
       "status": "downloaded",
       "bytes": 1701872,
       "sha256": "8eb6306042d7dbef7c533a946c1aa90101aed94783f6a98e062f4e397c0a7070",
-      "retrievedAt": "2026-08-22T04:40:46.175Z"
+      "retrievedAt": "2026-08-22T04:42:27.648Z"
     },
     {
       "id": "expenditure-2025-05",
@@ -425,7 +425,7 @@
       "status": "downloaded",
       "bytes": 3558088,
       "sha256": "9a7284746fde2bb303e042fb40d52fa1e0ce1d916feec3d90e3c24addc87ebe7",
-      "retrievedAt": "2026-08-22T04:40:46.175Z"
+      "retrievedAt": "2026-08-22T04:42:27.648Z"
     },
     {
       "id": "expenditure-2025-06",
@@ -439,7 +439,7 @@
       "status": "downloaded",
       "bytes": 5413381,
       "sha256": "948f61a6fd16e0cf27fe830806456956ef2c48e6a708c7fcdc7c35072471e67d",
-      "retrievedAt": "2026-08-22T04:40:46.175Z"
+      "retrievedAt": "2026-08-22T04:42:27.648Z"
     },
     {
       "id": "expenditure-2025-07",
@@ -453,7 +453,7 @@
       "status": "downloaded",
       "bytes": 6463830,
       "sha256": "31c3d12c3378400452353e8e551d92a96533be6f03a3c137eadc62c87429ced8",
-      "retrievedAt": "2026-08-22T04:40:46.175Z"
+      "retrievedAt": "2026-08-22T04:42:27.648Z"
     },
     {
       "id": "expenditure-2025-08",
@@ -468,7 +468,7 @@
       "status": "downloaded",
       "bytes": 5505681,
       "sha256": "3264a31c5e0c1f814079975976712f4ea2baf7521a9872e796186683cdccb75d",
-      "retrievedAt": "2026-08-22T04:40:46.175Z"
+      "retrievedAt": "2026-08-22T04:42:27.648Z"
     },
     {
       "id": "expenditure-2025-09",
@@ -482,7 +482,7 @@
       "status": "downloaded",
       "bytes": 5731957,
       "sha256": "2b044ba9e483df465d76594b1c1bc6b7424d9b62b1ecda80bdbc46971fbd7f06",
-      "retrievedAt": "2026-08-22T04:40:46.175Z"
+      "retrievedAt": "2026-08-22T04:42:27.648Z"
     },
     {
       "id": "expenditure-2025-10",
@@ -496,7 +496,7 @@
       "status": "downloaded",
       "bytes": 6452243,
       "sha256": "96aaf7c779c95fa68d7776df2adb0ac431f7c9c23a3da8065777504c607ab06d",
-      "retrievedAt": "2026-08-22T04:40:46.175Z"
+      "retrievedAt": "2026-08-22T04:42:27.648Z"
     },
     {
       "id": "expenditure-2025-11",
@@ -510,7 +510,7 @@
       "status": "downloaded",
       "bytes": 5423960,
       "sha256": "8e9f14419fa1abd53f63de55896b4e0904500ef2887c8a59bded0f090b1ee18a",
-      "retrievedAt": "2026-08-22T04:40:46.175Z"
+      "retrievedAt": "2026-08-22T04:42:27.648Z"
     },
     {
       "id": "expenditure-2025-12",
@@ -524,7 +524,7 @@
       "status": "downloaded",
       "bytes": 6136133,
       "sha256": "df9544a77c1178dc37f658006ee7845d432acfab1da5b768e085f681eedf7057",
-      "retrievedAt": "2026-08-22T04:40:46.175Z"
+      "retrievedAt": "2026-08-22T04:42:27.648Z"
     },
     {
       "id": "expenditure-2026-01-fy2025",
@@ -538,7 +538,7 @@
       "status": "downloaded",
       "bytes": 6258331,
       "sha256": "f54d5631507c343be60f2f6c5bdf43bd0c6012d3877ce69fca51ef6dabdfb984",
-      "retrievedAt": "2026-08-22T04:40:46.175Z"
+      "retrievedAt": "2026-08-22T04:42:27.648Z"
     },
     {
       "id": "expenditure-payroll-fy2025",
@@ -552,7 +552,7 @@
       "status": "downloaded",
       "bytes": 1305,
       "sha256": "6a025d85ca925bb700be3334e649475433113fe1562a688c9b6aab89a79f6232",
-      "retrievedAt": "2026-08-22T04:40:46.175Z"
+      "retrievedAt": "2026-08-22T04:42:27.648Z"
     },
     {
       "id": "subsidies-2025",
@@ -566,7 +566,7 @@
       "status": "downloaded",
       "bytes": 798308,
       "sha256": "d587efd7fea4e8fdd2e76620363ba62acf964e1e3f47b24eb2dedc04284be1ee",
-      "retrievedAt": "2026-08-22T04:40:46.175Z"
+      "retrievedAt": "2026-08-22T04:42:27.648Z"
     },
     {
       "id": "subsidies-2026",
@@ -580,7 +580,7 @@
       "status": "downloaded",
       "bytes": 833875,
       "sha256": "35f693e2c958b0b79b1e4d23ccb5674a2d2a11fb68e5c66b9ebcfc53caf5a46d",
-      "retrievedAt": "2026-08-22T04:40:46.175Z"
+      "retrievedAt": "2026-08-22T04:42:27.648Z"
     },
     {
       "id": "catalog-relevant-api-list",
@@ -595,7 +595,7 @@
       "status": "downloaded",
       "bytes": 1722402,
       "sha256": "23a6ea89852fb429078ad9f08dc3da2403fec996c74a1d83978d508601b5ad52",
-      "retrievedAt": "2026-08-22T04:40:46.175Z"
+      "retrievedAt": "2026-08-22T04:42:27.648Z"
     },
     {
       "id": "expenditure-pending-fy2025-2026-02",
@@ -610,7 +610,7 @@
       "status": "downloaded",
       "bytes": 2570388,
       "sha256": "bf327af67c34ddea04b08bad2bff2b857ba358b64c671632ba228fc0c6a79d52",
-      "retrievedAt": "2026-08-22T04:40:46.175Z"
+      "retrievedAt": "2026-08-22T04:42:27.648Z"
     },
     {
       "id": "expenditure-pending-fy2025-2026-03",
@@ -625,7 +625,7 @@
       "status": "downloaded",
       "bytes": 3308171,
       "sha256": "f6cee3fad809aed1a765e59021b9d60bdce1588de975cae1e102520156a268ad",
-      "retrievedAt": "2026-08-22T04:40:46.175Z"
+      "retrievedAt": "2026-08-22T04:42:27.648Z"
     },
     {
       "id": "expenditure-pending-fy2025-closing-04",
@@ -640,7 +640,7 @@
       "status": "downloaded",
       "bytes": 2845401,
       "sha256": "920d454ccb83733bc7d8ca3032054b3aa8972450231e83ae437ea6abe1bb5e2a",
-      "retrievedAt": "2026-08-22T04:40:46.175Z"
+      "retrievedAt": "2026-08-22T04:42:27.648Z"
     },
     {
       "id": "expenditure-pending-fy2025-closing-05",
@@ -655,7 +655,7 @@
       "status": "downloaded",
       "bytes": 766446,
       "sha256": "0c0d5118b7ce2de3481d62746e84bbb8c7518100751d40823a3a0db46c21875c",
-      "retrievedAt": "2026-08-22T04:40:46.175Z"
+      "retrievedAt": "2026-08-22T04:42:27.648Z"
     },
     {
       "id": "expenditure-pending-fy2026-2026-04",
@@ -670,7 +670,7 @@
       "status": "downloaded",
       "bytes": 760568,
       "sha256": "5deb1d9500809f23306fe25491ba4cef77024986e7d723fa066406403b8e242e",
-      "retrievedAt": "2026-08-22T04:40:46.175Z"
+      "retrievedAt": "2026-08-22T04:42:27.648Z"
     },
     {
       "id": "expenditure-pending-fy2026-2026-05",
@@ -685,7 +685,7 @@
       "status": "downloaded",
       "bytes": 1458968,
       "sha256": "7b3c140b5ef25cd2815c3c64ed444de1dbb8a64bc152f1855773892681b3972a",
-      "retrievedAt": "2026-08-22T04:40:46.175Z"
+      "retrievedAt": "2026-08-22T04:42:27.648Z"
     },
     {
       "id": "expenditure-pending-fy2026-2026-06",
@@ -700,7 +700,7 @@
       "status": "downloaded",
       "bytes": 2486765,
       "sha256": "ccc0635bd2ad065237a5f5bae831fd0fdf2d428f3775c63920918bf93bab1542",
-      "retrievedAt": "2026-08-22T04:40:46.175Z"
+      "retrievedAt": "2026-08-22T04:42:27.648Z"
     },
     {
       "id": "expenditure-pending-fy2026-payroll",
@@ -715,7 +715,7 @@
       "status": "downloaded",
       "bytes": 13359,
       "sha256": "47cc0927be893a034620556d7543cdaa1ce34364172efe8dc1bf44c15c3afabe",
-      "retrievedAt": "2026-08-22T04:40:46.175Z"
+      "retrievedAt": "2026-08-22T04:42:27.648Z"
     },
     {
       "id": "document-fy2026-budget-proposal-overview",
@@ -729,7 +729,7 @@
       "status": "downloaded",
       "bytes": 32618758,
       "sha256": "d063f526d369f52bc3ef9b6027b184f7db92defd3efe260c569b5ec943038d06",
-      "retrievedAt": "2026-08-22T04:40:46.175Z"
+      "retrievedAt": "2026-08-22T04:42:27.648Z"
     },
     {
       "id": "document-fy2026-budget-proposal-visual-summary",
@@ -743,7 +743,7 @@
       "status": "downloaded",
       "bytes": 2038867,
       "sha256": "2987af5ce7272d15088b93a2f1044547214b2be011c42e25aa220c3c02b3f4ae",
-      "retrievedAt": "2026-08-22T04:40:46.175Z"
+      "retrievedAt": "2026-08-22T04:42:27.648Z"
     },
     {
       "id": "document-fy2026-major-projects",
@@ -757,7 +757,7 @@
       "status": "downloaded",
       "bytes": 5140412,
       "sha256": "fde6b7b787d4ecffc147b4264ebaba67ab846963ae15c310fb646f7e98cd7ad6",
-      "retrievedAt": "2026-08-22T04:40:46.175Z"
+      "retrievedAt": "2026-08-22T04:42:27.648Z"
     },
     {
       "id": "document-fy2026-subsidy-execution-review",
@@ -772,7 +772,7 @@
       "status": "downloaded",
       "bytes": 250131,
       "sha256": "5daac7dbbe3aed34b26659dd5bfd6c97313c40de65bf388ae8f96fc32afd4caf",
-      "retrievedAt": "2026-08-22T04:40:46.175Z"
+      "retrievedAt": "2026-08-22T04:42:27.648Z"
     },
     {
       "id": "document-fy2025-budget-proposal-overview",
@@ -786,7 +786,7 @@
       "status": "downloaded",
       "bytes": 15400451,
       "sha256": "c1e6cf6e375cbd30767990cb67f923017bd0fc2cb7324b978f4f49099a4f52fe",
-      "retrievedAt": "2026-08-22T04:40:46.175Z"
+      "retrievedAt": "2026-08-22T04:42:27.648Z"
     },
     {
       "id": "document-fy2025-budget-proposal-visual-summary",
@@ -800,7 +800,7 @@
       "status": "downloaded",
       "bytes": 2096443,
       "sha256": "f76655d82e682b8ea50f83912e7f78e16afb88ea6e66e3d3662ab2400d91960d",
-      "retrievedAt": "2026-08-22T04:40:46.175Z"
+      "retrievedAt": "2026-08-22T04:42:27.648Z"
     },
     {
       "id": "document-fy2025-major-projects",
@@ -814,7 +814,7 @@
       "status": "downloaded",
       "bytes": 4611693,
       "sha256": "01261557adfa93a76ab67f8328cec800b0e7e89882148aeb0fe24f1cb3a5c0fa",
-      "retrievedAt": "2026-08-22T04:40:46.175Z"
+      "retrievedAt": "2026-08-22T04:42:27.648Z"
     },
     {
       "id": "document-fy2025-general-account-closing-estimate",
@@ -829,7 +829,7 @@
       "status": "downloaded",
       "bytes": 140743,
       "sha256": "4eb4b2ee2147e625d7b0ac50f31604761b9aa5cdfd5c7db1c30a9016f05658b2",
-      "retrievedAt": "2026-08-22T04:40:46.175Z"
+      "retrievedAt": "2026-08-22T04:42:27.648Z"
     },
     {
       "id": "er-fy2024-settlement-all-accounts-statement",
@@ -843,7 +843,7 @@
       "status": "downloaded",
       "bytes": 553344,
       "sha256": "73ba8598bfed197fc5f5de00d779a5bc3e3afcb234c24011dbc220e0ae379e22",
-      "retrievedAt": "2026-08-22T04:40:46.175Z"
+      "retrievedAt": "2026-08-22T04:42:27.648Z"
     },
     {
       "id": "er-fy2024-settlement-general-account-detail",
@@ -858,7 +858,7 @@
       "status": "downloaded",
       "bytes": 10201173,
       "sha256": "bf65f32e9b1e6a9aa46e02d06282f18748c57e1ced4f20016234a13e235f5844",
-      "retrievedAt": "2026-08-22T04:40:46.175Z"
+      "retrievedAt": "2026-08-22T04:42:27.648Z"
     },
     {
       "id": "er-fy2024-settlement-reference-total-overview",
@@ -872,7 +872,7 @@
       "status": "downloaded",
       "bytes": 1291501,
       "sha256": "a1f97be6ffa2348cd94a7510c4beeca592660cc689568b44afb0357565e6b8d5",
-      "retrievedAt": "2026-08-22T04:40:46.175Z"
+      "retrievedAt": "2026-08-22T04:42:27.648Z"
     },
     {
       "id": "er-fy2024-settlement-reference-general-account",
@@ -886,7 +886,7 @@
       "status": "downloaded",
       "bytes": 1972099,
       "sha256": "1704022b8f9aafeedfe84a0dbe09041eeaac7537c4621b33834712ea23db9b56",
-      "retrievedAt": "2026-08-22T04:40:46.175Z"
+      "retrievedAt": "2026-08-22T04:42:27.648Z"
     },
     {
       "id": "er-fy2024-major-policy-results",
@@ -901,7 +901,229 @@
       "status": "downloaded",
       "bytes": 10678917,
       "sha256": "e52d9303453984f2af52fa43f1a463a01b1ea6581dbeffd8c76404c6ebb392ee",
-      "retrievedAt": "2026-08-22T04:40:46.175Z"
+      "retrievedAt": "2026-08-22T04:42:27.648Z"
+    },
+    {
+      "id": "er-fy2024-expenditure-2024-04",
+      "title": "公金支出情報 令和6年度 2024-04",
+      "category": "public-expenditure",
+      "fiscalYears": [
+        2024
+      ],
+      "sourceUrl": "https://www.kaikeikanri.metro.tokyo.lg.jp/documents/d/kaikeikanri/0604koukinsisyutsu_1",
+      "localPath": "data/raw/public-expenditure/fy2024/2024-04.xlsx",
+      "status": "downloaded",
+      "bytes": 733795,
+      "sha256": "af27cd20b5a8d9b20fd4e4dd3f29a237502ccf82c50fb37811cd6c1733ca994a",
+      "retrievedAt": "2026-08-22T04:42:27.648Z"
+    },
+    {
+      "id": "er-fy2024-expenditure-2024-05",
+      "title": "公金支出情報 令和6年度 2024-05",
+      "category": "public-expenditure",
+      "fiscalYears": [
+        2024
+      ],
+      "sourceUrl": "https://www.kaikeikanri.metro.tokyo.lg.jp/documents/d/kaikeikanri/0605koukinsisyutsu_1",
+      "localPath": "data/raw/public-expenditure/fy2024/2024-05.xlsx",
+      "status": "downloaded",
+      "bytes": 1614484,
+      "sha256": "626e3cfe3a3775761453068785887de5b02de8778b0b842ade1b0f8824eb11b0",
+      "retrievedAt": "2026-08-22T04:42:27.648Z"
+    },
+    {
+      "id": "er-fy2024-expenditure-2024-06",
+      "title": "公金支出情報 令和6年度 2024-06",
+      "category": "public-expenditure",
+      "fiscalYears": [
+        2024
+      ],
+      "sourceUrl": "https://www.kaikeikanri.metro.tokyo.lg.jp/documents/d/kaikeikanri/0606koukinsisyutsu_1",
+      "localPath": "data/raw/public-expenditure/fy2024/2024-06.xlsx",
+      "status": "downloaded",
+      "bytes": 2202583,
+      "sha256": "4ee8f2584703664e5d836bd9e9916c4047de4d1f033ba531f592a8e79da21ae7",
+      "retrievedAt": "2026-08-22T04:42:27.648Z"
+    },
+    {
+      "id": "er-fy2024-expenditure-2024-07",
+      "title": "公金支出情報 令和6年度 2024-07",
+      "category": "public-expenditure",
+      "fiscalYears": [
+        2024
+      ],
+      "sourceUrl": "https://www.kaikeikanri.metro.tokyo.lg.jp/documents/d/kaikeikanri/0607koukinsisyutsu_1",
+      "localPath": "data/raw/public-expenditure/fy2024/2024-07.xlsx",
+      "status": "downloaded",
+      "bytes": 2819200,
+      "sha256": "5b308a9ae2ebac59d7c70ac0a91d94bf68b93ad3474e3cb5a66269a2f67bdc82",
+      "retrievedAt": "2026-08-22T04:42:27.648Z"
+    },
+    {
+      "id": "er-fy2024-expenditure-2024-08",
+      "title": "公金支出情報 令和6年度 2024-08",
+      "category": "public-expenditure",
+      "fiscalYears": [
+        2024
+      ],
+      "sourceUrl": "https://www.kaikeikanri.metro.tokyo.lg.jp/documents/d/kaikeikanri/0608koukinsisyutsu_1",
+      "localPath": "data/raw/public-expenditure/fy2024/2024-08.xlsx",
+      "status": "downloaded",
+      "bytes": 2417010,
+      "sha256": "fddaa8e805df0d77b2b32081df1edf30b6175eb281ea9134d7d95f20e2b6a83c",
+      "retrievedAt": "2026-08-22T04:42:27.648Z"
+    },
+    {
+      "id": "er-fy2024-expenditure-2024-09",
+      "title": "公金支出情報 令和6年度 2024-09",
+      "category": "public-expenditure",
+      "fiscalYears": [
+        2024
+      ],
+      "sourceUrl": "https://www.kaikeikanri.metro.tokyo.lg.jp/documents/d/kaikeikanri/0609koukinsisyutsu_1",
+      "localPath": "data/raw/public-expenditure/fy2024/2024-09.xlsx",
+      "status": "downloaded",
+      "bytes": 2387218,
+      "sha256": "58b81f2c8e012a01a997b0807ad6cf5589a2d6539b1dbfea015d372cd7ad5408",
+      "retrievedAt": "2026-08-22T04:42:27.648Z"
+    },
+    {
+      "id": "er-fy2024-expenditure-2024-10",
+      "title": "公金支出情報 令和6年度 2024-10",
+      "category": "public-expenditure",
+      "fiscalYears": [
+        2024
+      ],
+      "sourceUrl": "https://www.kaikeikanri.metro.tokyo.lg.jp/documents/d/kaikeikanri/0610koukinsisyutsu_1",
+      "localPath": "data/raw/public-expenditure/fy2024/2024-10.xlsx",
+      "status": "downloaded",
+      "bytes": 2820995,
+      "sha256": "788441f9afd7bf40038e730a6e44c34be5da678d2404a06dfcca7dd72901a80f",
+      "retrievedAt": "2026-08-22T04:42:27.648Z"
+    },
+    {
+      "id": "er-fy2024-expenditure-2024-11",
+      "title": "公金支出情報 令和6年度 2024-11",
+      "category": "public-expenditure",
+      "fiscalYears": [
+        2024
+      ],
+      "sourceUrl": "https://www.kaikeikanri.metro.tokyo.lg.jp/documents/d/kaikeikanri/0611koukinsisyutsu_1-1",
+      "localPath": "data/raw/public-expenditure/fy2024/2024-11.xlsx",
+      "status": "downloaded",
+      "bytes": 2499826,
+      "sha256": "85990cab71a445b6dd1548f1580979a25394cbc81950cc29cdd2100c3f6a6a54",
+      "retrievedAt": "2026-08-22T04:42:27.648Z"
+    },
+    {
+      "id": "er-fy2024-expenditure-2024-12",
+      "title": "公金支出情報 令和6年度 2024-12",
+      "category": "public-expenditure",
+      "fiscalYears": [
+        2024
+      ],
+      "sourceUrl": "https://www.kaikeikanri.metro.tokyo.lg.jp/documents/d/kaikeikanri/0612koukinsisyutsu_1",
+      "localPath": "data/raw/public-expenditure/fy2024/2024-12.xlsx",
+      "status": "downloaded",
+      "bytes": 2579359,
+      "sha256": "8f6632578282eac38ee5d96b3e2d88925e1eceb95e9772f50036af9adc7b7fa4",
+      "retrievedAt": "2026-08-22T04:42:27.648Z"
+    },
+    {
+      "id": "er-fy2024-expenditure-2025-01",
+      "title": "公金支出情報 令和6年度 2025-01",
+      "category": "public-expenditure",
+      "fiscalYears": [
+        2024
+      ],
+      "sourceUrl": "https://www.kaikeikanri.metro.tokyo.lg.jp/documents/d/kaikeikanri/0701koukinsisyutsu_1",
+      "localPath": "data/raw/public-expenditure/fy2024/2025-01.xlsx",
+      "status": "downloaded",
+      "bytes": 2728120,
+      "sha256": "2c5e30a83ab8124fa8f8d8858ea4ad56e5d8e1a2fded0c33907d3113744fc1e1",
+      "retrievedAt": "2026-08-22T04:42:27.648Z"
+    },
+    {
+      "id": "er-fy2024-expenditure-2025-02",
+      "title": "公金支出情報 令和6年度 2025-02",
+      "category": "public-expenditure",
+      "fiscalYears": [
+        2024
+      ],
+      "sourceUrl": "https://www.kaikeikanri.metro.tokyo.lg.jp/documents/d/kaikeikanri/0702koukinsisyutsu_1",
+      "localPath": "data/raw/public-expenditure/fy2024/2025-02.xlsx",
+      "status": "downloaded",
+      "bytes": 2585627,
+      "sha256": "ecaf23d14587be5a52e578be1b447d5790245d5fa8a004002bb2c5e7676c290c",
+      "retrievedAt": "2026-08-22T04:42:27.648Z"
+    },
+    {
+      "id": "er-fy2024-expenditure-2025-03",
+      "title": "公金支出情報 令和6年度 2025-03",
+      "category": "public-expenditure",
+      "fiscalYears": [
+        2024
+      ],
+      "sourceUrl": "https://www.kaikeikanri.metro.tokyo.lg.jp/documents/d/kaikeikanri/0703koukinsisyutsu-1-",
+      "localPath": "data/raw/public-expenditure/fy2024/2025-03.xlsx",
+      "status": "downloaded",
+      "bytes": 3064017,
+      "sha256": "05cea0a0963382f11ac87a287458c7e5caf703420d4880262005281f295caf2d",
+      "retrievedAt": "2026-08-22T04:42:27.648Z"
+    },
+    {
+      "id": "er-fy2024-expenditure-closing-2025-04",
+      "title": "公金支出情報 令和6年度 2025-04 出納整理期間",
+      "category": "public-expenditure",
+      "fiscalYears": [
+        2024
+      ],
+      "sourceUrl": "https://www.kaikeikanri.metro.tokyo.lg.jp/documents/d/kaikeikanri/0704_suit_koukinsisyutsu-1-",
+      "localPath": "data/raw/public-expenditure/fy2024/2025-04-closing.xlsx",
+      "notes": "出納整理期間分。通常月と区別したうえで補助証拠集計に含めるかを検討する。",
+      "status": "downloaded",
+      "bytes": 2755491,
+      "sha256": "d356a6ffa73cb3cc27732f460bf9da20d0e657269f6fb9daa3a0375b15e4db75",
+      "retrievedAt": "2026-08-22T04:42:27.648Z"
+    },
+    {
+      "id": "er-fy2024-expenditure-closing-2025-05",
+      "title": "公金支出情報 令和6年度 2025-05 出納整理期間",
+      "category": "public-expenditure",
+      "fiscalYears": [
+        2024
+      ],
+      "sourceUrl": "https://www.kaikeikanri.metro.tokyo.lg.jp/documents/d/kaikeikanri/0705_suit_koukinsisyutsu-1-1",
+      "localPath": "data/raw/public-expenditure/fy2024/2025-05-closing.xlsx",
+      "notes": "出納整理期間分。通常月と区別したうえで補助証拠集計に含めるかを検討する。",
+      "status": "downloaded",
+      "bytes": 801003,
+      "sha256": "08140eb19ba05e4a1f5064aa044e4f1f845f4f867e029d6cd436de8f25c8d44b",
+      "retrievedAt": "2026-08-22T04:42:27.648Z"
+    },
+    {
+      "id": "er-fy2024-expenditure-payroll",
+      "title": "公金支出情報 令和6年度 給与関係費等",
+      "category": "public-expenditure",
+      "fiscalYears": [
+        2024
+      ],
+      "sourceUrl": "https://www.kaikeikanri.metro.tokyo.lg.jp/documents/d/kaikeikanri/06koukinsisyutsukyuuyo-3-",
+      "localPath": "data/raw/public-expenditure/fy2024/payroll.xlsx",
+      "status": "downloaded",
+      "bytes": 11712,
+      "sha256": "381d73fc2e52d92d3840ab5384daf461ef0a18887a52c206de4ffc98856ed69c",
+      "retrievedAt": "2026-08-22T04:42:27.648Z"
+    },
+    {
+      "id": "reference-expenditure-fy2024-page",
+      "title": "東京都会計管理局: 公金支出情報（令和6年度）",
+      "category": "reference",
+      "fiscalYears": [
+        2024
+      ],
+      "sourceUrl": "https://www.kaikeikanri.metro.tokyo.lg.jp/about/jyouhoukoukai/koukinsisyutsu/06koukaidata",
+      "status": "reference-only"
     },
     {
       "id": "reference-budget-dataset",
