@@ -67,8 +67,8 @@ describe("groupPageRows", () => {
 describe("mergeWrappedNameRows", () => {  it("名称のみの継続行を直前の行へ後方結合する", () => {
     const merged = mergeWrappedNameRows(
       [
-        { y: 502, cells: { sectionCode: "05", sectionName: "管理職手", amount: "132,611,000" } },
-        { y: 494, cells: { sectionName: "当" } },
+        { y: 502, cells: { sectionCode: "05", sectionName: "管理職手", amount: "132,611,000" }, cellX: {} },
+        { y: 494, cells: { sectionName: "当" }, cellX: {} },
       ],
       { nameColumns: WRAPPED_NAME_COLUMNS },
     );
@@ -78,7 +78,7 @@ describe("mergeWrappedNameRows", () => {  it("名称のみの継続行を直前�
   });
 
   it("結合先がない継続行はそのまま残す", () => {
-    const merged = mergeWrappedNameRows([{ y: 100, cells: { name: "孤立" } }], {
+    const merged = mergeWrappedNameRows([{ y: 100, cells: { name: "孤立" }, cellX: {} }], {
       nameColumns: ["name"],
     });
     assert.equal(merged.length, 1);
@@ -92,11 +92,11 @@ describe("filterStructuralRows", () => {
   it("ヘッダー・単位行・ページ番号・空行を除外する", () => {
     const kept = filterStructuralRows(
       [
-        { y: 826, cells: { name: "１一般会計歳出２総務費" } },
-        { y: 805, cells: { name: "科目", amount: "予算現額" } },
-        { y: 742, cells: { supplementaryBudget: "円円", total: "円" } },
-        { y: 64, cells: {} },
-        { y: 734, cells: { name: "02総務費", amount: "368,474,000,000" } },
+        { y: 826, cells: { name: "１一般会計歳出２総務費" }, cellX: {} },
+        { y: 805, cells: { name: "科目", amount: "予算現額" }, cellX: {} },
+        { y: 742, cells: { supplementaryBudget: "円円", total: "円" }, cellX: {} },
+        { y: 64, cells: {}, cellX: {} },
+        { y: 734, cells: { name: "02総務費", amount: "368,474,000,000" }, cellX: {} },
       ],
       heuristics,
     );
@@ -105,7 +105,7 @@ describe("filterStructuralRows", () => {
   });
 
   it("金額もコードもないデータ片は除外する", () => {
-    const kept = filterStructuralRows([{ y: 100, cells: { name: "備考" } }], heuristics);
+    const kept = filterStructuralRows([{ y: 100, cells: { name: "備考" }, cellX: {} }], heuristics);
     assert.equal(kept.length, 0);
   });
 });

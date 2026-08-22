@@ -24,10 +24,12 @@ export interface GroupPageRowsOptions {
 
 /** 1行ぶんの復元結果。空でないセルのみを保持する。 */
 export interface PageRow {
-  /** 行のY座標（行内項目Yの最大値）。 */
+  /** 行のY座標（行内で最初に走査した項目のY）。 */
   y: number;
   /** 列IDごとの文字列。複数項目は結合済み。 */
   cells: Record<string, string>;
+  /** 列IDごとの、そのセルに割り当てられた先頭（最も左）項目のX座標。 */
+  cellX: Record<string, number>;
 }
 
 /**
@@ -65,12 +67,14 @@ export function groupPageRows(
   return bands.map((band) => {
     band.sort((a, b) => a.x - b.x);
     const cells: Record<string, string> = {};
+    const cellX: Record<string, number> = {};
     for (const item of band) {
       const column = columns.find((layout) => item.x >= layout.xMin && item.x < layout.xMax);
       if (!column) continue;
       cells[column.name] = (cells[column.name] ?? "") + item.text;
+      cellX[column.name] ??= round2(item.x);
     }
-    return { y: round2(band[0].y), cells };
+    return { y: round2(band[0].y), cells, cellX };
   });
 }
 
@@ -93,7 +97,7 @@ export function mergeWrappedNameRows(
       previous.cells[filledColumns[0]] += row.cells[filledColumns[0]];
       continue;
     }
-    merged.push({ y: row.y, cells: { ...row.cells } });
+    merged.push({ y: row.y, cells: { ...row.cells }, cellX: { ...row.cellX } });
   }
   return merged;
 }
