@@ -57,9 +57,6 @@ const file = JSON.parse(await readFile(resolve(ROOT, CANDIDATES_PATH), "utf8")) 
   records: CandidateRow[];
 };
 
-function labelOf(row: CandidateRow): string {
-  return row.fy2024Keys.map((key) => key.chapter + (key.section ? `/${key.section}` : "")).join(" + ");
-}
 function fullLabel(row: CandidateRow): string {
   const parts: string[] = [];
   for (const key of row.fy2024Keys) {
@@ -79,11 +76,12 @@ function categorize(label: string): { category: MethodCategory; basis: string } 
 
 // 入力(review-candidates)は「要説明を先頭に不用額降順」で並んでいるため、
 // 対象外(税連動・公債費・予備費等)を除いた上で入力順をそのまま優先順位として使う。
-const ordered = file.records.filter((row) => {
+const eligible = file.records.filter((row) => {
   if (row.policyReviewExcluded) return false;
   const label = fullLabel(row);
   return !NON_POLICY_PATTERNS.some((pattern) => pattern.test(label));
 });
+const ordered = eligible;
 
 // 執行方式ごとのカウンタ（各5件を目標）
 const TARGET_PER_CATEGORY = 5;
@@ -145,11 +143,10 @@ const output = {
   summary: {
     selectedCount: selected.length,
     byCategory: { ...counters },
-    shortfallNotes: [
-      ...(counters.unknown > 0
+    shortfallNotes:
+      counters.unknown > 0
         ? [`${counters.unknown}件は公式説明だけでは執行方式を確定できず unknown とした`]
-        : []),
-    ],
+        : [],
   },
 };
 await writeFile(resolve(ROOT, OUTPUT_PATH), `${JSON.stringify(output, null, 1)}\n`, "utf8");
