@@ -1,0 +1,90 @@
+{
+ "version": 1,
+ "generatedAt": "2026-08-22T12:39:01.819Z",
+ "scope": {
+  "fiscalYears": {
+   "settlement": 2024,
+   "budget": 2026
+  },
+  "account": "一般会計",
+  "note": "対象は一般会計のみ。普通会計（一般会計＋公営企業会計等＋一部特別会計）とは集計範囲が異なるため数値を混同しない。"
+ },
+ "scan": {
+  "total": 408,
+  "policyReviewTarget": 396,
+  "policyReviewExcluded": 12,
+  "file": "data/normalized/execution-review/fy2024/execution-scan.json"
+ },
+ "comparisons": {
+  "file": "data/normalized/execution-review/budget-comparisons.json",
+  "comparableCount": 77,
+  "byConfidence": {
+   "A": 74,
+   "B": 3,
+   "C": 0,
+   "unmatched": 0
+  }
+ },
+ "reviewCandidates": {
+  "file": "data/normalized/execution-review/review-candidates.json",
+  "count": 77,
+  "byStatus": {
+   "needs-explanation": 4,
+   "executed": 40,
+   "incomparable": 33
+  },
+  "thresholds": {
+   "needsUnusedRate": 0.2,
+   "needsBudgetContinuationRate": 0.9,
+   "needsMinCurrentBudgetYen": 100000000,
+   "carryoverRate": 0.2,
+   "executedRate": 0.9,
+   "reviewReflectedBudgetContinuationRate": 0.5
+  }
+ },
+ "bureauSummary": {
+  "bureauCount": 18,
+  "totalComparableCount": 77,
+  "totalNeedsExplanationCount": 4,
+  "totalCarryoverCount": 0,
+  "totalReviewReflectedCount": 0,
+  "totalFy2024CurrentBudgetYen": 16493976268000,
+  "consistencyCheck": "passed",
+  "file": "data/normalized/execution-review/bureau-summary.json"
+ },
+ "policyReviews": {
+  "status": "ready",
+  "detailsFile": "data/normalized/execution-review/policy-review-details.json",
+  "reviewedCount": 2,
+  "featuredReviews": [
+   {
+    "reviewId": "rev-0001",
+    "comparisonId": "cmp-0024",
+    "policyTitle": "2:総務費 10:退職手当及年金費",
+    "bureau": null,
+    "executionMethod": "direct"
+   },
+   {
+    "reviewId": "rev-0001",
+    "comparisonId": "cmp-0050",
+    "policyTitle": "9:産業労働費 6:施設整備費",
+    "bureau": null,
+    "executionMethod": "construction"
+   }
+  ]
+ },
+ "outputs": {
+  "executionScan": "data/normalized/execution-review/fy2024/execution-scan.json",
+  "budgetComparisons": "data/normalized/execution-review/budget-comparisons.json",
+  "reviewCandidates": "data/normalized/execution-review/review-candidates.json",
+  "bureauSummary": "data/normalized/execution-review/bureau-summary.json",
+  "paymentEvidence": "data/normalized/execution-review/payment-evidence.json",
+  "policyReviewDetails": "data/normalized/execution-review/policy-review-details.json"
+ },
+ "cautions": [
+  "本indexの対象は一般会計。普通会計とは集計範囲が異なるため、決算参考書等の普通会計ベースの数値と混同しない。",
+  "公金支出情報は正式決算（令和6年度一般会計歳入歳出決算事項別明細書）の代替にしない。支払件名・金額は補助証拠としてのみ使う。",
+  "執行率=支出済額/予算現額。公金支出明細を分子にしない。",
+  "C/unmatchedの対応は比較出力に含まれず、対応表(account-mappings.json)でのみ管理される。"
+ ]
+}

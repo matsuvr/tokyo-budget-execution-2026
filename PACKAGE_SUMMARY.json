@@ -1,7 +1,7 @@
 {
   "packageName": "tokyo-budget-execution-2026",
   "version": "2026.08.21",
-  "generatedAt": "2026-08-22T04:48:38.460Z",
+  "generatedAt": "2026-08-22T12:39:02.313Z",
   "timezone": "Asia/Tokyo",
   "requestedFiscalYears": [
     2024,
@@ -9,8 +9,8 @@
     2026
   ],
   "contents": {
-    "manifestSources": 87,
-    "officialRawSourcesDownloaded": 79,
+    "manifestSources": 88,
+    "officialRawSourcesDownloaded": 80,
     "referenceSources": 8,
     "sourceCategories": {
       "budget": 15,
@@ -18,7 +18,7 @@
       "public-expenditure": 34,
       "subsidy": 2,
       "catalog": 1,
-      "document": 17,
+      "document": 18,
       "reference": 8
     },
     "budget": {
@@ -90,14 +90,27 @@
       "status": "preliminary",
       "path": "data/normalized/closing-estimate/fy2025.json"
     },
-    "relatedOfficialDocuments": 17,
+    "relatedOfficialDocuments": 18,
     "executionReviewOriginals": {
-      "total": 24,
+      "total": 25,
       "byFiscalYear": {
         "2024": 22,
-        "2026": 2
+        "2026": 3
       },
       "allHashesVerified": true
+    },
+    "executionReview": {
+      "account": "一般会計",
+      "fiscalYearPair": [
+        2024,
+        2026
+      ],
+      "comparableCount": 77,
+      "candidateCount": 77,
+      "bureauCount": 18,
+      "policyReviewStatus": "ready",
+      "reviewedCount": 2,
+      "path": "data/normalized/execution-review/index.json"
     },
     "catalogExtractRows": 1497
   },
@@ -106,7 +119,7 @@
     "typecheck": "passed",
     "typecheckCommand": "pnpm run typecheck",
     "typecheckRequiresDevDependencies": true,
-    "verificationChecks": 268,
+    "verificationChecks": 271,
     "failedChecks": 0,
     "workerRoutesTested": true,
     "sourceHashesVerified": true

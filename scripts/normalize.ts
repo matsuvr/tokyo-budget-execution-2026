@@ -676,6 +676,33 @@ async function main(): Promise<void> {
   const publicExpenditure = await normalizePublicExpenditure();
   const subsidies = await normalizeSubsidies();
   const closingEstimate = await normalizeClosingEstimate();
+  // 執行レビューの概要indexが存在する場合だけ収録状況をcoverageへ載せる（#41）
+  let executionReviewCoverage: Record<string, unknown> | null = null;
+  try {
+    const index = JSON.parse(
+      await readFile(join(NORMALIZED, "execution-review/index.json"), "utf8"),
+    ) as {
+      scope: { account: string };
+      scan: { recordCount?: number; total?: number } | null;
+      comparisons: { comparableCount: number };
+      reviewCandidates: { count: number };
+      bureauSummary: { bureauCount: number };
+      policyReviews: { status: string; reviewedCount: number };
+    };
+    executionReviewCoverage = {
+      status: "indexed",
+      account: index.scope.account,
+      fiscalYearPair: [2024, 2026],
+      comparableCount: index.comparisons.comparableCount,
+      candidateCount: index.reviewCandidates.count,
+      bureauCount: index.bureauSummary.bureauCount,
+      policyReviewStatus: index.policyReviews.status,
+      reviewedCount: index.policyReviews.reviewedCount,
+      path: "data/normalized/execution-review/index.json",
+    };
+  } catch {
+    executionReviewCoverage = { status: "not-generated", path: "data/normalized/execution-review/index.json" };
+  }
   const coverage = {
     generatedAt: new Date().toISOString(),
     requestedFiscalYears: [2025, 2026],
@@ -713,6 +740,7 @@ async function main(): Promise<void> {
       status: "preliminary",
       path: "data/normalized/closing-estimate/fy2025.json",
     },
+    executionReview: executionReviewCoverage,
     cautions: [
       "URLのディレクトリ名ではなく、CSV内の年度列を年度判定に使用する。",
       "公金支出明細と予算見える化CSVは分類体系・粒度が一致しないため、未検証の直接結合や執行率計算を避ける。",

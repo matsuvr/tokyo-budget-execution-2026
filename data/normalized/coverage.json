@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-22T07:59:04.652Z",
+  "generatedAt": "2026-08-22T12:39:31.638Z",
   "requestedFiscalYears": [
     2025,
     2026
@@ -85,6 +85,20 @@
     "fiscalYear": 2025,
     "status": "preliminary",
     "path": "data/normalized/closing-estimate/fy2025.json"
+  },
+  "executionReview": {
+    "status": "indexed",
+    "account": "一般会計",
+    "fiscalYearPair": [
+      2024,
+      2026
+    ],
+    "comparableCount": 77,
+    "candidateCount": 77,
+    "bureauCount": 18,
+    "policyReviewStatus": "ready",
+    "reviewedCount": 2,
+    "path": "data/normalized/execution-review/index.json"
   },
   "cautions": [
     "URLのディレクトリ名ではなく、CSV内の年度列を年度判定に使用する。",

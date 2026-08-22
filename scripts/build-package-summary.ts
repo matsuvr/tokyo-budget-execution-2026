@@ -48,6 +48,30 @@ const verification = await readJson<{
   failedCheckCount: number;
 }>("data/verification-report.json");
 
+// 執行レビューの概要indexが存在する場合だけ収録状況を載せる（#41）
+let executionReview: Record<string, unknown> | null = null;
+try {
+  const index = await readJson<{
+    scope: { account: string };
+    comparisons: { comparableCount: number };
+    reviewCandidates: { count: number };
+    bureauSummary: { bureauCount: number };
+    policyReviews: { status: string; reviewedCount: number };
+  }>("data/normalized/execution-review/index.json");
+  executionReview = {
+    account: index.scope.account,
+    fiscalYearPair: [2024, 2026],
+    comparableCount: index.comparisons.comparableCount,
+    candidateCount: index.reviewCandidates.count,
+    bureauCount: index.bureauSummary.bureauCount,
+    policyReviewStatus: index.policyReviews.status,
+    reviewedCount: index.policyReviews.reviewedCount,
+    path: "data/normalized/execution-review/index.json",
+  };
+} catch {
+  executionReview = { status: "not-generated", path: "data/normalized/execution-review/index.json" };
+}
+
 const sourceCategories: Record<string, number> = {};
 for (const source of manifest.sources) {
   sourceCategories[source.category] = (sourceCategories[source.category] ?? 0) + 1;
@@ -120,6 +144,7 @@ const summary = {
         (source) => source.status === "downloaded" && Boolean(source.sha256),
       ),
     },
+    executionReview,
     catalogExtractRows: catalog.recordCount,
   },
   validation: {
