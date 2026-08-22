@@ -1,0 +1,78 @@
+{
+  "version": 1,
+  "updatedAt": "2026-08-22T00:00:00.000Z",
+  "comment": "フォーマット例（実データの対応付けではない）。exact / renamed / merged / unmatched を各1件含む。",
+  "mappings": [
+    {
+      "mappingId": "map-0001",
+      "fiscalYear2024": [
+        { "account": "一般会計", "chapter": "01:議会費" }
+      ],
+      "fiscalYear2026": [
+        { "account": "一般会計", "chapter": "01:議会費" }
+      ],
+      "granularity": "chapter",
+      "confidence": "A",
+      "relationType": "exact",
+      "evidence": {
+        "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）／令和8年度予算概要",
+        "url": "https://www.kaikeikanri.metro.tokyo.lg.jp/documents/d/kaikeikanri/06kessan-2",
+        "page": null
+      },
+      "note": "例: 款名・範囲とも変更なし"
+    },
+    {
+      "mappingId": "map-0002",
+      "fiscalYear2024": [
+        { "account": "一般会計", "chapter": "04:生活文化スポーツ費", "section": "01:生活文化費" }
+      ],
+      "fiscalYear2026": [
+        { "account": "一般会計", "chapter": "04:生活文化スポーツ費", "section": "01:文化観光部", "item": "01:文化振興費" }
+      ],
+      "granularity": "section",
+      "confidence": "B",
+      "relationType": "renamed",
+      "evidence": {
+        "title": "令和6年度予算概要 第1一般会計／令和8年度予算案 計数表",
+        "url": "https://www.zaimu.metro.tokyo.lg.jp/zaisei/yosan/r6/6yosangaiyounituite",
+        "page": null
+      },
+      "note": "例: 項の改称。2024側は項まで、2026側は目まで確認できるため項へ集約して比較"
+    },
+    {
+      "mappingId": "map-0003",
+      "fiscalYear2024": [
+        { "account": "一般会計", "chapter": "07:福祉費", "section": "03:児童福祉費", "item": "02:児童相談所費" },
+        { "account": "一般会計", "chapter": "07:福祉費", "section": "03:児童福祉費", "item": "05:保育所費" }
+      ],
+      "fiscalYear2026": [
+        { "account": "一般会計", "chapter": "07:福祉費", "section": "03:子供・子育て支援費", "item": "02:子供家庭福祉費" }
+      ],
+      "granularity": "item",
+      "confidence": "B",
+      "relationType": "merged",
+      "evidence": {
+        "title": "令和8年度主要事業",
+        "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/20260130_reiwa8nendo_tokyotoyosanangaiyou/8shuyouzigyou.pdf",
+        "page": null
+      },
+      "note": "例: many-to-one。金額の自動按分は行わず、合計値での比較のみ"
+    },
+    {
+      "mappingId": "map-0004",
+      "fiscalYear2024": [
+        { "account": "一般会計", "chapter": "99:廃止された科目" }
+      ],
+      "fiscalYear2026": [],
+      "granularity": "chapter",
+      "confidence": "unmatched",
+      "relationType": "discontinued",
+      "evidence": {
+        "title": "令和8年度東京都予算案の概要",
+        "url": "https://www.metro.tokyo.lg.jp/information/press/2026/01/2026013039",
+        "page": null
+      },
+      "note": "例: 2026年度に対応が存在しない。要説明候補の集計対象外"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "2024年度決算科目と2026年度予算科目の対応表",
+  "description": "年度間の名称変更・組織再編を監査可能な対応表で管理する。A/Bのみが要説明候補の集計に入る。",
+  "type": "object",
+  "required": ["version", "updatedAt", "mappings"],
+  "properties": {
+    "version": { "const": 1 },
+    "updatedAt": { "type": "string", "format": "date-time" },
+    "mappings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "mappingId",
+          "fiscalYear2024",
+          "fiscalYear2026",
+          "granularity",
+          "confidence",
+          "relationType",
+          "evidence"
+        ],
+        "properties": {
+          "mappingId": { "type": "string", "pattern": "^map-[0-9]{4,}$" },
+          "fiscalYear2024": {
+            "type": "array",
+            "minItems": 1,
+            "items": { "$ref": "#/$defs/accountKey" }
+          },
+          "fiscalYear2026": {
+            "type": "array",
+            "description": "unmatchedの場合は空配列を許容する",
+            "items": { "$ref": "#/$defs/accountKey" }
+          },
+          "granularity": {
+            "enum": ["chapter", "item", "object"],
+            "description": "双方の公式資料で確認できる最小共通粒度"
+          },
+          "confidence": {
+            "enum": ["A", "B", "C", "unmatched"],
+            "description": "A/Bのみが要説明候補の集計に入る。Bは人手確認20件上限"
+          },
+          "relationType": {
+            "enum": ["exact", "renamed", "merged", "split", "discontinued", "unknown"]
+          },
+          "evidence": {
+            "type": "object",
+            "required": ["title", "url", "page"],
+            "properties": {
+              "title": { "type": "string" },
+              "url": { "type": "string", "format": "uri" },
+              "page": { "type": ["integer", "null"] }
+            }
+          },
+          "note": { "type": "string", "description": "人手確認メモ" }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "accountKey": {
+      "type": "object",
+      "required": ["account", "chapter"],
+      "properties": {
+        "account": { "type": "string", "examples": ["一般会計"] },
+        "chapter": { "type": "string", "examples": ["01:議会費"] },
+        "section": { "type": "string" },
+        "item": { "type": "string" }
+      }
+    }
+  }
+}
