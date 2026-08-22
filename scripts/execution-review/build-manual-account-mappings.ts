@@ -187,7 +187,7 @@ async function main(): Promise<void> {
     emittedDecisions.add(decision.fy2024Key);
     mappingSeq += 1;
     manualMappings.push({
-      mappingId: `map-${String(mappingSeq).padStart(4, "0")}`,
+      mappingId: `map-manual-${String(mappingSeq).padStart(4, "0")}`,
       fiscalYear2024: [
         {
           account: "一般会計",

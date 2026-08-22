@@ -1,0 +1,2089 @@
+{
+ "records": [
+  {
+   "mappingId": "map-0001",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "1:議会費"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "01:議会費"
+    }
+   ],
+   "granularity": "chapter",
+   "confidence": "A",
+   "relationType": "exact",
+   "evidence": {
+    "title": "令和6年度予算概要 × 決算明細書 × 議案第1号 突合",
+    "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+    "page": null
+   },
+   "note": "#26で独立原本突合により確認",
+   "aggregatable": true
+  },
+  {
+   "mappingId": "map-0002",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "2:総務費"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "02:総務費"
+    }
+   ],
+   "granularity": "chapter",
+   "confidence": "A",
+   "relationType": "exact",
+   "evidence": {
+    "title": "令和6年度予算概要 × 決算明細書 × 議案第1号 突合",
+    "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+    "page": null
+   },
+   "note": "#26で独立原本突合により確認",
+   "aggregatable": true
+  },
+  {
+   "mappingId": "map-0003",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "3:徴税費"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "03:徴税費"
+    }
+   ],
+   "granularity": "chapter",
+   "confidence": "A",
+   "relationType": "exact",
+   "evidence": {
+    "title": "令和6年度予算概要 × 決算明細書 × 議案第1号 突合",
+    "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+    "page": null
+   },
+   "note": "#26で独立原本突合により確認",
+   "aggregatable": true
+  },
+  {
+   "mappingId": "map-0004",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "5:都市整備費"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "05:都市整備費"
+    }
+   ],
+   "granularity": "chapter",
+   "confidence": "A",
+   "relationType": "exact",
+   "evidence": {
+    "title": "令和6年度予算概要 × 決算明細書 × 議案第1号 突合",
+    "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+    "page": null
+   },
+   "note": "#26で独立原本突合により確認",
+   "aggregatable": true
+  },
+  {
+   "mappingId": "map-0005",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "6:環境費"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "06:環境費"
+    }
+   ],
+   "granularity": "chapter",
+   "confidence": "A",
+   "relationType": "exact",
+   "evidence": {
+    "title": "令和6年度予算概要 × 決算明細書 × 議案第1号 突合",
+    "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+    "page": null
+   },
+   "note": "#26で独立原本突合により確認",
+   "aggregatable": true
+  },
+  {
+   "mappingId": "map-0006",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "7:福祉費"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "07:福祉費"
+    }
+   ],
+   "granularity": "chapter",
+   "confidence": "A",
+   "relationType": "exact",
+   "evidence": {
+    "title": "令和6年度予算概要 × 決算明細書 × 議案第1号 突合",
+    "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+    "page": null
+   },
+   "note": "#26で独立原本突合により確認",
+   "aggregatable": true
+  },
+  {
+   "mappingId": "map-0007",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "8:保健医療費"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "08:保健医療費"
+    }
+   ],
+   "granularity": "chapter",
+   "confidence": "A",
+   "relationType": "exact",
+   "evidence": {
+    "title": "令和6年度予算概要 × 決算明細書 × 議案第1号 突合",
+    "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+    "page": null
+   },
+   "note": "#26で独立原本突合により確認",
+   "aggregatable": true
+  },
+  {
+   "mappingId": "map-0008",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "9:産業労働費"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "09:産業労働費"
+    }
+   ],
+   "granularity": "chapter",
+   "confidence": "A",
+   "relationType": "exact",
+   "evidence": {
+    "title": "令和6年度予算概要 × 決算明細書 × 議案第1号 突合",
+    "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+    "page": null
+   },
+   "note": "#26で独立原本突合により確認",
+   "aggregatable": true
+  },
+  {
+   "mappingId": "map-0009",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "11:港湾費"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "11:港湾費"
+    }
+   ],
+   "granularity": "chapter",
+   "confidence": "A",
+   "relationType": "exact",
+   "evidence": {
+    "title": "令和6年度予算概要 × 決算明細書 × 議案第1号 突合",
+    "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+    "page": null
+   },
+   "note": "#26で独立原本突合により確認",
+   "aggregatable": true
+  },
+  {
+   "mappingId": "map-0010",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "12:教育費"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "12:教育費"
+    }
+   ],
+   "granularity": "chapter",
+   "confidence": "A",
+   "relationType": "exact",
+   "evidence": {
+    "title": "令和6年度予算概要 × 決算明細書 × 議案第1号 突合",
+    "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+    "page": null
+   },
+   "note": "#26で独立原本突合により確認",
+   "aggregatable": true
+  },
+  {
+   "mappingId": "map-0011",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "13:学務費"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "13:学務費"
+    }
+   ],
+   "granularity": "chapter",
+   "confidence": "A",
+   "relationType": "exact",
+   "evidence": {
+    "title": "令和6年度予算概要 × 決算明細書 × 議案第1号 突合",
+    "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+    "page": null
+   },
+   "note": "#26で独立原本突合により確認",
+   "aggregatable": true
+  },
+  {
+   "mappingId": "map-0012",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "15:消防費"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "15:消防費"
+    }
+   ],
+   "granularity": "chapter",
+   "confidence": "A",
+   "relationType": "exact",
+   "evidence": {
+    "title": "令和6年度予算概要 × 決算明細書 × 議案第1号 突合",
+    "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+    "page": null
+   },
+   "note": "#26で独立原本突合により確認",
+   "aggregatable": true
+  },
+  {
+   "mappingId": "map-0013",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "16:公債費"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "16:公債費"
+    }
+   ],
+   "granularity": "chapter",
+   "confidence": "A",
+   "relationType": "exact",
+   "evidence": {
+    "title": "令和6年度予算概要 × 決算明細書 × 議案第1号 突合",
+    "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+    "page": null
+   },
+   "note": "#26で独立原本突合により確認",
+   "aggregatable": true
+  },
+  {
+   "mappingId": "map-0014",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "17:諸支出金"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "17:諸支出金"
+    }
+   ],
+   "granularity": "chapter",
+   "confidence": "A",
+   "relationType": "exact",
+   "evidence": {
+    "title": "令和6年度予算概要 × 決算明細書 × 議案第1号 突合",
+    "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+    "page": null
+   },
+   "note": "#26で独立原本突合により確認",
+   "aggregatable": true
+  },
+  {
+   "mappingId": "map-0015",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "18:予備費"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "18:予備費"
+    }
+   ],
+   "granularity": "chapter",
+   "confidence": "A",
+   "relationType": "exact",
+   "evidence": {
+    "title": "令和6年度予算概要 × 決算明細書 × 議案第1号 突合",
+    "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+    "page": null
+   },
+   "note": "#26で独立原本突合により確認",
+   "aggregatable": true
+  },
+  {
+   "mappingId": "map-0016",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "2:総務費",
+     "section": "1:総務管理費"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "02:総務費",
+     "section": "01:総務管理費"
+    }
+   ],
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "evidence": {
+    "title": "令和6年度予算概要 × 決算明細書 × 議案第1号 突合",
+    "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+    "page": null
+   },
+   "note": "#26で独立原本突合により確認",
+   "aggregatable": true
+  },
+  {
+   "mappingId": "map-0017",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "2:総務費",
+     "section": "2:政策企画費"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "02:総務費",
+     "section": "02:政策企画費"
+    }
+   ],
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "evidence": {
+    "title": "令和6年度予算概要 × 決算明細書 × 議案第1号 突合",
+    "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+    "page": null
+   },
+   "note": "#26で独立原本突合により確認",
+   "aggregatable": true
+  },
+  {
+   "mappingId": "map-0018",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "2:総務費",
+     "section": "3:子供政策連携費"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "02:総務費",
+     "section": "03:子供政策連携費"
+    }
+   ],
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "evidence": {
+    "title": "令和6年度予算概要 × 決算明細書 × 議案第1号 突合",
+    "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+    "page": null
+   },
+   "note": "#26で独立原本突合により確認",
+   "aggregatable": true
+  },
+  {
+   "mappingId": "map-0019",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "2:総務費",
+     "section": "5:デジタルサービス費"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "02:総務費",
+     "section": "04:デジタルサービス費"
+    }
+   ],
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "evidence": {
+    "title": "令和6年度予算概要 × 決算明細書 × 議案第1号 突合",
+    "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+    "page": null
+   },
+   "note": "#26で独立原本突合により確認",
+   "aggregatable": true
+  },
+  {
+   "mappingId": "map-0020",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "2:総務費",
+     "section": "6:区市町村振興費"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "02:総務費",
+     "section": "05:区市町村振興費"
+    }
+   ],
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "evidence": {
+    "title": "令和6年度予算概要 × 決算明細書 × 議案第1号 突合",
+    "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+    "page": null
+   },
+   "note": "#26で独立原本突合により確認",
+   "aggregatable": true
+  },
+  {
+   "mappingId": "map-0021",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "2:総務費",
+     "section": "7:選挙費"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "02:総務費",
+     "section": "06:選挙費"
+    }
+   ],
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "evidence": {
+    "title": "令和6年度予算概要 × 決算明細書 × 議案第1号 突合",
+    "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+    "page": null
+   },
+   "note": "#26で独立原本突合により確認",
+   "aggregatable": true
+  },
+  {
+   "mappingId": "map-0022",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "2:総務費",
+     "section": "8:防災管理費"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "02:総務費",
+     "section": "07:防災管理費"
+    }
+   ],
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "evidence": {
+    "title": "令和6年度予算概要 × 決算明細書 × 議案第1号 突合",
+    "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+    "page": null
+   },
+   "note": "#26で独立原本突合により確認",
+   "aggregatable": true
+  },
+  {
+   "mappingId": "map-0023",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "2:総務費",
+     "section": "9:建築保全費"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "02:総務費",
+     "section": "12:建築保全費"
+    }
+   ],
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "evidence": {
+    "title": "令和6年度予算概要 × 決算明細書 × 議案第1号 突合",
+    "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+    "page": null
+   },
+   "note": "#26で独立原本突合により確認",
+   "aggregatable": true
+  },
+  {
+   "mappingId": "map-0024",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "2:総務費",
+     "section": "10:退職手当及年金費"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "02:総務費",
+     "section": "13:退職手当及年金費"
+    }
+   ],
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "evidence": {
+    "title": "令和6年度予算概要 × 決算明細書 × 議案第1号 突合",
+    "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+    "page": null
+   },
+   "note": "#26で独立原本突合により確認",
+   "aggregatable": true
+  },
+  {
+   "mappingId": "map-0025",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "5:都市整備費",
+     "section": "1:都市整備管理費"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "05:都市整備費",
+     "section": "01:都市整備管理費"
+    }
+   ],
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "evidence": {
+    "title": "令和6年度予算概要 × 決算明細書 × 議案第1号 突合",
+    "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+    "page": null
+   },
+   "note": "#26で独立原本突合により確認",
+   "aggregatable": true
+  },
+  {
+   "mappingId": "map-0026",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "5:都市整備費",
+     "section": "2:都市基盤整備費"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "05:都市整備費",
+     "section": "02:都市基盤整備費"
+    }
+   ],
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "evidence": {
+    "title": "令和6年度予算概要 × 決算明細書 × 議案第1号 突合",
+    "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+    "page": null
+   },
+   "note": "#26で独立原本突合により確認",
+   "aggregatable": true
+  },
+  {
+   "mappingId": "map-0027",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "5:都市整備費",
+     "section": "4:建築行政費"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "05:都市整備費",
+     "section": "04:建築行政費"
+    }
+   ],
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "evidence": {
+    "title": "令和6年度予算概要 × 決算明細書 × 議案第1号 突合",
+    "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+    "page": null
+   },
+   "note": "#26で独立原本突合により確認",
+   "aggregatable": true
+  },
+  {
+   "mappingId": "map-0028",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "5:都市整備費",
+     "section": "5:住宅政策費"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "05:都市整備費",
+     "section": "05:住宅政策費"
+    }
+   ],
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "evidence": {
+    "title": "令和6年度予算概要 × 決算明細書 × 議案第1号 突合",
+    "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+    "page": null
+   },
+   "note": "#26で独立原本突合により確認",
+   "aggregatable": true
+  },
+  {
+   "mappingId": "map-0029",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "6:環境費",
+     "section": "1:環境管理費"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "06:環境費",
+     "section": "01:環境管理費"
+    }
+   ],
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "evidence": {
+    "title": "令和6年度予算概要 × 決算明細書 × 議案第1号 突合",
+    "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+    "page": null
+   },
+   "note": "#26で独立原本突合により確認",
+   "aggregatable": true
+  },
+  {
+   "mappingId": "map-0030",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "6:環境費",
+     "section": "2:環境保全費"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "06:環境費",
+     "section": "02:環境保全費"
+    }
+   ],
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "evidence": {
+    "title": "令和6年度予算概要 × 決算明細書 × 議案第1号 突合",
+    "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+    "page": null
+   },
+   "note": "#26で独立原本突合により確認",
+   "aggregatable": true
+  },
+  {
+   "mappingId": "map-0031",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "6:環境費",
+     "section": "3:廃棄物費"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "06:環境費",
+     "section": "03:廃棄物費"
+    }
+   ],
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "evidence": {
+    "title": "令和6年度予算概要 × 決算明細書 × 議案第1号 突合",
+    "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+    "page": null
+   },
+   "note": "#26で独立原本突合により確認",
+   "aggregatable": true
+  },
+  {
+   "mappingId": "map-0032",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "7:福祉費",
+     "section": "1:福祉管理費"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "07:福祉費",
+     "section": "01:福祉管理費"
+    }
+   ],
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "evidence": {
+    "title": "令和6年度予算概要 × 決算明細書 × 議案第1号 突合",
+    "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+    "page": null
+   },
+   "note": "#26で独立原本突合により確認",
+   "aggregatable": true
+  },
+  {
+   "mappingId": "map-0033",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "7:福祉費",
+     "section": "2:生活福祉費"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "07:福祉費",
+     "section": "02:生活福祉費"
+    }
+   ],
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "evidence": {
+    "title": "令和6年度予算概要 × 決算明細書 × 議案第1号 突合",
+    "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+    "page": null
+   },
+   "note": "#26で独立原本突合により確認",
+   "aggregatable": true
+  },
+  {
+   "mappingId": "map-0034",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "7:福祉費",
+     "section": "3:子供・子育て支援費"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "07:福祉費",
+     "section": "03:子供・子育て支援費"
+    }
+   ],
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "evidence": {
+    "title": "令和6年度予算概要 × 決算明細書 × 議案第1号 突合",
+    "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+    "page": null
+   },
+   "note": "#26で独立原本突合により確認",
+   "aggregatable": true
+  },
+  {
+   "mappingId": "map-0035",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "7:福祉費",
+     "section": "4:高齢者施策推進費"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "07:福祉費",
+     "section": "04:高齢者施策推進費"
+    }
+   ],
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "evidence": {
+    "title": "令和6年度予算概要 × 決算明細書 × 議案第1号 突合",
+    "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+    "page": null
+   },
+   "note": "#26で独立原本突合により確認",
+   "aggregatable": true
+  },
+  {
+   "mappingId": "map-0036",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "7:福祉費",
+     "section": "5:障害者施策推進費"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "07:福祉費",
+     "section": "05:障害者施策推進費"
+    }
+   ],
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "evidence": {
+    "title": "令和6年度予算概要 × 決算明細書 × 議案第1号 突合",
+    "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+    "page": null
+   },
+   "note": "#26で独立原本突合により確認",
+   "aggregatable": true
+  },
+  {
+   "mappingId": "map-0037",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "7:福祉費",
+     "section": "6:施設整備費"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "07:福祉費",
+     "section": "06:施設整備費"
+    }
+   ],
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "evidence": {
+    "title": "令和6年度予算概要 × 決算明細書 × 議案第1号 突合",
+    "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+    "page": null
+   },
+   "note": "#26で独立原本突合により確認",
+   "aggregatable": true
+  },
+  {
+   "mappingId": "map-0038",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "8:保健医療費",
+     "section": "1:保健医療管理費"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "08:保健医療費",
+     "section": "01:保健医療管理費"
+    }
+   ],
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "evidence": {
+    "title": "令和6年度予算概要 × 決算明細書 × 議案第1号 突合",
+    "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+    "page": null
+   },
+   "note": "#26で独立原本突合により確認",
+   "aggregatable": true
+  },
+  {
+   "mappingId": "map-0039",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "8:保健医療費",
+     "section": "2:保健政策費"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "08:保健医療費",
+     "section": "02:保健政策費"
+    }
+   ],
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "evidence": {
+    "title": "令和6年度予算概要 × 決算明細書 × 議案第1号 突合",
+    "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+    "page": null
+   },
+   "note": "#26で独立原本突合により確認",
+   "aggregatable": true
+  },
+  {
+   "mappingId": "map-0040",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "8:保健医療費",
+     "section": "3:医療政策費"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "08:保健医療費",
+     "section": "03:医療政策費"
+    }
+   ],
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "evidence": {
+    "title": "令和6年度予算概要 × 決算明細書 × 議案第1号 突合",
+    "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+    "page": null
+   },
+   "note": "#26で独立原本突合により確認",
+   "aggregatable": true
+  },
+  {
+   "mappingId": "map-0041",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "8:保健医療費",
+     "section": "4:都立病院支援費"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "08:保健医療費",
+     "section": "04:都立病院支援費"
+    }
+   ],
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "evidence": {
+    "title": "令和6年度予算概要 × 決算明細書 × 議案第1号 突合",
+    "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+    "page": null
+   },
+   "note": "#26で独立原本突合により確認",
+   "aggregatable": true
+  },
+  {
+   "mappingId": "map-0042",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "8:保健医療費",
+     "section": "5:健康安全費"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "08:保健医療費",
+     "section": "05:健康安全費"
+    }
+   ],
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "evidence": {
+    "title": "令和6年度予算概要 × 決算明細書 × 議案第1号 突合",
+    "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+    "page": null
+   },
+   "note": "#26で独立原本突合により確認",
+   "aggregatable": true
+  },
+  {
+   "mappingId": "map-0043",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "8:保健医療費",
+     "section": "6:感染症対策費"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "08:保健医療費",
+     "section": "06:感染症対策費"
+    }
+   ],
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "evidence": {
+    "title": "令和6年度予算概要 × 決算明細書 × 議案第1号 突合",
+    "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+    "page": null
+   },
+   "note": "#26で独立原本突合により確認",
+   "aggregatable": true
+  },
+  {
+   "mappingId": "map-0044",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "8:保健医療費",
+     "section": "7:施設整備費"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "08:保健医療費",
+     "section": "07:施設整備費"
+    }
+   ],
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "evidence": {
+    "title": "令和6年度予算概要 × 決算明細書 × 議案第1号 突合",
+    "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+    "page": null
+   },
+   "note": "#26で独立原本突合により確認",
+   "aggregatable": true
+  },
+  {
+   "mappingId": "map-0045",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "9:産業労働費",
+     "section": "1:労働委員会費"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "09:産業労働費",
+     "section": "01:労働委員会費"
+    }
+   ],
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "evidence": {
+    "title": "令和6年度予算概要 × 決算明細書 × 議案第1号 突合",
+    "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+    "page": null
+   },
+   "note": "#26で独立原本突合により確認",
+   "aggregatable": true
+  },
+  {
+   "mappingId": "map-0046",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "9:産業労働費",
+     "section": "2:産業労働管理費"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "09:産業労働費",
+     "section": "02:産業労働管理費"
+    }
+   ],
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "evidence": {
+    "title": "令和6年度予算概要 × 決算明細書 × 議案第1号 突合",
+    "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+    "page": null
+   },
+   "note": "#26で独立原本突合により確認",
+   "aggregatable": true
+  },
+  {
+   "mappingId": "map-0047",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "9:産業労働費",
+     "section": "3:商工業振興費"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "09:産業労働費",
+     "section": "03:商工業振興費"
+    }
+   ],
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "evidence": {
+    "title": "令和6年度予算概要 × 決算明細書 × 議案第1号 突合",
+    "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+    "page": null
+   },
+   "note": "#26で独立原本突合により確認",
+   "aggregatable": true
+  },
+  {
+   "mappingId": "map-0048",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "9:産業労働費",
+     "section": "4:農林水産費"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "09:産業労働費",
+     "section": "04:農林水産費"
+    }
+   ],
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "evidence": {
+    "title": "令和6年度予算概要 × 決算明細書 × 議案第1号 突合",
+    "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+    "page": null
+   },
+   "note": "#26で独立原本突合により確認",
+   "aggregatable": true
+  },
+  {
+   "mappingId": "map-0049",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "9:産業労働費",
+     "section": "5:労働費"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "09:産業労働費",
+     "section": "05:労働費"
+    }
+   ],
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "evidence": {
+    "title": "令和6年度予算概要 × 決算明細書 × 議案第1号 突合",
+    "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+    "page": null
+   },
+   "note": "#26で独立原本突合により確認",
+   "aggregatable": true
+  },
+  {
+   "mappingId": "map-0050",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "9:産業労働費",
+     "section": "6:施設整備費"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "09:産業労働費",
+     "section": "06:施設整備費"
+    }
+   ],
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "evidence": {
+    "title": "令和6年度予算概要 × 決算明細書 × 議案第1号 突合",
+    "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+    "page": null
+   },
+   "note": "#26で独立原本突合により確認",
+   "aggregatable": true
+  },
+  {
+   "mappingId": "map-0051",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "10:土木費",
+     "section": "3:公園霊園費"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "10:土木費",
+     "section": "04:公園霊園費"
+    }
+   ],
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "evidence": {
+    "title": "令和6年度予算概要 × 決算明細書 × 議案第1号 突合",
+    "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+    "page": null
+   },
+   "note": "#26で独立原本突合により確認",
+   "aggregatable": true
+  },
+  {
+   "mappingId": "map-0052",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "10:土木費",
+     "section": "4:土木管理費"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "10:土木費",
+     "section": "01:土木管理費"
+    }
+   ],
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "evidence": {
+    "title": "令和6年度予算概要 × 決算明細書 × 議案第1号 突合",
+    "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+    "page": null
+   },
+   "note": "#26で独立原本突合により確認",
+   "aggregatable": true
+  },
+  {
+   "mappingId": "map-0053",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "11:港湾費",
+     "section": "1:東京港整備費"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "11:港湾費",
+     "section": "02:東京港整備費"
+    }
+   ],
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "evidence": {
+    "title": "令和6年度予算概要 × 決算明細書 × 議案第1号 突合",
+    "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+    "page": null
+   },
+   "note": "#26で独立原本突合により確認",
+   "aggregatable": true
+  },
+  {
+   "mappingId": "map-0054",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "11:港湾費",
+     "section": "2:島しょ等港湾整備費"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "11:港湾費",
+     "section": "03:島しょ等港湾整備費"
+    }
+   ],
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "evidence": {
+    "title": "令和6年度予算概要 × 決算明細書 × 議案第1号 突合",
+    "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+    "page": null
+   },
+   "note": "#26で独立原本突合により確認",
+   "aggregatable": true
+  },
+  {
+   "mappingId": "map-0055",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "11:港湾費",
+     "section": "3:港湾管理費"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "11:港湾費",
+     "section": "01:港湾管理費"
+    }
+   ],
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "evidence": {
+    "title": "令和6年度予算概要 × 決算明細書 × 議案第1号 突合",
+    "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+    "page": null
+   },
+   "note": "#26で独立原本突合により確認",
+   "aggregatable": true
+  },
+  {
+   "mappingId": "map-0056",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "12:教育費",
+     "section": "1:小中学校費"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "12:教育費",
+     "section": "02:小中学校費"
+    }
+   ],
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "evidence": {
+    "title": "令和6年度予算概要 × 決算明細書 × 議案第1号 突合",
+    "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+    "page": null
+   },
+   "note": "#26で独立原本突合により確認",
+   "aggregatable": true
+  },
+  {
+   "mappingId": "map-0057",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "12:教育費",
+     "section": "2:高等学校費"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "12:教育費",
+     "section": "03:高等学校費"
+    }
+   ],
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "evidence": {
+    "title": "令和6年度予算概要 × 決算明細書 × 議案第1号 突合",
+    "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+    "page": null
+   },
+   "note": "#26で独立原本突合により確認",
+   "aggregatable": true
+  },
+  {
+   "mappingId": "map-0058",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "12:教育費",
+     "section": "3:特別支援学校費"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "12:教育費",
+     "section": "04:特別支援学校費"
+    }
+   ],
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "evidence": {
+    "title": "令和6年度予算概要 × 決算明細書 × 議案第1号 突合",
+    "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+    "page": null
+   },
+   "note": "#26で独立原本突合により確認",
+   "aggregatable": true
+  },
+  {
+   "mappingId": "map-0059",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "12:教育費",
+     "section": "4:社会教育費"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "12:教育費",
+     "section": "08:社会教育費"
+    }
+   ],
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "evidence": {
+    "title": "令和6年度予算概要 × 決算明細書 × 議案第1号 突合",
+    "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+    "page": null
+   },
+   "note": "#26で独立原本突合により確認",
+   "aggregatable": true
+  },
+  {
+   "mappingId": "map-0060",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "12:教育費",
+     "section": "5:退職手当及年金費"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "12:教育費",
+     "section": "06:退職手当及年金費"
+    }
+   ],
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "evidence": {
+    "title": "令和6年度予算概要 × 決算明細書 × 議案第1号 突合",
+    "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+    "page": null
+   },
+   "note": "#26で独立原本突合により確認",
+   "aggregatable": true
+  },
+  {
+   "mappingId": "map-0061",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "12:教育費",
+     "section": "6:施設整備費"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "12:教育費",
+     "section": "09:施設整備費"
+    }
+   ],
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "evidence": {
+    "title": "令和6年度予算概要 × 決算明細書 × 議案第1号 突合",
+    "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+    "page": null
+   },
+   "note": "#26で独立原本突合により確認",
+   "aggregatable": true
+  },
+  {
+   "mappingId": "map-0062",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "13:学務費",
+     "section": "1:東京都公立大学法人支援費"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "13:学務費",
+     "section": "01:東京都公立大学法人支援費"
+    }
+   ],
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "evidence": {
+    "title": "令和6年度予算概要 × 決算明細書 × 議案第1号 突合",
+    "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+    "page": null
+   },
+   "note": "#26で独立原本突合により確認",
+   "aggregatable": true
+  },
+  {
+   "mappingId": "map-0063",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "13:学務費",
+     "section": "2:私立学校振興費"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "13:学務費",
+     "section": "02:私立学校振興費"
+    }
+   ],
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "evidence": {
+    "title": "令和6年度予算概要 × 決算明細書 × 議案第1号 突合",
+    "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+    "page": null
+   },
+   "note": "#26で独立原本突合により確認",
+   "aggregatable": true
+  },
+  {
+   "mappingId": "map-0064",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "13:学務費",
+     "section": "3:育英資金費"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "13:学務費",
+     "section": "03:育英資金費"
+    }
+   ],
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "evidence": {
+    "title": "令和6年度予算概要 × 決算明細書 × 議案第1号 突合",
+    "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+    "page": null
+   },
+   "note": "#26で独立原本突合により確認",
+   "aggregatable": true
+  },
+  {
+   "mappingId": "map-0065",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "14:警察費",
+     "section": "1:警察管理費"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "14:警察費",
+     "section": "01:警察管理費"
+    }
+   ],
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "evidence": {
+    "title": "令和6年度予算概要 × 決算明細書 × 議案第1号 突合",
+    "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+    "page": null
+   },
+   "note": "#26で独立原本突合により確認",
+   "aggregatable": true
+  },
+  {
+   "mappingId": "map-0066",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "14:警察費",
+     "section": "2:退職手当及年金費"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "14:警察費",
+     "section": "02:退職手当及年金費"
+    }
+   ],
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "evidence": {
+    "title": "令和6年度予算概要 × 決算明細書 × 議案第1号 突合",
+    "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+    "page": null
+   },
+   "note": "#26で独立原本突合により確認",
+   "aggregatable": true
+  },
+  {
+   "mappingId": "map-0067",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "14:警察費",
+     "section": "3:警察活動費"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "14:警察費",
+     "section": "03:警察活動費"
+    }
+   ],
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "evidence": {
+    "title": "令和6年度予算概要 × 決算明細書 × 議案第1号 突合",
+    "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+    "page": null
+   },
+   "note": "#26で独立原本突合により確認",
+   "aggregatable": true
+  },
+  {
+   "mappingId": "map-0068",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "14:警察費",
+     "section": "4:警察施設費"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "14:警察費",
+     "section": "04:警察施設費"
+    }
+   ],
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "evidence": {
+    "title": "令和6年度予算概要 × 決算明細書 × 議案第1号 突合",
+    "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+    "page": null
+   },
+   "note": "#26で独立原本突合により確認",
+   "aggregatable": true
+  },
+  {
+   "mappingId": "map-0069",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "15:消防費",
+     "section": "1:消防管理費"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "15:消防費",
+     "section": "01:消防管理費"
+    }
+   ],
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "evidence": {
+    "title": "令和6年度予算概要 × 決算明細書 × 議案第1号 突合",
+    "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+    "page": null
+   },
+   "note": "#26で独立原本突合により確認",
+   "aggregatable": true
+  },
+  {
+   "mappingId": "map-0070",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "15:消防費",
+     "section": "2:消防活動費"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "15:消防費",
+     "section": "02:消防活動費"
+    }
+   ],
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "evidence": {
+    "title": "令和6年度予算概要 × 決算明細書 × 議案第1号 突合",
+    "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+    "page": null
+   },
+   "note": "#26で独立原本突合により確認",
+   "aggregatable": true
+  },
+  {
+   "mappingId": "map-0071",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "15:消防費",
+     "section": "3:消防団費"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "15:消防費",
+     "section": "03:消防団費"
+    }
+   ],
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "evidence": {
+    "title": "令和6年度予算概要 × 決算明細書 × 議案第1号 突合",
+    "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+    "page": null
+   },
+   "note": "#26で独立原本突合により確認",
+   "aggregatable": true
+  },
+  {
+   "mappingId": "map-0072",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "15:消防費",
+     "section": "4:退職手当及年金費"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "15:消防費",
+     "section": "04:退職手当及年金費"
+    }
+   ],
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "evidence": {
+    "title": "令和6年度予算概要 × 決算明細書 × 議案第1号 突合",
+    "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+    "page": null
+   },
+   "note": "#26で独立原本突合により確認",
+   "aggregatable": true
+  },
+  {
+   "mappingId": "map-0073",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "15:消防費",
+     "section": "5:建設費"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "15:消防費",
+     "section": "05:建設費"
+    }
+   ],
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "evidence": {
+    "title": "令和6年度予算概要 × 決算明細書 × 議案第1号 突合",
+    "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+    "page": null
+   },
+   "note": "#26で独立原本突合により確認",
+   "aggregatable": true
+  },
+  {
+   "mappingId": "map-0074",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "17:諸支出金",
+     "section": "1:他会計支出金"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "17:諸支出金",
+     "section": "02:他会計支出金"
+    }
+   ],
+   "granularity": "item",
+   "confidence": "A",
+   "relationType": "exact",
+   "evidence": {
+    "title": "令和6年度予算概要 × 決算明細書 × 議案第1号 突合",
+    "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+    "page": null
+   },
+   "note": "#26で独立原本突合により確認",
+   "aggregatable": true
+  },
+  {
+   "mappingId": "map-manual-0001",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "14:警察費"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "14:警察費"
+    }
+   ],
+   "granularity": "chapter",
+   "confidence": "B",
+   "relationType": "renamed",
+   "evidence": {
+    "title": "令和6年度予算概要 第1一般会計",
+    "url": "https://www.zaimu.metro.tokyo.lg.jp/zaisei/yosan/r6/6yosangaiyounituite",
+    "page": 23
+   },
+   "evidenceList": [
+    {
+     "title": "令和6年度予算概要 第1一般会計",
+     "url": "https://www.zaimu.metro.tokyo.lg.jp/zaisei/yosan/r6/6yosangaiyounituite",
+     "page": 23
+    },
+    {
+     "title": "議案第1号 令和8年度東京都一般会計予算",
+     "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+     "page": 16
+    }
+   ],
+   "note": "名称・範囲とも変更なし。決算明細書側の当初予算額が未抽出のためA確定できず、本表でB対応とする。（予算現額 6710.6億円・対象ランク 1位）",
+   "aggregatable": true
+  },
+  {
+   "mappingId": "map-manual-0002",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "10:土木費"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "10:土木費"
+    }
+   ],
+   "granularity": "chapter",
+   "confidence": "B",
+   "relationType": "renamed",
+   "evidence": {
+    "title": "令和6年度予算概要 第1一般会計",
+    "url": "https://www.zaimu.metro.tokyo.lg.jp/zaisei/yosan/r6/6yosangaiyounituite",
+    "page": 18
+   },
+   "evidenceList": [
+    {
+     "title": "令和6年度予算概要 第1一般会計",
+     "url": "https://www.zaimu.metro.tokyo.lg.jp/zaisei/yosan/r6/6yosangaiyounituite",
+     "page": 18
+    },
+    {
+     "title": "議案第1号 令和8年度東京都一般会計予算",
+     "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+     "page": 13
+    }
+   ],
+   "note": "名称・範囲とも変更なし。決算明細書側の当初予算額が未抽出のためA確定できず、本表でB対応とする。（予算現額 5947.3億円・対象ランク 2位）",
+   "aggregatable": true
+  },
+  {
+   "mappingId": "map-manual-0003",
+   "fiscalYear2024": [
+    {
+     "account": "一般会計",
+     "chapter": "04:生活文化スポーツ費"
+    }
+   ],
+   "fiscalYear2026": [
+    {
+     "account": "一般会計",
+     "chapter": "04:生活文化費"
+    }
+   ],
+   "granularity": "chapter",
+   "confidence": "B",
+   "relationType": "renamed",
+   "evidence": {
+    "title": "令和6年度予算概要 第1一般会計",
+    "url": "https://www.zaimu.metro.tokyo.lg.jp/zaisei/yosan/r6/6yosangaiyounituite",
+    "page": 8
+   },
+   "evidenceList": [
+    {
+     "title": "令和6年度予算概要 第1一般会計",
+     "url": "https://www.zaimu.metro.tokyo.lg.jp/zaisei/yosan/r6/6yosangaiyounituite",
+     "page": 8
+    },
+    {
+     "title": "議案第1号 令和8年度東京都一般会計予算",
+     "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+     "page": 12
+    }
+   ],
+   "note": "第4款の改称（生活文化スポーツ費→生活文化費）。範囲は同一。（予算現額 894.3億円・対象ランク 6位）",
+   "aggregatable": true
+  }
+ ],
+ "summary": {
+  "A": 74,
+  "B": 3,
+  "C": 0,
+  "unmatched": 0
+ }
+}

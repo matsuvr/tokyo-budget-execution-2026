@@ -34,7 +34,8 @@
     "normalize:fy2026-budget": "node --experimental-strip-types scripts/execution-review/normalize-fy2026-budget.ts",
     "suggest:mappings": "node --experimental-strip-types scripts/execution-review/suggest-exact-account-mappings.ts",
     "confirm:mappings": "node --experimental-strip-types scripts/execution-review/confirm-exact-account-mappings.ts",
-    "manual:mappings": "node --experimental-strip-types scripts/execution-review/build-manual-account-mappings.ts"
+    "manual:mappings": "node --experimental-strip-types scripts/execution-review/build-manual-account-mappings.ts",
+    "validate:mappings": "node --experimental-strip-types scripts/execution-review/validate-account-mappings.ts"
   },
   "devDependencies": {
     "@types/node": "latest",
