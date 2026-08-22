@@ -1,0 +1,27 @@
+{
+ "version": 1,
+ "note": "#37の政策レビュー（委託・調達 procurement）。selected-policy-reviews.json の executionMethod=procurement のみが対象。入札不調・契約遅延等のタグは公式資料に明示された場合だけ付け、一般統計からの個別断定はしない。",
+ "generatedFrom": "data/manual/execution-review/selected-policy-reviews.json",
+ "criteria": {
+  "maxSelections": 5,
+  "targetExecutionMethod": "procurement"
+ },
+ "records": [],
+ "summary": {
+  "reviewedCount": 0,
+  "maxAllowed": 5,
+  "byReasonStatus": {
+   "confirmed": 0,
+   "not-found": 0,
+   "not-applicable": 0
+  },
+  "byImprovementStatus": {
+   "confirmed": 0,
+   "not-found": 0,
+   "not-applicable": 0
+  },
+  "shortfallNotes": [
+   "selected-policy-reviews.json で executionMethod=procurement と確定した候補が0件のため対象なし。#35の選定方針に従い、他区分の候補で水増ししていない。"
+  ]
+ }
+}
