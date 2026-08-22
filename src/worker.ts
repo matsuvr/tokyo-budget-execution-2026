@@ -91,6 +91,9 @@ async function route(request: Request, env: Env): Promise<Response> {
         subsidySummary: "/subsidies/summary?year=2025|2026",
         closingEstimate: "/closing-estimate/2025",
         catalog: "/catalog",
+        executionReviewIndex: "/execution-review",
+        executionReviewCandidates: "/execution-review/candidates",
+        executionReviewBureaus: "/execution-review/bureaus",
         objectProxy: "/data/*",
       },
       cautions: [
@@ -163,6 +166,16 @@ async function route(request: Request, env: Env): Promise<Response> {
 
   if (path === "/closing-estimate/2025") {
     return serveObject(env, "data/normalized/closing-estimate/fy2025.json", request.method);
+  }
+
+  if (path === "/execution-review") {
+    return serveObject(env, "data/normalized/execution-review/index.json", request.method);
+  }
+  if (path === "/execution-review/candidates") {
+    return serveObject(env, "data/normalized/execution-review/review-candidates.json", request.method);
+  }
+  if (path === "/execution-review/bureaus") {
+    return serveObject(env, "data/normalized/execution-review/bureau-summary.json", request.method);
   }
 
   if (path.startsWith("/data/")) {
