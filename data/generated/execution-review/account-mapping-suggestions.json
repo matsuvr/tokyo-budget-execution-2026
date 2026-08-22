@@ -1,0 +1,2323 @@
+{
+ "version": 1,
+ "generatedFrom": {
+  "fy2024": "data/normalized/execution-review/fy2024/initial-budget-lines.json",
+  "fy2026": "data/normalized/execution-review/fy2026/initial-budget-lines.json"
+ },
+ "normalization": "whitespace removal + parenthetical removal + full-width alnum folding",
+ "note": "自動候補は人手確認前の状態であり信頼度Aを持たない。A確定は #26 の手順で行う。",
+ "candidates": [
+  {
+   "status": "candidate",
+   "granularity": "chapter",
+   "fy2024": [
+    {
+     "fiscalYear": 2024,
+     "chapterRaw": "1:議会費",
+     "sectionRaw": null,
+     "chapterNormalized": "議会費",
+     "sectionNormalized": null,
+     "initialBudgetYen": 5419000000,
+     "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    }
+   ],
+   "fy2026": [
+    {
+     "fiscalYear": 2026,
+     "chapterRaw": "01:議会費",
+     "sectionRaw": null,
+     "chapterNormalized": "議会費",
+     "sectionNormalized": null,
+     "initialBudgetYen": 6010000000,
+     "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    }
+   ]
+  },
+  {
+   "status": "candidate",
+   "granularity": "chapter",
+   "fy2024": [
+    {
+     "fiscalYear": 2024,
+     "chapterRaw": "2:総務費",
+     "sectionRaw": null,
+     "chapterNormalized": "総務費",
+     "sectionNormalized": null,
+     "initialBudgetYen": 368474000000,
+     "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    }
+   ],
+   "fy2026": [
+    {
+     "fiscalYear": 2026,
+     "chapterRaw": "02:総務費",
+     "sectionRaw": null,
+     "chapterNormalized": "総務費",
+     "sectionNormalized": null,
+     "initialBudgetYen": 396719000000,
+     "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    }
+   ]
+  },
+  {
+   "status": "candidate",
+   "granularity": "chapter",
+   "fy2024": [
+    {
+     "fiscalYear": 2024,
+     "chapterRaw": "3:徴税費",
+     "sectionRaw": null,
+     "chapterNormalized": "徴税費",
+     "sectionNormalized": null,
+     "initialBudgetYen": 84784000000,
+     "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    }
+   ],
+   "fy2026": [
+    {
+     "fiscalYear": 2026,
+     "chapterRaw": "03:徴税費",
+     "sectionRaw": null,
+     "chapterNormalized": "徴税費",
+     "sectionNormalized": null,
+     "initialBudgetYen": 103003000000,
+     "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    }
+   ]
+  },
+  {
+   "status": "candidate",
+   "granularity": "chapter",
+   "fy2024": [
+    {
+     "fiscalYear": 2024,
+     "chapterRaw": "5:都市整備費",
+     "sectionRaw": null,
+     "chapterNormalized": "都市整備費",
+     "sectionNormalized": null,
+     "initialBudgetYen": 143296000000,
+     "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    }
+   ],
+   "fy2026": [
+    {
+     "fiscalYear": 2026,
+     "chapterRaw": "05:都市整備費",
+     "sectionRaw": null,
+     "chapterNormalized": "都市整備費",
+     "sectionNormalized": null,
+     "initialBudgetYen": 186629000000,
+     "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    }
+   ]
+  },
+  {
+   "status": "candidate",
+   "granularity": "chapter",
+   "fy2024": [
+    {
+     "fiscalYear": 2024,
+     "chapterRaw": "6:環境費",
+     "sectionRaw": null,
+     "chapterNormalized": "環境費",
+     "sectionNormalized": null,
+     "initialBudgetYen": 175783000000,
+     "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    }
+   ],
+   "fy2026": [
+    {
+     "fiscalYear": 2026,
+     "chapterRaw": "06:環境費",
+     "sectionRaw": null,
+     "chapterNormalized": "環境費",
+     "sectionNormalized": null,
+     "initialBudgetYen": 281302000000,
+     "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    }
+   ]
+  },
+  {
+   "status": "candidate",
+   "granularity": "chapter",
+   "fy2024": [
+    {
+     "fiscalYear": 2024,
+     "chapterRaw": "7:福祉費",
+     "sectionRaw": null,
+     "chapterNormalized": "福祉費",
+     "sectionNormalized": null,
+     "initialBudgetYen": 1104502000000,
+     "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    }
+   ],
+   "fy2026": [
+    {
+     "fiscalYear": 2026,
+     "chapterRaw": "07:福祉費",
+     "sectionRaw": null,
+     "chapterNormalized": "福祉費",
+     "sectionNormalized": null,
+     "initialBudgetYen": 1290411000000,
+     "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    }
+   ]
+  },
+  {
+   "status": "candidate",
+   "granularity": "chapter",
+   "fy2024": [
+    {
+     "fiscalYear": 2024,
+     "chapterRaw": "8:保健医療費",
+     "sectionRaw": null,
+     "chapterNormalized": "保健医療費",
+     "sectionNormalized": null,
+     "initialBudgetYen": 492753000000,
+     "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    }
+   ],
+   "fy2026": [
+    {
+     "fiscalYear": 2026,
+     "chapterRaw": "08:保健医療費",
+     "sectionRaw": null,
+     "chapterNormalized": "保健医療費",
+     "sectionNormalized": null,
+     "initialBudgetYen": 563895000000,
+     "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    }
+   ]
+  },
+  {
+   "status": "candidate",
+   "granularity": "chapter",
+   "fy2024": [
+    {
+     "fiscalYear": 2024,
+     "chapterRaw": "9:産業労働費",
+     "sectionRaw": null,
+     "chapterNormalized": "産業労働費",
+     "sectionNormalized": null,
+     "initialBudgetYen": 676385000000,
+     "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    }
+   ],
+   "fy2026": [
+    {
+     "fiscalYear": 2026,
+     "chapterRaw": "09:産業労働費",
+     "sectionRaw": null,
+     "chapterNormalized": "産業労働費",
+     "sectionNormalized": null,
+     "initialBudgetYen": 774369000000,
+     "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    }
+   ]
+  },
+  {
+   "status": "candidate",
+   "granularity": "chapter",
+   "fy2024": [
+    {
+     "fiscalYear": 2024,
+     "chapterRaw": "10:土木費",
+     "sectionRaw": null,
+     "chapterNormalized": "土木費",
+     "sectionNormalized": null,
+     "initialBudgetYen": 636558000000,
+     "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    }
+   ],
+   "fy2026": [
+    {
+     "fiscalYear": 2026,
+     "chapterRaw": "10:土木費",
+     "sectionRaw": null,
+     "chapterNormalized": "土木費",
+     "sectionNormalized": null,
+     "initialBudgetYen": 658278000000,
+     "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    }
+   ]
+  },
+  {
+   "status": "candidate",
+   "granularity": "chapter",
+   "fy2024": [
+    {
+     "fiscalYear": 2024,
+     "chapterRaw": "11:港湾費",
+     "sectionRaw": null,
+     "chapterNormalized": "港湾費",
+     "sectionNormalized": null,
+     "initialBudgetYen": 100365000000,
+     "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    }
+   ],
+   "fy2026": [
+    {
+     "fiscalYear": 2026,
+     "chapterRaw": "11:港湾費",
+     "sectionRaw": null,
+     "chapterNormalized": "港湾費",
+     "sectionNormalized": null,
+     "initialBudgetYen": 105209000000,
+     "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    }
+   ]
+  },
+  {
+   "status": "candidate",
+   "granularity": "chapter",
+   "fy2024": [
+    {
+     "fiscalYear": 2024,
+     "chapterRaw": "12:教育費",
+     "sectionRaw": null,
+     "chapterNormalized": "教育費",
+     "sectionNormalized": null,
+     "initialBudgetYen": 1009413000000,
+     "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    }
+   ],
+   "fy2026": [
+    {
+     "fiscalYear": 2026,
+     "chapterRaw": "12:教育費",
+     "sectionRaw": null,
+     "chapterNormalized": "教育費",
+     "sectionNormalized": null,
+     "initialBudgetYen": 1181231000000,
+     "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    }
+   ]
+  },
+  {
+   "status": "candidate",
+   "granularity": "chapter",
+   "fy2024": [
+    {
+     "fiscalYear": 2024,
+     "chapterRaw": "13:学務費",
+     "sectionRaw": null,
+     "chapterNormalized": "学務費",
+     "sectionNormalized": null,
+     "initialBudgetYen": 298853000000,
+     "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    }
+   ],
+   "fy2026": [
+    {
+     "fiscalYear": 2026,
+     "chapterRaw": "13:学務費",
+     "sectionRaw": null,
+     "chapterNormalized": "学務費",
+     "sectionNormalized": null,
+     "initialBudgetYen": 343249000000,
+     "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    }
+   ]
+  },
+  {
+   "status": "candidate",
+   "granularity": "chapter",
+   "fy2024": [
+    {
+     "fiscalYear": 2024,
+     "chapterRaw": "14:警察費",
+     "sectionRaw": null,
+     "chapterNormalized": "警察費",
+     "sectionNormalized": null,
+     "initialBudgetYen": 682260000000,
+     "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    }
+   ],
+   "fy2026": [
+    {
+     "fiscalYear": 2026,
+     "chapterRaw": "14:警察費",
+     "sectionRaw": null,
+     "chapterNormalized": "警察費",
+     "sectionNormalized": null,
+     "initialBudgetYen": 738951000000,
+     "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    }
+   ]
+  },
+  {
+   "status": "candidate",
+   "granularity": "chapter",
+   "fy2024": [
+    {
+     "fiscalYear": 2024,
+     "chapterRaw": "15:消防費",
+     "sectionRaw": null,
+     "chapterNormalized": "消防費",
+     "sectionNormalized": null,
+     "initialBudgetYen": 279384000000,
+     "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    }
+   ],
+   "fy2026": [
+    {
+     "fiscalYear": 2026,
+     "chapterRaw": "15:消防費",
+     "sectionRaw": null,
+     "chapterNormalized": "消防費",
+     "sectionNormalized": null,
+     "initialBudgetYen": 318582000000,
+     "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    }
+   ]
+  },
+  {
+   "status": "candidate",
+   "granularity": "chapter",
+   "fy2024": [
+    {
+     "fiscalYear": 2024,
+     "chapterRaw": "16:公債費",
+     "sectionRaw": null,
+     "chapterNormalized": "公債費",
+     "sectionNormalized": null,
+     "initialBudgetYen": 323848000000,
+     "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    }
+   ],
+   "fy2026": [
+    {
+     "fiscalYear": 2026,
+     "chapterRaw": "16:公債費",
+     "sectionRaw": null,
+     "chapterNormalized": "公債費",
+     "sectionNormalized": null,
+     "initialBudgetYen": 279908000000,
+     "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    }
+   ]
+  },
+  {
+   "status": "candidate",
+   "granularity": "chapter",
+   "fy2024": [
+    {
+     "fiscalYear": 2024,
+     "chapterRaw": "17:諸支出金",
+     "sectionRaw": null,
+     "chapterNormalized": "諸支出金",
+     "sectionNormalized": null,
+     "initialBudgetYen": 1973948000000,
+     "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    }
+   ],
+   "fy2026": [
+    {
+     "fiscalYear": 2026,
+     "chapterRaw": "17:諸支出金",
+     "sectionRaw": null,
+     "chapterNormalized": "諸支出金",
+     "sectionNormalized": null,
+     "initialBudgetYen": 2347515000000,
+     "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    }
+   ]
+  },
+  {
+   "status": "candidate",
+   "granularity": "chapter",
+   "fy2024": [
+    {
+     "fiscalYear": 2024,
+     "chapterRaw": "18:予備費",
+     "sectionRaw": null,
+     "chapterNormalized": "予備費",
+     "sectionNormalized": null,
+     "initialBudgetYen": 5000000000,
+     "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    }
+   ],
+   "fy2026": [
+    {
+     "fiscalYear": 2026,
+     "chapterRaw": "18:予備費",
+     "sectionRaw": null,
+     "chapterNormalized": "予備費",
+     "sectionNormalized": null,
+     "initialBudgetYen": 5000000000,
+     "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    }
+   ]
+  },
+  {
+   "status": "candidate",
+   "granularity": "item",
+   "fy2024": [
+    {
+     "fiscalYear": 2024,
+     "chapterRaw": "2:総務費",
+     "sectionRaw": "1:総務管理費",
+     "chapterNormalized": "総務費",
+     "sectionNormalized": "総務管理費",
+     "initialBudgetYen": 62437836000,
+     "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    }
+   ],
+   "fy2026": [
+    {
+     "fiscalYear": 2026,
+     "chapterRaw": "02:総務費",
+     "sectionRaw": "01:総務管理費",
+     "chapterNormalized": "総務費",
+     "sectionNormalized": "総務管理費",
+     "initialBudgetYen": 69224104000,
+     "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    }
+   ]
+  },
+  {
+   "status": "candidate",
+   "granularity": "item",
+   "fy2024": [
+    {
+     "fiscalYear": 2024,
+     "chapterRaw": "2:総務費",
+     "sectionRaw": "2:政策企画費",
+     "chapterNormalized": "総務費",
+     "sectionNormalized": "政策企画費",
+     "initialBudgetYen": 16096000000,
+     "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    }
+   ],
+   "fy2026": [
+    {
+     "fiscalYear": 2026,
+     "chapterRaw": "02:総務費",
+     "sectionRaw": "02:政策企画費",
+     "chapterNormalized": "総務費",
+     "sectionNormalized": "政策企画費",
+     "initialBudgetYen": 12588000000,
+     "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    }
+   ]
+  },
+  {
+   "status": "candidate",
+   "granularity": "item",
+   "fy2024": [
+    {
+     "fiscalYear": 2024,
+     "chapterRaw": "2:総務費",
+     "sectionRaw": "3:子供政策連携費",
+     "chapterNormalized": "総務費",
+     "sectionNormalized": "子供政策連携費",
+     "initialBudgetYen": 13083000000,
+     "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    }
+   ],
+   "fy2026": [
+    {
+     "fiscalYear": 2026,
+     "chapterRaw": "02:総務費",
+     "sectionRaw": "03:子供政策連携費",
+     "chapterNormalized": "総務費",
+     "sectionNormalized": "子供政策連携費",
+     "initialBudgetYen": 18509000000,
+     "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    }
+   ]
+  },
+  {
+   "status": "candidate",
+   "granularity": "item",
+   "fy2024": [
+    {
+     "fiscalYear": 2024,
+     "chapterRaw": "2:総務費",
+     "sectionRaw": "5:デジタルサービス費",
+     "chapterNormalized": "総務費",
+     "sectionNormalized": "デジタルサービス費",
+     "initialBudgetYen": 71974000000,
+     "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    }
+   ],
+   "fy2026": [
+    {
+     "fiscalYear": 2026,
+     "chapterRaw": "02:総務費",
+     "sectionRaw": "04:デジタルサービス費",
+     "chapterNormalized": "総務費",
+     "sectionNormalized": "デジタルサービス費",
+     "initialBudgetYen": 78338000000,
+     "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    }
+   ]
+  },
+  {
+   "status": "candidate",
+   "granularity": "item",
+   "fy2024": [
+    {
+     "fiscalYear": 2024,
+     "chapterRaw": "2:総務費",
+     "sectionRaw": "6:区市町村振興費",
+     "chapterNormalized": "総務費",
+     "sectionNormalized": "区市町村振興費",
+     "initialBudgetYen": 112439306000,
+     "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    }
+   ],
+   "fy2026": [
+    {
+     "fiscalYear": 2026,
+     "chapterRaw": "02:総務費",
+     "sectionRaw": "05:区市町村振興費",
+     "chapterNormalized": "総務費",
+     "sectionNormalized": "区市町村振興費",
+     "initialBudgetYen": 133369157000,
+     "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    }
+   ]
+  },
+  {
+   "status": "candidate",
+   "granularity": "item",
+   "fy2024": [
+    {
+     "fiscalYear": 2024,
+     "chapterRaw": "2:総務費",
+     "sectionRaw": "7:選挙費",
+     "chapterNormalized": "総務費",
+     "sectionNormalized": "選挙費",
+     "initialBudgetYen": 6787000000,
+     "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    }
+   ],
+   "fy2026": [
+    {
+     "fiscalYear": 2026,
+     "chapterRaw": "02:総務費",
+     "sectionRaw": "06:選挙費",
+     "chapterNormalized": "総務費",
+     "sectionNormalized": "選挙費",
+     "initialBudgetYen": 425000000,
+     "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    }
+   ]
+  },
+  {
+   "status": "candidate",
+   "granularity": "item",
+   "fy2024": [
+    {
+     "fiscalYear": 2024,
+     "chapterRaw": "2:総務費",
+     "sectionRaw": "8:防災管理費",
+     "chapterNormalized": "総務費",
+     "sectionNormalized": "防災管理費",
+     "initialBudgetYen": 16335840000,
+     "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    }
+   ],
+   "fy2026": [
+    {
+     "fiscalYear": 2026,
+     "chapterRaw": "02:総務費",
+     "sectionRaw": "07:防災管理費",
+     "chapterNormalized": "総務費",
+     "sectionNormalized": "防災管理費",
+     "initialBudgetYen": 23871011000,
+     "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    }
+   ]
+  },
+  {
+   "status": "candidate",
+   "granularity": "item",
+   "fy2024": [
+    {
+     "fiscalYear": 2024,
+     "chapterRaw": "2:総務費",
+     "sectionRaw": "9:建築保全費",
+     "chapterNormalized": "総務費",
+     "sectionNormalized": "建築保全費",
+     "initialBudgetYen": 14829000000,
+     "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    }
+   ],
+   "fy2026": [
+    {
+     "fiscalYear": 2026,
+     "chapterRaw": "02:総務費",
+     "sectionRaw": "12:建築保全費",
+     "chapterNormalized": "総務費",
+     "sectionNormalized": "建築保全費",
+     "initialBudgetYen": 15203000000,
+     "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    }
+   ]
+  },
+  {
+   "status": "candidate",
+   "granularity": "item",
+   "fy2024": [
+    {
+     "fiscalYear": 2024,
+     "chapterRaw": "2:総務費",
+     "sectionRaw": "10:退職手当及年金費",
+     "chapterNormalized": "総務費",
+     "sectionNormalized": "退職手当及年金費",
+     "initialBudgetYen": 18953741000,
+     "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    }
+   ],
+   "fy2026": [
+    {
+     "fiscalYear": 2026,
+     "chapterRaw": "02:総務費",
+     "sectionRaw": "13:退職手当及年金費",
+     "chapterNormalized": "総務費",
+     "sectionNormalized": "退職手当及年金費",
+     "initialBudgetYen": 17916647000,
+     "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    }
+   ]
+  },
+  {
+   "status": "candidate",
+   "granularity": "item",
+   "fy2024": [
+    {
+     "fiscalYear": 2024,
+     "chapterRaw": "5:都市整備費",
+     "sectionRaw": "1:都市整備管理費",
+     "chapterNormalized": "都市整備費",
+     "sectionNormalized": "都市整備管理費",
+     "initialBudgetYen": 10202000000,
+     "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    }
+   ],
+   "fy2026": [
+    {
+     "fiscalYear": 2026,
+     "chapterRaw": "05:都市整備費",
+     "sectionRaw": "01:都市整備管理費",
+     "chapterNormalized": "都市整備費",
+     "sectionNormalized": "都市整備管理費",
+     "initialBudgetYen": 47963000000,
+     "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    }
+   ]
+  },
+  {
+   "status": "candidate",
+   "granularity": "item",
+   "fy2024": [
+    {
+     "fiscalYear": 2024,
+     "chapterRaw": "5:都市整備費",
+     "sectionRaw": "2:都市基盤整備費",
+     "chapterNormalized": "都市整備費",
+     "sectionNormalized": "都市基盤整備費",
+     "initialBudgetYen": 22897000000,
+     "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    }
+   ],
+   "fy2026": [
+    {
+     "fiscalYear": 2026,
+     "chapterRaw": "05:都市整備費",
+     "sectionRaw": "02:都市基盤整備費",
+     "chapterNormalized": "都市整備費",
+     "sectionNormalized": "都市基盤整備費",
+     "initialBudgetYen": 35711000000,
+     "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    }
+   ]
+  },
+  {
+   "status": "candidate",
+   "granularity": "item",
+   "fy2024": [
+    {
+     "fiscalYear": 2024,
+     "chapterRaw": "5:都市整備費",
+     "sectionRaw": "3:市街地整備費",
+     "chapterNormalized": "都市整備費",
+     "sectionNormalized": "市街地整備費",
+     "initialBudgetYen": 57782000000,
+     "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    }
+   ],
+   "fy2026": [
+    {
+     "fiscalYear": 2026,
+     "chapterRaw": "05:都市整備費",
+     "sectionRaw": "03:市街地整備費",
+     "chapterNormalized": "都市整備費",
+     "sectionNormalized": "市街地整備費",
+     "initialBudgetYen": 45200000000,
+     "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    }
+   ]
+  },
+  {
+   "status": "candidate",
+   "granularity": "item",
+   "fy2024": [
+    {
+     "fiscalYear": 2024,
+     "chapterRaw": "5:都市整備費",
+     "sectionRaw": "4:建築行政費",
+     "chapterNormalized": "都市整備費",
+     "sectionNormalized": "建築行政費",
+     "initialBudgetYen": 7106000000,
+     "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    }
+   ],
+   "fy2026": [
+    {
+     "fiscalYear": 2026,
+     "chapterRaw": "05:都市整備費",
+     "sectionRaw": "04:建築行政費",
+     "chapterNormalized": "都市整備費",
+     "sectionNormalized": "建築行政費",
+     "initialBudgetYen": 8254000000,
+     "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    }
+   ]
+  },
+  {
+   "status": "candidate",
+   "granularity": "item",
+   "fy2024": [
+    {
+     "fiscalYear": 2024,
+     "chapterRaw": "5:都市整備費",
+     "sectionRaw": "5:住宅政策費",
+     "chapterNormalized": "都市整備費",
+     "sectionNormalized": "住宅政策費",
+     "initialBudgetYen": 45309000000,
+     "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    }
+   ],
+   "fy2026": [
+    {
+     "fiscalYear": 2026,
+     "chapterRaw": "05:都市整備費",
+     "sectionRaw": "05:住宅政策費",
+     "chapterNormalized": "都市整備費",
+     "sectionNormalized": "住宅政策費",
+     "initialBudgetYen": 49501000000,
+     "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    }
+   ]
+  },
+  {
+   "status": "candidate",
+   "granularity": "item",
+   "fy2024": [
+    {
+     "fiscalYear": 2024,
+     "chapterRaw": "6:環境費",
+     "sectionRaw": "1:環境管理費",
+     "chapterNormalized": "環境費",
+     "sectionNormalized": "環境管理費",
+     "initialBudgetYen": 6410000000,
+     "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    }
+   ],
+   "fy2026": [
+    {
+     "fiscalYear": 2026,
+     "chapterRaw": "06:環境費",
+     "sectionRaw": "01:環境管理費",
+     "chapterNormalized": "環境費",
+     "sectionNormalized": "環境管理費",
+     "initialBudgetYen": 6337000000,
+     "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    }
+   ]
+  },
+  {
+   "status": "candidate",
+   "granularity": "item",
+   "fy2024": [
+    {
+     "fiscalYear": 2024,
+     "chapterRaw": "6:環境費",
+     "sectionRaw": "2:環境保全費",
+     "chapterNormalized": "環境費",
+     "sectionNormalized": "環境保全費",
+     "initialBudgetYen": 156215000000,
+     "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    }
+   ],
+   "fy2026": [
+    {
+     "fiscalYear": 2026,
+     "chapterRaw": "06:環境費",
+     "sectionRaw": "02:環境保全費",
+     "chapterNormalized": "環境費",
+     "sectionNormalized": "環境保全費",
+     "initialBudgetYen": 257143000000,
+     "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    }
+   ]
+  },
+  {
+   "status": "candidate",
+   "granularity": "item",
+   "fy2024": [
+    {
+     "fiscalYear": 2024,
+     "chapterRaw": "6:環境費",
+     "sectionRaw": "3:廃棄物費",
+     "chapterNormalized": "環境費",
+     "sectionNormalized": "廃棄物費",
+     "initialBudgetYen": 13158000000,
+     "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    }
+   ],
+   "fy2026": [
+    {
+     "fiscalYear": 2026,
+     "chapterRaw": "06:環境費",
+     "sectionRaw": "03:廃棄物費",
+     "chapterNormalized": "環境費",
+     "sectionNormalized": "廃棄物費",
+     "initialBudgetYen": 17822000000,
+     "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    }
+   ]
+  },
+  {
+   "status": "candidate",
+   "granularity": "item",
+   "fy2024": [
+    {
+     "fiscalYear": 2024,
+     "chapterRaw": "7:福祉費",
+     "sectionRaw": "1:福祉管理費",
+     "chapterNormalized": "福祉費",
+     "sectionNormalized": "福祉管理費",
+     "initialBudgetYen": 7307000000,
+     "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    }
+   ],
+   "fy2026": [
+    {
+     "fiscalYear": 2026,
+     "chapterRaw": "07:福祉費",
+     "sectionRaw": "01:福祉管理費",
+     "chapterNormalized": "福祉費",
+     "sectionNormalized": "福祉管理費",
+     "initialBudgetYen": 9086000000,
+     "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    }
+   ]
+  },
+  {
+   "status": "candidate",
+   "granularity": "item",
+   "fy2024": [
+    {
+     "fiscalYear": 2024,
+     "chapterRaw": "7:福祉費",
+     "sectionRaw": "2:生活福祉費",
+     "chapterNormalized": "福祉費",
+     "sectionNormalized": "生活福祉費",
+     "initialBudgetYen": 73917000000,
+     "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    }
+   ],
+   "fy2026": [
+    {
+     "fiscalYear": 2026,
+     "chapterRaw": "07:福祉費",
+     "sectionRaw": "02:生活福祉費",
+     "chapterNormalized": "福祉費",
+     "sectionNormalized": "生活福祉費",
+     "initialBudgetYen": 86971000000,
+     "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    }
+   ]
+  },
+  {
+   "status": "candidate",
+   "granularity": "item",
+   "fy2024": [
+    {
+     "fiscalYear": 2024,
+     "chapterRaw": "7:福祉費",
+     "sectionRaw": "3:子供・子育て支援費",
+     "chapterNormalized": "福祉費",
+     "sectionNormalized": "子供・子育て支援費",
+     "initialBudgetYen": 482489000000,
+     "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    }
+   ],
+   "fy2026": [
+    {
+     "fiscalYear": 2026,
+     "chapterRaw": "07:福祉費",
+     "sectionRaw": "03:子供・子育て支援費",
+     "chapterNormalized": "福祉費",
+     "sectionNormalized": "子供・子育て支援費",
+     "initialBudgetYen": 608973000000,
+     "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    }
+   ]
+  },
+  {
+   "status": "candidate",
+   "granularity": "item",
+   "fy2024": [
+    {
+     "fiscalYear": 2024,
+     "chapterRaw": "7:福祉費",
+     "sectionRaw": "4:高齢者施策推進費",
+     "chapterNormalized": "福祉費",
+     "sectionNormalized": "高齢者施策推進費",
+     "initialBudgetYen": 262198000000,
+     "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    }
+   ],
+   "fy2026": [
+    {
+     "fiscalYear": 2026,
+     "chapterRaw": "07:福祉費",
+     "sectionRaw": "04:高齢者施策推進費",
+     "chapterNormalized": "福祉費",
+     "sectionNormalized": "高齢者施策推進費",
+     "initialBudgetYen": 283630000000,
+     "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    }
+   ]
+  },
+  {
+   "status": "candidate",
+   "granularity": "item",
+   "fy2024": [
+    {
+     "fiscalYear": 2024,
+     "chapterRaw": "7:福祉費",
+     "sectionRaw": "5:障害者施策推進費",
+     "chapterNormalized": "福祉費",
+     "sectionNormalized": "障害者施策推進費",
+     "initialBudgetYen": 242654000000,
+     "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    }
+   ],
+   "fy2026": [
+    {
+     "fiscalYear": 2026,
+     "chapterRaw": "07:福祉費",
+     "sectionRaw": "05:障害者施策推進費",
+     "chapterNormalized": "福祉費",
+     "sectionNormalized": "障害者施策推進費",
+     "initialBudgetYen": 264248000000,
+     "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    }
+   ]
+  },
+  {
+   "status": "candidate",
+   "granularity": "item",
+   "fy2024": [
+    {
+     "fiscalYear": 2024,
+     "chapterRaw": "7:福祉費",
+     "sectionRaw": "6:施設整備費",
+     "chapterNormalized": "福祉費",
+     "sectionNormalized": "施設整備費",
+     "initialBudgetYen": 35937000000,
+     "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    }
+   ],
+   "fy2026": [
+    {
+     "fiscalYear": 2026,
+     "chapterRaw": "07:福祉費",
+     "sectionRaw": "06:施設整備費",
+     "chapterNormalized": "福祉費",
+     "sectionNormalized": "施設整備費",
+     "initialBudgetYen": 37503000000,
+     "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    }
+   ]
+  },
+  {
+   "status": "candidate",
+   "granularity": "item",
+   "fy2024": [
+    {
+     "fiscalYear": 2024,
+     "chapterRaw": "8:保健医療費",
+     "sectionRaw": "1:保健医療管理費",
+     "chapterNormalized": "保健医療費",
+     "sectionNormalized": "保健医療管理費",
+     "initialBudgetYen": 6182000000,
+     "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    }
+   ],
+   "fy2026": [
+    {
+     "fiscalYear": 2026,
+     "chapterRaw": "08:保健医療費",
+     "sectionRaw": "01:保健医療管理費",
+     "chapterNormalized": "保健医療費",
+     "sectionNormalized": "保健医療管理費",
+     "initialBudgetYen": 6365000000,
+     "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    }
+   ]
+  },
+  {
+   "status": "candidate",
+   "granularity": "item",
+   "fy2024": [
+    {
+     "fiscalYear": 2024,
+     "chapterRaw": "8:保健医療費",
+     "sectionRaw": "2:保健政策費",
+     "chapterNormalized": "保健医療費",
+     "sectionNormalized": "保健政策費",
+     "initialBudgetYen": 341547000000,
+     "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    }
+   ],
+   "fy2026": [
+    {
+     "fiscalYear": 2026,
+     "chapterRaw": "08:保健医療費",
+     "sectionRaw": "02:保健政策費",
+     "chapterNormalized": "保健医療費",
+     "sectionNormalized": "保健政策費",
+     "initialBudgetYen": 365876000000,
+     "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    }
+   ]
+  },
+  {
+   "status": "candidate",
+   "granularity": "item",
+   "fy2024": [
+    {
+     "fiscalYear": 2024,
+     "chapterRaw": "8:保健医療費",
+     "sectionRaw": "3:医療政策費",
+     "chapterNormalized": "保健医療費",
+     "sectionNormalized": "医療政策費",
+     "initialBudgetYen": 52864000000,
+     "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    }
+   ],
+   "fy2026": [
+    {
+     "fiscalYear": 2026,
+     "chapterRaw": "08:保健医療費",
+     "sectionRaw": "03:医療政策費",
+     "chapterNormalized": "保健医療費",
+     "sectionNormalized": "医療政策費",
+     "initialBudgetYen": 93889000000,
+     "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    }
+   ]
+  },
+  {
+   "status": "candidate",
+   "granularity": "item",
+   "fy2024": [
+    {
+     "fiscalYear": 2024,
+     "chapterRaw": "8:保健医療費",
+     "sectionRaw": "4:都立病院支援費",
+     "chapterNormalized": "保健医療費",
+     "sectionNormalized": "都立病院支援費",
+     "initialBudgetYen": 55246000000,
+     "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    }
+   ],
+   "fy2026": [
+    {
+     "fiscalYear": 2026,
+     "chapterRaw": "08:保健医療費",
+     "sectionRaw": "04:都立病院支援費",
+     "chapterNormalized": "保健医療費",
+     "sectionNormalized": "都立病院支援費",
+     "initialBudgetYen": 57452000000,
+     "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    }
+   ]
+  },
+  {
+   "status": "candidate",
+   "granularity": "item",
+   "fy2024": [
+    {
+     "fiscalYear": 2024,
+     "chapterRaw": "8:保健医療費",
+     "sectionRaw": "5:健康安全費",
+     "chapterNormalized": "保健医療費",
+     "sectionNormalized": "健康安全費",
+     "initialBudgetYen": 10787000000,
+     "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    }
+   ],
+   "fy2026": [
+    {
+     "fiscalYear": 2026,
+     "chapterRaw": "08:保健医療費",
+     "sectionRaw": "05:健康安全費",
+     "chapterNormalized": "保健医療費",
+     "sectionNormalized": "健康安全費",
+     "initialBudgetYen": 12147000000,
+     "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    }
+   ]
+  },
+  {
+   "status": "candidate",
+   "granularity": "item",
+   "fy2024": [
+    {
+     "fiscalYear": 2024,
+     "chapterRaw": "8:保健医療費",
+     "sectionRaw": "6:感染症対策費",
+     "chapterNormalized": "保健医療費",
+     "sectionNormalized": "感染症対策費",
+     "initialBudgetYen": 9391000000,
+     "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    }
+   ],
+   "fy2026": [
+    {
+     "fiscalYear": 2026,
+     "chapterRaw": "08:保健医療費",
+     "sectionRaw": "06:感染症対策費",
+     "chapterNormalized": "保健医療費",
+     "sectionNormalized": "感染症対策費",
+     "initialBudgetYen": 7679000000,
+     "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    }
+   ]
+  },
+  {
+   "status": "candidate",
+   "granularity": "item",
+   "fy2024": [
+    {
+     "fiscalYear": 2024,
+     "chapterRaw": "8:保健医療費",
+     "sectionRaw": "7:施設整備費",
+     "chapterNormalized": "保健医療費",
+     "sectionNormalized": "施設整備費",
+     "initialBudgetYen": 16736000000,
+     "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    }
+   ],
+   "fy2026": [
+    {
+     "fiscalYear": 2026,
+     "chapterRaw": "08:保健医療費",
+     "sectionRaw": "07:施設整備費",
+     "chapterNormalized": "保健医療費",
+     "sectionNormalized": "施設整備費",
+     "initialBudgetYen": 20487000000,
+     "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    }
+   ]
+  },
+  {
+   "status": "candidate",
+   "granularity": "item",
+   "fy2024": [
+    {
+     "fiscalYear": 2024,
+     "chapterRaw": "9:産業労働費",
+     "sectionRaw": "1:労働委員会費",
+     "chapterNormalized": "産業労働費",
+     "sectionNormalized": "労働委員会費",
+     "initialBudgetYen": 620000000,
+     "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    }
+   ],
+   "fy2026": [
+    {
+     "fiscalYear": 2026,
+     "chapterRaw": "09:産業労働費",
+     "sectionRaw": "01:労働委員会費",
+     "chapterNormalized": "産業労働費",
+     "sectionNormalized": "労働委員会費",
+     "initialBudgetYen": 645000000,
+     "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    }
+   ]
+  },
+  {
+   "status": "candidate",
+   "granularity": "item",
+   "fy2024": [
+    {
+     "fiscalYear": 2024,
+     "chapterRaw": "9:産業労働費",
+     "sectionRaw": "2:産業労働管理費",
+     "chapterNormalized": "産業労働費",
+     "sectionNormalized": "産業労働管理費",
+     "initialBudgetYen": 2872000000,
+     "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    }
+   ],
+   "fy2026": [
+    {
+     "fiscalYear": 2026,
+     "chapterRaw": "09:産業労働費",
+     "sectionRaw": "02:産業労働管理費",
+     "chapterNormalized": "産業労働費",
+     "sectionNormalized": "産業労働管理費",
+     "initialBudgetYen": 19648000000,
+     "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    }
+   ]
+  },
+  {
+   "status": "candidate",
+   "granularity": "item",
+   "fy2024": [
+    {
+     "fiscalYear": 2024,
+     "chapterRaw": "9:産業労働費",
+     "sectionRaw": "3:商工業振興費",
+     "chapterNormalized": "産業労働費",
+     "sectionNormalized": "商工業振興費",
+     "initialBudgetYen": 580188000000,
+     "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    }
+   ],
+   "fy2026": [
+    {
+     "fiscalYear": 2026,
+     "chapterRaw": "09:産業労働費",
+     "sectionRaw": "03:商工業振興費",
+     "chapterNormalized": "産業労働費",
+     "sectionNormalized": "商工業振興費",
+     "initialBudgetYen": 608586000000,
+     "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    }
+   ]
+  },
+  {
+   "status": "candidate",
+   "granularity": "item",
+   "fy2024": [
+    {
+     "fiscalYear": 2024,
+     "chapterRaw": "9:産業労働費",
+     "sectionRaw": "4:農林水産費",
+     "chapterNormalized": "産業労働費",
+     "sectionNormalized": "農林水産費",
+     "initialBudgetYen": 30968000000,
+     "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    }
+   ],
+   "fy2026": [
+    {
+     "fiscalYear": 2026,
+     "chapterRaw": "09:産業労働費",
+     "sectionRaw": "04:農林水産費",
+     "chapterNormalized": "産業労働費",
+     "sectionNormalized": "農林水産費",
+     "initialBudgetYen": 33498000000,
+     "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    }
+   ]
+  },
+  {
+   "status": "candidate",
+   "granularity": "item",
+   "fy2024": [
+    {
+     "fiscalYear": 2024,
+     "chapterRaw": "9:産業労働費",
+     "sectionRaw": "5:労働費",
+     "chapterNormalized": "産業労働費",
+     "sectionNormalized": "労働費",
+     "initialBudgetYen": 56000000000,
+     "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    }
+   ],
+   "fy2026": [
+    {
+     "fiscalYear": 2026,
+     "chapterRaw": "09:産業労働費",
+     "sectionRaw": "05:労働費",
+     "chapterNormalized": "産業労働費",
+     "sectionNormalized": "労働費",
+     "initialBudgetYen": 62424000000,
+     "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    }
+   ]
+  },
+  {
+   "status": "candidate",
+   "granularity": "item",
+   "fy2024": [
+    {
+     "fiscalYear": 2024,
+     "chapterRaw": "9:産業労働費",
+     "sectionRaw": "6:施設整備費",
+     "chapterNormalized": "産業労働費",
+     "sectionNormalized": "施設整備費",
+     "initialBudgetYen": 5737000000,
+     "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    }
+   ],
+   "fy2026": [
+    {
+     "fiscalYear": 2026,
+     "chapterRaw": "09:産業労働費",
+     "sectionRaw": "06:施設整備費",
+     "chapterNormalized": "産業労働費",
+     "sectionNormalized": "施設整備費",
+     "initialBudgetYen": 10366000000,
+     "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    }
+   ]
+  },
+  {
+   "status": "candidate",
+   "granularity": "item",
+   "fy2024": [
+    {
+     "fiscalYear": 2024,
+     "chapterRaw": "10:土木費",
+     "sectionRaw": "1:道路橋梁費",
+     "chapterNormalized": "土木費",
+     "sectionNormalized": "道路橋梁費",
+     "initialBudgetYen": 399016000000,
+     "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    }
+   ],
+   "fy2026": [
+    {
+     "fiscalYear": 2026,
+     "chapterRaw": "10:土木費",
+     "sectionRaw": "02:道路橋梁費",
+     "chapterNormalized": "土木費",
+     "sectionNormalized": "道路橋梁費",
+     "initialBudgetYen": 419022000000,
+     "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    }
+   ]
+  },
+  {
+   "status": "candidate",
+   "granularity": "item",
+   "fy2024": [
+    {
+     "fiscalYear": 2024,
+     "chapterRaw": "10:土木費",
+     "sectionRaw": "2:河川海岸費",
+     "chapterNormalized": "土木費",
+     "sectionNormalized": "河川海岸費",
+     "initialBudgetYen": 125442000000,
+     "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    }
+   ],
+   "fy2026": [
+    {
+     "fiscalYear": 2026,
+     "chapterRaw": "10:土木費",
+     "sectionRaw": "03:河川海岸費",
+     "chapterNormalized": "土木費",
+     "sectionNormalized": "河川海岸費",
+     "initialBudgetYen": 133768000000,
+     "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    }
+   ]
+  },
+  {
+   "status": "candidate",
+   "granularity": "item",
+   "fy2024": [
+    {
+     "fiscalYear": 2024,
+     "chapterRaw": "10:土木費",
+     "sectionRaw": "3:公園霊園費",
+     "chapterNormalized": "土木費",
+     "sectionNormalized": "公園霊園費",
+     "initialBudgetYen": 86631000000,
+     "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    }
+   ],
+   "fy2026": [
+    {
+     "fiscalYear": 2026,
+     "chapterRaw": "10:土木費",
+     "sectionRaw": "04:公園霊園費",
+     "chapterNormalized": "土木費",
+     "sectionNormalized": "公園霊園費",
+     "initialBudgetYen": 77354000000,
+     "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    }
+   ]
+  },
+  {
+   "status": "candidate",
+   "granularity": "item",
+   "fy2024": [
+    {
+     "fiscalYear": 2024,
+     "chapterRaw": "10:土木費",
+     "sectionRaw": "4:土木管理費",
+     "chapterNormalized": "土木費",
+     "sectionNormalized": "土木管理費",
+     "initialBudgetYen": 25469000000,
+     "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    }
+   ],
+   "fy2026": [
+    {
+     "fiscalYear": 2026,
+     "chapterRaw": "10:土木費",
+     "sectionRaw": "01:土木管理費",
+     "chapterNormalized": "土木費",
+     "sectionNormalized": "土木管理費",
+     "initialBudgetYen": 28134000000,
+     "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    }
+   ]
+  },
+  {
+   "status": "candidate",
+   "granularity": "item",
+   "fy2024": [
+    {
+     "fiscalYear": 2024,
+     "chapterRaw": "11:港湾費",
+     "sectionRaw": "1:東京港整備費",
+     "chapterNormalized": "港湾費",
+     "sectionNormalized": "東京港整備費",
+     "initialBudgetYen": 76227000000,
+     "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    }
+   ],
+   "fy2026": [
+    {
+     "fiscalYear": 2026,
+     "chapterRaw": "11:港湾費",
+     "sectionRaw": "02:東京港整備費",
+     "chapterNormalized": "港湾費",
+     "sectionNormalized": "東京港整備費",
+     "initialBudgetYen": 80173000000,
+     "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    }
+   ]
+  },
+  {
+   "status": "candidate",
+   "granularity": "item",
+   "fy2024": [
+    {
+     "fiscalYear": 2024,
+     "chapterRaw": "11:港湾費",
+     "sectionRaw": "2:島しょ等港湾整備費",
+     "chapterNormalized": "港湾費",
+     "sectionNormalized": "島しょ等港湾整備費",
+     "initialBudgetYen": 23432000000,
+     "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    }
+   ],
+   "fy2026": [
+    {
+     "fiscalYear": 2026,
+     "chapterRaw": "11:港湾費",
+     "sectionRaw": "03:島しょ等港湾整備費",
+     "chapterNormalized": "港湾費",
+     "sectionNormalized": "島しょ等港湾整備費",
+     "initialBudgetYen": 24137000000,
+     "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    }
+   ]
+  },
+  {
+   "status": "candidate",
+   "granularity": "item",
+   "fy2024": [
+    {
+     "fiscalYear": 2024,
+     "chapterRaw": "11:港湾費",
+     "sectionRaw": "3:港湾管理費",
+     "chapterNormalized": "港湾費",
+     "sectionNormalized": "港湾管理費",
+     "initialBudgetYen": 706000000,
+     "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    }
+   ],
+   "fy2026": [
+    {
+     "fiscalYear": 2026,
+     "chapterRaw": "11:港湾費",
+     "sectionRaw": "01:港湾管理費",
+     "chapterNormalized": "港湾費",
+     "sectionNormalized": "港湾管理費",
+     "initialBudgetYen": 899000000,
+     "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    }
+   ]
+  },
+  {
+   "status": "candidate",
+   "granularity": "item",
+   "fy2024": [
+    {
+     "fiscalYear": 2024,
+     "chapterRaw": "12:教育費",
+     "sectionRaw": "1:小中学校費",
+     "chapterNormalized": "教育費",
+     "sectionNormalized": "小中学校費",
+     "initialBudgetYen": 512813000000,
+     "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    }
+   ],
+   "fy2026": [
+    {
+     "fiscalYear": 2026,
+     "chapterRaw": "12:教育費",
+     "sectionRaw": "02:小中学校費",
+     "chapterNormalized": "教育費",
+     "sectionNormalized": "小中学校費",
+     "initialBudgetYen": 575676000000,
+     "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    }
+   ]
+  },
+  {
+   "status": "candidate",
+   "granularity": "item",
+   "fy2024": [
+    {
+     "fiscalYear": 2024,
+     "chapterRaw": "12:教育費",
+     "sectionRaw": "2:高等学校費",
+     "chapterNormalized": "教育費",
+     "sectionNormalized": "高等学校費",
+     "initialBudgetYen": 155345000000,
+     "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    }
+   ],
+   "fy2026": [
+    {
+     "fiscalYear": 2026,
+     "chapterRaw": "12:教育費",
+     "sectionRaw": "03:高等学校費",
+     "chapterNormalized": "教育費",
+     "sectionNormalized": "高等学校費",
+     "initialBudgetYen": 194163000000,
+     "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    }
+   ]
+  },
+  {
+   "status": "candidate",
+   "granularity": "item",
+   "fy2024": [
+    {
+     "fiscalYear": 2024,
+     "chapterRaw": "12:教育費",
+     "sectionRaw": "3:特別支援学校費",
+     "chapterNormalized": "教育費",
+     "sectionNormalized": "特別支援学校費",
+     "initialBudgetYen": 100962000000,
+     "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    }
+   ],
+   "fy2026": [
+    {
+     "fiscalYear": 2026,
+     "chapterRaw": "12:教育費",
+     "sectionRaw": "04:特別支援学校費",
+     "chapterNormalized": "教育費",
+     "sectionNormalized": "特別支援学校費",
+     "initialBudgetYen": 119092000000,
+     "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    }
+   ]
+  },
+  {
+   "status": "candidate",
+   "granularity": "item",
+   "fy2024": [
+    {
+     "fiscalYear": 2024,
+     "chapterRaw": "12:教育費",
+     "sectionRaw": "4:社会教育費",
+     "chapterNormalized": "教育費",
+     "sectionNormalized": "社会教育費",
+     "initialBudgetYen": 10830000000,
+     "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    }
+   ],
+   "fy2026": [
+    {
+     "fiscalYear": 2026,
+     "chapterRaw": "12:教育費",
+     "sectionRaw": "08:社会教育費",
+     "chapterNormalized": "教育費",
+     "sectionNormalized": "社会教育費",
+     "initialBudgetYen": 13588000000,
+     "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    }
+   ]
+  },
+  {
+   "status": "candidate",
+   "granularity": "item",
+   "fy2024": [
+    {
+     "fiscalYear": 2024,
+     "chapterRaw": "12:教育費",
+     "sectionRaw": "5:退職手当及年金費",
+     "chapterNormalized": "教育費",
+     "sectionNormalized": "退職手当及年金費",
+     "initialBudgetYen": 44851000000,
+     "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    }
+   ],
+   "fy2026": [
+    {
+     "fiscalYear": 2026,
+     "chapterRaw": "12:教育費",
+     "sectionRaw": "06:退職手当及年金費",
+     "chapterNormalized": "教育費",
+     "sectionNormalized": "退職手当及年金費",
+     "initialBudgetYen": 39062000000,
+     "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    }
+   ]
+  },
+  {
+   "status": "candidate",
+   "granularity": "item",
+   "fy2024": [
+    {
+     "fiscalYear": 2024,
+     "chapterRaw": "12:教育費",
+     "sectionRaw": "6:施設整備費",
+     "chapterNormalized": "教育費",
+     "sectionNormalized": "施設整備費",
+     "initialBudgetYen": 65740000000,
+     "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    }
+   ],
+   "fy2026": [
+    {
+     "fiscalYear": 2026,
+     "chapterRaw": "12:教育費",
+     "sectionRaw": "09:施設整備費",
+     "chapterNormalized": "教育費",
+     "sectionNormalized": "施設整備費",
+     "initialBudgetYen": 66184000000,
+     "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    }
+   ]
+  },
+  {
+   "status": "candidate",
+   "granularity": "item",
+   "fy2024": [
+    {
+     "fiscalYear": 2024,
+     "chapterRaw": "13:学務費",
+     "sectionRaw": "1:東京都公立大学法人支援費",
+     "chapterNormalized": "学務費",
+     "sectionNormalized": "東京都公立大学法人支援費",
+     "initialBudgetYen": 27577000000,
+     "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    }
+   ],
+   "fy2026": [
+    {
+     "fiscalYear": 2026,
+     "chapterRaw": "13:学務費",
+     "sectionRaw": "01:東京都公立大学法人支援費",
+     "chapterNormalized": "学務費",
+     "sectionNormalized": "東京都公立大学法人支援費",
+     "initialBudgetYen": 35626000000,
+     "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    }
+   ]
+  },
+  {
+   "status": "candidate",
+   "granularity": "item",
+   "fy2024": [
+    {
+     "fiscalYear": 2024,
+     "chapterRaw": "13:学務費",
+     "sectionRaw": "2:私立学校振興費",
+     "chapterNormalized": "学務費",
+     "sectionNormalized": "私立学校振興費",
+     "initialBudgetYen": 270995000000,
+     "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    }
+   ],
+   "fy2026": [
+    {
+     "fiscalYear": 2026,
+     "chapterRaw": "13:学務費",
+     "sectionRaw": "02:私立学校振興費",
+     "chapterNormalized": "学務費",
+     "sectionNormalized": "私立学校振興費",
+     "initialBudgetYen": 307301000000,
+     "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    }
+   ]
+  },
+  {
+   "status": "candidate",
+   "granularity": "item",
+   "fy2024": [
+    {
+     "fiscalYear": 2024,
+     "chapterRaw": "13:学務費",
+     "sectionRaw": "3:育英資金費",
+     "chapterNormalized": "学務費",
+     "sectionNormalized": "育英資金費",
+     "initialBudgetYen": 281000000,
+     "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    }
+   ],
+   "fy2026": [
+    {
+     "fiscalYear": 2026,
+     "chapterRaw": "13:学務費",
+     "sectionRaw": "03:育英資金費",
+     "chapterNormalized": "学務費",
+     "sectionNormalized": "育英資金費",
+     "initialBudgetYen": 322000000,
+     "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    }
+   ]
+  },
+  {
+   "status": "candidate",
+   "granularity": "item",
+   "fy2024": [
+    {
+     "fiscalYear": 2024,
+     "chapterRaw": "14:警察費",
+     "sectionRaw": "1:警察管理費",
+     "chapterNormalized": "警察費",
+     "sectionNormalized": "警察管理費",
+     "initialBudgetYen": 543390515000,
+     "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    }
+   ],
+   "fy2026": [
+    {
+     "fiscalYear": 2026,
+     "chapterRaw": "14:警察費",
+     "sectionRaw": "01:警察管理費",
+     "chapterNormalized": "警察費",
+     "sectionNormalized": "警察管理費",
+     "initialBudgetYen": 576667637000,
+     "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    }
+   ]
+  },
+  {
+   "status": "candidate",
+   "granularity": "item",
+   "fy2024": [
+    {
+     "fiscalYear": 2024,
+     "chapterRaw": "14:警察費",
+     "sectionRaw": "2:退職手当及年金費",
+     "chapterNormalized": "警察費",
+     "sectionNormalized": "退職手当及年金費",
+     "initialBudgetYen": 28178118000,
+     "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    }
+   ],
+   "fy2026": [
+    {
+     "fiscalYear": 2026,
+     "chapterRaw": "14:警察費",
+     "sectionRaw": "02:退職手当及年金費",
+     "chapterNormalized": "警察費",
+     "sectionNormalized": "退職手当及年金費",
+     "initialBudgetYen": 25681049000,
+     "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    }
+   ]
+  },
+  {
+   "status": "candidate",
+   "granularity": "item",
+   "fy2024": [
+    {
+     "fiscalYear": 2024,
+     "chapterRaw": "14:警察費",
+     "sectionRaw": "3:警察活動費",
+     "chapterNormalized": "警察費",
+     "sectionNormalized": "警察活動費",
+     "initialBudgetYen": 60891476000,
+     "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    }
+   ],
+   "fy2026": [
+    {
+     "fiscalYear": 2026,
+     "chapterRaw": "14:警察費",
+     "sectionRaw": "03:警察活動費",
+     "chapterNormalized": "警察費",
+     "sectionNormalized": "警察活動費",
+     "initialBudgetYen": 73527664000,
+     "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    }
+   ]
+  },
+  {
+   "status": "candidate",
+   "granularity": "item",
+   "fy2024": [
+    {
+     "fiscalYear": 2024,
+     "chapterRaw": "14:警察費",
+     "sectionRaw": "4:警察施設費",
+     "chapterNormalized": "警察費",
+     "sectionNormalized": "警察施設費",
+     "initialBudgetYen": 49799891000,
+     "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    }
+   ],
+   "fy2026": [
+    {
+     "fiscalYear": 2026,
+     "chapterRaw": "14:警察費",
+     "sectionRaw": "04:警察施設費",
+     "chapterNormalized": "警察費",
+     "sectionNormalized": "警察施設費",
+     "initialBudgetYen": 63074650000,
+     "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    }
+   ]
+  },
+  {
+   "status": "candidate",
+   "granularity": "item",
+   "fy2024": [
+    {
+     "fiscalYear": 2024,
+     "chapterRaw": "15:消防費",
+     "sectionRaw": "1:消防管理費",
+     "chapterNormalized": "消防費",
+     "sectionNormalized": "消防管理費",
+     "initialBudgetYen": 213341000000,
+     "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    }
+   ],
+   "fy2026": [
+    {
+     "fiscalYear": 2026,
+     "chapterRaw": "15:消防費",
+     "sectionRaw": "01:消防管理費",
+     "chapterNormalized": "消防費",
+     "sectionNormalized": "消防管理費",
+     "initialBudgetYen": 237381000000,
+     "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    }
+   ]
+  },
+  {
+   "status": "candidate",
+   "granularity": "item",
+   "fy2024": [
+    {
+     "fiscalYear": 2024,
+     "chapterRaw": "15:消防費",
+     "sectionRaw": "2:消防活動費",
+     "chapterNormalized": "消防費",
+     "sectionNormalized": "消防活動費",
+     "initialBudgetYen": 33651000000,
+     "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    }
+   ],
+   "fy2026": [
+    {
+     "fiscalYear": 2026,
+     "chapterRaw": "15:消防費",
+     "sectionRaw": "02:消防活動費",
+     "chapterNormalized": "消防費",
+     "sectionNormalized": "消防活動費",
+     "initialBudgetYen": 44962000000,
+     "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    }
+   ]
+  },
+  {
+   "status": "candidate",
+   "granularity": "item",
+   "fy2024": [
+    {
+     "fiscalYear": 2024,
+     "chapterRaw": "15:消防費",
+     "sectionRaw": "3:消防団費",
+     "chapterNormalized": "消防費",
+     "sectionNormalized": "消防団費",
+     "initialBudgetYen": 3957000000,
+     "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    }
+   ],
+   "fy2026": [
+    {
+     "fiscalYear": 2026,
+     "chapterRaw": "15:消防費",
+     "sectionRaw": "03:消防団費",
+     "chapterNormalized": "消防費",
+     "sectionNormalized": "消防団費",
+     "initialBudgetYen": 4765000000,
+     "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    }
+   ]
+  },
+  {
+   "status": "candidate",
+   "granularity": "item",
+   "fy2024": [
+    {
+     "fiscalYear": 2024,
+     "chapterRaw": "15:消防費",
+     "sectionRaw": "4:退職手当及年金費",
+     "chapterNormalized": "消防費",
+     "sectionNormalized": "退職手当及年金費",
+     "initialBudgetYen": 10314000000,
+     "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    }
+   ],
+   "fy2026": [
+    {
+     "fiscalYear": 2026,
+     "chapterRaw": "15:消防費",
+     "sectionRaw": "04:退職手当及年金費",
+     "chapterNormalized": "消防費",
+     "sectionNormalized": "退職手当及年金費",
+     "initialBudgetYen": 8259000000,
+     "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    }
+   ]
+  },
+  {
+   "status": "candidate",
+   "granularity": "item",
+   "fy2024": [
+    {
+     "fiscalYear": 2024,
+     "chapterRaw": "15:消防費",
+     "sectionRaw": "5:建設費",
+     "chapterNormalized": "消防費",
+     "sectionNormalized": "建設費",
+     "initialBudgetYen": 18121000000,
+     "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    }
+   ],
+   "fy2026": [
+    {
+     "fiscalYear": 2026,
+     "chapterRaw": "15:消防費",
+     "sectionRaw": "05:建設費",
+     "chapterNormalized": "消防費",
+     "sectionNormalized": "建設費",
+     "initialBudgetYen": 23215000000,
+     "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    }
+   ]
+  },
+  {
+   "status": "candidate",
+   "granularity": "item",
+   "fy2024": [
+    {
+     "fiscalYear": 2024,
+     "chapterRaw": "17:諸支出金",
+     "sectionRaw": "1:他会計支出金",
+     "chapterNormalized": "諸支出金",
+     "sectionNormalized": "他会計支出金",
+     "initialBudgetYen": 1424232980000,
+     "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    }
+   ],
+   "fy2026": [
+    {
+     "fiscalYear": 2026,
+     "chapterRaw": "17:諸支出金",
+     "sectionRaw": "02:他会計支出金",
+     "chapterNormalized": "諸支出金",
+     "sectionNormalized": "他会計支出金",
+     "initialBudgetYen": 1595632980000,
+     "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    }
+   ]
+  }
+ ],
+ "conflicts": [],
+ "unmatched": {
+  "fy2024": [
+   {
+    "fiscalYear": 2024,
+    "chapterRaw": "4:生活文化スポーツ費",
+    "sectionRaw": null,
+    "chapterNormalized": "生活文化スポーツ費",
+    "sectionNormalized": null,
+    "initialBudgetYen": 91975000000,
+    "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+   },
+   {
+    "fiscalYear": 2024,
+    "chapterRaw": "2:総務費",
+    "sectionRaw": "4:スタートアップ・国際金融都市戦略費",
+    "chapterNormalized": "総務費",
+    "sectionNormalized": "スタートアップ・国際金融都市戦略費",
+    "initialBudgetYen": 27937000000,
+    "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+   },
+   {
+    "fiscalYear": 2024,
+    "chapterRaw": "2:総務費",
+    "sectionRaw": "11:その他",
+    "chapterNormalized": "総務費",
+    "sectionNormalized": "その他",
+    "initialBudgetYen": 7601277000,
+    "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+   },
+   {
+    "fiscalYear": 2024,
+    "chapterRaw": "12:教育費",
+    "sectionRaw": "7:教育管理費その他",
+    "chapterNormalized": "教育費",
+    "sectionNormalized": "教育管理費その他",
+    "initialBudgetYen": 118872000000,
+    "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+   },
+   {
+    "fiscalYear": 2024,
+    "chapterRaw": "17:諸支出金",
+    "sectionRaw": "2:その他",
+    "chapterNormalized": "諸支出金",
+    "sectionNormalized": "その他",
+    "initialBudgetYen": 549715020000,
+    "sourceFile": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+   }
+  ],
+  "fy2026": [
+   {
+    "fiscalYear": 2026,
+    "chapterRaw": "04:生活文化費",
+    "sectionRaw": null,
+    "chapterNormalized": "生活文化費",
+    "sectionNormalized": null,
+    "initialBudgetYen": 72739000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   {
+    "fiscalYear": 2026,
+    "chapterRaw": "01:議会費",
+    "sectionRaw": "01:都議会費",
+    "chapterNormalized": "議会費",
+    "sectionNormalized": "都議会費",
+    "initialBudgetYen": 6010000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   {
+    "fiscalYear": 2026,
+    "chapterRaw": "02:総務費",
+    "sectionRaw": "08:統計費",
+    "chapterNormalized": "総務費",
+    "sectionNormalized": "統計費",
+    "initialBudgetYen": 3519081000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   {
+    "fiscalYear": 2026,
+    "chapterRaw": "02:総務費",
+    "sectionRaw": "09:会計管理費",
+    "chapterNormalized": "総務費",
+    "sectionNormalized": "会計管理費",
+    "initialBudgetYen": 21628000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   {
+    "fiscalYear": 2026,
+    "chapterRaw": "02:総務費",
+    "sectionRaw": "10:人事委員会費",
+    "chapterNormalized": "総務費",
+    "sectionNormalized": "人事委員会費",
+    "initialBudgetYen": 1220000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   {
+    "fiscalYear": 2026,
+    "chapterRaw": "02:総務費",
+    "sectionRaw": "11:監査委員費",
+    "chapterNormalized": "総務費",
+    "sectionNormalized": "監査委員費",
+    "initialBudgetYen": 908000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   {
+    "fiscalYear": 2026,
+    "chapterRaw": "03:徴税費",
+    "sectionRaw": "01:徴税管理費",
+    "chapterNormalized": "徴税費",
+    "sectionNormalized": "徴税管理費",
+    "initialBudgetYen": 45343072000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   {
+    "fiscalYear": 2026,
+    "chapterRaw": "03:徴税費",
+    "sectionRaw": "02:課税費",
+    "chapterNormalized": "徴税費",
+    "sectionNormalized": "課税費",
+    "initialBudgetYen": 14637000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   {
+    "fiscalYear": 2026,
+    "chapterRaw": "03:徴税費",
+    "sectionRaw": "03:徴収費",
+    "chapterNormalized": "徴税費",
+    "sectionNormalized": "徴収費",
+    "initialBudgetYen": 37696000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   {
+    "fiscalYear": 2026,
+    "chapterRaw": "03:徴税費",
+    "sectionRaw": "04:施設整備費",
+    "chapterNormalized": "徴税費",
+    "sectionNormalized": "施設整備費",
+    "initialBudgetYen": 5326928000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   {
+    "fiscalYear": 2026,
+    "chapterRaw": "04:生活文化費",
+    "sectionRaw": "01:生活文化費",
+    "chapterNormalized": "生活文化費",
+    "sectionNormalized": "生活文化費",
+    "initialBudgetYen": 42650000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   {
+    "fiscalYear": 2026,
+    "chapterRaw": "04:生活文化費",
+    "sectionRaw": "02:都民安全総合対策費",
+    "chapterNormalized": "生活文化費",
+    "sectionNormalized": "都民安全総合対策費",
+    "initialBudgetYen": 6078000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   {
+    "fiscalYear": 2026,
+    "chapterRaw": "04:生活文化費",
+    "sectionRaw": "03:スポーツ推進費",
+    "chapterNormalized": "生活文化費",
+    "sectionNormalized": "スポーツ推進費",
+    "initialBudgetYen": 24011000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   {
+    "fiscalYear": 2026,
+    "chapterRaw": "09:産業労働費",
+    "sectionRaw": "07:スタートアップ戦略推進費",
+    "chapterNormalized": "産業労働費",
+    "sectionNormalized": "スタートアップ戦略推進費",
+    "initialBudgetYen": 39202000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   {
+    "fiscalYear": 2026,
+    "chapterRaw": "12:教育費",
+    "sectionRaw": "01:教育管理費",
+    "chapterNormalized": "教育費",
+    "sectionNormalized": "教育管理費",
+    "initialBudgetYen": 116241000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   {
+    "fiscalYear": 2026,
+    "chapterRaw": "12:教育費",
+    "sectionRaw": "05:福利厚生費",
+    "chapterNormalized": "教育費",
+    "sectionNormalized": "福利厚生費",
+    "initialBudgetYen": 3354000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   {
+    "fiscalYear": 2026,
+    "chapterRaw": "12:教育費",
+    "sectionRaw": "07:教育指導奨励費",
+    "chapterNormalized": "教育費",
+    "sectionNormalized": "教育指導奨励費",
+    "initialBudgetYen": 53871000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   {
+    "fiscalYear": 2026,
+    "chapterRaw": "16:公債費",
+    "sectionRaw": "01:公債費",
+    "chapterNormalized": "公債費",
+    "sectionNormalized": "公債費",
+    "initialBudgetYen": 279908000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   {
+    "fiscalYear": 2026,
+    "chapterRaw": "17:諸支出金",
+    "sectionRaw": "01:財産費",
+    "chapterNormalized": "諸支出金",
+    "sectionNormalized": "財産費",
+    "initialBudgetYen": 20560000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   {
+    "fiscalYear": 2026,
+    "chapterRaw": "17:諸支出金",
+    "sectionRaw": "03:収用委員会費",
+    "chapterNormalized": "諸支出金",
+    "sectionNormalized": "収用委員会費",
+    "initialBudgetYen": 432000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   {
+    "fiscalYear": 2026,
+    "chapterRaw": "17:諸支出金",
+    "sectionRaw": "04:諸費",
+    "chapterNormalized": "諸支出金",
+    "sectionNormalized": "諸費",
+    "initialBudgetYen": 730890020000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   },
+   {
+    "fiscalYear": 2026,
+    "chapterRaw": "18:予備費",
+    "sectionRaw": "01:予備費",
+    "chapterNormalized": "予備費",
+    "sectionNormalized": "予備費",
+    "initialBudgetYen": 5000000000,
+    "sourceFile": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+   }
+  ]
+ },
+ "summary": {
+  "exactCandidates": 79,
+  "conflictCount": 0,
+  "unmatchedFy2024": 5,
+  "unmatchedFy2026": 22,
+  "chapterCandidates": 17,
+  "itemCandidates": 62
+ }
+}
