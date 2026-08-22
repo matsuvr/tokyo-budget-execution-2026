@@ -29,7 +29,7 @@
       "fiscalYear2026": [
         { "account": "一般会計", "chapter": "04:生活文化スポーツ費", "section": "01:文化観光部", "item": "01:文化振興費" }
       ],
-      "granularity": "section",
+      "granularity": "item",
       "confidence": "B",
       "relationType": "renamed",
       "evidence": {
@@ -37,7 +37,7 @@
         "url": "https://www.zaimu.metro.tokyo.lg.jp/zaisei/yosan/r6/6yosangaiyounituite",
         "page": null
       },
-      "note": "例: 項の改称。2024側は項まで、2026側は目まで確認できるため項へ集約して比較"
+      "note": "例: 項の改称。2024側は項まで、2026側は目まで確認できるため項へ集約して比較（granularity=itemは科目単位の意）"
     },
     {
       "mappingId": "map-0003",
