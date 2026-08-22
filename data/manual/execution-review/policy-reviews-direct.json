@@ -1,0 +1,76 @@
+{
+ "version": 1,
+ "note": "#36の政策レビュー（直営・行政サービス direct）。selected-policy-reviews.json の executionMethod=direct のみを対象に、公式資料で低執行理由と2026年度の変更を確認した。ページ番号は各PDFの物理ページ。推測による補完はしない。",
+ "generatedFrom": "data/manual/execution-review/selected-policy-reviews.json",
+ "criteria": {
+  "maxSelections": 5,
+  "targetExecutionMethod": "direct",
+  "checkedSources": [
+   "令和6年度 主要施策の成果（該当項目の記載なし）",
+   "令和6年度 東京都決算参考書 一般会計",
+   "令和6年度予算概要 分割版 第1 一般会計",
+   "議案第1号 令和8年度東京都一般会計予算",
+   "令和8年度 東京都予算案の概要"
+  ]
+ },
+ "records": [
+  {
+   "reviewId": "rev-0001",
+   "comparisonId": "cmp-0024",
+   "policyTitle": "退職手当及年金費（総務局所管）",
+   "bureau": null,
+   "executionMethod": "direct",
+   "officialDescription": "都職員の退職手当（教育庁・警視庁・東京消防庁・交通局・水道局・下水道局で支出するものを除く）及び地方公務員等共済組合法施行前に退職した職員（特別区職員を含む）の恩給などに要する経費。",
+   "reasonStatus": "confirmed",
+   "reasonTags": [
+    "other-official-reason"
+   ],
+   "improvementStatus": "confirmed",
+   "improvementSummary": "2026年度当初予算は17,916,647千円で、2024年度当初18,953,741千円から減少。制度面では、令和8年度予算案の概要が給与関係費について定年延長に伴う退職手当の増を前年度比増の要因として挙げている。",
+   "evidenceReferences": [
+    {
+     "title": "令和6年度 東京都決算参考書 一般会計",
+     "url": "https://www.kaikeikanri.metro.tokyo.lg.jp/documents/d/kaikeikanri/06kessan-7",
+     "page": 76,
+     "summary": "総務費の項別執行状況。「退職手当及び年金に要した経費」は予算現額18,953,741千円・支出済額14,340,151,414円・不用額4,613,589,586円・執行率75.7%。内訳は恩給及び事務費（同頁で執行率76.9%）と退職手当及び事務費（同75.7%）。同頁の総務費不用額説明には「退職手当の実績による残」4,597,234,897円との記載がある。人員不足等への言及はない。"
+    },
+    {
+     "title": "令和6年度予算概要 分割版 第1 一般会計",
+     "url": "https://www.zaimu.metro.tokyo.lg.jp/documents/d/zaimu/6yosangaiyou3",
+     "page": 7,
+     "summary": "項「10 退職手当及年金費（総務局所管）」は18,953,741千円（5年度比+9,893,461千円）。経費の性格説明と内訳（恩給及び退職年金66,356千円、退職手当18,882,367千円）。"
+    },
+    {
+     "title": "議案第1号 令和8年度東京都一般会計予算",
+     "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+     "page": 11,
+     "summary": "総務費13 退職手当及年金費 17,916,647千円（令和8年度当初）。"
+    },
+    {
+     "title": "令和8年度 東京都予算案の概要",
+     "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/20260130_reiwa8nendo_tokyotoyosanangaiyou/8yosanangaiyou.pdf",
+     "page": 23,
+     "summary": "「給与関係費」の説明頁。給与改定に伴う増や定年延長に伴う退職手当の増などにより前年度比増となった旨の記載。同PDFは数字グリフのToUnicodeが欠落し金額が抽出できないため、金額は未確認。"
+    }
+   ],
+   "reviewerNotes": "選定ファイル中 executionMethod=direct は本件1件のみ（上限5件以内）。理由タグは決算参考書の文言「実績による残」に基づき other-official-reason を使用し、推測タグは付けていない。staffing-or-delivery-capacity は公式資料に人員不足等の明記がないため不使用。主要施策の成果（R6）に本項目に対応する事業記載はなく、監査事務局公表の令和6年度決算審査意見書概要でも本項目固有の指摘は確認できず。R6予算概要は総務局所管と明記するが、2026年度側の議案に局の記載がないため bureau は null。"
+  }
+ ],
+ "summary": {
+  "reviewedCount": 1,
+  "maxAllowed": 5,
+  "byReasonStatus": {
+   "confirmed": 1,
+   "not-found": 0,
+   "not-applicable": 0
+  },
+  "byImprovementStatus": {
+   "confirmed": 1,
+   "not-found": 0,
+   "not-applicable": 0
+  },
+  "shortfallNotes": [
+   "selected-policy-reviews.json で executionMethod=direct と確定した候補は cmp-0024 のみのため1件で終了。他区分での水増しはしない。"
+  ]
+ }
+}
