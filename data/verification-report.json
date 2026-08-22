@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-22T04:48:38.127Z",
+  "generatedAt": "2026-08-22T07:59:39.976Z",
   "pass": true,
-  "checkCount": 268,
+  "checkCount": 271,
   "failedCheckCount": 0,
   "checks": [
     {
@@ -1765,6 +1765,27 @@
       }
     },
     {
+      "name": "manifest local file exists: er-fy2026-budget-budget-bill",
+      "pass": true,
+      "details": "data/raw/execution-review/fy2026/budget/budget-bill.pdf"
+    },
+    {
+      "name": "manifest hash: er-fy2026-budget-budget-bill",
+      "pass": true,
+      "details": {
+        "expected": "0c81a92edd71e1cbbf97ecb6f565e227b17d58b8b6b105f9d73c55844ea056a1",
+        "actual": "0c81a92edd71e1cbbf97ecb6f565e227b17d58b8b6b105f9d73c55844ea056a1"
+      }
+    },
+    {
+      "name": "manifest size: er-fy2026-budget-budget-bill",
+      "pass": true,
+      "details": {
+        "expected": 21966285,
+        "actual": 21966285
+      }
+    },
+    {
       "name": "manifest local file exists: er-fy2026-budget-counting-table",
       "pass": true,
       "details": "data/raw/execution-review/fy2026/budget/counting-table.pdf"
@@ -1788,7 +1809,7 @@
     {
       "name": "downloaded source hashes verified",
       "pass": true,
-      "details": 79
+      "details": 80
     },
     {
       "name": "worker endpoint /",

@@ -239,7 +239,7 @@ async function writeLine(
 }
 
 interface PublicYearResult {
-  fiscalYear: 2025 | 2026;
+  fiscalYear: 2024 | 2025 | 2026;
   transactionCount: number;
   transactionAmountYen: number;
   payrollAmountYen: number;
@@ -248,7 +248,9 @@ interface PublicYearResult {
   payrollFile: string | null;
 }
 
-async function normalizePublicExpenditureYear(fiscalYear: 2025 | 2026): Promise<PublicYearResult> {
+async function normalizePublicExpenditureYear(
+  fiscalYear: 2024 | 2025 | 2026,
+): Promise<PublicYearResult> {
   const directoryName = `fy${fiscalYear}`;
   const sourceDirectory = join(RAW, "public-expenditure", directoryName);
   const outputDirectory = join(NORMALIZED, "public-expenditure", directoryName);
@@ -477,6 +479,7 @@ async function normalizePublicExpenditure(): Promise<PublicYearResult[]> {
   await rm(outputDirectory, { recursive: true, force: true });
   await ensureDirectory(outputDirectory);
   const results = [
+    await normalizePublicExpenditureYear(2024),
     await normalizePublicExpenditureYear(2025),
     await normalizePublicExpenditureYear(2026),
   ];

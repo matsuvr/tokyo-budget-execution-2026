@@ -1,0 +1,49 @@
+{
+  "fiscalYear": 2024,
+  "sourceMonths": [
+    "2024-04",
+    "2024-05",
+    "2024-06",
+    "2024-07",
+    "2024-08",
+    "2024-09",
+    "2024-10",
+    "2024-11",
+    "2024-12",
+    "2025-01",
+    "2025-02",
+    "2025-03",
+    "2025-04",
+    "2025-05"
+  ],
+  "sourceFiles": [
+    "2024-04.xlsx",
+    "2024-05.xlsx",
+    "2024-06.xlsx",
+    "2024-07.xlsx",
+    "2024-08.xlsx",
+    "2024-09.xlsx",
+    "2024-10.xlsx",
+    "2024-11.xlsx",
+    "2024-12.xlsx",
+    "2025-01.xlsx",
+    "2025-02.xlsx",
+    "2025-03.xlsx",
+    "2025-04-closing.xlsx",
+    "2025-05-closing.xlsx"
+  ],
+  "transactionFileCount": 14,
+  "transactionCount": 503589,
+  "transactionAmountYen": 10266419629155,
+  "payrollFile": "payroll.xlsx",
+  "payrollRecordCount": 84,
+  "payrollAmountYen": 1714477171129,
+  "combinedAmountYen": 11980896800284,
+  "invalidDateCount": 0,
+  "skippedNonDataRowCount": 29,
+  "notes": [
+    "公金支出の通常明細と給与関係費は別原本であり、別系列として保持した。",
+    "出納整理期間はisClosingPeriod=trueで識別できる。",
+    "予算系列と公金支出系列は分類粒度が異なるため、この集計だけから執行率を算出しない。"
+  ]
+}
