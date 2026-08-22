@@ -85,7 +85,87 @@ function levelKey(level: HierarchyLevelContext): string {
 }
 
 /**
- * 行配列から款・項・目の階層を復元する。
+ * 階層状態を跨ぎ持ち運べる段階的なアノテーターを作る。
+ * - 状態はクロージャ内でのみ保持する（グローバル変数を使わない）。
+ * - JSONLのストリーム処理など、見開き単位の分割呼び出しに対応する。
+ */
+export interface SettlementHierarchyTracker<TCells extends Record<string, string>> {
+  annotate(rows: readonly (PageRow & { page: number; cells: TCells })[]): AnnotatedSettlementRow<TCells>[];
+}
+
+export function createSettlementHierarchyTracker<const TCells extends Record<string, string>>(
+  options: ReconstructHierarchyOptions,
+): SettlementHierarchyTracker<TCells> {
+  let currentKan: HierarchyLevelContext | null = null;
+  let currentKou: HierarchyLevelContext | null = null;
+  let currentMoku: HierarchyLevelContext | null = null;
+
+  return {
+    annotate(rows) {
+      return rows.map((row) => {
+        // レベル判定はコードセルの内容のみで行う（先勝り）。
+        const kan = extractLevel(options.kan, row.cells);
+        const kou = kan ? null : extractLevel(options.kou, row.cells);
+        const moku = kan || kou ? null : extractLevel(options.moku, row.cells);
+
+        if (kan) {
+          currentKan = kan;
+          currentKou = null;
+          currentMoku = null;
+        } else if (kou) {
+          if (!currentKan) {
+            throw new Error(`項が款に先行しています: page=${row.page} cells=${JSON.stringify(row.cells)}`);
+          }
+          currentKou = kou;
+          currentMoku = null;
+        } else if (moku) {
+          if (!currentKan || !currentKou) {
+            throw new Error(`目が款・項に先行しています: page=${row.page} cells=${JSON.stringify(row.cells)}`);
+          }
+          currentMoku = moku;
+        }
+
+        const amountPattern = options.amountPattern;
+        const hasAmounts =
+          amountPattern != null &&
+          Object.values(row.cells).some((value) => amountPattern.test(value));
+        // 小計判定はセル単位（金額セルと結合しない）。
+        const subtotalPattern = options.subtotalPattern;
+        const isSubtotal =
+          subtotalPattern != null &&
+          Object.values(row.cells).some((value) => {
+            const normalizedValue = normalizeName(value);
+            return normalizedValue.length > 0 && subtotalPattern.test(normalizedValue);
+          });
+        let kind: SettlementRowKind;
+        if (kan) kind = "kan";
+        else if (kou) kind = "kou";
+        else if (moku) kind = "moku";
+        else if (isSubtotal) {
+          kind = "subtotal";
+        } else if (hasAmounts) {
+          kind = "data";
+        } else {
+          kind = "unclassified";
+        }
+
+        const hierarchy: HierarchyContext =
+          kind === "unclassified"
+            ? { kan: null, kou: null, moku: null }
+            : { kan: currentKan, kou: currentKou, moku: currentMoku };
+        const stableKey =
+          hierarchy.kan && hierarchy.kou && hierarchy.moku
+            ? [hierarchy.kan, hierarchy.kou, hierarchy.moku].map((level) => levelKey(level)).join("/")
+            : null;
+
+        return { page: row.page, cells: row.cells, kind, hierarchy, stableKey };
+      });
+    },
+  };
+}
+
+/**
+ * 行配列から款・項・目の階層を復元する（一回呼び出し版）。
  * - 入力順序を保ち、状態はこの関数のローカルでのみ持つ。
  * - 数値行・小計行には現在の階層を付与する。階層が未確定ならnullを残す（fail-closed）。
  */
@@ -93,66 +173,5 @@ export function reconstructHierarchy<const TCells extends Record<string, string>
   rows: readonly (PageRow & { page: number; cells: TCells })[],
   options: ReconstructHierarchyOptions,
 ): AnnotatedSettlementRow<TCells>[] {
-  let currentKan: HierarchyLevelContext | null = null;
-  let currentKou: HierarchyLevelContext | null = null;
-  let currentMoku: HierarchyLevelContext | null = null;
-
-  return rows.map((row) => {
-    // レベル判定はコードセルの内容のみで行う（先勝り）。
-    const kan = extractLevel(options.kan, row.cells);
-    const kou = kan ? null : extractLevel(options.kou, row.cells);
-    const moku = kan || kou ? null : extractLevel(options.moku, row.cells);
-
-    if (kan) {
-      currentKan = kan;
-      currentKou = null;
-      currentMoku = null;
-    } else if (kou) {
-      if (!currentKan) {
-        throw new Error(`項が款に先行しています: page=${row.page} cells=${JSON.stringify(row.cells)}`);
-      }
-      currentKou = kou;
-      currentMoku = null;
-    } else if (moku) {
-      if (!currentKan || !currentKou) {
-        throw new Error(`目が款・項に先行しています: page=${row.page} cells=${JSON.stringify(row.cells)}`);
-      }
-      currentMoku = moku;
-    }
-
-    const amountPattern = options.amountPattern;
-    const hasAmounts =
-      amountPattern != null &&
-      Object.values(row.cells).some((value) => amountPattern.test(value));
-    // 小計判定はセル単位（金額セルと結合しない）。
-    const subtotalPattern = options.subtotalPattern;
-    const isSubtotal =
-      subtotalPattern != null &&
-      Object.values(row.cells).some((value) => {
-        const normalizedValue = normalizeName(value);
-        return normalizedValue.length > 0 && subtotalPattern.test(normalizedValue);
-      });
-    let kind: SettlementRowKind;
-    if (kan) kind = "kan";
-    else if (kou) kind = "kou";
-    else if (moku) kind = "moku";
-    else if (isSubtotal) {
-      kind = "subtotal";
-    } else if (hasAmounts) {
-      kind = "data";
-    } else {
-      kind = "unclassified";
-    }
-
-    const hierarchy: HierarchyContext =
-      kind === "unclassified"
-        ? { kan: null, kou: null, moku: null }
-        : { kan: currentKan, kou: currentKou, moku: currentMoku };
-    const stableKey =
-      hierarchy.kan && hierarchy.kou && hierarchy.moku
-        ? [hierarchy.kan, hierarchy.kou, hierarchy.moku].map((level) => levelKey(level)).join("/")
-        : null;
-
-    return { page: row.page, cells: row.cells, kind, hierarchy, stableKey };
-  });
+  return createSettlementHierarchyTracker<TCells>(options).annotate(rows);
 }

@@ -35,3 +35,47 @@ export const DATA_ROW_HEURISTICS = {
 
 /** 折り返し科目名を結合する対象の列。 */
 export const WRAPPED_NAME_COLUMNS = ["accountAndName", "sectionName"] as const;
+
+/**
+ * 歳出見開きページ（表: 偶数 / 裏: 奇数）の列設定（Issue #18）。
+ * - 表ページは款・項・目のコード位置を分離した階層向けウィンドウを持つ。
+ *   款名は均等割りで複数ウィンドウにまたがるため、nameColumns連結で復元する。
+ * - 裏ページの金額列は右端揃え（右端X: 180/242/304/366/418）を実測した値。
+ */
+export const SETTLEMENT_DETAIL_SPREAD_FRONT_COLUMNS: readonly PageColumnLayout[] = [
+  { name: "kanCode", xMin: 85, xMax: 96 },
+  { name: "kouCell", xMin: 96, xMax: 105 },
+  { name: "mokuCell", xMin: 105, xMax: 155 },
+  { name: "initialBudget", xMin: 156, xMax: 200 },
+  { name: "supplementaryBudget", xMin: 200, xMax: 264 },
+  { name: "priorYearCarryover", xMin: 264, xMax: 320 },
+  { name: "continuingReserveAdjustment", xMin: 320, xMax: 388 },
+  { name: "currentBudgetTotal", xMin: 388, xMax: 444 },
+  { name: "sectionCode", xMin: 444, xMax: 454 },
+  { name: "sectionName", xMin: 454, xMax: 500 },
+  { name: "sectionSpentAmount", xMin: 500, xMax: 560 },
+];
+
+/** 裏ページ（支出済額・翌年度繰越額・不用額・備考）の列設定。 */
+export const SETTLEMENT_DETAIL_SPREAD_BACK_COLUMNS: readonly PageColumnLayout[] = [
+  { name: "spentAmount", xMin: 120, xMax: 210 },
+  { name: "carryoverContinuingFee", xMin: 210, xMax: 248 },
+  { name: "carryoverAuthorized", xMin: 248, xMax: 315 },
+  { name: "carryoverSuccessive", xMin: 315, xMax: 370 },
+  { name: "unusedAmount", xMin: 370, xMax: 412 },
+  { name: "remarks", xMin: 412, xMax: 600 },
+];
+
+/** 見開き表ページからの款・項・目抽出仕様（reconstruct-hierarchyへ渡す）。 */
+export const SETTLEMENT_DETAIL_HIERARCHY_SPECS = {
+  kan: { codeColumn: "kanCode", nameColumns: ["kouCell", "mokuCell"] },
+  kou: { codeColumn: "kouCell", nameColumns: ["mokuCell"] },
+  // 目はコードと名称が結合して現れるため先頭コードを分解する
+  moku: { codeColumn: "mokuCell", nameColumns: [] },
+} as const;
+
+/** 歳出セクションの物理ページ範囲（116: 歳出１議会費の表ページ / 505: 18予備費の裏ページ）。 */
+export const FY2024_EXPENDITURE_PAGE_RANGE = {
+  firstPage: 116,
+  lastPage: 505,
+} as const;

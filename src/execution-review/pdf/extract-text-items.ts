@@ -90,3 +90,28 @@ export async function extractPageTextItems(
     await loadingTask.destroy();
   }
 }
+
+const TRAILING_AMOUNT_PATTERN = /\s(\d{1,3}(?:,\d{3}){2,})$/;
+
+/**
+ * 隣接する右端揃えの金額が同一テキスト項目に取り込まれた場合に分割する純粋関数。
+ * - 例: "0 1,145,795,413,000" → "0" と "1,145,795,413,000" の2項目。
+ * - 後半金額は右端揃えとみなし、文字幅比率からX座標を推定して再配置する。
+ * - 分割不要な項目はそのまま返す。入力は変更しない。
+ */
+export function splitEmbeddedAmountItems(items: readonly PdfTextItem[]): PdfTextItem[] {
+  return items.flatMap((item) => {
+    const match = item.text.match(TRAILING_AMOUNT_PATTERN);
+    if (!match || match[1] == null) return [item];
+    const suffix = match[1];
+    const prefix = item.text.slice(0, item.text.length - suffix.length).trimEnd();
+    if (prefix.length === 0) return [item];
+    // 文字幅比率から後半金額の左端Xを推定する（右端は元項目と共有）。
+    const charWidth = item.width / item.text.length;
+    const suffixX = Math.round((item.x + item.width - suffix.length * charWidth) * 100) / 100;
+    return [
+      { ...item, text: prefix },
+      { ...item, text: suffix, x: suffixX, width: Math.round(suffix.length * charWidth * 100) / 100 },
+    ];
+  });
+}
