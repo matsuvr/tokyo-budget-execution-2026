@@ -1,24 +1,25 @@
 {
   "packageName": "tokyo-budget-execution-2026",
   "version": "2026.08.21",
-  "generatedAt": "2026-08-22T01:30:52.539Z",
+  "generatedAt": "2026-08-22T04:48:38.460Z",
   "timezone": "Asia/Tokyo",
   "requestedFiscalYears": [
+    2024,
     2025,
     2026
   ],
   "contents": {
-    "manifestSources": 60,
-    "officialRawSourcesDownloaded": 55,
-    "referenceSources": 5,
+    "manifestSources": 87,
+    "officialRawSourcesDownloaded": 79,
+    "referenceSources": 8,
     "sourceCategories": {
       "budget": 15,
       "settlement": 10,
-      "public-expenditure": 19,
+      "public-expenditure": 34,
       "subsidy": 2,
       "catalog": 1,
-      "document": 8,
-      "reference": 5
+      "document": 17,
+      "reference": 8
     },
     "budget": {
       "series": 15,
@@ -89,7 +90,15 @@
       "status": "preliminary",
       "path": "data/normalized/closing-estimate/fy2025.json"
     },
-    "relatedOfficialDocuments": 8,
+    "relatedOfficialDocuments": 17,
+    "executionReviewOriginals": {
+      "total": 24,
+      "byFiscalYear": {
+        "2024": 22,
+        "2026": 2
+      },
+      "allHashesVerified": true
+    },
     "catalogExtractRows": 1497
   },
   "validation": {
@@ -97,7 +106,7 @@
     "typecheck": "passed",
     "typecheckCommand": "pnpm run typecheck",
     "typecheckRequiresDevDependencies": true,
-    "verificationChecks": 196,
+    "verificationChecks": 268,
     "failedChecks": 0,
     "workerRoutesTested": true,
     "sourceHashesVerified": true

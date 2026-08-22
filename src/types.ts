@@ -26,6 +26,8 @@ export interface SourceEntry {
   fiscalYears: number[];
   sourceUrl: string;
   localPath?: string;
+  /** カテゴリだけでは意味が曖昧な場合の補助分類（後方互換のため任意）。 */
+  subcategory?: "execution-review";
   status: SourceStatus;
   bytes?: number;
   sha256?: string;

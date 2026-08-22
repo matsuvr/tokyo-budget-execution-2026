@@ -53,6 +53,17 @@ for (const source of manifest.sources) {
   sourceCategories[source.category] = (sourceCategories[source.category] ?? 0) + 1;
 }
 
+const executionReviewOriginals = manifest.sources.filter(
+  (source) => source.subcategory === "execution-review",
+);
+const executionReviewByFiscalYear: Record<string, number> = {};
+for (const source of executionReviewOriginals) {
+  for (const fiscalYear of source.fiscalYears) {
+    executionReviewByFiscalYear[String(fiscalYear)] =
+      (executionReviewByFiscalYear[String(fiscalYear)] ?? 0) + 1;
+  }
+}
+
 const summary = {
   packageName: manifest.packageName,
   version: manifest.packageVersion,
@@ -102,6 +113,13 @@ const summary = {
     relatedOfficialDocuments: manifest.sources.filter(
       (source) => source.category === "document" && source.status === "downloaded",
     ).length,
+    executionReviewOriginals: {
+      total: executionReviewOriginals.length,
+      byFiscalYear: executionReviewByFiscalYear,
+      allHashesVerified: executionReviewOriginals.every(
+        (source) => source.status === "downloaded" && Boolean(source.sha256),
+      ),
+    },
     catalogExtractRows: catalog.recordCount,
   },
   validation: {

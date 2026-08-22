@@ -11,6 +11,7 @@
     "filter:catalog": "node --experimental-strip-types scripts/filter-catalog.ts",
     "normalize": "node --max-old-space-size=3072 --experimental-strip-types scripts/normalize.ts",
     "manifest": "node --experimental-strip-types scripts/build-manifest.ts",
+    "checksums": "node --experimental-strip-types scripts/build-checksums.ts",
     "summary": "node --experimental-strip-types scripts/build-package-summary.ts",
     "drilldown": "node --experimental-strip-types scripts/build-drilldown.ts",
     "verify": "node --experimental-strip-types scripts/verify.ts",

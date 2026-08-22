@@ -362,6 +362,7 @@ const definitions: SourceDefinition[] = [
       id: document.id,
       title: document.title,
       category: "document" as const,
+      subcategory: "execution-review" as const,
       fiscalYears: [2024] as number[],
       sourceUrl: `https://www.kaikeikanri.metro.tokyo.lg.jp/documents/d/kaikeikanri/${document.remoteName}`,
       localPath: `data/raw/execution-review/fy2024/settlement/${document.fileName}`,
@@ -376,6 +377,7 @@ const definitions: SourceDefinition[] = [
     id: "er-fy2024-major-policy-results",
     title: "令和6年度 主要施策の成果（本編・目次一体）",
     category: "document",
+    subcategory: "execution-review",
     fiscalYears: [2024],
     sourceUrl:
       "https://www.zaimu.metro.tokyo.lg.jp/documents/d/zaimu/20250924shuyousisakunoseika",
@@ -403,6 +405,7 @@ const definitions: SourceDefinition[] = [
     id: `er-fy2024-expenditure-${closing ? "closing-" : ""}${month}`,
     title: `公金支出情報 令和6年度 ${month}${closing ? " 出納整理期間" : ""}`,
     category: "public-expenditure" as const,
+    subcategory: "execution-review" as const,
     fiscalYears: [2024] as number[],
     sourceUrl: `https://www.kaikeikanri.metro.tokyo.lg.jp/documents/d/kaikeikanri/${remoteName}`,
     localPath: `data/raw/public-expenditure/fy2024/${month}${closing ? "-closing" : ""}.xlsx`,
@@ -415,6 +418,7 @@ const definitions: SourceDefinition[] = [
     id: "er-fy2024-expenditure-payroll",
     title: "公金支出情報 令和6年度 給与関係費等",
     category: "public-expenditure",
+    subcategory: "execution-review",
     fiscalYears: [2024],
     sourceUrl:
       "https://www.kaikeikanri.metro.tokyo.lg.jp/documents/d/kaikeikanri/06koukinsisyutsukyuuyo-3-",
@@ -434,6 +438,7 @@ const definitions: SourceDefinition[] = [
     id: "er-fy2024-budget-overview-integrated",
     title: "令和6年度予算概要（統合版）",
     category: "document",
+    subcategory: "execution-review",
     fiscalYears: [2024],
     sourceUrl: "https://www.zaimu.metro.tokyo.lg.jp/documents/d/zaimu/6yosangaiyou1-1",
     localPath: "data/raw/execution-review/fy2024/budget/budget-overview-integrated.pdf",
@@ -443,6 +448,7 @@ const definitions: SourceDefinition[] = [
     id: "er-fy2024-budget-general-account",
     title: "令和6年度予算概要 分割版 第1 一般会計",
     category: "document",
+    subcategory: "execution-review",
     fiscalYears: [2024],
     sourceUrl: "https://www.zaimu.metro.tokyo.lg.jp/documents/d/zaimu/6yosangaiyou3",
     localPath: "data/raw/execution-review/fy2024/budget/budget-general-account.pdf",
@@ -454,6 +460,7 @@ const definitions: SourceDefinition[] = [
     id: "er-fy2026-budget-major-policies",
     title: "令和8年度予算案 主要な施策",
     category: "document",
+    subcategory: "execution-review",
     fiscalYears: [2026],
     sourceUrl: "https://www.metro.tokyo.lg.jp/documents/d/tosei/20260130_39_04",
     localPath: "data/raw/execution-review/fy2026/budget/major-policies.pdf",
@@ -463,6 +470,7 @@ const definitions: SourceDefinition[] = [
     id: "er-fy2026-budget-counting-table",
     title: "令和8年度予算案 計数表",
     category: "document",
+    subcategory: "execution-review",
     fiscalYears: [2026],
     sourceUrl: "https://www.metro.tokyo.lg.jp/documents/d/tosei/20260130_39_09",
     localPath: "data/raw/execution-review/fy2026/budget/counting-table.pdf",
@@ -539,6 +547,7 @@ async function digest(path: string): Promise<{ bytes: number; sha256: string }> 
 }
 
 const sources: SourceEntry[] = [];
+const missingExpectedDownloads: string[] = [];
 for (const definition of definitions) {
   const { expectedStatus, ...base } = definition;
   if (base.localPath && existsSync(join(ROOT, base.localPath))) {
@@ -551,9 +560,33 @@ for (const definition of definitions) {
       retrievedAt: generatedAt,
     });
   } else {
+    // 欠損原本を成功扱いしない。downloaded期待の原本が無ければ最後に失敗させる。
+    if (expectedStatus === "downloaded" && base.localPath) {
+      missingExpectedDownloads.push(`${base.id}: ${base.localPath}`);
+    }
     sources.push({ ...base, status: expectedStatus });
   }
 }
+
+// 同一ファイルの重複登録を検出する（同一パス・同一ハッシュ）。
+function findDuplicates(values: string[]): Map<string, string[]> {
+  const grouped = new Map<string, string[]>();
+  for (const value of values) {
+    if (!value) continue;
+    const list = grouped.get(value) ?? [];
+    list.push(value);
+    grouped.set(value, list);
+  }
+  return new Map([...grouped].filter(([, list]) => list.length > 1));
+}
+const duplicatePaths = [
+  ...findDuplicates(sources.map((source) => source.localPath ?? "")).keys(),
+];
+const duplicateHashes = [
+  ...findDuplicates(
+    sources.filter((source) => source.status === "downloaded").map((source) => source.sha256 ?? ""),
+  ).keys(),
+];
 
 const manifest: DataManifest = {
   generatedAt,
@@ -601,8 +634,22 @@ const lines = [
 await writeFile(join(ROOT, "sources", "official-sources.md"), `${lines.join("\n")}\n`, "utf8");
 console.log(
   JSON.stringify(
-    { sourceCount: sources.length, categoryCounts: Object.fromEntries(categoryCounts) },
+    {
+      sourceCount: sources.length,
+      categoryCounts: Object.fromEntries(categoryCounts),
+      missingExpectedDownloads,
+      duplicatePaths,
+      duplicateHashes,
+    },
     null,
     2,
   ),
 );
+if (
+  missingExpectedDownloads.length > 0 ||
+  duplicatePaths.length > 0 ||
+  duplicateHashes.length > 0
+) {
+  console.error("manifest validation failed: missing or duplicated originals detected");
+  process.exit(1);
+}

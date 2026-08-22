@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-21T07:29:22.740Z",
+  "generatedAt": "2026-08-22T04:48:38.127Z",
   "pass": true,
-  "checkCount": 196,
+  "checkCount": 268,
   "failedCheckCount": 0,
   "checks": [
     {
@@ -1282,9 +1282,513 @@
       }
     },
     {
+      "name": "manifest local file exists: er-fy2024-settlement-all-accounts-statement",
+      "pass": true,
+      "details": "data/raw/execution-review/fy2024/settlement/tokyo-all-accounts-settlement-statement.pdf"
+    },
+    {
+      "name": "manifest hash: er-fy2024-settlement-all-accounts-statement",
+      "pass": true,
+      "details": {
+        "expected": "73ba8598bfed197fc5f5de00d779a5bc3e3afcb234c24011dbc220e0ae379e22",
+        "actual": "73ba8598bfed197fc5f5de00d779a5bc3e3afcb234c24011dbc220e0ae379e22"
+      }
+    },
+    {
+      "name": "manifest size: er-fy2024-settlement-all-accounts-statement",
+      "pass": true,
+      "details": {
+        "expected": 553344,
+        "actual": 553344
+      }
+    },
+    {
+      "name": "manifest local file exists: er-fy2024-settlement-general-account-detail",
+      "pass": true,
+      "details": "data/raw/execution-review/fy2024/settlement/general-account-settlement-detail.pdf"
+    },
+    {
+      "name": "manifest hash: er-fy2024-settlement-general-account-detail",
+      "pass": true,
+      "details": {
+        "expected": "bf65f32e9b1e6a9aa46e02d06282f18748c57e1ced4f20016234a13e235f5844",
+        "actual": "bf65f32e9b1e6a9aa46e02d06282f18748c57e1ced4f20016234a13e235f5844"
+      }
+    },
+    {
+      "name": "manifest size: er-fy2024-settlement-general-account-detail",
+      "pass": true,
+      "details": {
+        "expected": 10201173,
+        "actual": 10201173
+      }
+    },
+    {
+      "name": "manifest local file exists: er-fy2024-settlement-reference-total-overview",
+      "pass": true,
+      "details": "data/raw/execution-review/fy2024/settlement/settlement-reference-total-overview.pdf"
+    },
+    {
+      "name": "manifest hash: er-fy2024-settlement-reference-total-overview",
+      "pass": true,
+      "details": {
+        "expected": "a1f97be6ffa2348cd94a7510c4beeca592660cc689568b44afb0357565e6b8d5",
+        "actual": "a1f97be6ffa2348cd94a7510c4beeca592660cc689568b44afb0357565e6b8d5"
+      }
+    },
+    {
+      "name": "manifest size: er-fy2024-settlement-reference-total-overview",
+      "pass": true,
+      "details": {
+        "expected": 1291501,
+        "actual": 1291501
+      }
+    },
+    {
+      "name": "manifest local file exists: er-fy2024-settlement-reference-general-account",
+      "pass": true,
+      "details": "data/raw/execution-review/fy2024/settlement/settlement-reference-general-account.pdf"
+    },
+    {
+      "name": "manifest hash: er-fy2024-settlement-reference-general-account",
+      "pass": true,
+      "details": {
+        "expected": "1704022b8f9aafeedfe84a0dbe09041eeaac7537c4621b33834712ea23db9b56",
+        "actual": "1704022b8f9aafeedfe84a0dbe09041eeaac7537c4621b33834712ea23db9b56"
+      }
+    },
+    {
+      "name": "manifest size: er-fy2024-settlement-reference-general-account",
+      "pass": true,
+      "details": {
+        "expected": 1972099,
+        "actual": 1972099
+      }
+    },
+    {
+      "name": "manifest local file exists: er-fy2024-major-policy-results",
+      "pass": true,
+      "details": "data/raw/execution-review/fy2024/major-policy-results/major-policy-results.pdf"
+    },
+    {
+      "name": "manifest hash: er-fy2024-major-policy-results",
+      "pass": true,
+      "details": {
+        "expected": "e52d9303453984f2af52fa43f1a463a01b1ea6581dbeffd8c76404c6ebb392ee",
+        "actual": "e52d9303453984f2af52fa43f1a463a01b1ea6581dbeffd8c76404c6ebb392ee"
+      }
+    },
+    {
+      "name": "manifest size: er-fy2024-major-policy-results",
+      "pass": true,
+      "details": {
+        "expected": 10678917,
+        "actual": 10678917
+      }
+    },
+    {
+      "name": "manifest local file exists: er-fy2024-expenditure-2024-04",
+      "pass": true,
+      "details": "data/raw/public-expenditure/fy2024/2024-04.xlsx"
+    },
+    {
+      "name": "manifest hash: er-fy2024-expenditure-2024-04",
+      "pass": true,
+      "details": {
+        "expected": "af27cd20b5a8d9b20fd4e4dd3f29a237502ccf82c50fb37811cd6c1733ca994a",
+        "actual": "af27cd20b5a8d9b20fd4e4dd3f29a237502ccf82c50fb37811cd6c1733ca994a"
+      }
+    },
+    {
+      "name": "manifest size: er-fy2024-expenditure-2024-04",
+      "pass": true,
+      "details": {
+        "expected": 733795,
+        "actual": 733795
+      }
+    },
+    {
+      "name": "manifest local file exists: er-fy2024-expenditure-2024-05",
+      "pass": true,
+      "details": "data/raw/public-expenditure/fy2024/2024-05.xlsx"
+    },
+    {
+      "name": "manifest hash: er-fy2024-expenditure-2024-05",
+      "pass": true,
+      "details": {
+        "expected": "626e3cfe3a3775761453068785887de5b02de8778b0b842ade1b0f8824eb11b0",
+        "actual": "626e3cfe3a3775761453068785887de5b02de8778b0b842ade1b0f8824eb11b0"
+      }
+    },
+    {
+      "name": "manifest size: er-fy2024-expenditure-2024-05",
+      "pass": true,
+      "details": {
+        "expected": 1614484,
+        "actual": 1614484
+      }
+    },
+    {
+      "name": "manifest local file exists: er-fy2024-expenditure-2024-06",
+      "pass": true,
+      "details": "data/raw/public-expenditure/fy2024/2024-06.xlsx"
+    },
+    {
+      "name": "manifest hash: er-fy2024-expenditure-2024-06",
+      "pass": true,
+      "details": {
+        "expected": "4ee8f2584703664e5d836bd9e9916c4047de4d1f033ba531f592a8e79da21ae7",
+        "actual": "4ee8f2584703664e5d836bd9e9916c4047de4d1f033ba531f592a8e79da21ae7"
+      }
+    },
+    {
+      "name": "manifest size: er-fy2024-expenditure-2024-06",
+      "pass": true,
+      "details": {
+        "expected": 2202583,
+        "actual": 2202583
+      }
+    },
+    {
+      "name": "manifest local file exists: er-fy2024-expenditure-2024-07",
+      "pass": true,
+      "details": "data/raw/public-expenditure/fy2024/2024-07.xlsx"
+    },
+    {
+      "name": "manifest hash: er-fy2024-expenditure-2024-07",
+      "pass": true,
+      "details": {
+        "expected": "5b308a9ae2ebac59d7c70ac0a91d94bf68b93ad3474e3cb5a66269a2f67bdc82",
+        "actual": "5b308a9ae2ebac59d7c70ac0a91d94bf68b93ad3474e3cb5a66269a2f67bdc82"
+      }
+    },
+    {
+      "name": "manifest size: er-fy2024-expenditure-2024-07",
+      "pass": true,
+      "details": {
+        "expected": 2819200,
+        "actual": 2819200
+      }
+    },
+    {
+      "name": "manifest local file exists: er-fy2024-expenditure-2024-08",
+      "pass": true,
+      "details": "data/raw/public-expenditure/fy2024/2024-08.xlsx"
+    },
+    {
+      "name": "manifest hash: er-fy2024-expenditure-2024-08",
+      "pass": true,
+      "details": {
+        "expected": "fddaa8e805df0d77b2b32081df1edf30b6175eb281ea9134d7d95f20e2b6a83c",
+        "actual": "fddaa8e805df0d77b2b32081df1edf30b6175eb281ea9134d7d95f20e2b6a83c"
+      }
+    },
+    {
+      "name": "manifest size: er-fy2024-expenditure-2024-08",
+      "pass": true,
+      "details": {
+        "expected": 2417010,
+        "actual": 2417010
+      }
+    },
+    {
+      "name": "manifest local file exists: er-fy2024-expenditure-2024-09",
+      "pass": true,
+      "details": "data/raw/public-expenditure/fy2024/2024-09.xlsx"
+    },
+    {
+      "name": "manifest hash: er-fy2024-expenditure-2024-09",
+      "pass": true,
+      "details": {
+        "expected": "58b81f2c8e012a01a997b0807ad6cf5589a2d6539b1dbfea015d372cd7ad5408",
+        "actual": "58b81f2c8e012a01a997b0807ad6cf5589a2d6539b1dbfea015d372cd7ad5408"
+      }
+    },
+    {
+      "name": "manifest size: er-fy2024-expenditure-2024-09",
+      "pass": true,
+      "details": {
+        "expected": 2387218,
+        "actual": 2387218
+      }
+    },
+    {
+      "name": "manifest local file exists: er-fy2024-expenditure-2024-10",
+      "pass": true,
+      "details": "data/raw/public-expenditure/fy2024/2024-10.xlsx"
+    },
+    {
+      "name": "manifest hash: er-fy2024-expenditure-2024-10",
+      "pass": true,
+      "details": {
+        "expected": "788441f9afd7bf40038e730a6e44c34be5da678d2404a06dfcca7dd72901a80f",
+        "actual": "788441f9afd7bf40038e730a6e44c34be5da678d2404a06dfcca7dd72901a80f"
+      }
+    },
+    {
+      "name": "manifest size: er-fy2024-expenditure-2024-10",
+      "pass": true,
+      "details": {
+        "expected": 2820995,
+        "actual": 2820995
+      }
+    },
+    {
+      "name": "manifest local file exists: er-fy2024-expenditure-2024-11",
+      "pass": true,
+      "details": "data/raw/public-expenditure/fy2024/2024-11.xlsx"
+    },
+    {
+      "name": "manifest hash: er-fy2024-expenditure-2024-11",
+      "pass": true,
+      "details": {
+        "expected": "85990cab71a445b6dd1548f1580979a25394cbc81950cc29cdd2100c3f6a6a54",
+        "actual": "85990cab71a445b6dd1548f1580979a25394cbc81950cc29cdd2100c3f6a6a54"
+      }
+    },
+    {
+      "name": "manifest size: er-fy2024-expenditure-2024-11",
+      "pass": true,
+      "details": {
+        "expected": 2499826,
+        "actual": 2499826
+      }
+    },
+    {
+      "name": "manifest local file exists: er-fy2024-expenditure-2024-12",
+      "pass": true,
+      "details": "data/raw/public-expenditure/fy2024/2024-12.xlsx"
+    },
+    {
+      "name": "manifest hash: er-fy2024-expenditure-2024-12",
+      "pass": true,
+      "details": {
+        "expected": "8f6632578282eac38ee5d96b3e2d88925e1eceb95e9772f50036af9adc7b7fa4",
+        "actual": "8f6632578282eac38ee5d96b3e2d88925e1eceb95e9772f50036af9adc7b7fa4"
+      }
+    },
+    {
+      "name": "manifest size: er-fy2024-expenditure-2024-12",
+      "pass": true,
+      "details": {
+        "expected": 2579359,
+        "actual": 2579359
+      }
+    },
+    {
+      "name": "manifest local file exists: er-fy2024-expenditure-2025-01",
+      "pass": true,
+      "details": "data/raw/public-expenditure/fy2024/2025-01.xlsx"
+    },
+    {
+      "name": "manifest hash: er-fy2024-expenditure-2025-01",
+      "pass": true,
+      "details": {
+        "expected": "2c5e30a83ab8124fa8f8d8858ea4ad56e5d8e1a2fded0c33907d3113744fc1e1",
+        "actual": "2c5e30a83ab8124fa8f8d8858ea4ad56e5d8e1a2fded0c33907d3113744fc1e1"
+      }
+    },
+    {
+      "name": "manifest size: er-fy2024-expenditure-2025-01",
+      "pass": true,
+      "details": {
+        "expected": 2728120,
+        "actual": 2728120
+      }
+    },
+    {
+      "name": "manifest local file exists: er-fy2024-expenditure-2025-02",
+      "pass": true,
+      "details": "data/raw/public-expenditure/fy2024/2025-02.xlsx"
+    },
+    {
+      "name": "manifest hash: er-fy2024-expenditure-2025-02",
+      "pass": true,
+      "details": {
+        "expected": "ecaf23d14587be5a52e578be1b447d5790245d5fa8a004002bb2c5e7676c290c",
+        "actual": "ecaf23d14587be5a52e578be1b447d5790245d5fa8a004002bb2c5e7676c290c"
+      }
+    },
+    {
+      "name": "manifest size: er-fy2024-expenditure-2025-02",
+      "pass": true,
+      "details": {
+        "expected": 2585627,
+        "actual": 2585627
+      }
+    },
+    {
+      "name": "manifest local file exists: er-fy2024-expenditure-2025-03",
+      "pass": true,
+      "details": "data/raw/public-expenditure/fy2024/2025-03.xlsx"
+    },
+    {
+      "name": "manifest hash: er-fy2024-expenditure-2025-03",
+      "pass": true,
+      "details": {
+        "expected": "05cea0a0963382f11ac87a287458c7e5caf703420d4880262005281f295caf2d",
+        "actual": "05cea0a0963382f11ac87a287458c7e5caf703420d4880262005281f295caf2d"
+      }
+    },
+    {
+      "name": "manifest size: er-fy2024-expenditure-2025-03",
+      "pass": true,
+      "details": {
+        "expected": 3064017,
+        "actual": 3064017
+      }
+    },
+    {
+      "name": "manifest local file exists: er-fy2024-expenditure-closing-2025-04",
+      "pass": true,
+      "details": "data/raw/public-expenditure/fy2024/2025-04-closing.xlsx"
+    },
+    {
+      "name": "manifest hash: er-fy2024-expenditure-closing-2025-04",
+      "pass": true,
+      "details": {
+        "expected": "d356a6ffa73cb3cc27732f460bf9da20d0e657269f6fb9daa3a0375b15e4db75",
+        "actual": "d356a6ffa73cb3cc27732f460bf9da20d0e657269f6fb9daa3a0375b15e4db75"
+      }
+    },
+    {
+      "name": "manifest size: er-fy2024-expenditure-closing-2025-04",
+      "pass": true,
+      "details": {
+        "expected": 2755491,
+        "actual": 2755491
+      }
+    },
+    {
+      "name": "manifest local file exists: er-fy2024-expenditure-closing-2025-05",
+      "pass": true,
+      "details": "data/raw/public-expenditure/fy2024/2025-05-closing.xlsx"
+    },
+    {
+      "name": "manifest hash: er-fy2024-expenditure-closing-2025-05",
+      "pass": true,
+      "details": {
+        "expected": "08140eb19ba05e4a1f5064aa044e4f1f845f4f867e029d6cd436de8f25c8d44b",
+        "actual": "08140eb19ba05e4a1f5064aa044e4f1f845f4f867e029d6cd436de8f25c8d44b"
+      }
+    },
+    {
+      "name": "manifest size: er-fy2024-expenditure-closing-2025-05",
+      "pass": true,
+      "details": {
+        "expected": 801003,
+        "actual": 801003
+      }
+    },
+    {
+      "name": "manifest local file exists: er-fy2024-expenditure-payroll",
+      "pass": true,
+      "details": "data/raw/public-expenditure/fy2024/payroll.xlsx"
+    },
+    {
+      "name": "manifest hash: er-fy2024-expenditure-payroll",
+      "pass": true,
+      "details": {
+        "expected": "381d73fc2e52d92d3840ab5384daf461ef0a18887a52c206de4ffc98856ed69c",
+        "actual": "381d73fc2e52d92d3840ab5384daf461ef0a18887a52c206de4ffc98856ed69c"
+      }
+    },
+    {
+      "name": "manifest size: er-fy2024-expenditure-payroll",
+      "pass": true,
+      "details": {
+        "expected": 11712,
+        "actual": 11712
+      }
+    },
+    {
+      "name": "manifest local file exists: er-fy2024-budget-overview-integrated",
+      "pass": true,
+      "details": "data/raw/execution-review/fy2024/budget/budget-overview-integrated.pdf"
+    },
+    {
+      "name": "manifest hash: er-fy2024-budget-overview-integrated",
+      "pass": true,
+      "details": {
+        "expected": "a49bd3fcc271b6304f4d72144153b68e795475b2ac716e877974b82e782cfd10",
+        "actual": "a49bd3fcc271b6304f4d72144153b68e795475b2ac716e877974b82e782cfd10"
+      }
+    },
+    {
+      "name": "manifest size: er-fy2024-budget-overview-integrated",
+      "pass": true,
+      "details": {
+        "expected": 11995470,
+        "actual": 11995470
+      }
+    },
+    {
+      "name": "manifest local file exists: er-fy2024-budget-general-account",
+      "pass": true,
+      "details": "data/raw/execution-review/fy2024/budget/budget-general-account.pdf"
+    },
+    {
+      "name": "manifest hash: er-fy2024-budget-general-account",
+      "pass": true,
+      "details": {
+        "expected": "a5a4e32e578f491473a951c2821a02c497256970fa4b8b3f7346d68117d902a0",
+        "actual": "a5a4e32e578f491473a951c2821a02c497256970fa4b8b3f7346d68117d902a0"
+      }
+    },
+    {
+      "name": "manifest size: er-fy2024-budget-general-account",
+      "pass": true,
+      "details": {
+        "expected": 1325679,
+        "actual": 1325679
+      }
+    },
+    {
+      "name": "manifest local file exists: er-fy2026-budget-major-policies",
+      "pass": true,
+      "details": "data/raw/execution-review/fy2026/budget/major-policies.pdf"
+    },
+    {
+      "name": "manifest hash: er-fy2026-budget-major-policies",
+      "pass": true,
+      "details": {
+        "expected": "93e7bfc113dc4b5495365cf576adab2727a3ba26fc7a8ff51910fef44488f1a8",
+        "actual": "93e7bfc113dc4b5495365cf576adab2727a3ba26fc7a8ff51910fef44488f1a8"
+      }
+    },
+    {
+      "name": "manifest size: er-fy2026-budget-major-policies",
+      "pass": true,
+      "details": {
+        "expected": 8716767,
+        "actual": 8716767
+      }
+    },
+    {
+      "name": "manifest local file exists: er-fy2026-budget-counting-table",
+      "pass": true,
+      "details": "data/raw/execution-review/fy2026/budget/counting-table.pdf"
+    },
+    {
+      "name": "manifest hash: er-fy2026-budget-counting-table",
+      "pass": true,
+      "details": {
+        "expected": "097ccf08beb9d3f3b6afd0d3cfa4e60e772938d7c13d34965df48ab84dc15cec",
+        "actual": "097ccf08beb9d3f3b6afd0d3cfa4e60e772938d7c13d34965df48ab84dc15cec"
+      }
+    },
+    {
+      "name": "manifest size: er-fy2026-budget-counting-table",
+      "pass": true,
+      "details": {
+        "expected": 622419,
+        "actual": 622419
+      }
+    },
+    {
       "name": "downloaded source hashes verified",
       "pass": true,
-      "details": 55
+      "details": 79
     },
     {
       "name": "worker endpoint /",
