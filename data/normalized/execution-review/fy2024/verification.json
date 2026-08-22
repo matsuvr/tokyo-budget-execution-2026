@@ -1,0 +1,52 @@
+{
+ "fiscalYear": 2024,
+ "generatedAt": "2026-08-22T06:28:01.207Z",
+ "identity": {
+  "toleranceYen": 0,
+  "formula": "予算現額 = 支出済額 + 翌年度繰越額 + 不用額",
+  "checked": 408,
+  "passed": 408,
+  "notVerifiable": 0,
+  "derivedSkipped": 0,
+  "mismatched": []
+ },
+ "officialTotals": [
+  {
+   "name": "一般会計 歳出予算現額",
+   "officialYen": 9336018956000,
+   "actualSumYen": 9336018956000,
+   "differenceYen": 0,
+   "pass": true,
+   "sourceTitle": "令和6年度 主要施策の成果 Ⅰ 決算の総括 (2) 歳出",
+   "sourcePage": 9
+  },
+  {
+   "name": "一般会計 歳出決算額（支出済額）",
+   "officialYen": 8724585235000,
+   "actualSumYen": 8724585235292,
+   "differenceYen": 292,
+   "pass": true,
+   "sourceTitle": "令和6年度 主要施策の成果 Ⅰ 決算の総括 (2) 歳出",
+   "sourcePage": 9
+  },
+  {
+   "name": "一般会計 翌年度繰越額",
+   "officialYen": 110837422000,
+   "actualSumYen": 110837422000,
+   "differenceYen": 0,
+   "pass": true,
+   "sourceTitle": "令和6年度 主要施策の成果 Ⅰ 決算の総括 (2) 歳出",
+   "sourcePage": 9
+  },
+  {
+   "name": "一般会計 不用額",
+   "officialYen": 500596299000,
+   "actualSumYen": 500596298708,
+   "differenceYen": -292,
+   "pass": true,
+   "sourceTitle": "令和6年度 主要施策の成果 Ⅰ 決算の総括 (2) 歳出",
+   "sourcePage": 9
+  }
+ ],
+ "pass": true
+}

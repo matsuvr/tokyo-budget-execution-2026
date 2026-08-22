@@ -1,0 +1,37 @@
+{
+  "comment": "令和6年度一般会計 歳出の公式総額（決算の総括より手動転記）。原本は千円単位のため円換算値には丸め誤差があり得る。",
+  "fiscalYear": 2024,
+  "source": {
+    "title": "令和6年度 主要施策の成果 Ⅰ 決算の総括 (2) 歳出",
+    "url": "https://www.zaimu.metro.tokyo.lg.jp/documents/d/zaimu/20250924shuyousisakunoseika",
+    "localPath": "data/raw/execution-review/fy2024/major-policy-results/major-policy-results.pdf",
+    "page": 9,
+    "unitOriginal": "千円"
+  },
+  "totals": [
+    {
+      "name": "一般会計 歳出予算現額",
+      "field": "currentBudgetYen",
+      "officialYen": 9336018956000,
+      "toleranceYen": 0
+    },
+    {
+      "name": "一般会計 歳出決算額（支出済額）",
+      "field": "spentYen",
+      "officialYen": 8724585235000,
+      "toleranceYen": 1000
+    },
+    {
+      "name": "一般会計 翌年度繰越額",
+      "field": "carryoverYen",
+      "officialYen": 110837422000,
+      "toleranceYen": 0
+    },
+    {
+      "name": "一般会計 不用額",
+      "field": "unusedYen",
+      "officialYen": 500596299000,
+      "toleranceYen": 1000
+    }
+  ]
+}

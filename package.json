@@ -27,7 +27,8 @@
     "dev": "wrangler dev",
     "deploy": "wrangler deploy",
     "extract:settlement-rows": "node --experimental-strip-types scripts/execution-review/extract-fy2024-settlement-rows.ts",
-    "build:execution-records": "node --experimental-strip-types scripts/execution-review/build-fy2024-execution-records.ts"
+    "build:execution-records": "node --experimental-strip-types scripts/execution-review/build-fy2024-execution-records.ts",
+    "verify:execution": "node --experimental-strip-types scripts/execution-review/verify-fy2024-execution-records.ts"
   },
   "devDependencies": {
     "@types/node": "latest",
