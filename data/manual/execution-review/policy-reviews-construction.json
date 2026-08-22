@@ -1,0 +1,94 @@
+{
+ "version": 1,
+ "note": "#38の政策レビュー（工事・施設整備 construction）。selected-policy-reviews.json の executionMethod=construction のみを対象に、公式資料で繰越・不用の理由と2026年度の変更を確認した。ページ番号は各PDFの物理ページ。繰越と不用は区別して記録し、推測による補完はしない。",
+ "generatedFrom": "data/manual/execution-review/selected-policy-reviews.json",
+ "criteria": {
+  "maxSelections": 5,
+  "targetExecutionMethod": "construction",
+  "checkedSources": [
+   "令和6年度 東京都決算参考書 一般会計",
+   "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+   "令和6年度予算概要 分割版 第1 一般会計",
+   "令和6年度 主要施策の成果（該当項目の記載なし）",
+   "議案第1号 令和8年度東京都一般会計予算",
+   "第11次東京都職業能力開発計画（概要版）【令和5年3月改訂】",
+   "令和6年度各会計歳入歳出決算審査意見書（本項目固有の指摘なし）"
+  ]
+ },
+ "records": [
+  {
+   "reviewId": "rev-0001",
+   "comparisonId": "cmp-0050",
+   "policyTitle": "9:産業労働費 6:施設整備費",
+   "bureau": null,
+   "executionMethod": "construction",
+   "officialDescription": "「この経費は、産業労働施設の整備に要する経費である」（R6予算概要・産業労働局所管）。目レベルでは「職業能力開発センター等施設整備、農林水産施設・商工施設の整備等」（決算参考書）。",
+   "reasonStatus": "not-found",
+   "reasonTags": [],
+   "improvementStatus": "not-found",
+   "improvementSummary": "",
+   "evidenceReferences": [
+    {
+     "title": "令和6年度 東京都決算参考書 一般会計",
+     "url": "https://www.kaikeikanri.metro.tokyo.lg.jp/documents/d/kaikeikanri/06kessan-7",
+     "page": 95,
+     "summary": "項別執行状況「６ 施設整備に要した経費」は予算現額5,766,700,000円・支出済額3,424,781,970円・翌年度繰越額1,149,513,000円・不用額1,192,405,030円・執行率59.4%。"
+    },
+    {
+     "title": "令和6年度 東京都決算参考書 一般会計",
+     "url": "https://www.kaikeikanri.metro.tokyo.lg.jp/documents/d/kaikeikanri/06kessan-7",
+     "page": 96,
+     "summary": "目「⑴ 産業労働施設整備費」は項6と同額（単一目）。内容は職業能力開発センター等施設整備、農林水産施設・商工施設の整備等。同頁の不用額説明は款産業労働費全体（計66,723,764,224円）のもので、落札差金や実績による残などの列挙があるが項別の帰属は明示されておらず、本項固有の原因記載は確認できない。"
+    },
+    {
+     "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+     "url": "https://www.kaikeikanri.metro.tokyo.lg.jp/documents/d/kaikeikanri/06kessan-2",
+     "page": 338,
+     "summary": "項06施設整備費は当初5,737,000,000円＋補正29,700,000円＝現額5,766,700,000円。目01産業労働施設整備費が全額。"
+    },
+    {
+     "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+     "url": "https://www.kaikeikanri.metro.tokyo.lg.jp/documents/d/kaikeikanri/06kessan-2",
+     "page": 339,
+     "summary": "目01産業労働施設整備費の支出済額3,424,781,970円に対し、翌年度繰越額1,149,513,000円は全額が「繰越明許費」で事故繰越は0。不用額は1,192,405,030円。低執分の約半分は複数年度事業として認められた計画的な繰越であり、不用とは区別される。"
+    },
+    {
+     "title": "令和6年度予算概要 分割版 第1 一般会計",
+     "url": "https://www.zaimu.metro.tokyo.lg.jp/documents/d/zaimu/6yosangaiyou3",
+     "page": 17,
+     "summary": "「６ 施設整備費（産業労働局所管）」5,737,000千円（5年度17,699,000千円、△11,962,000）。「この経費は、産業労働施設の整備に要する経費である。」"
+    },
+    {
+     "title": "議案第1号 令和8年度東京都一般会計予算",
+     "url": "https://www.zaimu1.metro.tokyo.lg.jp/zaisei/yosan/8tousyogian.pdf",
+     "page": 14,
+     "summary": "９産業労働費のうち「０６ 施設整備費」10,366,000千円（令和8年度当初）。R6当初5,737,000千円から約80%増。同款には新たに「０７ スタートアップ戦略推進費」39,202,000千円が創設。"
+    },
+    {
+     "title": "第11次東京都職業能力開発計画（概要版）【令和5年3月改訂】",
+     "url": "https://www.hataraku.metro.tokyo.lg.jp/plan/%E7%AC%AC11%E6%AC%A1%E6%9D%B1%E4%BA%AC%E9%83%BD%E8%81%B7%E6%A5%AD%E8%83%BD%E5%8A%9B%E9%96%8B%E7%99%BA%E8%A8%88%E7%94%BB%EF%BC%88%E6%A6%82%E8%A6%81%E7%89%88%EF%BC%89%E3%80%90%E4%BB%A4%E5%92%8C5%E5%B9%B43%E6%9C%88%E6%94%B9%E8%A8%82%E3%80%91%20.pdf",
+     "page": 10,
+     "summary": "重点施策(16)「職業能力開発センターの計画的な施設整備」。大田校の整備推進、高年齢者校の改修、城南センター・八王子校・赤羽校・板橋校など老朽化施設を「第二次主要施設10か年維持更新計画」等に基づき計画的な整備・改修を推進、「しごとセンター校（仮称）」を令和6年度を目途に新設、赤羽校の早期改築。施設整備費の執行が複数年度の計画事業であることを示す公式の方針文書。"
+    }
+   ],
+   "reviewerNotes": "選定ファイル中 executionMethod=construction は本件1件のみ（上限5件以内）。繰越と不用は同一視しない: 繰越1,149,513千円は明細書上すべて繰越明許費（事故繰越0）で、第11次職業能力開発計画の重点施策(16)にある計画的・複数年度の施設整備と整合し、これ自体を問題扱いしない。不用1,192,405,030円については、決算参考書の不用額説明が款レベルで項別帰属が明示されず、本項固有の原因（用地取得・関係者調整・入札不調・施工遅延等）は公式資料から確認できなかったため reasonStatus=not-found とし、タグは付けない。款レベルの「落札差金」を本項に帰属させることはしない。主要施策の成果（R6）に本項目に対応する記載はなく、監査事務局の令和6年度各会計歳入歳出決算審査意見書でも本項目固有の指摘は確認できず（産業労働局関係の指摘は出資による権利の登載に関するもの）。2026年度側の議案に局の記載がないため bureau は null。改善策の記載も確認できず improvementStatus=not-found。"
+  }
+ ],
+ "summary": {
+  "reviewedCount": 1,
+  "maxAllowed": 5,
+  "byReasonStatus": {
+   "confirmed": 0,
+   "not-found": 1,
+   "not-applicable": 0
+  },
+  "byImprovementStatus": {
+   "confirmed": 0,
+   "not-found": 1,
+   "not-applicable": 0
+  },
+  "shortfallNotes": [
+   "selected-policy-reviews.json で executionMethod=construction と確定した候補は cmp-0050 のみのため1件で終了。他区分での水増しはしない。"
+  ]
+ }
+}
