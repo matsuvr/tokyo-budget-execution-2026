@@ -44,7 +44,7 @@ const payroll = {
 };
 
 let failed = false;
-for (const entry of [...expectedFiles.map(({ month, closing, ...rest }) => rest), payroll]) {
+for (const entry of [...expectedFiles.map((entry) => ({ id: entry.id, remoteName: entry.remoteName, fileName: entry.fileName })), payroll]) {
   try {
     await fetchDocument(entry.id, {
       url: `${BASE}/${entry.remoteName}`,
