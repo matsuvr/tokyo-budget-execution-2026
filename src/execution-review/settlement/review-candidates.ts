@@ -13,6 +13,7 @@ import type { ReviewStatus } from "../types.ts";
  */
 
 export interface ComparisonInput {
+  comparisonId?: string;
   mappingId: string;
   confidence: "A" | "B";
   relationType: string;

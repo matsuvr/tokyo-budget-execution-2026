@@ -1,0 +1,444 @@
+{
+ "version": 1,
+ "generatedFrom": "data/normalized/execution-review/review-candidates.json",
+ "criteria": {
+  "maxSelections": 20,
+  "perCategoryTarget": 5,
+  "ordering": "needs-explanation優先→不用額降順（実装上は不用額降順で対象外科目を除く）"
+ },
+ "selections": [
+  {
+   "comparisonId": "cmp-0048",
+   "mappingId": "map-0048",
+   "policyTitle": "9:産業労働費 4:農林水産費",
+   "bureau": null,
+   "executionMethod": "unknown",
+   "selectionReason": "不用額 73.6 億円。執行方式は科目名から確定できず。",
+   "evidenceReferences": [
+    {
+     "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+     "url": "https://www.kaikeikanri.metro.tokyo.lg.jp/documents/d/kaikeikanri/06kessan-2",
+     "page": null,
+     "summary": "科目 9:産業労働費 4:農林水産費 の当初予算額・支出済額等。"
+    }
+   ],
+   "amountContext": {
+    "fy2024CurrentBudgetYen": 31006748000,
+    "fy2024UnusedYen": 7358438549,
+    "fy2026InitialBudgetYen": 33498000000
+   }
+  },
+  {
+   "comparisonId": "cmp-0024",
+   "mappingId": "map-0024",
+   "policyTitle": "2:総務費 10:退職手当及年金費",
+   "bureau": null,
+   "executionMethod": "direct",
+   "selectionReason": "不用額 46.1 億円。職員の退職手当等を直接支給する経費（予算概要）",
+   "evidenceReferences": [
+    {
+     "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+     "url": "https://www.kaikeikanri.metro.tokyo.lg.jp/documents/d/kaikeikanri/06kessan-2",
+     "page": null,
+     "summary": "科目 2:総務費 10:退職手当及年金費 の当初予算額・支出済額等。"
+    }
+   ],
+   "amountContext": {
+    "fy2024CurrentBudgetYen": 18953741000,
+    "fy2024UnusedYen": 4613589586,
+    "fy2026InitialBudgetYen": 17916647000
+   }
+  },
+  {
+   "comparisonId": "cmp-0050",
+   "mappingId": "map-0050",
+   "policyTitle": "9:産業労働費 6:施設整備費",
+   "bureau": null,
+   "executionMethod": "construction",
+   "selectionReason": "不用額 11.9 億円。施設・道路等の整備・建設を行う経費（予算概要）",
+   "evidenceReferences": [
+    {
+     "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+     "url": "https://www.kaikeikanri.metro.tokyo.lg.jp/documents/d/kaikeikanri/06kessan-2",
+     "page": null,
+     "summary": "科目 9:産業労働費 6:施設整備費 の当初予算額・支出済額等。"
+    }
+   ],
+   "amountContext": {
+    "fy2024CurrentBudgetYen": 5766700000,
+    "fy2024UnusedYen": 1192405030,
+    "fy2026InitialBudgetYen": 10366000000
+   }
+  },
+  {
+   "comparisonId": "cmp-0001",
+   "mappingId": "map-0001",
+   "policyTitle": "1:議会費",
+   "bureau": null,
+   "executionMethod": "unknown",
+   "selectionReason": "不用額 5.1 億円。執行方式は科目名から確定できず。",
+   "evidenceReferences": [
+    {
+     "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+     "url": "https://www.kaikeikanri.metro.tokyo.lg.jp/documents/d/kaikeikanri/06kessan-2",
+     "page": null,
+     "summary": "科目 1:議会費 の当初予算額・支出済額等。"
+    }
+   ],
+   "amountContext": {
+    "fy2024CurrentBudgetYen": 5314472000,
+    "fy2024UnusedYen": 511478131,
+    "fy2026InitialBudgetYen": 6010000000
+   }
+  },
+  {
+   "comparisonId": "cmp-0003",
+   "mappingId": "map-0003",
+   "policyTitle": "3:徴税費",
+   "bureau": null,
+   "executionMethod": "unknown",
+   "selectionReason": "不用額 10.4 億円。執行方式は科目名から確定できず。",
+   "evidenceReferences": [
+    {
+     "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+     "url": "https://www.kaikeikanri.metro.tokyo.lg.jp/documents/d/kaikeikanri/06kessan-2",
+     "page": null,
+     "summary": "科目 3:徴税費 の当初予算額・支出済額等。"
+    }
+   ],
+   "amountContext": {
+    "fy2024CurrentBudgetYen": 83878594000,
+    "fy2024UnusedYen": 1039766249,
+    "fy2026InitialBudgetYen": 103003000000
+   }
+  },
+  {
+   "comparisonId": "cmp-0006",
+   "mappingId": "map-0006",
+   "policyTitle": "7:福祉費",
+   "bureau": null,
+   "executionMethod": "unknown",
+   "selectionReason": "不用額 636.2 億円。執行方式は科目名から確定できず。",
+   "evidenceReferences": [
+    {
+     "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+     "url": "https://www.kaikeikanri.metro.tokyo.lg.jp/documents/d/kaikeikanri/06kessan-2",
+     "page": null,
+     "summary": "科目 7:福祉費 の当初予算額・支出済額等。"
+    }
+   ],
+   "amountContext": {
+    "fy2024CurrentBudgetYen": 1145795413000,
+    "fy2024UnusedYen": 63616907424,
+    "fy2026InitialBudgetYen": 1290411000000
+   }
+  },
+  {
+   "comparisonId": "cmp-0007",
+   "mappingId": "map-0007",
+   "policyTitle": "8:保健医療費",
+   "bureau": null,
+   "executionMethod": "unknown",
+   "selectionReason": "不用額 341.8 億円。執行方式は科目名から確定できず。",
+   "evidenceReferences": [
+    {
+     "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+     "url": "https://www.kaikeikanri.metro.tokyo.lg.jp/documents/d/kaikeikanri/06kessan-2",
+     "page": null,
+     "summary": "科目 8:保健医療費 の当初予算額・支出済額等。"
+    }
+   ],
+   "amountContext": {
+    "fy2024CurrentBudgetYen": 514736980000,
+    "fy2024UnusedYen": 34178072321,
+    "fy2026InitialBudgetYen": 563895000000
+   }
+  },
+  {
+   "comparisonId": "cmp-0010",
+   "mappingId": "map-0010",
+   "policyTitle": "12:教育費",
+   "bureau": null,
+   "executionMethod": "unknown",
+   "selectionReason": "不用額 504.5 億円。執行方式は科目名から確定できず。",
+   "evidenceReferences": [
+    {
+     "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+     "url": "https://www.kaikeikanri.metro.tokyo.lg.jp/documents/d/kaikeikanri/06kessan-2",
+     "page": null,
+     "summary": "科目 12:教育費 の当初予算額・支出済額等。"
+    }
+   ],
+   "amountContext": {
+    "fy2024CurrentBudgetYen": 1023897510000,
+    "fy2024UnusedYen": 50452519194,
+    "fy2026InitialBudgetYen": 1181231000000
+   }
+  },
+  {
+   "comparisonId": "cmp-0011",
+   "mappingId": "map-0011",
+   "policyTitle": "13:学務費",
+   "bureau": null,
+   "executionMethod": "unknown",
+   "selectionReason": "不用額 189.7 億円。執行方式は科目名から確定できず。",
+   "evidenceReferences": [
+    {
+     "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+     "url": "https://www.kaikeikanri.metro.tokyo.lg.jp/documents/d/kaikeikanri/06kessan-2",
+     "page": null,
+     "summary": "科目 13:学務費 の当初予算額・支出済額等。"
+    }
+   ],
+   "amountContext": {
+    "fy2024CurrentBudgetYen": 297687808000,
+    "fy2024UnusedYen": 18974629284,
+    "fy2026InitialBudgetYen": 343249000000
+   }
+  },
+  {
+   "comparisonId": "cmp-0012",
+   "mappingId": "map-0012",
+   "policyTitle": "15:消防費",
+   "bureau": null,
+   "executionMethod": "unknown",
+   "selectionReason": "不用額 66.4 億円。執行方式は科目名から確定できず。",
+   "evidenceReferences": [
+    {
+     "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+     "url": "https://www.kaikeikanri.metro.tokyo.lg.jp/documents/d/kaikeikanri/06kessan-2",
+     "page": null,
+     "summary": "科目 15:消防費 の当初予算額・支出済額等。"
+    }
+   ],
+   "amountContext": {
+    "fy2024CurrentBudgetYen": 288683607000,
+    "fy2024UnusedYen": 6639452972,
+    "fy2026InitialBudgetYen": 318582000000
+   }
+  },
+  {
+   "comparisonId": "cmp-0014",
+   "mappingId": "map-0014",
+   "policyTitle": "17:諸支出金",
+   "bureau": null,
+   "executionMethod": "unknown",
+   "selectionReason": "不用額 637.0 億円。執行方式は科目名から確定できず。",
+   "evidenceReferences": [
+    {
+     "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+     "url": "https://www.kaikeikanri.metro.tokyo.lg.jp/documents/d/kaikeikanri/06kessan-2",
+     "page": null,
+     "summary": "科目 17:諸支出金 の当初予算額・支出済額等。"
+    }
+   ],
+   "amountContext": {
+    "fy2024CurrentBudgetYen": 2382736314000,
+    "fy2024UnusedYen": 63704602253,
+    "fy2026InitialBudgetYen": 2347515000000
+   }
+  },
+  {
+   "comparisonId": "cmp-0016",
+   "mappingId": "map-0016",
+   "policyTitle": "2:総務費 1:総務管理費",
+   "bureau": null,
+   "executionMethod": "unknown",
+   "selectionReason": "不用額 50.2 億円。執行方式は科目名から確定できず。",
+   "evidenceReferences": [
+    {
+     "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+     "url": "https://www.kaikeikanri.metro.tokyo.lg.jp/documents/d/kaikeikanri/06kessan-2",
+     "page": null,
+     "summary": "科目 2:総務費 1:総務管理費 の当初予算額・支出済額等。"
+    }
+   ],
+   "amountContext": {
+    "fy2024CurrentBudgetYen": 61204397000,
+    "fy2024UnusedYen": 5022194436,
+    "fy2026InitialBudgetYen": 69224104000
+   }
+  },
+  {
+   "comparisonId": "cmp-0019",
+   "mappingId": "map-0019",
+   "policyTitle": "2:総務費 5:デジタルサービス費",
+   "bureau": null,
+   "executionMethod": "unknown",
+   "selectionReason": "不用額 89.4 億円。執行方式は科目名から確定できず。",
+   "evidenceReferences": [
+    {
+     "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+     "url": "https://www.kaikeikanri.metro.tokyo.lg.jp/documents/d/kaikeikanri/06kessan-2",
+     "page": null,
+     "summary": "科目 2:総務費 5:デジタルサービス費 の当初予算額・支出済額等。"
+    }
+   ],
+   "amountContext": {
+    "fy2024CurrentBudgetYen": 141432972000,
+    "fy2024UnusedYen": 8942020032,
+    "fy2026InitialBudgetYen": 78338000000
+   }
+  },
+  {
+   "comparisonId": "cmp-0021",
+   "mappingId": "map-0021",
+   "policyTitle": "2:総務費 7:選挙費",
+   "bureau": null,
+   "executionMethod": "unknown",
+   "selectionReason": "不用額 1.3 億円。執行方式は科目名から確定できず。",
+   "evidenceReferences": [
+    {
+     "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+     "url": "https://www.kaikeikanri.metro.tokyo.lg.jp/documents/d/kaikeikanri/06kessan-2",
+     "page": null,
+     "summary": "科目 2:総務費 7:選挙費 の当初予算額・支出済額等。"
+    }
+   ],
+   "amountContext": {
+    "fy2024CurrentBudgetYen": 16714789000,
+    "fy2024UnusedYen": 129304399,
+    "fy2026InitialBudgetYen": 425000000
+   }
+  },
+  {
+   "comparisonId": "cmp-0025",
+   "mappingId": "map-0025",
+   "policyTitle": "5:都市整備費 1:都市整備管理費",
+   "bureau": null,
+   "executionMethod": "unknown",
+   "selectionReason": "不用額 9.5 億円。執行方式は科目名から確定できず。",
+   "evidenceReferences": [
+    {
+     "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+     "url": "https://www.kaikeikanri.metro.tokyo.lg.jp/documents/d/kaikeikanri/06kessan-2",
+     "page": null,
+     "summary": "科目 5:都市整備費 1:都市整備管理費 の当初予算額・支出済額等。"
+    }
+   ],
+   "amountContext": {
+    "fy2024CurrentBudgetYen": 10043362000,
+    "fy2024UnusedYen": 952928415,
+    "fy2026InitialBudgetYen": 47963000000
+   }
+  },
+  {
+   "comparisonId": "cmp-0026",
+   "mappingId": "map-0026",
+   "policyTitle": "5:都市整備費 2:都市基盤整備費",
+   "bureau": null,
+   "executionMethod": "unknown",
+   "selectionReason": "不用額 24.8 億円。執行方式は科目名から確定できず。",
+   "evidenceReferences": [
+    {
+     "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+     "url": "https://www.kaikeikanri.metro.tokyo.lg.jp/documents/d/kaikeikanri/06kessan-2",
+     "page": null,
+     "summary": "科目 5:都市整備費 2:都市基盤整備費 の当初予算額・支出済額等。"
+    }
+   ],
+   "amountContext": {
+    "fy2024CurrentBudgetYen": 108242938000,
+    "fy2024UnusedYen": 2480896001,
+    "fy2026InitialBudgetYen": 35711000000
+   }
+  },
+  {
+   "comparisonId": "cmp-0029",
+   "mappingId": "map-0029",
+   "policyTitle": "6:環境費 1:環境管理費",
+   "bureau": null,
+   "executionMethod": "unknown",
+   "selectionReason": "不用額 3.4 億円。執行方式は科目名から確定できず。",
+   "evidenceReferences": [
+    {
+     "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+     "url": "https://www.kaikeikanri.metro.tokyo.lg.jp/documents/d/kaikeikanri/06kessan-2",
+     "page": null,
+     "summary": "科目 6:環境費 1:環境管理費 の当初予算額・支出済額等。"
+    }
+   ],
+   "amountContext": {
+    "fy2024CurrentBudgetYen": 6356738000,
+    "fy2024UnusedYen": 341178067,
+    "fy2026InitialBudgetYen": 6337000000
+   }
+  },
+  {
+   "comparisonId": "cmp-0032",
+   "mappingId": "map-0032",
+   "policyTitle": "7:福祉費 1:福祉管理費",
+   "bureau": null,
+   "executionMethod": "unknown",
+   "selectionReason": "不用額 5.0 億円。執行方式は科目名から確定できず。",
+   "evidenceReferences": [
+    {
+     "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+     "url": "https://www.kaikeikanri.metro.tokyo.lg.jp/documents/d/kaikeikanri/06kessan-2",
+     "page": null,
+     "summary": "科目 7:福祉費 1:福祉管理費 の当初予算額・支出済額等。"
+    }
+   ],
+   "amountContext": {
+    "fy2024CurrentBudgetYen": 7354938000,
+    "fy2024UnusedYen": 501674625,
+    "fy2026InitialBudgetYen": 9086000000
+   }
+  },
+  {
+   "comparisonId": "cmp-0034",
+   "mappingId": "map-0034",
+   "policyTitle": "7:福祉費 3:子供・子育て支援費",
+   "bureau": null,
+   "executionMethod": "unknown",
+   "selectionReason": "不用額 222.5 億円。執行方式は科目名から確定できず。",
+   "evidenceReferences": [
+    {
+     "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+     "url": "https://www.kaikeikanri.metro.tokyo.lg.jp/documents/d/kaikeikanri/06kessan-2",
+     "page": null,
+     "summary": "科目 7:福祉費 3:子供・子育て支援費 の当初予算額・支出済額等。"
+    }
+   ],
+   "amountContext": {
+    "fy2024CurrentBudgetYen": 495954780000,
+    "fy2024UnusedYen": 22246432513,
+    "fy2026InitialBudgetYen": 608973000000
+   }
+  },
+  {
+   "comparisonId": "cmp-0035",
+   "mappingId": "map-0035",
+   "policyTitle": "7:福祉費 4:高齢者施策推進費",
+   "bureau": null,
+   "executionMethod": "unknown",
+   "selectionReason": "不用額 140.6 億円。執行方式は科目名から確定できず。",
+   "evidenceReferences": [
+    {
+     "title": "令和6年度 歳入歳出決算事項別明細書（一般会計）",
+     "url": "https://www.kaikeikanri.metro.tokyo.lg.jp/documents/d/kaikeikanri/06kessan-2",
+     "page": null,
+     "summary": "科目 7:福祉費 4:高齢者施策推進費 の当初予算額・支出済額等。"
+    }
+   ],
+   "amountContext": {
+    "fy2024CurrentBudgetYen": 269181718000,
+    "fy2024UnusedYen": 14064700255,
+    "fy2026InitialBudgetYen": 283630000000
+   }
+  }
+ ],
+ "summary": {
+  "selectedCount": 20,
+  "byCategory": {
+   "direct": 1,
+   "procurement": 0,
+   "construction": 1,
+   "subsidy": 0,
+   "unknown": 18
+  },
+  "shortfallNotes": [
+   "18件は公式説明だけでは執行方式を確定できず unknown とした"
+  ]
+ }
+}
