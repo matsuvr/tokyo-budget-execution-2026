@@ -5,6 +5,7 @@ import { renderAttentionList } from "./attention-items.js";
 import { renderAttentionBureaus } from "./attention-bureaus.js";
 import { el } from "./dom.js";
 import { renderOverviewCard } from "./overview.js";
+import { renderTopUnusedSummary } from "./top-unused-summary.js";
 const content = document.querySelector("#content");
 const errorBox = document.querySelector("#error");
 const loading = document.querySelector("#loading");
@@ -117,7 +118,7 @@ function renderSections() {
         });
         main = renderAttentionList(filtered, detailCallbacks);
     }
-    content.replaceChildren(el("div", { class: "sections" }, renderOverviewCard(state.index), viewToggle(), filters, main));
+    content.replaceChildren(el("div", { class: "sections" }, renderTopUnusedSummary(all), renderOverviewCard(state.index), viewToggle(), filters, main));
 }
 async function main() {
     if (content == null) {
