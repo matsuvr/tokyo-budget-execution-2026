@@ -15,6 +15,17 @@ function json(value: unknown, status = 200, headers: HeadersInit = {}): Response
   });
 }
 
+function contentTypeForKey(key: string): string {
+  if (key.endsWith(".json")) return "application/json; charset=utf-8";
+  if (key.endsWith(".jsonl")) return "application/x-ndjson; charset=utf-8";
+  if (key.endsWith(".csv")) return "text/csv; charset=utf-8";
+  if (key.endsWith(".md")) return "text/markdown; charset=utf-8";
+  if (key.endsWith(".pdf")) return "application/pdf";
+  if (key.endsWith(".xlsx"))
+    return "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
+  return "application/octet-stream";
+}
+
 function objectHeaders(object: R2ObjectBody, key: string): Headers {
   const headers = new Headers({
     "access-control-allow-origin": "*",
@@ -27,17 +38,6 @@ function objectHeaders(object: R2ObjectBody, key: string): Headers {
     headers.set("content-disposition", object.httpMetadata.contentDisposition);
   }
   return headers;
-}
-
-function contentTypeForKey(key: string): string {
-  if (key.endsWith(".json")) return "application/json; charset=utf-8";
-  if (key.endsWith(".jsonl")) return "application/x-ndjson; charset=utf-8";
-  if (key.endsWith(".csv")) return "text/csv; charset=utf-8";
-  if (key.endsWith(".md")) return "text/markdown; charset=utf-8";
-  if (key.endsWith(".pdf")) return "application/pdf";
-  if (key.endsWith(".xlsx"))
-    return "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
-  return "application/octet-stream";
 }
 
 async function getObject(env: Env, key: string): Promise<R2ObjectBody | null> {
@@ -63,6 +63,52 @@ function safeDataKey(pathname: string): string | null {
   return `data/${decoded}`;
 }
 
+type AttentionDetailRecord = { item: { itemId: string } } & Record<string, unknown>;
+const attentionDetailCache = new WeakMap<
+  Env,
+  { etag: string | null; byId: Map<string, AttentionDetailRecord> }
+>();
+
+async function getAttentionDetailMap(env: Env): Promise<Map<string, AttentionDetailRecord> | null> {
+  const key = "data/normalized/execution-review/execution-attention-details.json";
+  const object = await getObject(env, key);
+  if (object == null) return null;
+  const etag = object.httpEtag ?? null;
+  const cached = attentionDetailCache.get(env);
+  if (cached != null && cached.etag === etag) return cached.byId;
+  const parsed = JSON.parse(await new Response(object.body).text()) as {
+    records?: AttentionDetailRecord[];
+  };
+  const byId = new Map<string, AttentionDetailRecord>();
+  for (const record of parsed.records ?? []) {
+    const itemId = record.item?.itemId;
+    if (typeof itemId === "string" && !byId.has(itemId)) byId.set(itemId, record);
+  }
+  attentionDetailCache.set(env, { etag, byId });
+  return byId;
+}
+
+function decodeAttentionItemId(encoded: string): string | null {
+  if (encoded.length === 0) return null;
+  let itemId: string;
+  try {
+    itemId = decodeURIComponent(encoded);
+  } catch {
+    return null;
+  }
+  if (
+    itemId.length === 0 ||
+    itemId.length > 1024 ||
+    itemId.includes("/") ||
+    itemId.includes("\\") ||
+    itemId.includes("\0") ||
+    itemId.includes("..")
+  ) {
+    return null;
+  }
+  return itemId;
+}
+
 function apiMetadata(): Record<string, unknown> {
   return {
     name: "Tokyo Budget Execution Data API",
@@ -85,6 +131,8 @@ function apiMetadata(): Record<string, unknown> {
       executionReviewCandidates: "/execution-review/candidates",
       executionReviewBureaus: "/execution-review/bureaus",
       executionReviewItem: "/execution-review/items/:reviewId",
+      executionAttentionItems: "/execution-review/attention-items",
+      executionAttentionItem: "/execution-review/attention-items/:itemId",
       objectProxy: "/data/*",
     },
     cautions: [
@@ -104,52 +152,51 @@ async function route(request: Request, env: Env): Promise<Response> {
   const url = new URL(request.url);
   const path = url.pathname.replace(/\/+$/, "") || "/";
 
-  if (path === "/" || path === "/api") {
-    return json(apiMetadata());
-  }
-
+  if (path === "/" || path === "/api") return json(apiMetadata());
   if (path === "/manifest") return serveObject(env, "data/manifest.json", request.method);
   if (path === "/coverage")
     return serveObject(env, "data/normalized/coverage.json", request.method);
-  if (path === "/catalog") {
-    return serveObject(env, "data/normalized/catalog/relevant-api-catalog.json", request.method);
-  }
+  if (path === "/catalog")
+    return serveObject(
+      env,
+      "data/normalized/catalog/relevant-api-catalog.json",
+      request.method,
+    );
 
-  if (path === "/budget") {
+  if (path === "/budget")
     return serveObject(env, "data/normalized/budget/index.json", request.method);
-  }
   if (path.startsWith("/budget/")) {
     const key = path.slice("/budget/".length);
     if (!/^[a-z0-9_]+$/u.test(key)) return json({ error: "invalid_budget_key" }, 400);
     const objectKey = `data/normalized/budget/${key}.json`;
     const yearText = url.searchParams.get("year");
-    if (!yearText || request.method === "HEAD") return serveObject(env, objectKey, request.method);
+    if (!yearText || request.method === "HEAD")
+      return serveObject(env, objectKey, request.method);
     const year = Number(yearText);
-    if (year !== 2025 && year !== 2026) return json({ error: "year_must_be_2025_or_2026" }, 400);
-    const table = await getJson<Record<string, unknown> & { records?: Record<string, unknown>[] }>(
-      env,
-      objectKey,
-    );
+    if (year !== 2025 && year !== 2026)
+      return json({ error: "year_must_be_2025_or_2026" }, 400);
+    const table = await getJson<
+      Record<string, unknown> & { records?: Record<string, unknown>[] }
+    >(env, objectKey);
     if (!table) return json({ error: "not_found", key: objectKey }, 404);
     const records = (table.records ?? []).filter((record) => Number(record["年度"]) === year);
     return json({ ...table, fiscalYears: [year], recordCount: records.length, records });
   }
 
-  if (path === "/settlement") {
+  if (path === "/settlement")
     return serveObject(env, "data/normalized/settlement/index.json", request.method);
-  }
   if (path.startsWith("/settlement/")) {
     const key = path.slice("/settlement/".length);
     if (!/^[a-z0-9_]+$/u.test(key)) return json({ error: "invalid_settlement_key" }, 400);
     return serveObject(env, `data/normalized/settlement/${key}.json`, request.method);
   }
 
-  if (path === "/expenditure") {
+  if (path === "/expenditure")
     return serveObject(env, "data/normalized/public-expenditure/index.json", request.method);
-  }
   if (path === "/expenditure/summary") {
     const year = Number(url.searchParams.get("year") ?? "2026");
-    if (year !== 2025 && year !== 2026) return json({ error: "year_must_be_2025_or_2026" }, 400);
+    if (year !== 2025 && year !== 2026)
+      return json({ error: "year_must_be_2025_or_2026" }, 400);
     const dimension = url.searchParams.get("dimension") ?? "total";
     const files: Record<string, string> = {
       total: "summary.json",
@@ -160,42 +207,85 @@ async function route(request: Request, env: Env): Promise<Response> {
     };
     const file = files[dimension];
     if (!file) return json({ error: "invalid_dimension", allowed: Object.keys(files) }, 400);
-    return serveObject(env, `data/normalized/public-expenditure/fy${year}/${file}`, request.method);
+    return serveObject(
+      env,
+      `data/normalized/public-expenditure/fy${year}/${file}`,
+      request.method,
+    );
   }
 
   if (path === "/subsidies/summary") {
     const year = Number(url.searchParams.get("year") ?? "2026");
-    if (year !== 2025 && year !== 2026) return json({ error: "year_must_be_2025_or_2026" }, 400);
+    if (year !== 2025 && year !== 2026)
+      return json({ error: "year_must_be_2025_or_2026" }, 400);
     return serveObject(env, `data/normalized/subsidies/${year}-summary.json`, request.method);
   }
-
-  if (path === "/closing-estimate/2025") {
+  if (path === "/closing-estimate/2025")
     return serveObject(env, "data/normalized/closing-estimate/fy2025.json", request.method);
+
+  if (path === "/execution-review")
+    return serveObject(env, "data/normalized/execution-review/index.json", request.method);
+  if (path === "/execution-review/candidates")
+    return serveObject(
+      env,
+      "data/normalized/execution-review/review-candidates.json",
+      request.method,
+    );
+  if (path === "/execution-review/bureaus")
+    return serveObject(
+      env,
+      "data/normalized/execution-review/bureau-summary.json",
+      request.method,
+    );
+
+  const attentionListPaths = new Set([
+    "/execution-review/attention-items",
+    "/api/execution-review/attention-items",
+  ]);
+  if (attentionListPaths.has(path)) {
+    return serveObject(
+      env,
+      "data/normalized/execution-review/execution-attention-items.json",
+      request.method,
+    );
+  }
+  const attentionPrefixes = [
+    "/execution-review/attention-items/",
+    "/api/execution-review/attention-items/",
+  ];
+  const attentionPrefix = attentionPrefixes.find((prefix) => path.startsWith(prefix));
+  if (attentionPrefix != null) {
+    const itemId = decodeAttentionItemId(path.slice(attentionPrefix.length));
+    if (itemId == null) return json({ error: "invalid_item_id" }, 400);
+    const details = await getAttentionDetailMap(env);
+    if (details == null) {
+      return json(
+        {
+          error: "not_found",
+          key: "data/normalized/execution-review/execution-attention-details.json",
+        },
+        404,
+      );
+    }
+    const record = details.get(itemId);
+    if (record == null) return json({ error: "not_found", itemId }, 404);
+    return request.method === "HEAD"
+      ? new Response(null, { status: 200, headers: JSON_HEADERS })
+      : json(record);
   }
 
-  if (path === "/execution-review") {
-    return serveObject(env, "data/normalized/execution-review/index.json", request.method);
-  }
-  if (path === "/execution-review/candidates") {
-    return serveObject(env, "data/normalized/execution-review/review-candidates.json", request.method);
-  }
-  if (path === "/execution-review/bureaus") {
-    return serveObject(env, "data/normalized/execution-review/bureau-summary.json", request.method);
-  }
   if (path.startsWith("/execution-review/items/")) {
     const reviewId = path.slice("/execution-review/items/".length);
-    if (!/^[A-Za-z0-9_-]+$/u.test(reviewId)) {
+    if (!/^[A-Za-z0-9_-]+$/u.test(reviewId))
       return json({ error: "invalid_review_id" }, 400);
-    }
     const details = await getJson<{
       records?: { reviewId: string | null; comparisonId: string }[];
     }>(env, "data/normalized/execution-review/policy-review-details.json");
     const record = details?.records?.find((entry) => entry.reviewId === reviewId);
     if (!record) return json({ error: "not_found", reviewId }, 404);
-    if (request.method === "HEAD") {
-      return new Response(null, { status: 200, headers: JSON_HEADERS });
-    }
-    return json(record);
+    return request.method === "HEAD"
+      ? new Response(null, { status: 200, headers: JSON_HEADERS })
+      : json(record);
   }
 
   if (path.startsWith("/data/")) {
@@ -203,7 +293,6 @@ async function route(request: Request, env: Env): Promise<Response> {
     if (!key) return json({ error: "invalid_data_key" }, 400);
     return serveObject(env, key, request.method);
   }
-
   return json({ error: "not_found", path }, 404);
 }
 
@@ -214,10 +303,7 @@ export default {
     } catch (error) {
       console.error(error);
       return json(
-        {
-          error: "internal_error",
-          message: error instanceof Error ? error.message : String(error),
-        },
+        { error: "internal_error", message: error instanceof Error ? error.message : String(error) },
         500,
       );
     }
