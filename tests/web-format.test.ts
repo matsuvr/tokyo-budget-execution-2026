@@ -19,22 +19,22 @@ describe("formatYen", () => {
     assert.equal(formatYen(1_000_000_000_000), "1兆円");
   });
 
-  it("0円は確認不能とせず、nullや非有限値とは区別する", () => {
+  it("0円と欠損値を区別する", () => {
     assert.equal(formatYen(0), "0円");
-    assert.notEqual(formatYen(null), formatYen(0));
+    assert.equal(formatYen(null), "—");
   });
 
-  it("負数は△付きで明示し、非有限値は確認不能を返す", () => {
+  it("負数は△付きで明示し、非有限値はダッシュを返す", () => {
     assert.equal(formatYen(-1_000_000_000), "△10億円");
-    assert.equal(formatYen(Number.NaN), "確認不能");
-    assert.equal(formatYen(Number.POSITIVE_INFINITY), "確認不能");
-    assert.equal(formatYen(Number.NEGATIVE_INFINITY), "確認不能");
+    assert.equal(formatYen(Number.NaN), "—");
+    assert.equal(formatYen(Number.POSITIVE_INFINITY), "—");
+    assert.equal(formatYen(Number.NEGATIVE_INFINITY), "—");
   });
 
-  it("欠損は0とみなさず確認不能を返す", () => {
-    assert.equal(formatYen(null), "確認不能");
-    assert.equal(formatYen(undefined), "確認不能");
-    assert.equal(formatYen(Number.NaN), "確認不能");
+  it("欠損は0とみなさずダッシュを返す", () => {
+    assert.equal(formatYen(null), "—");
+    assert.equal(formatYen(undefined), "—");
+    assert.equal(formatYen(Number.NaN), "—");
   });
 });
 
@@ -50,10 +50,10 @@ describe("formatRate", () => {
     assert.equal(formatRate(1), "100.0%");
   });
 
-  it("欠損は0%に変換せず確認不能を返す", () => {
-    assert.equal(formatRate(null), "確認不能");
+  it("欠損は0%に変換せずダッシュを返す", () => {
+    assert.equal(formatRate(null), "—");
     assert.notEqual(formatRate(null), formatRate(0));
-    assert.equal(formatRate(Number.NaN), "確認不能");
+    assert.equal(formatRate(Number.NaN), "—");
   });
 });
 

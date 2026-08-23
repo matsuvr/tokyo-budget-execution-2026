@@ -1,12 +1,12 @@
 /**
  * 表示用整形関数（Issue #48）。
  * 円データ・率データは表示時にだけ文字列へ整形し、元の数値は変更しない。
- * 欠損値は0とみなさず「確認不能」と表示する。
+ * 欠損値はダッシュで表示する。
  */
 
-/** 円→「X.X兆円」「X億円」「X万円」「X円」。欠損・非数は確認不能 */
+/** 円→「X.X兆円」「X億円」「X万円」「X円」。欠損・非数はダッシュ */
 export function formatYen(yen: number | null | undefined): string {
-  if (yen == null || !Number.isFinite(yen)) return "確認不能";
+  if (yen == null || !Number.isFinite(yen)) return "—";
   const abs = Math.abs(yen);
   const sign = yen < 0 ? "△" : "";
   if (abs >= 1e12) {
@@ -23,16 +23,16 @@ export function formatYen(yen: number | null | undefined): string {
   return `${sign}${yen.toLocaleString("ja-JP")}円`;
 }
 
-/** 率(小数)→「XX.X%」。欠損・非数は確認不能 */
+/** 率(小数)→「XX.X%」。欠損・非数はダッシュ */
 export function formatRate(rate: number | null | undefined): string {
-  if (rate == null || !Number.isFinite(rate)) return "確認不能";
+  if (rate == null || !Number.isFinite(rate)) return "—";
   const percent = Math.round(rate * 1000) / 10;
   return `${percent.toLocaleString("ja-JP", { minimumFractionDigits: 1 })}%`;
 }
 
-/** 金額を整数カン区切りで表示（欠損は確認不能） */
+/** 金額を整数カン区切りで表示（欠損はダッシュ） */
 export function formatYenExact(yen: number | null | undefined): string {
-  if (yen == null || !Number.isFinite(yen)) return "確認不能";
+  if (yen == null || !Number.isFinite(yen)) return "—";
   return `${yen.toLocaleString("ja-JP")}円`;
 }
 
@@ -45,7 +45,7 @@ export interface AmountRecordLike {
 }
 
 /**
- * 指定statusの候補について不用額・2026年度当初予算額の合計を計算する純粋関数。
+ * 指定statusの候補について年度内対応余地・2026年度当初予算額の合計を計算する純粋関数。
  * 欠損行は合計から除外し、件数として返す（0で補わない）。
  */
 export function sumAmountsByStatus(

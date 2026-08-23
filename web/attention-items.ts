@@ -2,10 +2,7 @@ import { el } from "./dom.js";
 import { formatRate, formatYen, formatYenExact } from "./format.js";
 import {
   attentionFlagLabel,
-  confidenceLabel,
   gapCompositionLabel,
-  methodLabel,
-  scopeLabel,
 } from "./labels.js";
 import { renderAttentionDetail } from "./attention-detail.js";
 import type { ExecutionAttentionDetailView, ExecutionAttentionItemView } from "./types.js";
@@ -56,7 +53,7 @@ function detailSection(item: ExecutionAttentionItemView, callbacks: AttentionLis
   const button = el(
     "button",
     { type: "button", class: "detail-toggle", "aria-expanded": slot.expanded ? "true" : "false" },
-    slot.expanded ? "詳細を閉じる" : "構成明細・支払内容・確認事項を見る",
+    slot.expanded ? "詳細を閉じる" : "詳細を見る",
   );
   button.addEventListener("click", () => callbacks.onToggleDetail(item));
   return el(
@@ -79,6 +76,26 @@ export function renderAttentionItem(
     { href: item.source.url, target: "_blank", rel: "noopener noreferrer" },
     `${item.source.title}${item.sourcePage == null ? "" : `（PDF物理ページ ${item.sourcePage}）`}`,
   );
+  const visibleFlags = item.attentionFlags.filter((flag) => flag !== "cross-year-comparison-unavailable");
+  const extraRows: (Node | string | null)[] = [];
+  if (item.gapComposition !== "unavailable") {
+    extraRows.push(
+      el("dt", {}, "執行ギャップの内訳"),
+      el("dd", {}, gapCompositionLabel(item.gapComposition)),
+    );
+  }
+  if (comparison?.fy2026InitialBudgetYen != null) {
+    extraRows.push(
+      el("dt", {}, "2026年度当初予算"),
+      el("dd", {}, formatYen(comparison.fy2026InitialBudgetYen)),
+    );
+  }
+  if (comparison?.budgetContinuationRate != null) {
+    extraRows.push(
+      el("dt", {}, "予算継続率"),
+      el("dd", {}, formatRate(comparison.budgetContinuationRate)),
+    );
+  }
   return el(
     "article",
     { class: `card attention-item scope-${item.reviewScope}` },
@@ -96,25 +113,19 @@ export function renderAttentionItem(
       { class: "exact-amounts" },
       `${formatYenExact(item.amounts.currentBudgetYen)} ＝ 支出済 ${formatYenExact(item.amounts.spentYen)} ＋ 翌年度継続 ${formatYenExact(item.amounts.carryoverYen)} ＋ 年度内対応余地 ${formatYenExact(item.amounts.unusedYen)}`,
     ),
-    el(
-      "div",
-      { class: "badge-list", "aria-label": "追加検証シグナル" },
-      ...item.attentionFlags.map((flag) => el("span", { class: "badge" }, attentionFlagLabel(flag))),
-    ),
+    visibleFlags.length === 0
+      ? null
+      : el(
+          "div",
+          { class: "badge-list", "aria-label": "注目ポイント" },
+          ...visibleFlags.map((flag) => el("span", { class: "badge" }, attentionFlagLabel(flag))),
+        ),
     el(
       "dl",
       { class: "candidate-grid" },
-      el("dt", {}, "表示区分"), el("dd", {}, scopeLabel(item.reviewScope)),
       el("dt", {}, "局・分野（款）"), el("dd", {}, item.bureau),
-      el("dt", {}, "執行方式"), el("dd", {}, methodLabel(item.executionMethod)),
-      el("dt", {}, "執行ギャップの内訳"), el("dd", {}, gapCompositionLabel(item.gapComposition)),
-      el("dt", {}, "2026年度当初予算"), el("dd", {}, comparison == null ? "比較未確認" : formatYen(comparison.fy2026InitialBudgetYen)),
-      el("dt", {}, "予算継続率"), el("dd", {}, comparison == null ? "比較未確認" : formatRate(comparison.budgetContinuationRate)),
-      el("dt", {}, "年度間対応"), el("dd", {}, comparison == null ? "対応なし／未確認" : `${confidenceLabel(comparison.confidence)}・${comparison.matchLevel}粒度`),
+      ...extraRows,
     ),
-    comparison == null
-      ? null
-      : el("p", { class: "sub" }, "2026年度予算は、この明細を含む款または項の集計値です。明細固有の予算額ではありません。"),
     el("p", { class: "source-line" }, "原本: ", source),
     callbacks == null ? null : detailSection(item, callbacks),
   );

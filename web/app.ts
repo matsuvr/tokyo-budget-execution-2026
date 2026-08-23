@@ -15,7 +15,6 @@ import {
 import { renderAttentionFilters } from "./attention-filters.js";
 import { renderAttentionList, type AttentionDetailSlot } from "./attention-items.js";
 import { renderAttentionBureaus } from "./attention-bureaus.js";
-import { renderReferenceItems } from "./reference-items.js";
 import { el } from "./dom.js";
 import { renderOverviewCard } from "./overview.js";
 import type {
@@ -25,7 +24,7 @@ import type {
   ExecutionReviewIndexView,
 } from "./types.js";
 
-type ViewMode = "items" | "bureaus" | "reference";
+type ViewMode = "items" | "bureaus";
 interface DetailCacheEntry {
   loading: boolean;
   error: string | null;
@@ -95,7 +94,7 @@ async function toggleDetail(itemId: string): Promise<void> {
     } catch (error) {
       state.detailCache.set(itemId, {
         loading: false,
-        error: error instanceof ApiError ? error.message : "詳細の取得に失敗しました",
+        error: error instanceof ApiError ? error.message : "詳細を表示できませんでした",
         data: null,
       });
     }
@@ -112,7 +111,6 @@ function viewToggle(): HTMLElement {
   const labels: Record<ViewMode, string> = {
     items: "行政サービス・事業",
     bureaus: "局・分野別",
-    reference: "参考項目・区分要確認",
   };
   return el(
     "nav",
@@ -135,19 +133,16 @@ function renderSections(): void {
   const all = state.items.records;
   let main: HTMLElement;
   let filters: HTMLElement | null = null;
-  if (state.view === "bureaus") {
-    main = state.bureaus == null
-      ? el("p", { class: "empty-note" }, "局・分野別サマリーを取得できませんでした。主一覧は利用できます。")
-      : renderAttentionBureaus(state.bureaus, {
-          onSelectBureau(bureau) {
-            state.filters = { ...state.filters, scope: "operational", bureau };
-            state.view = "items";
-            renderSections();
-          },
-        });
-  } else if (state.view === "reference") {
-    main = renderReferenceItems(all, detailCallbacks);
+  if (state.view === "bureaus" && state.bureaus != null) {
+    main = renderAttentionBureaus(state.bureaus, {
+      onSelectBureau(bureau) {
+        state.filters = { ...state.filters, scope: "operational", bureau };
+        state.view = "items";
+        renderSections();
+      },
+    });
   } else {
+    if (state.view === "bureaus") state.view = "items";
     const filtered = sortAttentionItems(applyAttentionFilters(all, state.filters), state.sort);
     filters = renderAttentionFilters(all, filtered.length, state.filters, state.sort, {
       onChange(nextFilters, nextSort) {
@@ -171,7 +166,7 @@ function renderSections(): void {
 }
 
 async function main(): Promise<void> {
-  if (content == null) { showError("画面の初期化に失敗しました"); return; }
+  if (content == null) { showError("画面を表示できませんでした"); return; }
   try {
     const [index, items] = await Promise.all([
       fetchExecutionReviewIndex(),
@@ -184,13 +179,13 @@ async function main(): Promise<void> {
     state.bureaus = bureaus;
     hideMessages();
     if (items.records.length === 0) {
-      showEmpty("表示できる2024年度執行明細がありません。データ生成後に再度アクセスしてください。");
+      showEmpty("表示する明細がありません。");
       return;
     }
     renderSections();
   } catch (error) {
     hideMessages();
-    showError(error instanceof ApiError ? error.message : "予期しないエラーで画面を表示できませんでした");
+    showError(error instanceof ApiError ? error.message : "画面を表示できませんでした");
     console.error(error);
   }
 }
