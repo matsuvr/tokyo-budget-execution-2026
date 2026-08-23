@@ -17,6 +17,7 @@ import { renderAttentionList, type AttentionDetailSlot } from "./attention-items
 import { renderAttentionBureaus } from "./attention-bureaus.js";
 import { el } from "./dom.js";
 import { renderOverviewCard } from "./overview.js";
+import { renderTopUnusedSummary } from "./top-unused-summary.js";
 import type {
   AttentionBureauSummaryView,
   ExecutionAttentionDetailView,
@@ -157,6 +158,7 @@ function renderSections(): void {
     el(
       "div",
       { class: "sections" },
+      renderTopUnusedSummary(all),
       renderOverviewCard(state.index),
       viewToggle(),
       filters,
