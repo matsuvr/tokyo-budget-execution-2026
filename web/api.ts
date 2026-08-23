@@ -1,28 +1,26 @@
 import type {
+  AttentionBureauSummaryView,
   BureauSummaryView,
+  ExecutionAttentionDetailView,
+  ExecutionAttentionItemsView,
   ExecutionReviewIndexView,
   PolicyReviewDetailView,
   ReviewCandidatesView,
-} from "./types.ts";
-
-/**
- * 執行レビューAPIクライアント（Issue #47）。
- * DOMに依存しない通信モジュール。失敗時に空配列やダミー値を返さず、
- * ApiErrorとして呼び出し元に伝える。
- */
+} from "./types.js";
 
 export const API_ENDPOINTS = {
   executionReviewIndex: "/execution-review",
   executionReviewCandidates: "/execution-review/candidates",
   executionReviewBureaus: "/execution-review/bureaus",
   executionReviewItem: "/execution-review/items",
+  executionAttentionItems: "/execution-review/attention-items",
+  executionAttentionItem: "/execution-review/attention-items",
+  executionAttentionBureaus: "/execution-review/attention-bureaus",
 } as const;
 
-/** ユーザー向け短文(message)とdebug用causeを分離したエラー */
 export class ApiError extends Error {
   readonly status: number | null;
   readonly cause?: unknown;
-
   constructor(message: string, options: { status?: number | null; cause?: unknown } = {}) {
     super(message);
     this.name = "ApiError";
@@ -31,9 +29,7 @@ export class ApiError extends Error {
   }
 }
 
-export type FetchJsonOptions = {
-  signal?: AbortSignal;
-};
+export type FetchJsonOptions = { signal?: AbortSignal };
 
 export async function fetchJson<T>(url: string, options: FetchJsonOptions = {}): Promise<T> {
   let response: Response;
@@ -45,9 +41,7 @@ export async function fetchJson<T>(url: string, options: FetchJsonOptions = {}):
   }
   if (!response.ok) {
     const status = response.status;
-    if (status === 404) {
-      throw new ApiError("データが見つかりませんでした", { status });
-    }
+    if (status === 404) throw new ApiError("データが見つかりませんでした", { status });
     throw new ApiError(`データの取得に失敗しました（HTTP ${status}）`, { status });
   }
   try {
@@ -57,30 +51,26 @@ export async function fetchJson<T>(url: string, options: FetchJsonOptions = {}):
   }
 }
 
-export async function fetchExecutionReviewIndex(
-  options: FetchJsonOptions = {},
-): Promise<ExecutionReviewIndexView> {
-  return fetchJson<ExecutionReviewIndexView>(API_ENDPOINTS.executionReviewIndex, options);
+export function fetchExecutionReviewIndex(options: FetchJsonOptions = {}): Promise<ExecutionReviewIndexView> {
+  return fetchJson(API_ENDPOINTS.executionReviewIndex, options);
+}
+export function fetchExecutionAttentionItems(options: FetchJsonOptions = {}): Promise<ExecutionAttentionItemsView> {
+  return fetchJson(API_ENDPOINTS.executionAttentionItems, options);
+}
+export function fetchExecutionAttentionDetail(itemId: string, options: FetchJsonOptions = {}): Promise<ExecutionAttentionDetailView> {
+  return fetchJson(`${API_ENDPOINTS.executionAttentionItem}/${encodeURIComponent(itemId)}`, options);
+}
+export function fetchAttentionBureauSummary(options: FetchJsonOptions = {}): Promise<AttentionBureauSummaryView> {
+  return fetchJson(API_ENDPOINTS.executionAttentionBureaus, options);
 }
 
-export async function fetchReviewCandidates(
-  options: FetchJsonOptions = {},
-): Promise<ReviewCandidatesView> {
-  return fetchJson<ReviewCandidatesView>(API_ENDPOINTS.executionReviewCandidates, options);
+/* Legacy clients retained during migration. */
+export function fetchReviewCandidates(options: FetchJsonOptions = {}): Promise<ReviewCandidatesView> {
+  return fetchJson(API_ENDPOINTS.executionReviewCandidates, options);
 }
-
-export async function fetchBureauSummary(options: FetchJsonOptions = {}): Promise<BureauSummaryView> {
-  return fetchJson<BureauSummaryView>(API_ENDPOINTS.executionReviewBureaus, options);
+export function fetchBureauSummary(options: FetchJsonOptions = {}): Promise<BureauSummaryView> {
+  return fetchJson(API_ENDPOINTS.executionReviewBureaus, options);
 }
-
-export async function fetchPolicyReviewDetail(
-  reviewId: string,
-  options: FetchJsonOptions = {},
-): Promise<PolicyReviewDetailView> {
-  // reviewIdはURLパスへ埋め込むため必ずエンコードする
-  const encoded = encodeURIComponent(reviewId);
-  return fetchJson<PolicyReviewDetailView>(
-    `${API_ENDPOINTS.executionReviewItem}/${encoded}`,
-    options,
-  );
+export function fetchPolicyReviewDetail(reviewId: string, options: FetchJsonOptions = {}): Promise<PolicyReviewDetailView> {
+  return fetchJson(`${API_ENDPOINTS.executionReviewItem}/${encodeURIComponent(reviewId)}`, options);
 }

@@ -64,10 +64,7 @@ function safeDataKey(pathname: string): string | null {
 }
 
 type AttentionDetailRecord = { item: { itemId: string } } & Record<string, unknown>;
-const attentionDetailCache = new WeakMap<
-  Env,
-  { etag: string | null; byId: Map<string, AttentionDetailRecord> }
->();
+const attentionDetailCache = new WeakMap<Env, { etag: string | null; byId: Map<string, AttentionDetailRecord> }>();
 
 async function getAttentionDetailMap(env: Env): Promise<Map<string, AttentionDetailRecord> | null> {
   const key = "data/normalized/execution-review/execution-attention-details.json";
@@ -132,6 +129,7 @@ function apiMetadata(): Record<string, unknown> {
       executionReviewBureaus: "/execution-review/bureaus",
       executionReviewItem: "/execution-review/items/:reviewId",
       executionAttentionItems: "/execution-review/attention-items",
+      executionAttentionBureaus: "/execution-review/attention-bureaus",
       executionAttentionItem: "/execution-review/attention-items/:itemId",
       objectProxy: "/data/*",
     },
@@ -154,49 +152,35 @@ async function route(request: Request, env: Env): Promise<Response> {
 
   if (path === "/" || path === "/api") return json(apiMetadata());
   if (path === "/manifest") return serveObject(env, "data/manifest.json", request.method);
-  if (path === "/coverage")
-    return serveObject(env, "data/normalized/coverage.json", request.method);
-  if (path === "/catalog")
-    return serveObject(
-      env,
-      "data/normalized/catalog/relevant-api-catalog.json",
-      request.method,
-    );
+  if (path === "/coverage") return serveObject(env, "data/normalized/coverage.json", request.method);
+  if (path === "/catalog") return serveObject(env, "data/normalized/catalog/relevant-api-catalog.json", request.method);
 
-  if (path === "/budget")
-    return serveObject(env, "data/normalized/budget/index.json", request.method);
+  if (path === "/budget") return serveObject(env, "data/normalized/budget/index.json", request.method);
   if (path.startsWith("/budget/")) {
     const key = path.slice("/budget/".length);
     if (!/^[a-z0-9_]+$/u.test(key)) return json({ error: "invalid_budget_key" }, 400);
     const objectKey = `data/normalized/budget/${key}.json`;
     const yearText = url.searchParams.get("year");
-    if (!yearText || request.method === "HEAD")
-      return serveObject(env, objectKey, request.method);
+    if (!yearText || request.method === "HEAD") return serveObject(env, objectKey, request.method);
     const year = Number(yearText);
-    if (year !== 2025 && year !== 2026)
-      return json({ error: "year_must_be_2025_or_2026" }, 400);
-    const table = await getJson<
-      Record<string, unknown> & { records?: Record<string, unknown>[] }
-    >(env, objectKey);
+    if (year !== 2025 && year !== 2026) return json({ error: "year_must_be_2025_or_2026" }, 400);
+    const table = await getJson<Record<string, unknown> & { records?: Record<string, unknown>[] }>(env, objectKey);
     if (!table) return json({ error: "not_found", key: objectKey }, 404);
     const records = (table.records ?? []).filter((record) => Number(record["年度"]) === year);
     return json({ ...table, fiscalYears: [year], recordCount: records.length, records });
   }
 
-  if (path === "/settlement")
-    return serveObject(env, "data/normalized/settlement/index.json", request.method);
+  if (path === "/settlement") return serveObject(env, "data/normalized/settlement/index.json", request.method);
   if (path.startsWith("/settlement/")) {
     const key = path.slice("/settlement/".length);
     if (!/^[a-z0-9_]+$/u.test(key)) return json({ error: "invalid_settlement_key" }, 400);
     return serveObject(env, `data/normalized/settlement/${key}.json`, request.method);
   }
 
-  if (path === "/expenditure")
-    return serveObject(env, "data/normalized/public-expenditure/index.json", request.method);
+  if (path === "/expenditure") return serveObject(env, "data/normalized/public-expenditure/index.json", request.method);
   if (path === "/expenditure/summary") {
     const year = Number(url.searchParams.get("year") ?? "2026");
-    if (year !== 2025 && year !== 2026)
-      return json({ error: "year_must_be_2025_or_2026" }, 400);
+    if (year !== 2025 && year !== 2026) return json({ error: "year_must_be_2025_or_2026" }, 400);
     const dimension = url.searchParams.get("dimension") ?? "total";
     const files: Record<string, string> = {
       total: "summary.json",
@@ -207,36 +191,31 @@ async function route(request: Request, env: Env): Promise<Response> {
     };
     const file = files[dimension];
     if (!file) return json({ error: "invalid_dimension", allowed: Object.keys(files) }, 400);
-    return serveObject(
-      env,
-      `data/normalized/public-expenditure/fy${year}/${file}`,
-      request.method,
-    );
+    return serveObject(env, `data/normalized/public-expenditure/fy${year}/${file}`, request.method);
   }
 
   if (path === "/subsidies/summary") {
     const year = Number(url.searchParams.get("year") ?? "2026");
-    if (year !== 2025 && year !== 2026)
-      return json({ error: "year_must_be_2025_or_2026" }, 400);
+    if (year !== 2025 && year !== 2026) return json({ error: "year_must_be_2025_or_2026" }, 400);
     return serveObject(env, `data/normalized/subsidies/${year}-summary.json`, request.method);
   }
-  if (path === "/closing-estimate/2025")
-    return serveObject(env, "data/normalized/closing-estimate/fy2025.json", request.method);
+  if (path === "/closing-estimate/2025") return serveObject(env, "data/normalized/closing-estimate/fy2025.json", request.method);
 
-  if (path === "/execution-review")
-    return serveObject(env, "data/normalized/execution-review/index.json", request.method);
-  if (path === "/execution-review/candidates")
+  if (path === "/execution-review") return serveObject(env, "data/normalized/execution-review/index.json", request.method);
+  if (path === "/execution-review/candidates") return serveObject(env, "data/normalized/execution-review/review-candidates.json", request.method);
+  if (path === "/execution-review/bureaus") return serveObject(env, "data/normalized/execution-review/bureau-summary.json", request.method);
+
+  const attentionBureauPaths = new Set([
+    "/execution-review/attention-bureaus",
+    "/api/execution-review/attention-bureaus",
+  ]);
+  if (attentionBureauPaths.has(path)) {
     return serveObject(
       env,
-      "data/normalized/execution-review/review-candidates.json",
+      "data/normalized/execution-review/attention-bureau-summary.json",
       request.method,
     );
-  if (path === "/execution-review/bureaus")
-    return serveObject(
-      env,
-      "data/normalized/execution-review/bureau-summary.json",
-      request.method,
-    );
+  }
 
   const attentionListPaths = new Set([
     "/execution-review/attention-items",
@@ -259,13 +238,7 @@ async function route(request: Request, env: Env): Promise<Response> {
     if (itemId == null) return json({ error: "invalid_item_id" }, 400);
     const details = await getAttentionDetailMap(env);
     if (details == null) {
-      return json(
-        {
-          error: "not_found",
-          key: "data/normalized/execution-review/execution-attention-details.json",
-        },
-        404,
-      );
+      return json({ error: "not_found", key: "data/normalized/execution-review/execution-attention-details.json" }, 404);
     }
     const record = details.get(itemId);
     if (record == null) return json({ error: "not_found", itemId }, 404);
@@ -276,11 +249,11 @@ async function route(request: Request, env: Env): Promise<Response> {
 
   if (path.startsWith("/execution-review/items/")) {
     const reviewId = path.slice("/execution-review/items/".length);
-    if (!/^[A-Za-z0-9_-]+$/u.test(reviewId))
-      return json({ error: "invalid_review_id" }, 400);
-    const details = await getJson<{
-      records?: { reviewId: string | null; comparisonId: string }[];
-    }>(env, "data/normalized/execution-review/policy-review-details.json");
+    if (!/^[A-Za-z0-9_-]+$/u.test(reviewId)) return json({ error: "invalid_review_id" }, 400);
+    const details = await getJson<{ records?: { reviewId: string | null; comparisonId: string }[] }>(
+      env,
+      "data/normalized/execution-review/policy-review-details.json",
+    );
     const record = details?.records?.find((entry) => entry.reviewId === reviewId);
     if (!record) return json({ error: "not_found", reviewId }, 404);
     return request.method === "HEAD"
@@ -302,10 +275,7 @@ export default {
       return await route(request, env);
     } catch (error) {
       console.error(error);
-      return json(
-        { error: "internal_error", message: error instanceof Error ? error.message : String(error) },
-        500,
-      );
+      return json({ error: "internal_error", message: error instanceof Error ? error.message : String(error) }, 500);
     }
   },
 };

@@ -1,80 +1,57 @@
 import { el } from "./dom.js";
-import { formatYen, sumAmountsByStatus } from "./format.js";
-import type { ExecutionReviewIndexView, ReviewCandidatesView } from "./types.js";
+import { formatYen } from "./format.js";
+import type { ExecutionReviewIndexView } from "./types.js";
 
-/**
- * 概要カード（Issue #48）。
- * 「2024年度正式決算と2026年度当初予算の比較」であることを明示し、
- * 対象規模と要説明候補の金額規模を表示する。
- */
-
-function thresholdSummary(thresholds: Record<string, number>): string {
-  const unused = thresholds["needsUnusedRate"];
-  const minBudget = thresholds["needsMinCurrentBudgetYen"];
-  const continuation = thresholds["needsBudgetContinuationRate"];
-  const parts: string[] = [];
-  if (unused != null) parts.push(`不用率${Math.round(unused * 1000) / 10}%以上`);
-  if (minBudget != null) parts.push(`予算現額${formatYen(minBudget)}以上`);
-  if (continuation != null) parts.push(`予算継続率${Math.round(continuation * 1000) / 10}%以上`);
-  return parts.join(" ＆ ");
-}
-
-export function renderOverviewCard(
-  index: ExecutionReviewIndexView,
-  candidates: ReviewCandidatesView,
-): HTMLElement {
-  const needsCount = index.reviewCandidates.byStatus["needs-explanation"] ?? 0;
-  const sums = sumAmountsByStatus(candidates.records, "needs-explanation");
-
+export function renderOverviewCard(index: ExecutionReviewIndexView): HTMLElement {
+  const attention = index.attentionItems;
+  if (attention == null) {
+    return el(
+      "section",
+      { class: "card overview-card", "aria-label": "年度内執行ギャップ概要" },
+      el("h2", {}, "概要"),
+      el("p", { class: "empty-note" }, "全明細データは生成中です。旧比較データのみ利用できます。"),
+    );
+  }
+  const operational = attention.totalsByScope.operational;
+  const operationalFlags = attention.flagCountsByScope.operational;
+  const continued = operationalFlags["budget-continues"] ?? 0;
+  const expanded = operationalFlags["budget-expanded"] ?? 0;
   return el(
     "section",
-    { class: "card overview-card", "aria-label": "執行レビュー概要" },
+    { class: "card overview-card", "aria-label": "年度内執行ギャップ概要" },
     el("h2", {}, "概要"),
     el(
       "p",
       { class: "scope-note" },
-      "2024年度（令和6年度）一般会計の正式決算と、2026年度（令和8年度）当初予算の比較です。",
+      "2024年度一般会計の正式決算について、行政サービス・事業の最下位明細（目）を集計しています。",
     ),
     el(
       "dl",
       { class: "overview-grid" },
-      el("dt", {}, "比較可能な科目数"),
-      el("dd", {}, `${index.comparisons.comparableCount.toLocaleString("ja-JP")} 件`),
-      el("dt", {}, "要説明候補の件数"),
-      el(
-        "dd",
-        {},
-        `${needsCount.toLocaleString("ja-JP")} 件`,
-        el("span", { class: "sub" }, `（比較可能 ${index.reviewCandidates.count.toLocaleString("ja-JP")} 件中）`),
-      ),
-      el("dt", {}, "要説明候補の2024年度不用額合計"),
-      el("dd", {}, formatYen(sums.unusedYenTotal)),
-      el("dt", {}, "要説明候補の2026年度当初予算額合計"),
-      el("dd", {}, formatYen(sums.fy2026InitialTotal)),
-      el("dt", {}, "重点レビュー件数"),
-      el(
-        "dd",
-        {},
-        `${index.policyReviews.reviewedCount.toLocaleString("ja-JP")} 件`,
-        el(
-          "span",
-          { class: "sub" },
-          index.policyReviews.status === "ready"
-            ? "（公式資料レビュー済み）"
-            : "（詳細は未生成）",
-        ),
-      ),
+      el("dt", {}, "行政サービス・事業の明細数"),
+      el("dd", {}, `${attention.scopeCounts.operational.toLocaleString("ja-JP")} 件`),
+      el("dt", {}, "年度内未執行額"),
+      el("dd", {}, formatYen(operational.yearEndUnexecutedYen)),
+      el("dt", {}, "内訳: 翌年度繰越額"),
+      el("dd", {}, formatYen(operational.carryoverYen)),
+      el("dt", {}, "内訳: 不用額"),
+      el("dd", {}, formatYen(operational.unusedYen)),
+      el("dt", {}, "2026年度比較あり"),
+      el("dd", {}, `${attention.comparisonCounts.attached.toLocaleString("ja-JP")} 件`),
+      el("dt", {}, "2026年度比較未確認"),
+      el("dd", {}, `${attention.comparisonCounts.unavailable.toLocaleString("ja-JP")} 件`),
+      el("dt", {}, "2026年度予算が90%以上継続"),
+      el("dd", {}, `${continued.toLocaleString("ja-JP")} 件（うち増額 ${expanded.toLocaleString("ja-JP")} 件）`),
     ),
     el(
       "p",
-      { class: "threshold-note" },
-      "初期スクリーニング条件（検索条件であり評価ではありません）: ",
-      thresholdSummary(index.reviewCandidates.thresholds),
+      { class: "reference-counts" },
+      `会計・制度上の参考項目 ${attention.scopeCounts["reference-only"].toLocaleString("ja-JP")} 件 ／ 区分要確認 ${attention.scopeCounts.uncertain.toLocaleString("ja-JP")} 件`,
     ),
     el(
       "p",
       { class: "caution-note" },
-      "執行率・不用率は数値の特徴を示すものであり、政策の成果や局の能力を評価する値ではありません。",
+      "年度内未執行額は翌年度繰越額と不用額の合計です。無駄、人手不足、政策失敗を直接証明する値ではありません。",
     ),
   );
 }
