@@ -22,6 +22,12 @@ function levelName(value: string): string {
   return (separator >= 0 ? value.slice(separator + 1) : value).replace(/\s+/gu, "").trim();
 }
 
+/**
+ * 東京都2024年度一般会計の実データで確認した退職・恩給系の項名。
+ * この項に属する全ての目を、行政サービス実施能力の主比較から分離する。
+ */
+export const RETIREMENT_REFERENCE_SECTION_NAMES = new Set(["退職手当及年金費"]);
+
 /** Exact-name rules only. Stable-key overrides can be added after a human check. */
 export const RETIREMENT_REFERENCE_NAMES = new Set([
   "退職手当",
@@ -31,6 +37,9 @@ export const RETIREMENT_REFERENCE_NAMES = new Set([
   "退職給付費",
   "退職手当引当金",
   "退職給付引当金",
+  // 2024年度正式決算の実データで確認した目名
+  "退職費",
+  "恩給費",
 ]);
 
 export const PERSONNEL_ADJUSTMENT_REFERENCE_NAMES = new Set([
@@ -71,6 +80,14 @@ export function classifyReviewScope(input: {
       scope: "reference-only",
       reasonCode: "statutory-transfer",
       matchedKeyword: "statutory-transfer",
+    };
+  }
+
+  if (RETIREMENT_REFERENCE_SECTION_NAMES.has(names.section)) {
+    return {
+      scope: "reference-only",
+      reasonCode: "retirement-benefit-adjustment",
+      matchedKeyword: names.section,
     };
   }
 
