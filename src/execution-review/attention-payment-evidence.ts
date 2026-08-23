@@ -39,14 +39,7 @@ interface Bucket {
   expenses: Map<string, Counter>;
 }
 
-interface ItemAccumulator {
-  item: ExecutionAttentionItem;
-  itemBucket: Bucket;
-  sectionBucket: Bucket;
-  chapterBucket: Bucket;
-}
-
-function bucket(): Bucket {
+function createBucket(): Bucket {
   return {
     transactionCount: 0,
     totalAmountYen: 0,
@@ -65,6 +58,14 @@ function normalize(value: string | undefined): string {
 
 function key(parts: readonly (string | undefined)[]): string {
   return parts.map(normalize).join("|");
+}
+
+function bucketFor(map: Map<string, Bucket>, bucketKey: string): Bucket {
+  const existing = map.get(bucketKey);
+  if (existing != null) return existing;
+  const created = createBucket();
+  map.set(bucketKey, created);
+  return created;
 }
 
 function increment(map: Map<string, Counter>, name: string, amountYen: number): void {
@@ -97,10 +98,11 @@ function addToBucket(target: Bucket, transaction: AttentionPaymentTxn): void {
 
 function sorted(map: Map<string, Counter>, limit?: number): NameAggregate[] {
   const values = [...map].map(([name, value]) => ({ name, ...value }));
-  values.sort((a, b) =>
-    b.amountYen - a.amountYen ||
-    b.count - a.count ||
-    a.name.localeCompare(b.name, "ja"),
+  values.sort(
+    (a, b) =>
+      b.amountYen - a.amountYen ||
+      b.count - a.count ||
+      a.name.localeCompare(b.name, "ja"),
   );
   return limit == null ? values : values.slice(0, limit);
 }
@@ -111,105 +113,85 @@ export interface AttentionPaymentEvidenceBuilder {
 }
 
 /**
- * Builds indexed accumulators so each transaction is not compared with every attention item.
- * The result selects the most specific non-empty evidence bucket and records that granularity.
+ * 各取引を item / section / chapter の一意なキーへ1回ずつ集約する。
+ * 配下の全明細ごとに同じMapを複製せず、finalize時に各明細が利用できる
+ * 最も具体的な非空bucketを参照するため、大量取引でもメモリ使用量を抑える。
  */
 export function createAttentionPaymentEvidenceBuilder(
   items: readonly ExecutionAttentionItem[],
 ): AttentionPaymentEvidenceBuilder {
-  const accumulators = new Map<string, ItemAccumulator>();
-  const itemIndex = new Map<string, string[]>();
-  const sectionIndex = new Map<string, string[]>();
-  const chapterIndex = new Map<string, string[]>();
-
-  function indexAdd(index: Map<string, string[]>, indexKey: string, itemId: string): void {
-    const ids = index.get(indexKey) ?? [];
-    ids.push(itemId);
-    index.set(indexKey, ids);
-  }
-
+  const itemBuckets = new Map<string, Bucket>();
+  const sectionBuckets = new Map<string, Bucket>();
+  const chapterBuckets = new Map<string, Bucket>();
+  const seenItemIds = new Set<string>();
   for (const item of items) {
-    if (accumulators.has(item.itemId)) throw new Error(`duplicate itemId: ${item.itemId}`);
-    accumulators.set(item.itemId, {
-      item,
-      itemBucket: bucket(),
-      sectionBucket: bucket(),
-      chapterBucket: bucket(),
-    });
-    indexAdd(
-      itemIndex,
-      key([item.accountKey.account, item.accountKey.chapter, item.accountKey.section, item.accountKey.item]),
-      item.itemId,
-    );
-    indexAdd(
-      sectionIndex,
-      key([item.accountKey.account, item.accountKey.chapter, item.accountKey.section]),
-      item.itemId,
-    );
-    indexAdd(
-      chapterIndex,
-      key([item.accountKey.account, item.accountKey.chapter]),
-      item.itemId,
-    );
-  }
-
-  function addForIds(
-    ids: readonly string[] | undefined,
-    level: keyof Pick<ItemAccumulator, "itemBucket" | "sectionBucket" | "chapterBucket">,
-    transaction: AttentionPaymentTxn,
-  ): void {
-    for (const itemId of ids ?? []) {
-      const accumulator = accumulators.get(itemId);
-      if (accumulator != null) addToBucket(accumulator[level], transaction);
-    }
+    if (seenItemIds.has(item.itemId)) throw new Error(`duplicate itemId: ${item.itemId}`);
+    seenItemIds.add(item.itemId);
   }
 
   return {
     add(transaction): void {
       if (normalize(transaction.account) !== normalize("一般会計")) return;
-      addForIds(
-        itemIndex.get(key([transaction.account, transaction.chapter, transaction.item, transaction.object])),
-        "itemBucket",
+      addToBucket(
+        bucketFor(
+          itemBuckets,
+          key([transaction.account, transaction.chapter, transaction.item, transaction.object]),
+        ),
         transaction,
       );
-      addForIds(
-        sectionIndex.get(key([transaction.account, transaction.chapter, transaction.item])),
-        "sectionBucket",
+      addToBucket(
+        bucketFor(
+          sectionBuckets,
+          key([transaction.account, transaction.chapter, transaction.item]),
+        ),
         transaction,
       );
-      addForIds(
-        chapterIndex.get(key([transaction.account, transaction.chapter])),
-        "chapterBucket",
+      addToBucket(
+        bucketFor(chapterBuckets, key([transaction.account, transaction.chapter])),
         transaction,
       );
     },
     finalize(): AttentionPaymentEvidence[] {
-      const results: AttentionPaymentEvidence[] = [];
-      for (const { item, itemBucket, sectionBucket, chapterBucket } of accumulators.values()) {
-        const choice: [AttentionPaymentMatchGranularity, Bucket] =
-          itemBucket.transactionCount > 0
-            ? ["item", itemBucket]
-            : sectionBucket.transactionCount > 0
-              ? ["section", sectionBucket]
-              : chapterBucket.transactionCount > 0
-                ? ["chapter", chapterBucket]
-                : ["none", itemBucket];
-        const [matchGranularity, selected] = choice;
-        results.push({
-          itemId: item.itemId,
-          comparisonId: item.comparison?.comparisonId ?? null,
-          matchGranularity,
-          transactionCount: selected.transactionCount,
-          totalAmountYen: selected.totalAmountYen,
-          ordinaryAmountYen: selected.ordinaryAmountYen,
-          closingAmountYen: selected.closingAmountYen,
-          firstPaymentDate: selected.firstPaymentDate,
-          lastPaymentDate: selected.lastPaymentDate,
-          topPaymentNames: sorted(selected.names, 10),
-          expenseBreakdown: sorted(selected.expenses),
-        });
-      }
-      return results.sort((a, b) => a.itemId.localeCompare(b.itemId, "ja"));
+      return items
+        .map((item): AttentionPaymentEvidence => {
+          const itemBucket = itemBuckets.get(
+            key([
+              item.accountKey.account,
+              item.accountKey.chapter,
+              item.accountKey.section,
+              item.accountKey.item,
+            ]),
+          );
+          const sectionBucket = sectionBuckets.get(
+            key([item.accountKey.account, item.accountKey.chapter, item.accountKey.section]),
+          );
+          const chapterBucket = chapterBuckets.get(
+            key([item.accountKey.account, item.accountKey.chapter]),
+          );
+          const choice: [AttentionPaymentMatchGranularity, Bucket | undefined] =
+            itemBucket != null && itemBucket.transactionCount > 0
+              ? ["item", itemBucket]
+              : sectionBucket != null && sectionBucket.transactionCount > 0
+                ? ["section", sectionBucket]
+                : chapterBucket != null && chapterBucket.transactionCount > 0
+                  ? ["chapter", chapterBucket]
+                  : ["none", undefined];
+          const [matchGranularity, selected] = choice;
+          return {
+            itemId: item.itemId,
+            comparisonId: item.comparison?.comparisonId ?? null,
+            matchGranularity,
+            transactionCount: selected?.transactionCount ?? 0,
+            totalAmountYen: selected?.totalAmountYen ?? 0,
+            ordinaryAmountYen: selected?.ordinaryAmountYen ?? 0,
+            closingAmountYen: selected?.closingAmountYen ?? 0,
+            firstPaymentDate: selected?.firstPaymentDate ?? null,
+            lastPaymentDate: selected?.lastPaymentDate ?? null,
+            topPaymentNames: selected == null ? [] : sorted(selected.names, 10),
+            expenseBreakdown: selected == null ? [] : sorted(selected.expenses),
+          };
+        })
+        .sort((a, b) => a.itemId.localeCompare(b.itemId, "ja"));
     },
   };
 }
