@@ -4,7 +4,7 @@ import { describe, it } from "node:test";
 import { sortBreakdownComponentsByUnexecutedAmount } from "../web/attention-detail-sort.ts";
 
 describe("attention detail unexecuted ranking", () => {
-  it("支出済額ではなく年度内未執行額の降順に並べる", () => {
+  it("支出済額ではなく年度内執行ギャップ額の降順に並べる", () => {
     const input = [
       {
         accountKey: { key: "a" },
@@ -28,7 +28,7 @@ describe("attention detail unexecuted ranking", () => {
     );
   });
 
-  it("未執行額が同じ場合はaccountKey.key昇順にする", () => {
+  it("年度内執行ギャップ額が同じ場合はaccountKey.key昇順にする", () => {
     const sorted = sortBreakdownComponentsByUnexecutedAmount([
       { accountKey: { key: "z" }, amounts: { yearEndUnexecutedYen: 20 } },
       { accountKey: { key: "a" }, amounts: { yearEndUnexecutedYen: 20 } },
@@ -43,9 +43,9 @@ describe("attention detail unexecuted ranking", () => {
   it("通常表示で支払件名上位を主ランキングにしない", async () => {
     const source = await readFile(new URL("../web/attention-detail.ts", import.meta.url), "utf8");
 
-    assert.match(source, /未執行額が大きい構成明細/u);
-    assert.match(source, /年度内未執行額/u);
-    assert.match(source, /年度内未執行率/u);
+    assert.match(source, /年度内執行ギャップ額が大きい構成明細/u);
+    assert.match(source, /年度内執行ギャップ額/u);
+    assert.match(source, /年度内執行ギャップ率/u);
     assert.match(source, /実際に支出された内容（公金支出・参考）/u);
     assert.doesNotMatch(source, /aggregateList\("支払件名上位"/u);
   });
