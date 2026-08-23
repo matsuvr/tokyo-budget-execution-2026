@@ -176,6 +176,14 @@ export interface InvestigationQuestionView {
   text: string;
 }
 
+export interface PolicyReviewPaymentEvidenceView {
+  transactionCount: number;
+  totalAmountYen: number;
+  ordinaryAmountYen: number;
+  closingAmountYen: number;
+  topPaymentNames: NameAggregateView[];
+}
+
 export interface PolicyReviewDetailView {
   reviewId: string | null;
   comparisonId: string;
@@ -199,7 +207,7 @@ export interface PolicyReviewDetailView {
     evidenceReferences: EvidenceReferenceView[];
     reviewerNotes: string;
   } | null;
-  paymentEvidence: unknown;
+  paymentEvidence: PolicyReviewPaymentEvidenceView | null;
 }
 
 export interface ExecutionAttentionDetailView {
