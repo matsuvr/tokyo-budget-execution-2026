@@ -16,14 +16,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Derive policy-attention execution gaps
+      - name: Derive policy-attention execution gaps and evidence
         shell: bash
         run: |
           node <<'NODE'
           const fs = require('node:fs');
-          const path = 'data/normalized/execution-review/execution-attention-items.json';
-          const data = JSON.parse(fs.readFileSync(path, 'utf8'));
-          const top = data.records
+          const itemsPath = 'data/normalized/execution-review/execution-attention-items.json';
+          const detailsPath = 'data/normalized/execution-review/execution-attention-details.json';
+          const itemsData = JSON.parse(fs.readFileSync(itemsPath, 'utf8'));
+          const top = itemsData.records
             .filter((record) =>
               record.reviewScope === 'operational' &&
               record.attentionFlags.includes('high-unexecuted-rate')
@@ -32,27 +33,24 @@ jobs:
               right.amounts.yearEndUnexecutedYen - left.amounts.yearEndUnexecutedYen ||
               left.itemId.localeCompare(right.itemId, 'ja')
             )
-            .slice(0, 12)
-            .map((record, index) => ({
-              rank: index + 1,
-              itemId: record.itemId,
-              bureau: record.bureau,
-              accountKey: record.accountKey,
-              executionMethod: record.executionMethod,
-              amounts: record.amounts,
-              rates: record.rates,
-              gapComposition: record.gapComposition,
-              attentionFlags: record.attentionFlags,
-              sourcePage: record.sourcePage,
-              source: record.source,
-            }));
-          fs.writeFileSync('top-unused-summary.json', JSON.stringify(top, null, 2) + '\n');
-          for (const record of top) {
-            console.log(`POLICY_TOP_${String(record.rank).padStart(2, '0')}=${JSON.stringify(record)}`);
+            .slice(0, 6);
+          for (const [index, record] of top.entries()) {
+            console.log(`POLICY_TOP_${String(index + 1).padStart(2, '0')}=${JSON.stringify(record)}`);
+          }
+
+          const detailsData = JSON.parse(fs.readFileSync(detailsPath, 'utf8'));
+          const detailRecords = Array.isArray(detailsData)
+            ? detailsData
+            : detailsData.records ?? detailsData.details ?? Object.values(detailsData);
+          const targetIds = new Set(top.map((record) => record.itemId));
+          const selectedDetails = detailRecords.filter((detail) =>
+            detail && detail.item && targetIds.has(detail.item.itemId)
+          );
+          console.log(`DETAIL_CONTAINER_KEYS=${JSON.stringify(Object.keys(detailsData))}`);
+          for (const detail of selectedDetails) {
+            console.log(`ATTENTION_DETAIL=${JSON.stringify(detail)}`);
+          }
+          if (selectedDetails.length !== top.length) {
+            throw new Error(`expected ${top.length} details, found ${selectedDetails.length}`);
           }
           NODE
-      - uses: actions/upload-artifact@v4
-        with:
-          name: top-unused-summary
-          path: top-unused-summary.json
-          if-no-files-found: error
