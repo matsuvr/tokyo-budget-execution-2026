@@ -1,4 +1,4 @@
-name: derive-top-unused-summary
+name: verify-top-unused-summary
 
 on:
   push:
@@ -12,45 +12,21 @@ permissions:
   contents: read
 
 jobs:
-  derive:
+  verify:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Derive policy-attention execution gaps and evidence
-        shell: bash
-        run: |
-          node <<'NODE'
-          const fs = require('node:fs');
-          const itemsPath = 'data/normalized/execution-review/execution-attention-items.json';
-          const detailsPath = 'data/normalized/execution-review/execution-attention-details.json';
-          const itemsData = JSON.parse(fs.readFileSync(itemsPath, 'utf8'));
-          const top = itemsData.records
-            .filter((record) =>
-              record.reviewScope === 'operational' &&
-              record.attentionFlags.includes('high-unexecuted-rate')
-            )
-            .sort((left, right) =>
-              right.amounts.yearEndUnexecutedYen - left.amounts.yearEndUnexecutedYen ||
-              left.itemId.localeCompare(right.itemId, 'ja')
-            )
-            .slice(0, 6);
-          for (const [index, record] of top.entries()) {
-            console.log(`POLICY_TOP_${String(index + 1).padStart(2, '0')}=${JSON.stringify(record)}`);
-          }
-
-          const detailsData = JSON.parse(fs.readFileSync(detailsPath, 'utf8'));
-          const detailRecords = Array.isArray(detailsData)
-            ? detailsData
-            : detailsData.records ?? detailsData.details ?? Object.values(detailsData);
-          const targetIds = new Set(top.map((record) => record.itemId));
-          const selectedDetails = detailRecords.filter((detail) =>
-            detail && detail.item && targetIds.has(detail.item.itemId)
-          );
-          console.log(`DETAIL_CONTAINER_KEYS=${JSON.stringify(Object.keys(detailsData))}`);
-          for (const detail of selectedDetails) {
-            console.log(`ATTENTION_DETAIL=${JSON.stringify(detail)}`);
-          }
-          if (selectedDetails.length !== top.length) {
-            throw new Error(`expected ${top.length} details, found ${selectedDetails.length}`);
-          }
-          NODE
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm typecheck
+      - run: pnpm lint
+      - run: pnpm test
+      - run: pnpm build:web
+      - name: Check committed browser build
+        run: git diff --exit-code -- public
