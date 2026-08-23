@@ -1,6 +1,6 @@
 {
- "version": 1,
- "generatedAt": "2026-08-22T13:42:54.443Z",
+ "version": 2,
+ "generatedAt": "2026-08-23T03:49:44.871Z",
  "scope": {
   "fiscalYears": {
    "settlement": 2024,
@@ -11,6 +11,12 @@
  },
  "scan": {
   "total": 408,
+  "leaf": 309,
+  "byReviewScope": {
+   "operational": 293,
+   "reference-only": 16,
+   "uncertain": 0
+  },
   "policyReviewTarget": 396,
   "policyReviewExcluded": 12,
   "file": "data/normalized/execution-review/fy2024/execution-scan.json"
@@ -86,5 +92,67 @@
   "公金支出情報は正式決算（令和6年度一般会計歳入歳出決算事項別明細書）の代替にしない。支払件名・金額は補助証拠としてのみ使う。",
   "執行率=支出済額/予算現額。公金支出明細を分子にしない。",
   "C/unmatchedの対応は比較出力に含まれず、対応表(account-mappings.json)でのみ管理される。"
- ]
+ ],
+ "attentionItems": {
+  "listPath": "data/normalized/execution-review/execution-attention-items.json",
+  "detailPath": "data/normalized/execution-review/execution-attention-details.json",
+  "bureauSummaryPath": "data/normalized/execution-review/attention-bureau-summary.json",
+  "recordCount": 309,
+  "detailCount": 309,
+  "scopeCounts": {
+   "operational": 293,
+   "reference-only": 16,
+   "uncertain": 0
+  },
+  "comparisonCounts": {
+   "attached": 309,
+   "unavailable": 0
+  },
+  "totalsByScope": {
+   "operational": {
+    "currentBudgetYen": 8324500010000,
+    "spentYen": 7762574450924,
+    "carryoverYen": 110837422000,
+    "unusedYen": 451088137076,
+    "yearEndUnexecutedYen": 561925559076
+   },
+   "reference-only": {
+    "currentBudgetYen": 1011518946000,
+    "spentYen": 962010784368,
+    "carryoverYen": 0,
+    "unusedYen": 49508161632,
+    "yearEndUnexecutedYen": 49508161632
+   },
+   "uncertain": {
+    "currentBudgetYen": 0,
+    "spentYen": 0,
+    "carryoverYen": 0,
+    "unusedYen": 0,
+    "yearEndUnexecutedYen": 0
+   }
+  },
+  "flagCountsByScope": {
+   "operational": {
+    "material-unexecuted-amount": 187,
+    "high-unexecuted-rate": 63,
+    "budget-continues": 267,
+    "budget-expanded": 264,
+    "cross-year-comparison-unavailable": 0
+   },
+   "reference-only": {
+    "material-unexecuted-amount": 9,
+    "high-unexecuted-rate": 4,
+    "budget-continues": 10,
+    "budget-expanded": 5,
+    "cross-year-comparison-unavailable": 0
+   },
+   "uncertain": {
+    "material-unexecuted-amount": 0,
+    "high-unexecuted-rate": 0,
+    "budget-continues": 0,
+    "budget-expanded": 0,
+    "cross-year-comparison-unavailable": 0
+   }
+  }
+ }
 }

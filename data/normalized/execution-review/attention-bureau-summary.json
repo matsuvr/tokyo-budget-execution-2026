@@ -1,0 +1,591 @@
+{
+ "generatedAt": "2026-08-23T03:49:44.522Z",
+ "fiscalYear": 2024,
+ "generatedFrom": "data/normalized/execution-review/execution-attention-items.json",
+ "rowCount": 23,
+ "rows": [
+  {
+   "bureau": "土木費",
+   "scope": "operational",
+   "itemCount": 39,
+   "amounts": {
+    "currentBudgetYen": 594733158000,
+    "spentYen": 498865730454,
+    "carryoverYen": 37206011000,
+    "unusedYen": 58661416546,
+    "yearEndUnexecutedYen": 95867427546
+   },
+   "rates": {
+    "executionRate": 0.8388059817139034,
+    "yearEndUnexecutedRate": 0.16119401828609664
+   },
+   "flagCounts": {
+    "material-unexecuted-amount": 24,
+    "high-unexecuted-rate": 13,
+    "budget-continues": 31,
+    "budget-expanded": 31,
+    "cross-year-comparison-unavailable": 0
+   },
+   "comparisonAttachedCount": 39,
+   "comparisonUnavailableCount": 0
+  },
+  {
+   "bureau": "福祉費",
+   "scope": "operational",
+   "itemCount": 27,
+   "amounts": {
+    "currentBudgetYen": 1145795413000,
+    "spentYen": 1066495914576,
+    "carryoverYen": 15682591000,
+    "unusedYen": 63616907424,
+    "yearEndUnexecutedYen": 79299498424
+   },
+   "rates": {
+    "executionRate": 0.9307908745974357,
+    "yearEndUnexecutedRate": 0.06920912540256434
+   },
+   "flagCounts": {
+    "material-unexecuted-amount": 22,
+    "high-unexecuted-rate": 3,
+    "budget-continues": 27,
+    "budget-expanded": 27,
+    "cross-year-comparison-unavailable": 0
+   },
+   "comparisonAttachedCount": 27,
+   "comparisonUnavailableCount": 0
+  },
+  {
+   "bureau": "総務費",
+   "scope": "operational",
+   "itemCount": 35,
+   "amounts": {
+    "currentBudgetYen": 589651477000,
+    "spentYen": 510707853201,
+    "carryoverYen": 26105024000,
+    "unusedYen": 52838599799,
+    "yearEndUnexecutedYen": 78943623799
+   },
+   "rates": {
+    "executionRate": 0.8661181615271355,
+    "yearEndUnexecutedRate": 0.13388183847286453
+   },
+   "flagCounts": {
+    "material-unexecuted-amount": 18,
+    "high-unexecuted-rate": 4,
+    "budget-continues": 27,
+    "budget-expanded": 27,
+    "cross-year-comparison-unavailable": 0
+   },
+   "comparisonAttachedCount": 35,
+   "comparisonUnavailableCount": 0
+  },
+  {
+   "bureau": "産業労働費",
+   "scope": "operational",
+   "itemCount": 21,
+   "amounts": {
+    "currentBudgetYen": 699049797000,
+    "spentYen": 628635837776,
+    "carryoverYen": 3690195000,
+    "unusedYen": 66723764224,
+    "yearEndUnexecutedYen": 70413959224
+   },
+   "rates": {
+    "executionRate": 0.8992718980447684,
+    "yearEndUnexecutedRate": 0.10072810195523167
+   },
+   "flagCounts": {
+    "material-unexecuted-amount": 14,
+    "high-unexecuted-rate": 6,
+    "budget-continues": 21,
+    "budget-expanded": 21,
+    "cross-year-comparison-unavailable": 0
+   },
+   "comparisonAttachedCount": 21,
+   "comparisonUnavailableCount": 0
+  },
+  {
+   "bureau": "教育費",
+   "scope": "operational",
+   "itemCount": 32,
+   "amounts": {
+    "currentBudgetYen": 979046510000,
+    "spentYen": 931116412379,
+    "carryoverYen": 0,
+    "unusedYen": 47930097621,
+    "yearEndUnexecutedYen": 47930097621
+   },
+   "rates": {
+    "executionRate": 0.9510441055338628,
+    "yearEndUnexecutedRate": 0.04895589446613726
+   },
+   "flagCounts": {
+    "material-unexecuted-amount": 20,
+    "high-unexecuted-rate": 11,
+    "budget-continues": 32,
+    "budget-expanded": 32,
+    "cross-year-comparison-unavailable": 0
+   },
+   "comparisonAttachedCount": 32,
+   "comparisonUnavailableCount": 0
+  },
+  {
+   "bureau": "保健医療費",
+   "scope": "operational",
+   "itemCount": 21,
+   "amounts": {
+    "currentBudgetYen": 514736980000,
+    "spentYen": 474450019679,
+    "carryoverYen": 6108888000,
+    "unusedYen": 34178072321,
+    "yearEndUnexecutedYen": 40286960321
+   },
+   "rates": {
+    "executionRate": 0.9217329201391359,
+    "yearEndUnexecutedRate": 0.07826707986086409
+   },
+   "flagCounts": {
+    "material-unexecuted-amount": 17,
+    "high-unexecuted-rate": 3,
+    "budget-continues": 19,
+    "budget-expanded": 19,
+    "cross-year-comparison-unavailable": 0
+   },
+   "comparisonAttachedCount": 21,
+   "comparisonUnavailableCount": 0
+  },
+  {
+   "bureau": "諸支出金",
+   "scope": "operational",
+   "itemCount": 16,
+   "amounts": {
+    "currentBudgetYen": 1889958314000,
+    "spentYen": 1859547393600,
+    "carryoverYen": 0,
+    "unusedYen": 30410920400,
+    "yearEndUnexecutedYen": 30410920400
+   },
+   "rates": {
+    "executionRate": 0.9839092110261222,
+    "yearEndUnexecutedRate": 0.016090788973877865
+   },
+   "flagCounts": {
+    "material-unexecuted-amount": 7,
+    "high-unexecuted-rate": 3,
+    "budget-continues": 16,
+    "budget-expanded": 16,
+    "cross-year-comparison-unavailable": 0
+   },
+   "comparisonAttachedCount": 16,
+   "comparisonUnavailableCount": 0
+  },
+  {
+   "bureau": "都市整備費",
+   "scope": "operational",
+   "itemCount": 22,
+   "amounts": {
+    "currentBudgetYen": 215282697000,
+    "spentYen": 187000862896,
+    "carryoverYen": 6339891000,
+    "unusedYen": 21941943104,
+    "yearEndUnexecutedYen": 28281834104
+   },
+   "rates": {
+    "executionRate": 0.8686293208970715,
+    "yearEndUnexecutedRate": 0.13137067910292854
+   },
+   "flagCounts": {
+    "material-unexecuted-amount": 14,
+    "high-unexecuted-rate": 6,
+    "budget-continues": 22,
+    "budget-expanded": 22,
+    "cross-year-comparison-unavailable": 0
+   },
+   "comparisonAttachedCount": 22,
+   "comparisonUnavailableCount": 0
+  },
+  {
+   "bureau": "学務費",
+   "scope": "operational",
+   "itemCount": 4,
+   "amounts": {
+    "currentBudgetYen": 297687808000,
+    "spentYen": 278713178716,
+    "carryoverYen": 0,
+    "unusedYen": 18974629284,
+    "yearEndUnexecutedYen": 18974629284
+   },
+   "rates": {
+    "executionRate": 0.936259971775532,
+    "yearEndUnexecutedRate": 0.06374002822446796
+   },
+   "flagCounts": {
+    "material-unexecuted-amount": 3,
+    "high-unexecuted-rate": 1,
+    "budget-continues": 4,
+    "budget-expanded": 4,
+    "cross-year-comparison-unavailable": 0
+   },
+   "comparisonAttachedCount": 4,
+   "comparisonUnavailableCount": 0
+  },
+  {
+   "bureau": "港湾費",
+   "scope": "operational",
+   "itemCount": 18,
+   "amounts": {
+    "currentBudgetYen": 116988223000,
+    "spentYen": 98215584612,
+    "carryoverYen": 7597764000,
+    "unusedYen": 11174874388,
+    "yearEndUnexecutedYen": 18772638388
+   },
+   "rates": {
+    "executionRate": 0.839533947036703,
+    "yearEndUnexecutedRate": 0.160466052963297
+   },
+   "flagCounts": {
+    "material-unexecuted-amount": 12,
+    "high-unexecuted-rate": 7,
+    "budget-continues": 18,
+    "budget-expanded": 18,
+    "cross-year-comparison-unavailable": 0
+   },
+   "comparisonAttachedCount": 18,
+   "comparisonUnavailableCount": 0
+  },
+  {
+   "bureau": "環境費",
+   "scope": "operational",
+   "itemCount": 10,
+   "amounts": {
+    "currentBudgetYen": 182607162000,
+    "spentYen": 163882866133,
+    "carryoverYen": 3645961000,
+    "unusedYen": 15078334867,
+    "yearEndUnexecutedYen": 18724295867
+   },
+   "rates": {
+    "executionRate": 0.8974613281214019,
+    "yearEndUnexecutedRate": 0.10253867187859805
+   },
+   "flagCounts": {
+    "material-unexecuted-amount": 7,
+    "high-unexecuted-rate": 3,
+    "budget-continues": 10,
+    "budget-expanded": 7,
+    "cross-year-comparison-unavailable": 0
+   },
+   "comparisonAttachedCount": 10,
+   "comparisonUnavailableCount": 0
+  },
+  {
+   "bureau": "警察費",
+   "scope": "operational",
+   "itemCount": 16,
+   "amounts": {
+    "currentBudgetYen": 642105486000,
+    "spentYen": 625910112707,
+    "carryoverYen": 758616000,
+    "unusedYen": 15436757293,
+    "yearEndUnexecutedYen": 16195373293
+   },
+   "rates": {
+    "executionRate": 0.9747777060839502,
+    "yearEndUnexecutedRate": 0.0252222939160498
+   },
+   "flagCounts": {
+    "material-unexecuted-amount": 13,
+    "high-unexecuted-rate": 1,
+    "budget-continues": 16,
+    "budget-expanded": 16,
+    "cross-year-comparison-unavailable": 0
+   },
+   "comparisonAttachedCount": 16,
+   "comparisonUnavailableCount": 0
+  },
+  {
+   "bureau": "消防費",
+   "scope": "operational",
+   "itemCount": 15,
+   "amounts": {
+    "currentBudgetYen": 278229098000,
+    "spentYen": 268125786141,
+    "carryoverYen": 3588650000,
+    "unusedYen": 6514661859,
+    "yearEndUnexecutedYen": 10103311859
+   },
+   "rates": {
+    "executionRate": 0.9636870768311947,
+    "yearEndUnexecutedRate": 0.0363129231688053
+   },
+   "flagCounts": {
+    "material-unexecuted-amount": 7,
+    "high-unexecuted-rate": 0,
+    "budget-continues": 15,
+    "budget-expanded": 15,
+    "cross-year-comparison-unavailable": 0
+   },
+   "comparisonAttachedCount": 15,
+   "comparisonUnavailableCount": 0
+  },
+  {
+   "bureau": "生活文化スポーツ費",
+   "scope": "operational",
+   "itemCount": 8,
+   "amounts": {
+    "currentBudgetYen": 89434821000,
+    "spentYen": 83265076434,
+    "carryoverYen": 113831000,
+    "unusedYen": 6055913566,
+    "yearEndUnexecutedYen": 6169744566
+   },
+   "rates": {
+    "executionRate": 0.9310140670377145,
+    "yearEndUnexecutedRate": 0.06898593296228546
+   },
+   "flagCounts": {
+    "material-unexecuted-amount": 6,
+    "high-unexecuted-rate": 2,
+    "budget-continues": 0,
+    "budget-expanded": 0,
+    "cross-year-comparison-unavailable": 0
+   },
+   "comparisonAttachedCount": 8,
+   "comparisonUnavailableCount": 0
+  },
+  {
+   "bureau": "徴税費",
+   "scope": "operational",
+   "itemCount": 7,
+   "amounts": {
+    "currentBudgetYen": 83878594000,
+    "spentYen": 82838827751,
+    "carryoverYen": 0,
+    "unusedYen": 1039766249,
+    "yearEndUnexecutedYen": 1039766249
+   },
+   "rates": {
+    "executionRate": 0.9876039141881658,
+    "yearEndUnexecutedRate": 0.012396085811834184
+   },
+   "flagCounts": {
+    "material-unexecuted-amount": 1,
+    "high-unexecuted-rate": 0,
+    "budget-continues": 7,
+    "budget-expanded": 7,
+    "cross-year-comparison-unavailable": 0
+   },
+   "comparisonAttachedCount": 7,
+   "comparisonUnavailableCount": 0
+  },
+  {
+   "bureau": "議会費",
+   "scope": "operational",
+   "itemCount": 2,
+   "amounts": {
+    "currentBudgetYen": 5314472000,
+    "spentYen": 4802993869,
+    "carryoverYen": 0,
+    "unusedYen": 511478131,
+    "yearEndUnexecutedYen": 511478131
+   },
+   "rates": {
+    "executionRate": 0.9037574887966293,
+    "yearEndUnexecutedRate": 0.09624251120337073
+   },
+   "flagCounts": {
+    "material-unexecuted-amount": 2,
+    "high-unexecuted-rate": 0,
+    "budget-continues": 2,
+    "budget-expanded": 2,
+    "cross-year-comparison-unavailable": 0
+   },
+   "comparisonAttachedCount": 2,
+   "comparisonUnavailableCount": 0
+  },
+  {
+   "bureau": "教育費",
+   "scope": "reference-only",
+   "itemCount": 2,
+   "amounts": {
+    "currentBudgetYen": 44851000000,
+    "spentYen": 42328578427,
+    "carryoverYen": 0,
+    "unusedYen": 2522421573,
+    "yearEndUnexecutedYen": 2522421573
+   },
+   "rates": {
+    "executionRate": 0.9437599702793694,
+    "yearEndUnexecutedRate": 0.05624002972063053
+   },
+   "flagCounts": {
+    "material-unexecuted-amount": 1,
+    "high-unexecuted-rate": 0,
+    "budget-continues": 0,
+    "budget-expanded": 0,
+    "cross-year-comparison-unavailable": 0
+   },
+   "comparisonAttachedCount": 2,
+   "comparisonUnavailableCount": 0
+  },
+  {
+   "bureau": "警察費",
+   "scope": "reference-only",
+   "itemCount": 2,
+   "amounts": {
+    "currentBudgetYen": 28958118000,
+    "spentYen": 28872623437,
+    "carryoverYen": 0,
+    "unusedYen": 85494563,
+    "yearEndUnexecutedYen": 85494563
+   },
+   "rates": {
+    "executionRate": 0.9970476478133006,
+    "yearEndUnexecutedRate": 0.0029523521866994256
+   },
+   "flagCounts": {
+    "material-unexecuted-amount": 0,
+    "high-unexecuted-rate": 0,
+    "budget-continues": 2,
+    "budget-expanded": 0,
+    "cross-year-comparison-unavailable": 0
+   },
+   "comparisonAttachedCount": 2,
+   "comparisonUnavailableCount": 0
+  },
+  {
+   "bureau": "公債費",
+   "scope": "reference-only",
+   "itemCount": 2,
+   "amounts": {
+    "currentBudgetYen": 412955089000,
+    "spentYen": 406655395056,
+    "carryoverYen": 0,
+    "unusedYen": 6299693944,
+    "yearEndUnexecutedYen": 6299693944
+   },
+   "rates": {
+    "executionRate": 0.9847448448710121,
+    "yearEndUnexecutedRate": 0.01525515512898789
+   },
+   "flagCounts": {
+    "material-unexecuted-amount": 1,
+    "high-unexecuted-rate": 1,
+    "budget-continues": 0,
+    "budget-expanded": 0,
+    "cross-year-comparison-unavailable": 0
+   },
+   "comparisonAttachedCount": 2,
+   "comparisonUnavailableCount": 0
+  },
+  {
+   "bureau": "諸支出金",
+   "scope": "reference-only",
+   "itemCount": 5,
+   "amounts": {
+    "currentBudgetYen": 492778000000,
+    "spentYen": 459484318147,
+    "carryoverYen": 0,
+    "unusedYen": 33293681853,
+    "yearEndUnexecutedYen": 33293681853
+   },
+   "rates": {
+    "executionRate": 0.9324367527507316,
+    "yearEndUnexecutedRate": 0.06756324724926843
+   },
+   "flagCounts": {
+    "material-unexecuted-amount": 4,
+    "high-unexecuted-rate": 0,
+    "budget-continues": 5,
+    "budget-expanded": 5,
+    "cross-year-comparison-unavailable": 0
+   },
+   "comparisonAttachedCount": 5,
+   "comparisonUnavailableCount": 0
+  },
+  {
+   "bureau": "消防費",
+   "scope": "reference-only",
+   "itemCount": 2,
+   "amounts": {
+    "currentBudgetYen": 10454509000,
+    "spentYen": 10329717887,
+    "carryoverYen": 0,
+    "unusedYen": 124791113,
+    "yearEndUnexecutedYen": 124791113
+   },
+   "rates": {
+    "executionRate": 0.9880634171341762,
+    "yearEndUnexecutedRate": 0.011936582865823732
+   },
+   "flagCounts": {
+    "material-unexecuted-amount": 1,
+    "high-unexecuted-rate": 0,
+    "budget-continues": 0,
+    "budget-expanded": 0,
+    "cross-year-comparison-unavailable": 0
+   },
+   "comparisonAttachedCount": 2,
+   "comparisonUnavailableCount": 0
+  },
+  {
+   "bureau": "総務費",
+   "scope": "reference-only",
+   "itemCount": 2,
+   "amounts": {
+    "currentBudgetYen": 18953741000,
+    "spentYen": 14340151414,
+    "carryoverYen": 0,
+    "unusedYen": 4613589586,
+    "yearEndUnexecutedYen": 4613589586
+   },
+   "rates": {
+    "executionRate": 0.7565868613483745,
+    "yearEndUnexecutedRate": 0.24341313865162556
+   },
+   "flagCounts": {
+    "material-unexecuted-amount": 1,
+    "high-unexecuted-rate": 2,
+    "budget-continues": 2,
+    "budget-expanded": 0,
+    "cross-year-comparison-unavailable": 0
+   },
+   "comparisonAttachedCount": 2,
+   "comparisonUnavailableCount": 0
+  },
+  {
+   "bureau": "予備費",
+   "scope": "reference-only",
+   "itemCount": 1,
+   "amounts": {
+    "currentBudgetYen": 2568489000,
+    "spentYen": 0,
+    "carryoverYen": 0,
+    "unusedYen": 2568489000,
+    "yearEndUnexecutedYen": 2568489000
+   },
+   "rates": {
+    "executionRate": 0,
+    "yearEndUnexecutedRate": 1
+   },
+   "flagCounts": {
+    "material-unexecuted-amount": 1,
+    "high-unexecuted-rate": 1,
+    "budget-continues": 1,
+    "budget-expanded": 0,
+    "cross-year-comparison-unavailable": 0
+   },
+   "comparisonAttachedCount": 1,
+   "comparisonUnavailableCount": 0
+  }
+ ],
+ "summary": {
+  "itemCount": 309,
+  "scopeRowCounts": {
+   "operational": 16,
+   "reference-only": 7,
+   "uncertain": 0
+  }
+ }
+}
