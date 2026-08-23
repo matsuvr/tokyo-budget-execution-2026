@@ -2,13 +2,15 @@
  * 執行レビューで使う基本指標の純粋関数。
  * - 丸めは行わず生の比率を返す。表示時のみ整形する。
  * - 分母が 0 または null/undefined なら null を返す（0で補完しない）。
- * - 負数は RangeError を投げる（呼び出し側で捕捉して not-found 等へ）。
- * - 入力オブジェクトは変更しない。
+ * - 負数は RangeError を投げる。
  */
 
-/**
- * 執行率 = 支出済額 / 予算現額
- */
+function validateAmount(value: number, name: string): void {
+  if (!Number.isFinite(value)) throw new RangeError(`${name} must be finite`);
+  if (value < 0) throw new RangeError(`${name} must be non-negative`);
+  if (!Number.isSafeInteger(value)) throw new RangeError(`${name} must be a safe integer`);
+}
+
 export function executionRate(
   spentYen: number | null | undefined,
   currentBudgetYen: number | null | undefined,
@@ -20,9 +22,6 @@ export function executionRate(
   return spentYen / currentBudgetYen;
 }
 
-/**
- * 繰越率 = 翌年度繰越額 / 予算現額
- */
 export function carryoverRate(
   carryoverYen: number | null | undefined,
   currentBudgetYen: number | null | undefined,
@@ -34,9 +33,6 @@ export function carryoverRate(
   return carryoverYen / currentBudgetYen;
 }
 
-/**
- * 不用率 = 不用額 / 予算現額
- */
 export function unusedRate(
   unusedYen: number | null | undefined,
   currentBudgetYen: number | null | undefined,
@@ -48,9 +44,6 @@ export function unusedRate(
   return unusedYen / currentBudgetYen;
 }
 
-/**
- * 予算継続率 = 2026年度当初予算 / 2024年度当初予算
- */
 export function budgetContinuationRate(
   fy2026InitialYen: number | null | undefined,
   fy2024InitialYen: number | null | undefined,
@@ -61,4 +54,31 @@ export function budgetContinuationRate(
     throw new RangeError("amount must be non-negative");
   if (fy2024InitialYen === 0) return null;
   return fy2026InitialYen / fy2024InitialYen;
+}
+
+/** 年度内未執行額 = 翌年度繰越額 + 不用額。 */
+export function yearEndUnexecutedYen(
+  carryoverYen: number | null | undefined,
+  unusedYen: number | null | undefined,
+): number | null {
+  if (carryoverYen == null || unusedYen == null) return null;
+  validateAmount(carryoverYen, "carryoverYen");
+  validateAmount(unusedYen, "unusedYen");
+  const total = carryoverYen + unusedYen;
+  if (!Number.isSafeInteger(total)) throw new RangeError("yearEndUnexecutedYen exceeds safe integer range");
+  return total;
+}
+
+/** 年度内未執行率 = (翌年度繰越額 + 不用額) / 予算現額。 */
+export function yearEndUnexecutedRate(
+  carryoverYen: number | null | undefined,
+  unusedYen: number | null | undefined,
+  currentBudgetYen: number | null | undefined,
+): number | null {
+  if (currentBudgetYen == null) return null;
+  if (!Number.isFinite(currentBudgetYen)) return null;
+  if (currentBudgetYen < 0) throw new RangeError("currentBudgetYen must be non-negative");
+  if (currentBudgetYen === 0) return null;
+  const amount = yearEndUnexecutedYen(carryoverYen, unusedYen);
+  return amount == null ? null : amount / currentBudgetYen;
 }

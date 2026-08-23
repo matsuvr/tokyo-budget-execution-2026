@@ -1,62 +1,24 @@
-import { ApiError, fetchBureauSummary, fetchExecutionReviewIndex, fetchPolicyReviewDetail, fetchReviewCandidates } from "./api.js";
-import { renderCandidateList } from "./candidates.js";
+import { ApiError, fetchAttentionBureauSummary, fetchExecutionAttentionDetail, fetchExecutionAttentionItems, fetchExecutionReviewIndex, } from "./api.js";
+import { applyAttentionFilters, defaultAttentionFilters, sortAttentionItems, } from "./attention-filter.js";
+import { renderAttentionFilters } from "./attention-filters.js";
+import { renderAttentionList } from "./attention-items.js";
+import { renderAttentionBureaus } from "./attention-bureaus.js";
+import { renderReferenceItems } from "./reference-items.js";
 import { el } from "./dom.js";
-import { renderBureauSection } from "./bureaus.js";
-import { applyCandidateFilters, defaultFilters, } from "./filter.js";
-import { renderFilterControls } from "./filters.js";
 import { renderOverviewCard } from "./overview.js";
 const content = document.querySelector("#content");
 const errorBox = document.querySelector("#error");
 const loading = document.querySelector("#loading");
 const state = {
     index: null,
-    candidates: null,
+    items: null,
     bureaus: null,
-    filters: defaultFilters(),
-    view: "candidates",
-    expandedComparisonIds: new Set(),
+    filters: defaultAttentionFilters(),
+    sort: "unexecuted-amount-desc",
+    view: "items",
+    expandedItemIds: new Set(),
     detailCache: new Map(),
 };
-/** indexのfeaturedReviewsから comparisonId → reviewId の対応を作る */
-function reviewIdByComparison() {
-    const map = new Map();
-    if (state.index == null)
-        return map;
-    for (const featured of state.index.policyReviews.featuredReviews) {
-        if (featured.reviewId != null)
-            map.set(featured.comparisonId, featured.reviewId);
-    }
-    return map;
-}
-async function toggleDetail(candidate) {
-    if (candidate.comparisonId == null)
-        return;
-    const comparisonId = candidate.comparisonId;
-    if (!state.expandedComparisonIds.has(comparisonId)) {
-        state.expandedComparisonIds.add(comparisonId);
-        // 初回展開時だけ詳細APIを呼ぶ（失敗しても一覧全体は壊さない）
-        const reviewId = reviewIdByComparison().get(comparisonId);
-        if (reviewId != null && !state.detailCache.has(comparisonId)) {
-            state.detailCache.set(comparisonId, { loading: true, error: null, data: null });
-            renderSections();
-            try {
-                const data = await fetchPolicyReviewDetail(reviewId);
-                state.detailCache.set(comparisonId, { loading: false, error: null, data });
-            }
-            catch (error) {
-                state.detailCache.set(comparisonId, {
-                    loading: false,
-                    error: error instanceof ApiError ? error.message : "不明なエラー",
-                    data: null,
-                });
-            }
-        }
-    }
-    else {
-        state.expandedComparisonIds.delete(comparisonId);
-    }
-    renderSections();
-}
 function showError(message) {
     if (errorBox == null)
         return;
@@ -72,67 +34,95 @@ function hideMessages() {
         loading.hidden = true;
 }
 function showEmpty(message) {
-    if (content == null)
-        return;
-    content.replaceChildren(el("p", { class: "empty-note" }, message));
+    content?.replaceChildren(el("p", { class: "empty-note" }, message));
 }
+function detailSlot(itemId) {
+    const cached = state.detailCache.get(itemId);
+    return {
+        expanded: state.expandedItemIds.has(itemId),
+        loading: cached?.loading ?? false,
+        error: cached?.error ?? null,
+        data: cached?.data ?? null,
+    };
+}
+async function toggleDetail(itemId) {
+    if (state.expandedItemIds.has(itemId)) {
+        state.expandedItemIds.delete(itemId);
+        renderSections();
+        return;
+    }
+    state.expandedItemIds.add(itemId);
+    if (!state.detailCache.has(itemId)) {
+        state.detailCache.set(itemId, { loading: true, error: null, data: null });
+        renderSections();
+        try {
+            const data = await fetchExecutionAttentionDetail(itemId);
+            state.detailCache.set(itemId, { loading: false, error: null, data });
+        }
+        catch (error) {
+            state.detailCache.set(itemId, {
+                loading: false,
+                error: error instanceof ApiError ? error.message : "詳細の取得に失敗しました",
+                data: null,
+            });
+        }
+    }
+    renderSections();
+}
+const detailCallbacks = {
+    getDetailSlot(item) { return detailSlot(item.itemId); },
+    onToggleDetail(item) { void toggleDetail(item.itemId); },
+};
 function viewToggle() {
-    const makeButton = (mode, label) => {
+    const labels = {
+        items: "行政サービス・事業",
+        bureaus: "局・分野別",
+        reference: "参考項目・区分要確認",
+    };
+    return el("nav", { class: "view-toggle", "aria-label": "表示切り替え" }, ...Object.entries(labels).map(([mode, label]) => {
         const button = el("button", { type: "button", class: "view-toggle-button" }, label);
         button.setAttribute("aria-pressed", state.view === mode ? "true" : "false");
         if (state.view === mode)
             button.setAttribute("data-active", "");
         button.addEventListener("click", () => {
-            if (state.view !== mode) {
-                state.view = mode;
-                renderSections();
-            }
+            state.view = mode;
+            renderSections();
         });
         return button;
-    };
-    return el("div", { class: "view-toggle", role: "group", "aria-label": "表示切り替え" }, makeButton("candidates", "候補一覧"), makeButton("bureaus", "局別サマリー"));
+    }));
 }
 function renderSections() {
-    if (content == null || state.index == null || state.candidates == null)
+    if (content == null || state.index == null || state.items == null)
         return;
-    const overview = renderOverviewCard(state.index, state.candidates);
-    const records = state.candidates.records;
-    const reviewIds = reviewIdByComparison();
-    const main = state.view === "bureaus" && state.bureaus != null
-        ? renderBureauSection(state.bureaus, {
-            onSelectBureau(bureau) {
-                state.filters = { ...state.filters, bureau };
-                state.view = "candidates";
+    const all = state.items.records;
+    let main;
+    let filters = null;
+    if (state.view === "bureaus") {
+        main = state.bureaus == null
+            ? el("p", { class: "empty-note" }, "局・分野別サマリーを取得できませんでした。主一覧は利用できます。")
+            : renderAttentionBureaus(state.bureaus, {
+                onSelectBureau(bureau) {
+                    state.filters = { ...state.filters, scope: "operational", bureau };
+                    state.view = "items";
+                    renderSections();
+                },
+            });
+    }
+    else if (state.view === "reference") {
+        main = renderReferenceItems(all, detailCallbacks);
+    }
+    else {
+        const filtered = sortAttentionItems(applyAttentionFilters(all, state.filters), state.sort);
+        filters = renderAttentionFilters(all, filtered.length, state.filters, state.sort, {
+            onChange(nextFilters, nextSort) {
+                state.filters = nextFilters;
+                state.sort = nextSort;
                 renderSections();
-            },
-        })
-        : renderCandidateList(applyCandidateFilters(records, state.filters), {
-            getDetailSlot(candidate) {
-                const comparisonId = candidate.comparisonId ?? "";
-                const cached = state.detailCache.get(comparisonId);
-                return {
-                    reviewId: reviewIds.get(comparisonId) ?? null,
-                    expanded: state.expandedComparisonIds.has(comparisonId),
-                    loading: cached?.loading ?? false,
-                    error: cached?.error ?? null,
-                    data: cached?.data ?? null,
-                };
-            },
-            onToggleDetail(candidate) {
-                void toggleDetail(candidate);
             },
         });
-    // 候補一覧ビューのときだけフィルターを表示（局別ビューでは絞り込み対象が異なるため）
-    const filterControls = state.view === "candidates"
-        ? renderFilterControls(records, applyCandidateFilters(records, state.filters).length, state.filters, {
-            onFiltersChange(filters) {
-                state.filters = filters;
-                renderSections();
-            },
-        })
-        : null;
-    const sections = el("div", { class: "sections" }, overview, viewToggle(), filterControls ?? "", main);
-    content.replaceChildren(sections);
+        main = renderAttentionList(filtered, detailCallbacks);
+    }
+    content.replaceChildren(el("div", { class: "sections" }, renderOverviewCard(state.index), viewToggle(), filters, main));
 }
 async function main() {
     if (content == null) {
@@ -140,36 +130,30 @@ async function main() {
         return;
     }
     try {
-        const [index, candidates] = await Promise.all([
+        const [index, items] = await Promise.all([
             fetchExecutionReviewIndex(),
-            fetchReviewCandidates(),
+            fetchExecutionAttentionItems(),
         ]);
         let bureaus = null;
         try {
-            bureaus = await fetchBureauSummary();
+            bureaus = await fetchAttentionBureauSummary();
         }
         catch {
-            // 局別サマリーが取得できなくても候補一覧は表示する
             bureaus = null;
         }
         state.index = index;
-        state.candidates = candidates;
+        state.items = items;
         state.bureaus = bureaus;
         hideMessages();
-        if (index.comparisons.comparableCount === 0 || candidates.records.length === 0) {
-            showEmpty("表示できる比較データがまだありません。データ生成後に再度アクセスしてください。");
+        if (items.records.length === 0) {
+            showEmpty("表示できる2024年度執行明細がありません。データ生成後に再度アクセスしてください。");
             return;
         }
         renderSections();
     }
     catch (error) {
         hideMessages();
-        if (error instanceof ApiError) {
-            showError(error.message);
-        }
-        else {
-            showError("予期しないエラーで画面を表示できませんでした");
-        }
+        showError(error instanceof ApiError ? error.message : "予期しないエラーで画面を表示できませんでした");
         console.error(error);
     }
 }

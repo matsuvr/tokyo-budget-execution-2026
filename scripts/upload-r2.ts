@@ -3,14 +3,6 @@ import { readdir, stat } from "node:fs/promises";
 import { join, relative, resolve, sep } from "node:path";
 import { fileURLToPath } from "node:url";
 
-/**
- * R2アップロード（Issue #42）。
- * - 既定対象: data/normalized 配下の生成物 + manifest + 検証レポート + ソース一覧。
- * - 既定除外: 中間解析用の settlement-rows.jsonl、公金支出の巨大な transactions.jsonl、*.partial。
- * - 執行レビュー配信に必須のファイルが欠けている場合は警告して非0終了する。
- * - --list でアップロード予定一覧のみ表示できる（dry-run）。
- */
-
 const ROOT = resolve(fileURLToPath(new URL("../", import.meta.url)));
 const args = process.argv.slice(2).filter((arg) => arg !== "--");
 const bucket = args[0];
@@ -30,19 +22,14 @@ async function walk(directory: string): Promise<string[]> {
   }
   return files;
 }
-
-function relativeKey(file: string): string {
-  return relative(ROOT, file).split(sep).join("/");
-}
-
-/** 既定アップロードから除外する中間解析・巨大ファイル */
+function relativeKey(file: string): string { return relative(ROOT, file).split(sep).join("/"); }
 const DEFAULT_EXCLUDED_PATTERNS: readonly RegExp[] = [
   /\/settlement-rows\.jsonl$/u,
   /\/transactions\.jsonl$/u,
   /\.partial$/u,
 ];
 
-const REQUIRED_EXECUTION_REVIEW_KEYS: readonly string[] = [
+export const REQUIRED_EXECUTION_REVIEW_KEYS: readonly string[] = [
   "data/normalized/execution-review/index.json",
   "data/normalized/execution-review/fy2024/execution-scan.json",
   "data/normalized/execution-review/budget-comparisons.json",
@@ -50,6 +37,10 @@ const REQUIRED_EXECUTION_REVIEW_KEYS: readonly string[] = [
   "data/normalized/execution-review/bureau-summary.json",
   "data/normalized/execution-review/policy-review-details.json",
   "data/normalized/execution-review/payment-evidence.json",
+  "data/normalized/execution-review/execution-attention-items.json",
+  "data/normalized/execution-review/attention-payment-evidence.json",
+  "data/normalized/execution-review/execution-attention-details.json",
+  "data/normalized/execution-review/attention-bureau-summary.json",
   "data/normalized/execution-review/fy2024/verification.json",
   "data/verification-report.json",
 ];
@@ -69,29 +60,24 @@ const files = [
 
 const missingRequired = REQUIRED_EXECUTION_REVIEW_KEYS.filter((key) => !files.includes(join(ROOT, key)));
 if (missingRequired.length > 0) {
-  console.error("既定アップロードに必須ファイルが欠けています（pnpm run prepare:data / 各buildを実行してください）:");
+  console.error("既定アップロードに必須ファイルが欠けています（pnpm run prepare:execution-review を実行してください）:");
   for (const key of missingRequired) console.error(`  - ${key}`);
   process.exit(1);
 }
-
 function contentType(path: string): string {
   if (path.endsWith(".json")) return "application/json; charset=utf-8";
   if (path.endsWith(".jsonl")) return "application/x-ndjson; charset=utf-8";
   if (path.endsWith(".csv")) return "text/csv; charset=utf-8";
   if (path.endsWith(".md")) return "text/markdown; charset=utf-8";
-  if (path.endsWith(".xlsx"))
-    return "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
+  if (path.endsWith(".xlsx")) return "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
   if (path.endsWith(".pdf")) return "application/pdf";
   return "application/octet-stream";
 }
-
 function cacheControl(key: string): string | undefined {
-  // 頻繁に再生成される概要indexは短め、その他のJSONは1時間のキャッシュを許容
   if (key.endsWith("execution-review/index.json")) return "public, max-age=60";
   if (key.endsWith(".json")) return "public, max-age=3600";
   return undefined;
 }
-
 for (const file of files.sort()) {
   const key = relativeKey(file);
   const objectPath = `${bucket}/${key}`;
@@ -106,20 +92,7 @@ for (const file of files.sort()) {
   if (cc != null) extraArgs.push("--cache-control", cc);
   const result = spawnSync(
     process.platform === "win32" ? "pnpm.cmd" : "pnpm",
-    [
-      "exec",
-      "wrangler",
-      "r2",
-      "object",
-      "put",
-      objectPath,
-      "--file",
-      file,
-      "--content-type",
-      contentType(file),
-      ...extraArgs,
-      "--remote",
-    ],
+    ["exec", "wrangler", "r2", "object", "put", objectPath, "--file", file, "--content-type", contentType(file), ...extraArgs, "--remote"],
     { cwd: ROOT, stdio: "inherit" },
   );
   if (result.status !== 0) process.exit(result.status ?? 1);

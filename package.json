@@ -4,9 +4,7 @@
   "private": true,
   "type": "module",
   "description": "東京都の令和7・8年度予算、公金支出、補助金、決算比較データをTypeScriptで扱うための再現可能なデータパッケージ",
-  "engines": {
-    "node": ">=22.6"
-  },
+  "engines": { "node": ">=22.6" },
   "scripts": {
     "filter:catalog": "node --experimental-strip-types scripts/filter-catalog.ts",
     "normalize": "node --max-old-space-size=3072 --experimental-strip-types scripts/normalize.ts",
@@ -43,9 +41,14 @@
     "build:payment-evidence": "node --experimental-strip-types scripts/execution-review/build-payment-evidence.ts",
     "select:policy-reviews": "node --experimental-strip-types scripts/execution-review/build-policy-review-selections.ts",
     "build:policy-details": "node --experimental-strip-types scripts/execution-review/build-policy-review-details.ts",
+    "build:execution-attention-items": "node --experimental-strip-types scripts/execution-review/build-execution-attention-items.ts",
+    "build:attention-payment-evidence": "node --experimental-strip-types scripts/execution-review/build-attention-payment-evidence.ts",
+    "build:execution-attention-details": "node --experimental-strip-types scripts/execution-review/build-execution-attention-details.ts",
+    "build:attention-bureau-summary": "node --experimental-strip-types scripts/execution-review/build-attention-bureau-summary.ts",
     "build:index": "node --experimental-strip-types scripts/execution-review/build-index.ts",
-    "prepare:execution-review": "pnpm run extract:settlement-rows && pnpm run build:execution-records && pnpm run normalize:fy2024-budget && pnpm run normalize:fy2026-budget && pnpm run verify:execution && pnpm run build:execution-scan && pnpm run validate:mappings && pnpm run build:comparisons && pnpm run build:review-candidates && pnpm run build:bureau-summary && pnpm run build:payment-evidence && pnpm run build:policy-details && pnpm run build:index",
-    "verify:execution-review": "node --experimental-strip-types scripts/execution-review/verify-execution-review.ts",
+    "verify:execution-attention": "node --experimental-strip-types scripts/execution-review/verify-execution-attention.ts",
+    "verify:execution-review": "node --experimental-strip-types scripts/execution-review/verify-execution-review.ts && pnpm run verify:execution-attention",
+    "prepare:execution-review": "pnpm run extract:settlement-rows && pnpm run build:execution-records && pnpm run normalize:fy2024-budget && pnpm run normalize:fy2026-budget && pnpm run verify:execution && pnpm run build:execution-scan && pnpm run validate:mappings && pnpm run build:comparisons && pnpm run build:review-candidates && pnpm run build:bureau-summary && pnpm run build:payment-evidence && pnpm run build:policy-details && pnpm run build:execution-attention-items && pnpm run build:attention-payment-evidence && pnpm run build:execution-attention-details && pnpm run build:attention-bureau-summary && pnpm run build:index && pnpm run verify:execution-review",
     "build": "pnpm run build:web"
   },
   "devDependencies": {

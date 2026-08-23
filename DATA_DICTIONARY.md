@@ -6,7 +6,7 @@
 
 | フィールド | 型 | 原本対応 | 説明 |
 |---|---|---|---|
-| `fiscalYear` | `2025 | 2026` | 年度 | 会計年度 |
+| `fiscalYear` | `2024 | 2025 | 2026` | 年度 | 会計年度 |
 | `sourceMonth` | `string` | 原本ファイル | `YYYY-MM`。出納整理期間も実際の支払月 |
 | `sourceFile` | `string` | - | 原本への相対パス |
 | `sourceRow` | `number` | - | 原本の1始まり行番号 |
@@ -66,3 +66,45 @@
 - `by-chapter.json`: 款別
 
 給与は局・款等の配賦情報を持たないため、局別・会計別・款別には加算していません。
+
+## 年度内執行ギャップ `execution-review`
+
+### `execution-attention-items.json`
+
+2024年度一般会計の正式決算における最下位の「目」行を1レコードとして保持します。款・項の集約行は `execution-scan.json` に残りますが、主一覧・主集計には使いません。
+
+| フィールド | 型 | 単位・null | 説明 |
+|---|---|---|---|
+| `itemId` | `string` | 非null | 原則 `accountKey.key`。同じ入力から決定的 |
+| `reviewScope` | `operational | reference-only | uncertain` | 非null | 主一覧、参考表示、区分要確認 |
+| `reviewScopeReasonCode` | `string | null` | `null`は明示的な分離理由なし | 参考項目等の理由コード |
+| `amounts.currentBudgetYen` | `number` | 円 | 予算現額 |
+| `amounts.spentYen` | `number` | 円 | 支出済額 |
+| `amounts.carryoverYen` | `number` | 円 | 翌年度繰越額 |
+| `amounts.unusedYen` | `number` | 円 | 不用額 |
+| `amounts.yearEndUnexecutedYen` | `number` | 円 | `carryoverYen + unusedYen` |
+| `rates.yearEndUnexecutedRate` | `number | null` | 0〜1。分母0等は`null` | 年度内未執行額 / 予算現額 |
+| `gapComposition` | `string` | 非null | `carryover-dominant`、`unused-dominant`、`balanced`、`unavailable` |
+| `attentionFlags` | `string[]` | 空配列可 | 複数同時成立する事実シグナル |
+| `comparison` | `object | null` | 比較不能・未確認は`null` | 2026年度予算との任意結合。A/B/Cを保持 |
+| `source`, `sourcePage` | `object`, `number | null` | - | 正式決算原本と物理ページ |
+
+`attentionFlags` は総合点ではありません。`material-unexecuted-amount`、`high-unexecuted-rate`、`budget-continues`、`budget-expanded`、`cross-year-comparison-unavailable`を固定順で併記します。
+
+### `execution-attention-details.json`
+
+| フィールド | 型 | 説明 |
+|---|---|---|
+| `item` | `ExecutionAttentionItem` | 一覧と同じ会計上の事実 |
+| `breakdown.components` | `array` | 比較単位に属する実在の2024年度「目」明細。推定した節・細節は作らない |
+| `breakdown.reconciliation` | `exact | mismatch | not-applicable` | 比較側集計と構成明細合計の照合結果 |
+| `paymentEvidence.matchGranularity` | `item | section | chapter | none` | 公金支出を実際に照合した粒度 |
+| `paymentEvidence.expenseBreakdown` | `array` | 公金支出の節・細節の全内訳 |
+| `officialExplanation.status` | `confirmed | not-found | not-reviewed | not-applicable` | 未調査と調査済み未確認を区別 |
+| `investigationQuestions` | `array` | 原因断定ではなく追加確認用の疑問文 |
+
+公金支出の `totalAmountYen` は正式決算の `spentYen` と別系列であり、置換・補正には使いません。
+
+### `attention-bureau-summary.json`
+
+款を局・分野の表示単位とし、`reviewScope`ごとに別集計します。率は行率の平均ではなく、合計金額から再計算します。`reference-only`と`uncertain`を`operational`へ混ぜません。

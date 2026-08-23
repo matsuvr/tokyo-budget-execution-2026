@@ -1,15 +1,12 @@
-/**
- * 執行レビューAPIクライアント（Issue #47）。
- * DOMに依存しない通信モジュール。失敗時に空配列やダミー値を返さず、
- * ApiErrorとして呼び出し元に伝える。
- */
 export const API_ENDPOINTS = {
     executionReviewIndex: "/execution-review",
     executionReviewCandidates: "/execution-review/candidates",
     executionReviewBureaus: "/execution-review/bureaus",
     executionReviewItem: "/execution-review/items",
+    executionAttentionItems: "/execution-review/attention-items",
+    executionAttentionItem: "/execution-review/attention-items",
+    executionAttentionBureaus: "/execution-review/attention-bureaus",
 };
-/** ユーザー向け短文(message)とdebug用causeを分離したエラー */
 export class ApiError extends Error {
     status;
     cause;
@@ -33,9 +30,8 @@ export async function fetchJson(url, options = {}) {
     }
     if (!response.ok) {
         const status = response.status;
-        if (status === 404) {
+        if (status === 404)
             throw new ApiError("データが見つかりませんでした", { status });
-        }
         throw new ApiError(`データの取得に失敗しました（HTTP ${status}）`, { status });
     }
     try {
@@ -45,17 +41,25 @@ export async function fetchJson(url, options = {}) {
         throw new ApiError("サーバー応答が正しいJSONではありませんでした", { cause: error });
     }
 }
-export async function fetchExecutionReviewIndex(options = {}) {
+export function fetchExecutionReviewIndex(options = {}) {
     return fetchJson(API_ENDPOINTS.executionReviewIndex, options);
 }
-export async function fetchReviewCandidates(options = {}) {
+export function fetchExecutionAttentionItems(options = {}) {
+    return fetchJson(API_ENDPOINTS.executionAttentionItems, options);
+}
+export function fetchExecutionAttentionDetail(itemId, options = {}) {
+    return fetchJson(`${API_ENDPOINTS.executionAttentionItem}/${encodeURIComponent(itemId)}`, options);
+}
+export function fetchAttentionBureauSummary(options = {}) {
+    return fetchJson(API_ENDPOINTS.executionAttentionBureaus, options);
+}
+/* Legacy clients retained during migration. */
+export function fetchReviewCandidates(options = {}) {
     return fetchJson(API_ENDPOINTS.executionReviewCandidates, options);
 }
-export async function fetchBureauSummary(options = {}) {
+export function fetchBureauSummary(options = {}) {
     return fetchJson(API_ENDPOINTS.executionReviewBureaus, options);
 }
-export async function fetchPolicyReviewDetail(reviewId, options = {}) {
-    // reviewIdはURLパスへ埋め込むため必ずエンコードする
-    const encoded = encodeURIComponent(reviewId);
-    return fetchJson(`${API_ENDPOINTS.executionReviewItem}/${encoded}`, options);
+export function fetchPolicyReviewDetail(reviewId, options = {}) {
+    return fetchJson(`${API_ENDPOINTS.executionReviewItem}/${encodeURIComponent(reviewId)}`, options);
 }

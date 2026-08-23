@@ -1,9 +1,3 @@
-/**
- * 表示用整形関数（Issue #48）。
- * 円データ・率データは表示時にだけ文字列へ整形し、元の数値は変更しない。
- * 欠損値は0とみなさず「確認不能」と表示する。
- */
-/** 円→「X.X兆円」「X億円」「X万円」「X円」。欠損・非数は確認不能 */
 export function formatYen(yen) {
     if (yen == null || !Number.isFinite(yen))
         return "確認不能";
@@ -17,28 +11,21 @@ export function formatYen(yen) {
         const oku = Math.round((abs / 1e8) * 10) / 10;
         return `${sign}${oku.toLocaleString("ja-JP")}億円`;
     }
-    if (abs >= 1e4) {
+    if (abs >= 1e4)
         return `${sign}${Math.round(abs / 1e4).toLocaleString("ja-JP")}万円`;
-    }
     return `${sign}${yen.toLocaleString("ja-JP")}円`;
 }
-/** 率(小数)→「XX.X%」。欠損・非数は確認不能 */
 export function formatRate(rate) {
     if (rate == null || !Number.isFinite(rate))
         return "確認不能";
     const percent = Math.round(rate * 1000) / 10;
     return `${percent.toLocaleString("ja-JP", { minimumFractionDigits: 1 })}%`;
 }
-/** 金額を整数カン区切りで表示（欠損は確認不能） */
 export function formatYenExact(yen) {
     if (yen == null || !Number.isFinite(yen))
         return "確認不能";
     return `${yen.toLocaleString("ja-JP")}円`;
 }
-/**
- * 指定statusの候補について不用額・2026年度当初予算額の合計を計算する純粋関数。
- * 欠損行は合計から除外し、件数として返す（0で補わない）。
- */
 export function sumAmountsByStatus(records, status) {
     let unusedYenTotal = 0;
     let fy2026InitialTotal = 0;
@@ -49,12 +36,10 @@ export function sumAmountsByStatus(records, status) {
             continue;
         matchedCount += 1;
         const { fy2024UnusedYen, fy2026InitialBudgetYen } = record.amounts;
-        if (fy2024UnusedYen != null && Number.isFinite(fy2024UnusedYen)) {
+        if (fy2024UnusedYen != null && Number.isFinite(fy2024UnusedYen))
             unusedYenTotal += fy2024UnusedYen;
-        }
-        if (fy2026InitialBudgetYen != null && Number.isFinite(fy2026InitialBudgetYen)) {
+        if (fy2026InitialBudgetYen != null && Number.isFinite(fy2026InitialBudgetYen))
             fy2026InitialTotal += fy2026InitialBudgetYen;
-        }
         if (fy2024UnusedYen == null || fy2026InitialBudgetYen == null)
             nullAmountCount += 1;
     }

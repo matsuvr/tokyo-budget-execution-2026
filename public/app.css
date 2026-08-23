@@ -1,301 +1,64 @@
 :root {
-  color-scheme: light dark;
-  font-family:
-    system-ui,
-    -apple-system,
-    "Hiragino Kaku Gothic ProN",
-    "Noto Sans JP",
-    sans-serif;
+  font-family: system-ui, -apple-system, "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
   line-height: 1.6;
 }
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0 auto;
-  max-width: 60rem;
-  padding: 1rem;
-}
-
-:focus-visible {
-  outline: 3px solid #1b6ac9;
-  outline-offset: 2px;
-}
-
-header h1 {
-  font-size: 1.5rem;
-  margin-bottom: 0.25rem;
-}
-
-.description {
-  color: gray;
-  font-size: 0.9rem;
-}
-
-#error {
-  border: 1px solid #c0392b;
-  border-radius: 4px;
-  color: #c0392b;
-  margin-top: 1rem;
-  padding: 0.75rem;
-}
-
-[hidden] {
-  display: none !important;
-}
-
-.card {
-  border: 1px solid #d0d0d0;
-  border-radius: 6px;
-  margin-top: 1rem;
-  padding: 1rem;
-}
-
-.overview-grid {
+* { box-sizing: border-box; }
+body { margin: 0 auto; max-width: 64rem; padding: 1rem; }
+:focus-visible { outline: 3px solid #1b6ac9; outline-offset: 2px; }
+header h1 { font-size: 1.55rem; margin-bottom: 0.25rem; }
+.description { color: #555; font-size: 0.92rem; }
+#error { border: 1px solid #a5281b; border-radius: 4px; color: #a5281b; margin-top: 1rem; padding: 0.75rem; }
+[hidden] { display: none !important; }
+.card { border: 1px solid #d0d0d0; border-radius: 6px; margin-top: 1rem; padding: 1rem; }
+.overview-grid, .candidate-grid, .compact-grid {
   display: grid;
-  gap: 0.25rem 1rem;
+  gap: 0.2rem 1rem;
   grid-template-columns: minmax(10em, max-content) 1fr;
   margin: 0.5rem 0;
 }
-
-.overview-grid dt {
-  color: gray;
-  font-weight: 600;
-}
-
-.overview-grid dd {
-  margin: 0;
-  overflow-wrap: anywhere;
-}
-
-.sub {
-  color: gray;
-  font-size: 0.85rem;
-  margin-left: 0.25rem;
-}
-
-.scope-note,
-.threshold-note,
-.caution-note {
-  font-size: 0.85rem;
-  margin: 0.25rem 0;
-}
-
-.threshold-note,
-.caution-note {
-  color: dimgray;
-}
-
-.empty-note {
-  color: gray;
-  margin-top: 1rem;
-}
-
-/* 候補一覧（#49） */
-
-.candidate-item header {
-  margin-bottom: 0.5rem;
-}
-
-.candidate-title {
-  font-size: 1.05rem;
-  margin: 0 0 0.25rem;
-  overflow-wrap: anywhere;
-}
-
-.candidate-meta {
-  font-size: 0.85rem;
-  margin: 0;
-}
-
-.badge {
-  border: 1px solid currentcolor;
-  border-radius: 3px;
-  display: inline-block;
-  font-size: 0.8rem;
-  padding: 0 0.35em;
-}
-
-.breakdown-bar {
-  border-radius: 4px;
-  display: flex;
-  height: 1.25rem;
-  margin: 0.5rem 0;
-  overflow: hidden;
-}
-
-.bar-segment.bar-spent {
-  background: #4c78a8;
-}
-
-.bar-segment.bar-carryover {
-  background: #f2a33c;
-}
-
-.bar-segment.bar-unused {
-  background: #c0504d;
-}
-
-.candidate-grid {
-  display: grid;
-  gap: 0.15rem 1rem;
-  grid-template-columns: minmax(9em, max-content) 1fr;
-  margin: 0.5rem 0;
-}
-
-.candidate-grid dt {
-  color: gray;
-}
-
-.candidate-grid dd {
-  margin: 0;
-  overflow-wrap: anywhere;
-}
-
-.exact-amounts {
-  color: dimgray;
-  font-size: 0.8rem;
-  overflow-wrap: anywhere;
-}
-
-/* フィルター（#50） */
-
-.filter-controls {
-  align-items: end;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-.filter-field {
-  border: none;
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-  margin: 0;
-  padding: 0;
-}
-
-.filter-field label,
-.filter-field legend {
-  font-size: 0.85rem;
-  font-weight: 600;
-}
-
-.checkbox-choice {
-  display: inline-flex;
-  gap: 0.25rem;
-  margin-right: 0.75rem;
-}
-
-.checkbox-choice input {
-  margin: 0;
-}
-
-.reset-button {
-  cursor: pointer;
-  font: inherit;
-  padding: 0.35rem 0.9rem;
-}
-
-.filter-count {
-  color: dimgray;
-  font-size: 0.85rem;
-}
-
-/* 表示切替と局別サマリー（#51） */
-
-.view-toggle {
-  display: flex;
-  gap: 0.5rem;
-  margin-top: 1rem;
-}
-
-.view-toggle-button {
-  cursor: pointer;
-  font: inherit;
-  padding: 0.4rem 1rem;
-}
-
-.view-toggle-button[data-active] {
-  background: #333;
-  color: #fff;
-}
-
-.bureau-select {
-  cursor: pointer;
-  font: inherit;
-}
-
-/* 詳細パネル（#52） */
-
-.detail-section {
-  margin-top: 0.5rem;
-}
-
-.detail-toggle {
-  cursor: pointer;
-  font: inherit;
-  padding: 0.3rem 0.8rem;
-}
-
-.detail-panel {
-  background: #f7f7f7;
-  margin-top: 0.5rem;
-}
-
-.detail-unavailable {
-  margin: 0.25rem 0 0;
-}
-
-.finding-block h4,
-.evidence-block h4,
-.payment-block h4 {
-  margin-bottom: 0.25rem;
-}
-
-.evidence-block ul,
-.payment-block ul {
-  padding-left: 1.25rem;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation: none !important;
-    transition: none !important;
-  }
-}
-
-/* 方法論・注意事項フッター（#53） */
-
-.methodology {
-  border-top: 2px solid #d0d0d0;
-  font-size: 0.85rem;
-  margin-top: 2rem;
-}
-
-.methodology h2 {
-  font-size: 1rem;
-}
-
-.methodology h3 {
-  font-size: 0.9rem;
-}
-
-.methodology ul {
-  padding-left: 1.25rem;
-}
-
-@media (max-width: 480px) {
-  .overview-grid,
-  .candidate-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .overview-grid dt,
-  .candidate-grid dt {
-    margin-top: 0.5rem;
-  }
+.overview-grid dt, .candidate-grid dt, .compact-grid dt { color: #555; font-weight: 600; }
+.overview-grid dd, .candidate-grid dd, .compact-grid dd { margin: 0; overflow-wrap: anywhere; }
+.sub, .scope-note, .caution-note, .reference-counts, .source-line { color: #555; font-size: 0.85rem; }
+.empty-note { color: #666; }
+.warning-note { border-left: 4px solid #a5281b; color: #8b2116; padding-left: 0.75rem; }
+.candidate-title { font-size: 1.05rem; margin: 0 0 0.35rem; overflow-wrap: anywhere; }
+.primary-value { align-items: baseline; display: flex; flex-wrap: wrap; gap: 0.35rem; margin: 0.25rem 0; }
+.primary-value strong { font-size: 1.15rem; }
+.badge-list { display: flex; flex-wrap: wrap; gap: 0.35rem; margin: 0.5rem 0; }
+.badge { border: 1px solid currentcolor; border-radius: 3px; display: inline-block; font-size: 0.8rem; padding: 0 0.35em; }
+.breakdown-bar { background: #eee; border-radius: 4px; display: flex; height: 1.25rem; margin: 0.5rem 0; overflow: hidden; }
+.bar-spent { background: #4c78a8; }
+.bar-carryover { background: #f2a33c; }
+.bar-unused { background: #c0504d; }
+.exact-amounts { color: #555; font-size: 0.8rem; overflow-wrap: anywhere; }
+.filter-controls { align-items: end; display: grid; gap: 0.75rem; grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr)); }
+.filter-field { border: none; display: flex; flex-direction: column; gap: 0.25rem; margin: 0; padding: 0; }
+.filter-field label { font-size: 0.85rem; font-weight: 600; }
+.filter-field select, .reset-button, .view-toggle-button, .detail-toggle, .bureau-select { font: inherit; }
+.reset-button, .view-toggle-button, .detail-toggle, .bureau-select { cursor: pointer; padding: 0.35rem 0.8rem; }
+.filter-count { color: #555; font-size: 0.85rem; }
+.view-toggle { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
+.view-toggle-button[data-active] { background: #333; color: #fff; }
+.detail-section { margin-top: 0.75rem; }
+.detail-panel { background: #f7f7f7; }
+.detail-block + .detail-block { border-top: 1px solid #d0d0d0; margin-top: 1rem; padding-top: 0.75rem; }
+.detail-block h4, .evidence-list h5 { margin-bottom: 0.35rem; }
+.component-list { padding-left: 1.25rem; }
+.breakdown-component { margin-bottom: 1rem; }
+.evidence-list ul, .detail-block ul { padding-left: 1.25rem; }
+.reference-reason { font-weight: 600; margin: 1rem 0 -0.5rem; }
+.reference-wrapper > .attention-item { margin-top: 0.75rem; }
+.scope-reference-only { border-left: 5px solid #777; }
+.scope-uncertain { border-left: 5px solid #b47b00; }
+.bureau-card h3 { margin-top: 0; }
+.bureau-select { background: none; border: 0; padding: 0; text-decoration: underline; }
+.methodology { border-top: 2px solid #d0d0d0; font-size: 0.85rem; margin-top: 2rem; }
+.methodology h2 { font-size: 1rem; }
+.methodology h3 { font-size: 0.9rem; }
+.methodology ul { padding-left: 1.25rem; }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+@media (max-width: 520px) {
+  .overview-grid, .candidate-grid, .compact-grid { grid-template-columns: 1fr; }
+  .overview-grid dt, .candidate-grid dt, .compact-grid dt { margin-top: 0.5rem; }
+  body { padding: 0.75rem; }
 }

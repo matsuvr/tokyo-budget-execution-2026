@@ -1,6 +1,3 @@
-/**
- * 内部状態値の表示ラベル。UIラベルに内部enum名（英語ID）を露出しない。
- */
 export const STATUS_LABELS = {
     "needs-explanation": "要説明候補",
     carryover: "遅延・繰越",
@@ -20,16 +17,44 @@ export const METHOD_LABELS = {
     construction: "工事・施設整備",
     subsidy: "補助・給付",
     "statutory-transfer": "法定移転・税連動",
-    unknown: "未分類",
+    unknown: "執行方式未確認",
 };
-export function methodLabel(method) {
-    return METHOD_LABELS[method] ?? method;
-}
-/** 確認状態の表示。not-foundを「理由なし」とは断定しない */
+export const SCOPE_LABELS = {
+    operational: "行政サービス・事業",
+    "reference-only": "会計・制度上の参考項目",
+    uncertain: "区分要確認",
+};
+export const GAP_COMPOSITION_LABELS = {
+    "carryover-dominant": "繰越中心",
+    "unused-dominant": "不用中心",
+    balanced: "繰越・不用が同程度",
+    unavailable: "内訳確認不能",
+};
+export const ATTENTION_FLAG_LABELS = {
+    "material-unexecuted-amount": "年度内未執行額1億円以上",
+    "high-unexecuted-rate": "年度内未執行率20%以上",
+    "budget-continues": "2026年度予算が90%以上継続",
+    "budget-expanded": "2026年度予算が増額",
+    "cross-year-comparison-unavailable": "2026年度との比較未確認",
+};
+export const REVIEW_SCOPE_REASON_LABELS = {
+    "public-debt": "公債費",
+    "special-ward-grant": "特別区交付金",
+    "local-consumption-tax-settlement": "地方消費税清算",
+    "tax-linked-cost": "税連動経費",
+    "inter-account-transfer": "会計間移転",
+    "reserve-fund": "予備費",
+    "repayment-refund": "償還・返還・法定移転",
+    "statutory-transfer": "法定移転",
+    "personnel-accounting-adjustment": "人件費の会計上の調整",
+    "retirement-benefit-adjustment": "退職手当・退職給付の会計上の調整",
+    "malformed-account-key": "会計科目キーの確認が必要",
+};
 export const CONFIRMATION_LABELS = {
     confirmed: "公式資料で確認",
-    "not-found": "公開資料から確認できず",
-    "not-applicable": "対象外",
+    "not-found": "公開資料を確認したが理由を特定できず",
+    "not-reviewed": "公式資料の個別確認は未実施",
+    "not-applicable": "執行体制レビューの対象外",
 };
 export const REASON_TAG_LABELS = {
     "low-demand": "需要の低さ",
@@ -44,16 +69,18 @@ export const REASON_TAG_LABELS = {
     "other-official-reason": "その他（公式資料の記載）",
     unknown: "内容特定不能",
 };
-export function reasonTagLabel(tag) {
-    return REASON_TAG_LABELS[tag] ?? tag;
+export function labelFrom(labels, value) {
+    return labels[value] ?? `その他（${value}）`;
 }
-export function statusLabel(status) {
-    return STATUS_LABELS[status] ?? `その他（${status}）`;
+export function methodLabel(value) { return labelFrom(METHOD_LABELS, value); }
+export function scopeLabel(value) { return labelFrom(SCOPE_LABELS, value); }
+export function gapCompositionLabel(value) { return labelFrom(GAP_COMPOSITION_LABELS, value); }
+export function attentionFlagLabel(value) { return labelFrom(ATTENTION_FLAG_LABELS, value); }
+export function reviewScopeReasonLabel(value) {
+    return value == null ? "理由コードなし" : labelFrom(REVIEW_SCOPE_REASON_LABELS, value);
 }
-export function confidenceLabel(confidence) {
-    return CONFIDENCE_LABELS[confidence] ?? confidence;
-}
-/** 局名の代わりに使う2024年度の款名（番号接頭辞を除す）。純粋関数 */
-export function bureauOfChapter(chapter) {
-    return chapter.replace(/^[0-9]{1,2}:/u, "");
-}
+export function confirmationLabel(value) { return labelFrom(CONFIRMATION_LABELS, value); }
+export function reasonTagLabel(value) { return labelFrom(REASON_TAG_LABELS, value); }
+export function statusLabel(value) { return labelFrom(STATUS_LABELS, value); }
+export function confidenceLabel(value) { return CONFIDENCE_LABELS[value] ?? value; }
+export function bureauOfChapter(chapter) { return chapter.replace(/^[0-9]{1,2}:/u, ""); }
