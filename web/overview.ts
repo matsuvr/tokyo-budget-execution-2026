@@ -30,11 +30,11 @@ export function renderOverviewCard(index: ExecutionReviewIndexView): HTMLElement
       { class: "overview-grid" },
       el("dt", {}, "行政サービス・事業の明細数"),
       el("dd", {}, `${attention.scopeCounts.operational.toLocaleString("ja-JP")} 件`),
-      el("dt", {}, "年度内未執行額"),
+      el("dt", {}, "年度内執行ギャップ額"),
       el("dd", {}, formatYen(operational.yearEndUnexecutedYen)),
-      el("dt", {}, "内訳: 翌年度繰越額"),
+      el("dt", {}, "内訳: 翌年度継続分"),
       el("dd", {}, formatYen(operational.carryoverYen)),
-      el("dt", {}, "内訳: 不用額"),
+      el("dt", {}, "内訳: 年度内対応余地"),
       el("dd", {}, formatYen(operational.unusedYen)),
       el("dt", {}, "2026年度比較あり"),
       el("dd", {}, `${attention.comparisonCounts.attached.toLocaleString("ja-JP")} 件`),
@@ -51,7 +51,7 @@ export function renderOverviewCard(index: ExecutionReviewIndexView): HTMLElement
     el(
       "p",
       { class: "caution-note" },
-      "年度内未執行額は翌年度繰越額と不用額の合計です。無駄、人手不足、政策失敗を直接証明する値ではありません。",
+      "年度内執行ギャップ額は、翌年度継続分と年度内対応余地の合計です。年度内対応余地は、予算現額のうち支出済みでも翌年度継続でもない部分を追加検証の入口として表した名称で、需要変動や経費節減等も含み得ます。",
     ),
   );
 }

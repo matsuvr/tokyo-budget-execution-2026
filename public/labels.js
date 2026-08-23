@@ -25,14 +25,14 @@ export const SCOPE_LABELS = {
     uncertain: "区分要確認",
 };
 export const GAP_COMPOSITION_LABELS = {
-    "carryover-dominant": "繰越中心",
-    "unused-dominant": "不用中心",
-    balanced: "繰越・不用が同程度",
+    "carryover-dominant": "翌年度継続分が中心",
+    "unused-dominant": "年度内対応余地が中心",
+    balanced: "翌年度継続分と年度内対応余地が同程度",
     unavailable: "内訳確認不能",
 };
 export const ATTENTION_FLAG_LABELS = {
-    "material-unexecuted-amount": "年度内未執行額1億円以上",
-    "high-unexecuted-rate": "年度内未執行率20%以上",
+    "material-unexecuted-amount": "年度内執行ギャップ額1億円以上",
+    "high-unexecuted-rate": "年度内執行ギャップ率20%以上",
     "budget-continues": "2026年度予算が90%以上継続",
     "budget-expanded": "2026年度予算が増額",
     "cross-year-comparison-unavailable": "2026年度との比較未確認",

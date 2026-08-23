@@ -18,19 +18,19 @@ export function renderAttentionFilters(allRecords, filteredCount, filters, sort,
     const bureauOptions = [{ value: ALL, label: "すべての局・分野" }, ...availableValues(allRecords, "bureau").map((value) => ({ value, label: value }))];
     const methodOptions = [{ value: ALL, label: "すべての執行方式" }, ...availableValues(allRecords, "executionMethod").map((value) => ({ value, label: METHOD_LABELS[value] ?? value }))];
     const compositionOptions = [{ value: ALL, label: "すべての内訳" }, ...Object.entries(GAP_COMPOSITION_LABELS).map(([value, label]) => ({ value, label }))];
-    const signalOptions = [{ value: ALL, label: "すべての確認シグナル" }, ...Object.entries(ATTENTION_FLAG_LABELS).map(([value, label]) => ({ value, label }))];
+    const signalOptions = [{ value: ALL, label: "すべての追加検証シグナル" }, ...Object.entries(ATTENTION_FLAG_LABELS).map(([value, label]) => ({ value, label }))];
     const comparisonOptions = [
         { value: "all", label: "2026年度比較: すべて" },
         { value: "attached", label: "2026年度比較あり" },
         { value: "unavailable", label: "2026年度比較未確認" },
     ];
     const sortOptions = [
-        { value: "unexecuted-amount-desc", label: "年度内未執行額が大きい順" },
-        { value: "unexecuted-rate-desc", label: "年度内未執行率が高い順" },
+        { value: "unexecuted-amount-desc", label: "年度内執行ギャップ額が大きい順" },
+        { value: "unexecuted-rate-desc", label: "年度内執行ギャップ率が高い順" },
         { value: "current-budget-desc", label: "予算現額が大きい順" },
         { value: "account-key-asc", label: "会計科目順" },
     ];
     const reset = el("button", { type: "button", class: "reset-button" }, "条件をリセット");
     reset.addEventListener("click", () => callbacks.onChange(clearAttentionFilters(), "unexecuted-amount-desc"));
-    return el("section", { class: "card filter-card", "aria-label": "全明細の絞り込みと並べ替え" }, el("h2", {}, "絞り込み・並べ替え"), el("div", { class: "filter-controls" }, selectControl("表示区分", "attention-scope", filters.scope, scopeOptions, (value) => update({ scope: value })), selectControl("局・分野（款）", "attention-bureau", filters.bureau, bureauOptions, (value) => update({ bureau: value })), selectControl("執行方式", "attention-method", filters.executionMethod, methodOptions, (value) => update({ executionMethod: value })), selectControl("未執行の内訳", "attention-composition", filters.gapComposition, compositionOptions, (value) => update({ gapComposition: value })), selectControl("年度間比較", "attention-comparison", filters.comparison, comparisonOptions, (value) => update({ comparison: value })), selectControl("確認シグナル", "attention-signal", filters.signal, signalOptions, (value) => update({ signal: value })), selectControl("並べ替え", "attention-sort", sort, sortOptions, (value) => update({}, value))), el("p", { class: "filter-count", "aria-live": "polite" }, `${filteredCount.toLocaleString("ja-JP")} 件 / 全 ${allRecords.length.toLocaleString("ja-JP")} 件`), reset);
+    return el("section", { class: "card filter-card", "aria-label": "全明細の絞り込みと並べ替え" }, el("h2", {}, "絞り込み・並べ替え"), el("div", { class: "filter-controls" }, selectControl("表示区分", "attention-scope", filters.scope, scopeOptions, (value) => update({ scope: value })), selectControl("局・分野（款）", "attention-bureau", filters.bureau, bureauOptions, (value) => update({ bureau: value })), selectControl("執行方式", "attention-method", filters.executionMethod, methodOptions, (value) => update({ executionMethod: value })), selectControl("執行ギャップの内訳", "attention-composition", filters.gapComposition, compositionOptions, (value) => update({ gapComposition: value })), selectControl("年度間比較", "attention-comparison", filters.comparison, comparisonOptions, (value) => update({ comparison: value })), selectControl("追加検証シグナル", "attention-signal", filters.signal, signalOptions, (value) => update({ signal: value })), selectControl("並べ替え", "attention-sort", sort, sortOptions, (value) => update({}, value))), el("p", { class: "filter-count", "aria-live": "polite" }, `${filteredCount.toLocaleString("ja-JP")} 件 / 全 ${allRecords.length.toLocaleString("ja-JP")} 件`), reset);
 }

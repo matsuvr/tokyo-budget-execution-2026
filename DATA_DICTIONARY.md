@@ -73,6 +73,8 @@
 
 2024年度一般会計の正式決算における最下位の「目」行を1レコードとして保持します。款・項の集約行は `execution-scan.json` に残りますが、主一覧・主集計には使いません。
 
+公開画面では、`carryoverYen` を「翌年度継続分」、`unusedYen` を「年度内対応余地」、`yearEndUnexecutedYen` を「年度内執行ギャップ額」と表示します。これは表示上の解釈レイヤーだけの変更で、JSONの原値・フィールド名・会計恒等式は変更しません。
+
 | フィールド | 型 | 単位・null | 説明 |
 |---|---|---|---|
 | `itemId` | `string` | 非null | 原則 `accountKey.key`。同じ入力から決定的 |
@@ -80,10 +82,10 @@
 | `reviewScopeReasonCode` | `string | null` | `null`は明示的な分離理由なし | 参考項目等の理由コード |
 | `amounts.currentBudgetYen` | `number` | 円 | 予算現額 |
 | `amounts.spentYen` | `number` | 円 | 支出済額 |
-| `amounts.carryoverYen` | `number` | 円 | 翌年度繰越額 |
-| `amounts.unusedYen` | `number` | 円 | 不用額 |
-| `amounts.yearEndUnexecutedYen` | `number` | 円 | `carryoverYen + unusedYen` |
-| `rates.yearEndUnexecutedRate` | `number | null` | 0〜1。分母0等は`null` | 年度内未執行額 / 予算現額 |
+| `amounts.carryoverYen` | `number` | 円 | 翌年度継続分として表示する原値 |
+| `amounts.unusedYen` | `number` | 円 | 年度内対応余地として表示する原値 |
+| `amounts.yearEndUnexecutedYen` | `number` | 円 | `carryoverYen + unusedYen`。公開表示は年度内執行ギャップ額 |
+| `rates.yearEndUnexecutedRate` | `number | null` | 0〜1。分母0等は`null` | 年度内執行ギャップ率 |
 | `gapComposition` | `string` | 非null | `carryover-dominant`、`unused-dominant`、`balanced`、`unavailable` |
 | `attentionFlags` | `string[]` | 空配列可 | 複数同時成立する事実シグナル |
 | `comparison` | `object | null` | 比較不能・未確認は`null` | 2026年度予算との任意結合。A/B/Cを保持 |
