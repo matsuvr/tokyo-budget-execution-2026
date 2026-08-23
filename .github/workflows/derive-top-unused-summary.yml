@@ -1,0 +1,52 @@
+name: derive-top-unused-summary
+
+on:
+  push:
+    branches:
+      - chore/derive-top-unused-summary
+
+permissions:
+  contents: read
+
+jobs:
+  derive:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Derive top operational execution gaps
+        shell: bash
+        run: |
+          node <<'NODE'
+          const fs = require('node:fs');
+          const path = 'data/normalized/execution-review/execution-attention-items.json';
+          const data = JSON.parse(fs.readFileSync(path, 'utf8'));
+          const top = data.records
+            .filter((record) => record.reviewScope === 'operational')
+            .sort((left, right) =>
+              right.amounts.yearEndUnexecutedYen - left.amounts.yearEndUnexecutedYen ||
+              left.itemId.localeCompare(right.itemId, 'ja')
+            )
+            .slice(0, 12)
+            .map((record, index) => ({
+              rank: index + 1,
+              itemId: record.itemId,
+              bureau: record.bureau,
+              accountKey: record.accountKey,
+              executionMethod: record.executionMethod,
+              amounts: record.amounts,
+              rates: record.rates,
+              gapComposition: record.gapComposition,
+              attentionFlags: record.attentionFlags,
+              sourcePage: record.sourcePage,
+              source: record.source,
+            }));
+          fs.writeFileSync('top-unused-summary.json', JSON.stringify(top, null, 2) + '\n');
+          for (const record of top) {
+            console.log(`TOP_UNUSED_${String(record.rank).padStart(2, '0')}=${JSON.stringify(record)}`);
+          }
+          NODE
+      - uses: actions/upload-artifact@v4
+        with:
+          name: top-unused-summary
+          path: top-unused-summary.json
+          if-no-files-found: error
