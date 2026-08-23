@@ -26,3 +26,6 @@ desktop.ini
 .idea/
 .vscode/
 .log/
+
+# local presentation drafts
+*.pptx
