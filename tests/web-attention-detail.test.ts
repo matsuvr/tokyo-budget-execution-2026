@@ -46,7 +46,10 @@ describe("attention detail unexecuted ranking", () => {
     assert.match(source, /年度内執行ギャップ額が大きい構成明細/u);
     assert.match(source, /年度内執行ギャップ額/u);
     assert.match(source, /年度内執行ギャップ率/u);
-    assert.match(source, /実際に支出された内容（公金支出・参考）/u);
+    assert.match(source, /実際に支出された内容（公金支出）/u);
+    assert.doesNotMatch(source, /実際に支出された内容（公金支出・参考）/u);
+    assert.doesNotMatch(source, /公金支出集計は支出済み内容の補助資料で/u);
+    assert.doesNotMatch(source, /正式な決算額や年度内執行ギャップ額の代わりにはしません/u);
     assert.doesNotMatch(source, /aggregateList\("支払件名上位"/u);
   });
 });

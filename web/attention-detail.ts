@@ -161,12 +161,7 @@ export function renderAttentionDetail(detail: ExecutionAttentionDetailView): HTM
     el(
       "section",
       { class: "detail-block" },
-      el("h4", {}, "実際に支出された内容（公金支出・参考）"),
-      el(
-        "p",
-        {},
-        "公金支出集計は支出済み内容の補助資料で、正式な決算額や年度内執行ギャップ額の代わりにはしません。",
-      ),
+      el("h4", {}, "実際に支出された内容（公金支出）"),
       el(
         "dl",
         { class: "compact-grid" },
